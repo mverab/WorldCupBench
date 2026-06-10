@@ -46,7 +46,7 @@ Respond ONLY with a valid JSON object (no additional text, no markdown, no expla
   "model_name": "<model name>",
   "model_id": "<model id on OpenRouter>",
   "timestamp": "<ISO 8601 date-time>",
-  "prompt_version": "2.0",
+  "prompt_version": "2.1",
   "temperature": 0.3,
   "group_stage_matches": [
     {
@@ -63,7 +63,7 @@ Respond ONLY with a valid JSON object (no additional text, no markdown, no expla
   "group_qualifiers": {
     "first_place": [{"team_code": "MEX", "group": "A"}],
     "second_place": [{"team_code": "RSA", "group": "A"}],
-    "best_third_place": [{"team_code": "<code>", "group": "<letter>"}]
+    "best_third_place": [{"team_code": "KOR", "group": "A"}]
   },
   "knockout_stage": {
     "round_of_32": [
@@ -71,7 +71,7 @@ Respond ONLY with a valid JSON object (no additional text, no markdown, no expla
         "match_id": "R32-73",
         "stage": "round_of_32",
         "group": null,
-        "home_team": "<code 1st H>",
+        "home_team": "<FIFA code>",
         "away_team": "<code 2nd J>",
         "predicted_result": "home",
         "predicted_score": {"home": 2, "away": 1},
@@ -112,7 +112,12 @@ Respond ONLY with a valid JSON object (no additional text, no markdown, no expla
 
 VALIDATION RULES:
 - All group stage match_ids must be "GS-01" to "GS-72".
-- All Round of 32 match_ids must be "R32-73" to "R32-96" (16 matches).
+- All Round of 32 match_ids must be "R32-73" to "R32-88" (16 matches).
+- All Round of 16 match_ids must be "R16-89" to "R16-96" (8 matches).
+- All Quarter Final match_ids must be "QF-97" to "QF-100" (4 matches).
+- All Semi Final match_ids must be "SF-101" and "SF-102" (2 matches).
+- Third place match_id must be "THIRD" (match 103).
+- Final match_id must be "FINAL" (match 104).
 - All teams must use 3-letter FIFA codes.
 - probs.home + probs.draw + probs.away must sum to 1.0 ± 0.02.
 - In knockouts, probs.draw must be 0.0 (no draws; if you predict a draw in 90 min, indicate the winner of extra time/penalties).
