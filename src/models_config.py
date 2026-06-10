@@ -1,17 +1,17 @@
 """
-Configuración de los modelos de IA (SOTA, junio 2026) que participan en WorldCupBench.
+Configuration of the SOTA AI models (June 2026) participating in WorldCupBench.
 
-Cada entrada define:
-- name: nombre legible del modelo (se usa para nombrar los archivos de predicciones).
-- model_id: identificador del modelo en OpenRouter.
-- provider: proveedor / laboratorio que desarrolla el modelo.
+Each entry defines:
+- name: human-readable model name (used to name prediction files).
+- model_id: model identifier in OpenRouter.
+- provider: lab/company that develops the model.
 
-NOTA: Los `model_id` siguen la convención de OpenRouter (proveedor/modelo). Como
-estos son modelos de última generación (junio 2026), verifica los identificadores
-exactos disponibles en https://openrouter.ai/models y ajústalos si es necesario.
+NOTE: The `model_id` values follow the OpenRouter convention (provider/model). As
+these are cutting-edge models (June 2026), verify the exact identifiers available
+at https://openrouter.ai/models and adjust them if necessary.
 """
 
-# Lista de modelos State-Of-The-Art a comparar en el benchmark (junio 2026).
+# List of State-Of-The-Art models to compare in the benchmark (June 2026).
 MODELS = [
     {
         "name": "GPT-5.5",
@@ -67,7 +67,7 @@ MODELS = [
 
 
 def get_model_by_name(name: str):
-    """Devuelve la configuración de un modelo a partir de su nombre."""
+    """Returns a model's configuration from its name."""
     for model in MODELS:
         if model["name"].lower() == name.lower():
             return model

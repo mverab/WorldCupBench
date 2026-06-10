@@ -1,4 +1,4 @@
-# Variables de entorno (nunca subir claves)
+# Environment variables (never commit keys)
 .env
 
 # Python
@@ -10,10 +10,10 @@ venv/
 env/
 .pytest_cache/
 
-# Predicciones crudas de depuración
+# Raw debug predictions
 predictions/*_raw_error.txt
 
-# Sistema operativo / editores
+# OS / editors
 .DS_Store
 .idea/
 .vscode/

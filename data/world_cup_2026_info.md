@@ -1,7 +1,7 @@
-# WorldCupBench - Datos del Torneo
+# WorldCupBench - Tournament Data
 
-> **Nota:** Este archivo ha sido reemplazado por `data/tournament.json`, que contiene los datos oficiales del sorteo de la FIFA (5 de diciembre de 2025) en formato estructurado.
+> **Note:** This file has been replaced by `data/tournament.json`, which contains the official FIFA draw data (December 5, 2025) in structured format.
 >
-> **Fuente de verdad:** `data/tournament.json`
+> **Source of truth:** `data/tournament.json`
 >
-> El prompt del benchmark (`prompts/prediction_prompt.txt`) inyecta automáticamente el contenido de `tournament.json` como contexto del torneo para todos los modelos.
+> The benchmark prompt (`prompts/prediction_prompt.txt`) automatically injects the contents of `tournament.json` as tournament context for all models.

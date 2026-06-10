@@ -1,9 +1,8 @@
 # Dashboard (placeholder)
 
-Esta carpeta contendrá el dashboard de visualización y comparación de las predicciones de los modelos (próxima fase del proyecto).
+This folder will contain the visualization dashboard for comparing model predictions (next project phase).
 
-Ideas para implementar:
-- Tabla comparativa de campeones predichos por cada modelo.
-- Visualización del bracket de eliminatorias por modelo.
-- Métricas de acierto una vez finalice el torneo (accuracy, Brier score, etc.).
-
+Ideas for implementation:
+- Comparative table of champions predicted by each model.
+- Knockout bracket visualization per model.
+- Accuracy metrics once the tournament ends (accuracy, Brier score, etc.).

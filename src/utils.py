@@ -1,6 +1,6 @@
 """
-Utilidades comunes para WorldCupBench: carga de prompt, parseo de respuestas JSON,
-validación contra el esquema y guardado de predicciones.
+Common utilities for WorldCupBench: prompt loading, JSON response parsing,
+schema validation, and prediction saving.
 """
 
 import json
@@ -8,7 +8,7 @@ import os
 import re
 from datetime import datetime, timezone
 
-# Rutas base del proyecto (relativas a la raíz del repositorio).
+# Base project paths (relative to the repo root).
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROMPT_PATH = os.path.join(BASE_DIR, "prompts", "prediction_prompt.txt")
 SCHEMA_PATH = os.path.join(BASE_DIR, "schema", "predictions_schema.json")
@@ -17,46 +17,46 @@ PREDICTIONS_DIR = os.path.join(BASE_DIR, "predictions")
 
 
 def load_prompt(path: str = PROMPT_PATH) -> str:
-    """Lee y devuelve el contenido del prompt estándar."""
+    """Reads and returns the standard prompt content."""
     with open(path, "r", encoding="utf-8") as f:
         return f.read()
 
 
 def load_schema(path: str = SCHEMA_PATH) -> dict:
-    """Carga el esquema JSON de predicciones."""
+    """Loads the JSON predictions schema."""
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def load_tournament_data(path: str = TOURNAMENT_PATH) -> dict:
-    """Carga los datos oficiales del torneo desde tournament.json."""
+    """Loads the official tournament data from tournament.json."""
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
 
 def now_iso() -> str:
-    """Devuelve la fecha-hora actual en formato ISO 8601 (UTC)."""
+    """Returns the current date-time in ISO 8601 format (UTC)."""
     return datetime.now(timezone.utc).isoformat()
 
 
 def extract_json(text: str):
     """
-    Extrae un objeto JSON de la respuesta de un modelo.
+    Extracts a JSON object from a model's response.
 
-    Maneja casos comunes donde el modelo envuelve el JSON en bloques de código
-    markdown (```json ... ```) o agrega texto antes/después.
-    Devuelve el dict parseado o lanza ValueError si no se puede parsear.
+    Handles common cases where the model wraps the JSON in markdown code
+    blocks (```json ... ```) or adds text before/after.
+    Returns the parsed dict or raises ValueError if parsing fails.
     """
     if not text or not text.strip():
-        raise ValueError("Respuesta vacía del modelo.")
+        raise ValueError("Empty response from model.")
 
-    # 1) Intentar parsear directamente.
+    # 1) Try direct parsing.
     try:
         return json.loads(text)
     except json.JSONDecodeError:
         pass
 
-    # 2) Quitar fences de markdown ```json ... ``` o ``` ... ```.
+    # 2) Strip markdown fences ```json ... ``` or ``` ... ```.
     fence_match = re.search(r"```(?:json)?\s*(\{.*\})\s*```", text, re.DOTALL)
     if fence_match:
         try:
@@ -64,22 +64,22 @@ def extract_json(text: str):
         except json.JSONDecodeError:
             pass
 
-    # 3) Tomar desde la primera '{' hasta la última '}'.
+    # 3) Take from the first '{' to the last '}'.
     start = text.find("{")
     end = text.rfind("}")
     if start != -1 and end != -1 and end > start:
         candidate = text[start:end + 1]
         return json.loads(candidate)
 
-    raise ValueError("No se pudo extraer JSON válido de la respuesta del modelo.")
+    raise ValueError("Could not extract valid JSON from the model's response.")
 
 
 def validate_predictions(data: dict, schema: dict) -> tuple:
     """
-    Valida las predicciones contra el esquema JSON y reglas semánticas adicionales.
+    Validates predictions against the JSON schema and additional semantic rules.
 
-    Devuelve (es_valido: bool, mensaje: str). Si la librería `jsonschema` no
-    está instalada, hace una validación mínima de claves de nivel superior.
+    Returns (is_valid: bool, message: str). If the `jsonschema` library is not
+    installed, performs a minimal validation of top-level keys.
     """
     required_top = [
         "model_name",
@@ -92,12 +92,12 @@ def validate_predictions(data: dict, schema: dict) -> tuple:
         "final_standings",
     ]
 
-    # Validación mínima de claves de nivel superior (siempre).
+    # Minimal top-level key validation (always).
     missing = [k for k in required_top if k not in data]
     if missing:
-        return False, f"Faltan claves obligatorias: {missing}"
+        return False, f"Missing required keys: {missing}"
 
-    # Validación contra el esquema JSON.
+    # JSON schema validation.
     try:
         import jsonschema
         from jsonschema import Draft7Validator
@@ -108,11 +108,11 @@ def validate_predictions(data: dict, schema: dict) -> tuple:
             msgs = "; ".join(
                 f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5]
             )
-            return False, f"Errores de esquema: {msgs}"
+            return False, f"Schema errors: {msgs}"
     except ImportError:
-        pass  # Continuar con validaciones semánticas
+        pass  # Continue with semantic validations
 
-    # Validaciones semánticas adicionales.
+    # Additional semantic validations.
     semantic_errors = []
 
     def _check_probs(match: dict, allow_draw: bool = True):
@@ -127,13 +127,13 @@ def validate_predictions(data: dict, schema: dict) -> tuple:
             mid = match.get("match_id", "?")
             semantic_errors.append(f"{mid}: knockout draw prob must be 0.0")
 
-    # Fase de grupos: empate permitido.
+    # Group stage: draw allowed.
     group_matches = data.get("group_stage_matches") or []
     if isinstance(group_matches, list):
         for match in group_matches:
             _check_probs(match, allow_draw=True)
 
-    # Fase eliminatoria: empate no permitido.
+    # Knockout stage: draw not allowed.
     knockout = data.get("knockout_stage") or {}
     if isinstance(knockout, dict):
         for stage in ["round_of_32", "round_of_16", "quarter_finals", "semi_finals"]:
@@ -148,16 +148,16 @@ def validate_predictions(data: dict, schema: dict) -> tuple:
 
     if semantic_errors:
         msgs = "; ".join(semantic_errors[:5])
-        return False, f"Errores semánticos: {msgs}"
+        return False, f"Semantic errors: {msgs}"
 
     return True, "OK"
 
 
 def save_predictions(model_name: str, data: dict, predictions_dir: str = PREDICTIONS_DIR) -> str:
     """
-    Guarda las predicciones de un modelo en predictions/{model_name}_predictions.json.
+    Saves a model's predictions to predictions/{model_name}_predictions.json.
 
-    Devuelve la ruta del archivo guardado.
+    Returns the path of the saved file.
     """
     os.makedirs(predictions_dir, exist_ok=True)
     safe_name = model_name.replace("/", "_").replace(" ", "_")

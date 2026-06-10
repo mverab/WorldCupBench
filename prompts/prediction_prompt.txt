@@ -1,51 +1,51 @@
-Eres un analista experto de fútbol y un sistema de predicción deportiva. Tu tarea es predecir TODOS los resultados de la Copa Mundial de la FIFA 2026™ con el mayor rigor posible.
+You are an expert football analyst and sports prediction system. Your task is to predict ALL the results of the FIFA World Cup 2026™ with the highest possible rigor.
 
 ==================================================
-CONTEXTO OFICIAL DEL TORNEO
+OFFICIAL TOURNAMENT CONTEXT
 ==================================================
 
 {{TOURNAMENT_DATA}}
 
 ==================================================
-INSTRUCCIONES DE PREDICCIÓN
+PREDICTION INSTRUCTIONS
 ==================================================
 
-Debes generar predicciones para:
-1. TODOS los 72 partidos de la fase de grupos (incluye marcador exacto y probabilidades 1X2).
-2. Los clasificados de cada grupo: 1° lugar, 2° lugar (12 cada uno) y los 8 mejores terceros.
-3. Todos los partidos de cada ronda eliminatoria con su ganador, marcador y probabilidades.
-4. Las posiciones finales del torneo: Campeón (1°), Subcampeón (2°), Tercer Lugar (3°) y Cuarto Lugar (4°).
+You must generate predictions for:
+1. ALL 72 group stage matches (include exact score and 1X2 probabilities).
+2. The qualifiers from each group: 1st place, 2nd place (12 each) and the 8 best third-place teams.
+3. All matches in each knockout round with their winner, score and probabilities.
+4. The final tournament positions: Champion (1st), Runner-up (2nd), Third Place (3rd) and Fourth Place (4th).
 
-Para cada partido proporciona:
-- match_id: identificador (ej. "GS-01" para grupos, "R32-73" para Ronda de 32, "FINAL").
-- stage: una de [group_stage, round_of_32, round_of_16, quarter_finals, semi_finals, third_place_match, final].
-- group: letra del grupo (A-L) o null si es eliminatoria.
-- home_team y away_team: códigos FIFA de 3 letras (ej. "MEX", "BRA").
-- predicted_result: una de ["home", "draw", "away"] indicando quién gana o si es empate.
-  - En fase de grupos, "draw" es válido.
-  - En eliminatorias (desde Ronda de 32 en adelante), NO puede ser "draw"; debe predecir un ganador.
-- predicted_score: objeto con goles enteros {"home": int, "away": int}.
-- probs: probabilidades 1X2 que SUMEN 1.0 (tolerancia ±0.02):
+For each match provide:
+- match_id: identifier (e.g. "GS-01" for groups, "R32-73" for Round of 32, "FINAL").
+- stage: one of [group_stage, round_of_32, round_of_16, quarter_finals, semi_finals, third_place_match, final].
+- group: group letter (A-L) or null if knockout.
+- home_team and away_team: 3-letter FIFA codes (e.g. "MEX", "BRA").
+- predicted_result: one of ["home", "draw", "away"] indicating who wins or if it's a draw.
+  - In group stage, "draw" is valid.
+  - In knockout stages (from Round of 32 onward), "draw" is NOT allowed; you must predict a winner.
+- predicted_score: object with integer goals {"home": int, "away": int}.
+- probs: 1X2 probabilities that SUM to 1.0 (tolerance ±0.02):
   {
-    "home": float,   // probabilidad de victoria del local
-    "draw": float,   // probabilidad de empate (solo en fase de grupos; en eliminatorias usar 0.0)
-    "away": float    // probabilidad de victoria del visitante
+    "home": float,   // probability of home win
+    "draw": float,   // probability of draw (group stage only; use 0.0 in knockouts)
+    "away": float    // probability of away win
   }
-  Ejemplo: {"home": 0.55, "draw": 0.25, "away": 0.20} → suma = 1.00
+  Example: {"home": 0.55, "draw": 0.25, "away": 0.20} → sum = 1.00
 
-NOTA IMPORTANTE: Usa ÚNICAMENTE códigos FIFA de 3 letras para los equipos. No uses nombres completos.
-Para empate en fase de grupos, el predicted_result es "draw" y el predicted_score puede ser empate (ej. 1-1).
+IMPORTANT NOTE: Use ONLY 3-letter FIFA codes for teams. Do not use full names.
+For a draw in group stage, predicted_result is "draw" and predicted_score can be a draw (e.g. 1-1).
 
 ==================================================
-FORMATO DE SALIDA (OBLIGATORIO)
+OUTPUT FORMAT (MANDATORY)
 ==================================================
 
-Responde ÚNICAMENTE con un objeto JSON válido (sin texto adicional, sin markdown, sin explicaciones) que siga EXACTAMENTE esta estructura:
+Respond ONLY with a valid JSON object (no additional text, no markdown, no explanations) that follows EXACTLY this structure:
 
 {
-  "model_name": "<nombre del modelo>",
-  "model_id": "<id del modelo en OpenRouter>",
-  "timestamp": "<fecha-hora ISO 8601>",
+  "model_name": "<model name>",
+  "model_id": "<model id on OpenRouter>",
+  "timestamp": "<ISO 8601 date-time>",
   "prompt_version": "2.0",
   "temperature": 0.3,
   "group_stage_matches": [
@@ -63,7 +63,7 @@ Responde ÚNICAMENTE con un objeto JSON válido (sin texto adicional, sin markdo
   "group_qualifiers": {
     "first_place": [{"team_code": "MEX", "group": "A"}],
     "second_place": [{"team_code": "RSA", "group": "A"}],
-    "best_third_place": [{"team_code": "<código>", "group": "<letra>"}]
+    "best_third_place": [{"team_code": "<code>", "group": "<letter>"}]
   },
   "knockout_stage": {
     "round_of_32": [
@@ -71,8 +71,8 @@ Responde ÚNICAMENTE con un objeto JSON válido (sin texto adicional, sin markdo
         "match_id": "R32-73",
         "stage": "round_of_32",
         "group": null,
-        "home_team": "<código 1°H>",
-        "away_team": "<código 2°J>",
+        "home_team": "<code 1st H>",
+        "away_team": "<code 2nd J>",
         "predicted_result": "home",
         "predicted_score": {"home": 2, "away": 1},
         "probs": {"home": 0.60, "draw": 0.00, "away": 0.40}
@@ -85,8 +85,8 @@ Responde ÚNICAMENTE con un objeto JSON válido (sin texto adicional, sin markdo
       "match_id": "THIRD",
       "stage": "third_place_match",
       "group": null,
-      "home_team": "<código>",
-      "away_team": "<código>",
+      "home_team": "<code>",
+      "away_team": "<code>",
       "predicted_result": "home",
       "predicted_score": {"home": 2, "away": 1},
       "probs": {"home": 0.55, "draw": 0.00, "away": 0.45}
@@ -95,28 +95,28 @@ Responde ÚNICAMENTE con un objeto JSON válido (sin texto adicional, sin markdo
       "match_id": "FINAL",
       "stage": "final",
       "group": null,
-      "home_team": "<código>",
-      "away_team": "<código>",
+      "home_team": "<code>",
+      "away_team": "<code>",
       "predicted_result": "home",
       "predicted_score": {"home": 2, "away": 1},
       "probs": {"home": 0.52, "draw": 0.00, "away": 0.48}
     }
   },
   "final_standings": {
-    "champion": "<código FIFA>",
-    "runner_up": "<código FIFA>",
-    "third_place": "<código FIFA>",
-    "fourth_place": "<código FIFA>"
+    "champion": "<FIFA code>",
+    "runner_up": "<FIFA code>",
+    "third_place": "<FIFA code>",
+    "fourth_place": "<FIFA code>"
   }
 }
 
-REGLAS DE VALIDACIÓN:
-- Todos los match_id de fase de grupos deben ser "GS-01" a "GS-72".
-- Todos los match_id de Ronda de 32 deben ser "R32-73" a "R32-96" (16 partidos).
-- Todos los equipos deben usar códigos FIFA de 3 letras.
-- Las probabilidades probs.home + probs.draw + probs.away deben sumar 1.0 ± 0.02.
-- En eliminatorias, probs.draw debe ser 0.0 (no hay empates; si predic empate en 90 min, indica el ganador de la prórroga/penales).
-- Debe haber exactamente 72 partidos en group_stage_matches.
-- Debe haber exactamente 12 equipos en first_place, 12 en second_place, 8 en best_third_place.
+VALIDATION RULES:
+- All group stage match_ids must be "GS-01" to "GS-72".
+- All Round of 32 match_ids must be "R32-73" to "R32-96" (16 matches).
+- All teams must use 3-letter FIFA codes.
+- probs.home + probs.draw + probs.away must sum to 1.0 ± 0.02.
+- In knockouts, probs.draw must be 0.0 (no draws; if you predict a draw in 90 min, indicate the winner of extra time/penalties).
+- There must be exactly 72 matches in group_stage_matches.
+- There must be exactly 12 teams in first_place, 12 in second_place, 8 in best_third_place.
 
-IMPORTANTE: La salida debe ser JSON puro y parseable. No incluyas comentarios, ni bloques de código markdown (```), ni texto antes o después del JSON.
+IMPORTANT: The output must be pure, parseable JSON. Do not include comments, markdown code blocks (```), or text before or after the JSON.
