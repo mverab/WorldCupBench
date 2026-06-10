@@ -15,6 +15,7 @@ Requisitos: ver requirements.txt
 """
 
 import argparse
+import json
 import os
 import sys
 import time
@@ -28,6 +29,10 @@ from models_config import MODELS, get_model_by_name  # noqa: E402
 import utils  # noqa: E402
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
+
+# Parámetros de la ejecución.
+TEMPERATURE = 0.3
+TOURNAMENT_PLACEHOLDER = "{{TOURNAMENT_DATA}}"
 
 # Parámetros de reintentos.
 MAX_RETRIES = 3
@@ -62,7 +67,7 @@ def call_openrouter(api_key: str, model_id: str, messages: list) -> str:
     payload = {
         "model": model_id,
         "messages": messages,
-        "temperature": 0.3,
+        "temperature": TEMPERATURE,
         # Solicitar salida en formato JSON cuando el modelo lo soporte.
         "response_format": {"type": "json_object"},
     }
@@ -136,6 +141,8 @@ def run_model(api_key: str, model: dict, prompt: str, schema: dict, dry_run: boo
     data.setdefault("model_name", name)
     data["model_id"] = model_id
     data.setdefault("timestamp", utils.now_iso())
+    data["temperature"] = TEMPERATURE
+    data.setdefault("prompt_version", "2.0")
 
     # Validar contra el esquema.
     is_valid, msg = utils.validate_predictions(data, schema)
@@ -179,6 +186,11 @@ def main():
 
     prompt = utils.load_prompt()
     schema = utils.load_schema()
+
+    # Cargar datos del torneo e inyectarlos en el prompt.
+    tournament_data = utils.load_tournament_data()
+    tournament_str = json.dumps(tournament_data, indent=2, ensure_ascii=False)
+    prompt = prompt.replace(TOURNAMENT_PLACEHOLDER, tournament_str)
 
     # Seleccionar modelos.
     if args.models:
