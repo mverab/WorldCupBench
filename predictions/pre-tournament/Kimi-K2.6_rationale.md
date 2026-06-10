@@ -1,167 +1,209 @@
-# Strategic Analysis: FIFA World Cup 2026™ — Pre-Tournament Assessment
+# Strategic Analysis: FIFA World Cup 2026™
 
 ## 1. Group-by-Group Analysis
 
-### Group A
-**Mexico** enters with massive spiritual and climatic home advantage, opening the tournament at Estadio Azteca against South Africa. El Tri’s familiarity with altitude and June heat across their venues (Mexico City → Los Angeles → Houston) makes them strong favorites to top the group. **Korea Republic** remains organized and physically disciplined; even with squad aging, their European-based core should see them through in second. The **Czech Republic** lacks the explosive individual talent of Korea but possesses enough structure to challenge for third, while **South Africa** likely finishes bottom without enough cutting edge.
-- **Prediction:** 1. MEX, 2. KOR, 3. CZE
+### Group A: Mexico, South Africa, South Korea, Czech Republic
+- **Mexico** opens the tournament at Estadio Azteca and benefits from altitude, fan density across all three host nations, and a favorable draw. They are clear favorites to win the group.
+- **South Korea** brings a European-based core with high tactical discipline and fitness levels. They should secure second place if they handle the Czech Republic.
+- **Czech Republic** is organized and physical but lacks the creative spark of past generations. They will rely on set pieces and defensive solidity.
+- **South Africa** is the weakest side in the group; they may struggle to register more than a single point.
+- **Prediction:** 1. Mexico, 2. South Korea. The Czechs are the most likely third-place team but may only finish with 3–4 points.
 
-### Group B
-**Switzerland** is one of the most consistent tournament operators in Europe—compact, experienced, and difficult to break down. They should win this group. **Canada**, however, is not to be underestimated as a co-host; with genuine world-class pace in wide areas and matches in Toronto and Monterrey, they are well-placed for second. **Qatar’s** 2022 core will have aged significantly, and away from home they look vulnerable, while **Bosnia and Herzegovina** lacks the depth to compete at this level.
-- **Prediction:** 1. SUI, 2. CAN, 3. QAT
+### Group B: Canada, Bosnia & Herzegovina, Qatar, Switzerland
+- **Canada** leverages true home soil in Toronto and a fast, transitional style that suits North American venues. They are favorites to top the group.
+- **Switzerland** is a tournament mainstay—defensively compact and mentally tough. They should advance in second.
+- **Bosnia & Herzegovina** still has technical quality (Džeko’s leadership) but lacks squad depth for a three-game sprint in summer heat.
+- **Qatar** was exposed in 2022 once away from home advantage; they are the group’s weakest link.
+- **Prediction:** 1. Canada, 2. Switzerland. Bosnia likely takes third with 3–4 points from a result against Qatar and a draw elsewhere.
 
-### Group C
-A genuinely tricky group. **Brazil** remains Brazil—abundant elite talent and a necessity to perform. **Morocco** carries the confidence of its 2022 semifinal run; its defensive organization and European-based stars (Hakimi, Ziyech) make them a tough opponent. **Scotland** is physical and proud but likely takes its only points against **Haiti**, who enter as major underdogs and will struggle against the physicality of African and South American opposition.
-- **Prediction:** 1. BRA, 2. MAR, 3. SCO
+### Group C: Brazil, Morocco, Haiti, Scotland
+- **Brazil** remains a top-tier contender despite recent managerial flux. Individual brilliance and squad depth make them group favorites.
+- **Morocco** arrives as a 2022 semifinalist with elite defensive organization and Premier League-quality wingers. They will not fear Scotland or Haiti.
+- **Scotland** is gritty and well-drilled but lacks the attacking punch to displace the top two.
+- **Haiti** is overmatched at this level and will likely finish with zero points.
+- **Prediction:** 1. Brazil, 2. Morocco. Scotland should take third with 3 points (a win over Haiti and narrow losses to the top two).
 
-### Group D
-**USA** benefits enormously from home support in SoFi Stadium (Los Angeles), BMO Field (Toronto), and AT&T Stadium (Dallas). With its strongest generation in decades, the USMNT should win the group. **Turkey** brings physicality, growing technical quality (Arda Güler by 2026), and European tournament experience—they are slight favorites for second. **Paraguay** is defensively stubborn and **Australia** gritty, but both may cancel each other out in a tightly contested race for third.
-- **Prediction:** 1. USA, 2. TUR, 3. PAR
+### Group D: USA, Paraguay, Australia, Turkey
+- **USA** has home advantage and a core of European-based players entering their primes. They should progress, but this is not a free pass.
+- **Turkey** is arguably the most dangerous second-seed in this group—dynamic, pressing aggressively, and tactically astute under Montella.
+- **Australia** is rugged and defensively stubborn but struggles to create against compact defenses.
+- **Paraguay** is physical and defensive but offensively limited in open play.
+- **Prediction:** 1. USA (home edge), 2. Turkey. Australia could sneak third with 3–4 points.
 
-### Group E
-**Germany** should dominate this group. Regardless of recent tournament setbacks, their squad depth, tactical flexibility, and tournament pedigree are overwhelming against this field. **Ecuador** brings fitness and South American intensity, likely edging **Ivory Coast** for second. The Ivorian squad is athletic and powerful but may lack cohesion against structured European and South American sides. **Curaçao** is drastically out of its depth here.
-- **Prediction:** 1. GER, 2. ECU, 3. CIV
+### Group E: Germany, Curaçao, Ivory Coast, Ecuador
+- **Germany** is rebuilding but possesses overwhelming squad depth. They should dominate this group.
+- **Ecuador** brings high-octane South American pressing and a crop of elite young midfielders. They are clear second favorites.
+- **Ivory Coast** has individual flair but often lacks tactical cohesion against European structure.
+- **Curaçao** is the group’s outlier and will likely exit with zero points and a significant goal-difference deficit.
+- **Prediction:** 1. Germany, 2. Ecuador. Ivory Coast may finish third but with a poor goal difference from the Germany fixture.
 
-### Group F
-Arguably the deepest group in the tournament. **Netherlands** boasts world-class defenders, a solid midfield, and emerging attacking talent. **Japan** is the most complete Asian side—tactically sophisticated, technically excellent, and entirely Europe-based by 2026. **Sweden** is experienced but transitioning, while **Tunisia** is defensively stubborn but limited going forward. Japan is fully capable of challenging for first, but the Dutch squad depth likely prevails.
-- **Prediction:** 1. NED, 2. JPN, 3. SWE
+### Group F: Netherlands, Japan, Sweden, Tunisia
+- **Netherlands** has world-class defenders and midfielders but questions at striker. Still, their physical and aerial dominance should see them top the group.
+- **Japan** is tactically elite, technically gifted, and proven against European opposition. They are a lock to advance.
+- **Sweden** relies on collective organization and set-piece threat; they lack a global star but are never an easy out.
+- **Tunisia** is defensively stubborn but offensively limited.
+- **Prediction:** 1. Netherlands, 2. Japan. This is a strong group where third place (likely Sweden) could accumulate 4 points.
 
-### Group G
-**Belgium’s** golden generation will be aging, but De Bruyne, Lukaku, and Trossard still provide enough quality to top the group. **Egypt** likely relies heavily on Salah (who will be 34), but their physicality and African tournament experience should see them through. **Iran** is defensively organized and will frustrate opponents; they should take points off New Zealand and possibly draw one of the other two. **New Zealand** is the weakest side in the group and likely exits without points.
-- **Prediction:** 1. BEL, 2. EGY, 3. IRN
+### Group G: Belgium, Egypt, Iran, New Zealand
+- **Belgium** is in generational transition but still possesses Kevin De Bruyne (fitness permitting) and a wealth of Premier League experience. They should win the group.
+- **Egypt** has Mohamed Salah and a battle-hardened core that understands tournament football.
+- **Iran** is defensively disciplined, physically robust, and historically difficult to break down in low-block scenarios.
+- **New Zealand** is the weakest confederation representative here.
+- **Prediction:** 1. Belgium, 2. Egypt. Iran likely takes third with 4 points (a win over New Zealand and a draw against Egypt).
 
-### Group H
-**Spain** arrives as the freshest elite power, buoyed by their Euro 2024 triumph and a young core (Lamine Yamal, Williams, Pedri) that will be hitting peak form. **Uruguay**, under Bielsa’s system, remains ferocious and tactically distinct—Darwin Núñez and Federico Valverde give them top-tier weapons. **Saudi Arabia** has spent heavily on domestic development but remains a tier below, while **Cape Verde** is compact but ultimately outgunned.
-- **Prediction:** 1. ESP, 2. URU, 3. KSA
+### Group H: Spain, Cape Verde, Saudi Arabia, Uruguay
+- **Spain** enters as reigning European champions with a golden generation of youth (Yamal, Williams, etc.). Favorites to win the group.
+- **Uruguay** blends a fearsome midfield (Valverde, Ugarte) with predatory finishing (Núñez). They will push Spain hard for first place.
+- **Saudi Arabia** can be tricky in isolated moments but lacks the consistency to trouble Spain or Uruguay over 90 minutes.
+- **Cape Verde** is athletic but technically outclassed at this level.
+- **Prediction:** 1. Spain, 2. Uruguay. This is a brutal group where third place (likely Saudi Arabia) may only manage 1–3 points and likely miss out on the Round of 32.
 
-### Group I
-**France** has the deepest and most athletic squad in the tournament. Mbappé, Tchouaméni, Camavinga, and a conveyor belt of emerging talent make them overwhelming favorites. **Senegal** brings African champion pedigree and Premier League physicality. **Norway**, built entirely around Erling Haaland’s goalscoring and Ødegaard’s creativity, is dangerous in open play and should beat Iraq comfortably. **Iraq** is spirited but limited against this caliber.
-- **Prediction:** 1. FRA, 2. SEN, 3. NOR
+### Group I: France, Senegal, Iraq, Norway
+- **France** is the deepest, most balanced squad in the tournament. They should win the group comfortably.
+- **Senegal** has elite physicality, European club experience, and a proven tournament mentality.
+- **Norway** has Erling Haaland but remains overly reliant on him; defensively suspect against high-level movement and combination play.
+- **Iraq** is organized but outgunned against top-tier athleticism.
+- **Prediction:** 1. France, 2. Senegal. Norway likely takes third with 3 points (a win over Iraq and competitive losses).
 
-### Group J
-**Argentina** defends its crown. Even if Messi’s role is reduced by 2026, the supporting cast (Alvarez, Fernández, a bolstered defense) remains elite. **Austria** is tactically rigorous under a pressing system; Sabitzer and a solid Bundesliga core give them the edge for second. **Algeria** is technically gifted but inconsistent. **Jordan** faces a massive uphill battle and will likely finish bottom.
-- **Prediction:** 1. ARG, 2. AUT, 3. ALG
+### Group J: Argentina, Algeria, Austria, Jordan
+- **Argentina** enters as defending champions with Lionel Messi likely in his farewell World Cup. Emotional drive and squad cohesion are immense.
+- **Austria** is a well-coached, high-pressing side with Bundesliga quality throughout. They are a dark horse for second place.
+- **Algeria** has flair but inconsistency; the post-Mahrez transition remains uncertain.
+- **Jordan** is the group’s weakest link and will struggle to pick up points.
+- **Prediction:** 1. Argentina, 2. Austria. Algeria likely finishes third with 3 points.
 
-### Group K
-**Portugal** enters a post-Ronaldo (or reduced-Ronaldo) era with elite depth in every line—Leão, Silva, Dias, Fernandes, and a strong spine. **Colombia** is resurgent, physically imposing, and features Luis Díaz as a genuine match-winner; they are strong favorites for second. **DR Congo** has athleticism but lacks cohesion at this level, while **Uzbekistan** is solid by Asian standards but faces a tall order here.
-- **Prediction:** 1. POR, 2. COL, 3. COD
+### Group K: Portugal, DR Congo, Uzbekistan, Colombia
+- **Portugal** has perhaps the most individually talented squad in their history, though system balance remains a question.
+- **Colombia** is resurgent with Luis Díaz in his prime and a supporting cast that understands tournament intensity.
+- **DR Congo** brings raw athleticism and individual quality but lacks tactical sophistication.
+- **Uzbekistan** is improving rapidly but this is a significant step up in class.
+- **Prediction:** 1. Portugal, 2. Colombia. DR Congo could take third with 3–4 points.
 
-### Group L
-**England** arguably has the most balanced starting XI in the tournament—Kane’s finishing, Bellingham’s drive, Foden’s creativity, and Rice’s screening. They should win the group. **Croatia’s** golden generation will have largely cycled through by 2026, but their tactical intelligence and fight remain. **Ghana** possesses explosive Premier League-level athleticism and should beat **Panama** to third place. Panama is organized but lacks the individual quality to advance.
-- **Prediction:** 1. ENG, 2. CRO, 3. GHA
+### Group L: England, Croatia, Ghana, Panama
+- **England** has been finalists at Euro 2024 and possesses outrageous attacking depth. Favorites to win the group.
+- **Croatia** is aging (the Modrić generation is winding down) but tournament savvy remains; they know how to grind results in heat.
+- **Ghana** has explosive young talent and is dangerous if underestimated.
+- **Panama** lacks the quality of their 2018 vintage and likely finishes bottom.
+- **Prediction:** 1. England, 2. Croatia. Ghana likely takes third with 3–4 points.
 
 ---
 
 ## 2. Best Third-Place Assessment
 
-With 12 groups and only 8 third-place berths available, the margins will be tight.
+With only eight third-place berths available across twelve groups, four teams will be eliminated. The groups can be tiered by the projected strength of their third-place finisher:
 
-**Groups where the 3rd-place team will likely accumulate strong points (3–4+):**
-- **Group C (Scotland):** Will almost certainly defeat Haiti, giving them a floor of 3 points.
-- **Group E (Ivory Coast):** Should beat Curaçao comfortably; 3 points are nearly guaranteed.
-- **Group G (Iran):** Should defeat New Zealand; defensive organization might earn a draw elsewhere.
-- **Group I (Norway):** Should defeat Iraq; Haaland could produce enough goals to secure a draw against Senegal, pushing them to 4 points.
-- **Group J (Algeria):** Should defeat Jordan; 3 points likely.
-- **Group L (Ghana):** Should defeat Panama; physical superiority ensures at least 3 points.
+**Strong Third-Place Candidates (likely 4+ points and safe advancement):**
+- **Group F (Sweden):** Even in a tough group, Sweden can draw with Tunisia and take a point off Japan or the Netherlands.
+- **Group G (Iran):** A win over New Zealand and a draw against Egypt gives them 4 points.
+- **Group D (Australia):** A win over Paraguay and a draw against Turkey or the USA yields 4 points.
+- **Group K (DR Congo):** A win over Uzbekistan and a draw against Colombia gives them 4 points.
+- **Group B (Bosnia):** A win over Qatar and a draw against Canada or Switzerland yields 4 points.
 
-**Groups where the 3rd-place team may struggle:**
-- **Group F (Sweden/Tunisia):** In a brutal group with Netherlands and Japan, third place might only earn 1 point.
-- **Group D (Paraguay/Australia):** Every match is a dogfight; 3 points are possible but not guaranteed.
-- **Group B (Qatar/BIH):** May only take points off each other, leaving third place on 2–3 points with poor goal difference.
+**Weak Third-Place Candidates (likely eliminated):**
+- **Group E (Curaçao):** Will almost certainly lose all three matches by heavy margins. 0 points.
+- **Group H (Saudi Arabia / Cape Verde):** In a group with Spain and Uruguay, the third-place team may only get 1 point from their head-to-head. Likely eliminated on points and goal difference.
+- **Group A (South Africa):** If they finish third, they may only manage 1 point from a draw with the Czechs or Koreans.
+- **Group J (Algeria / Jordan):** Jordan would finish with 0 points. If Algeria is third, 3 points might not be enough if their goal difference suffers against Argentina.
 
-**Groups where the 3rd-place team could surprise:**
-- **Group H (Saudi Arabia):** Could nick a draw against Uruguay or Cape Verde, but the ceiling is low.
-- **Group K (COD):** Likely beats Uzbekistan, giving them a clean 3 points.
-
-**Most likely advancing 3rd-place teams:** CIV, SCO, IRN, NOR, ALG, GHA, KSA, and one of PAR/SWE/COD.
+**Verdict:** The four eliminated third-place teams will almost certainly come from **Groups E, H, A, and J**. Groups **F, G, D, and K** are positioned to produce strong third-place teams that advance comfortably.
 
 ---
 
 ## 3. Knockout Bracket Path Analysis
 
-The bracket reveals two distinctly loaded halves.
+The expanded 48-team bracket creates extreme asymmetries in path difficulty. Not all group winners are rewarded equally:
 
-### The Left-Side Gauntlet (Quarter-Finals 97 & 98 → Semi-Final 101)
-**Upper-Left Cluster:**
-- **Match 74:** 1E (Germany) vs. a 3rd-place team — Germany should advance.
-- **Match 77:** 1I (France) vs. a 3rd-place team — France should advance.
-- **Match 89 (R16):** Winner 74 vs. Winner 77 — This is the tournament’s most brutal early fixture: **Germany vs. France** in the Round of 16. One massive contender will be eliminated before the quarter-finals.
-- **Match 90 (R16):** Winner 73 (likely Korea Republic or Canada) vs. Winner 75 (1F Netherlands vs. 2C Morocco). This path likely sees **Netherlands** advance to face the Germany/France winner.
+### "Soft" R32 Draws (Group Winner vs. 3rd Place)
+**Germany (1E), France (1I), Mexico (1A), England (1L), USA (1D), Belgium (1G), Portugal (1K),** and **1B** all draw third-place opponents. This is a massive structural advantage.
 
-**Lower-Left Cluster:**
-- **Match 83 (R32):** 2K Colombia vs. 2L Croatia — A tight, physical battle; Colombia’s youth may edge aging Croatian legs.
-- **Match 84 (R32):** 1H Spain vs. 2J Austria — Spain heavily favored.
-- **Match 93 (R16):** Winner 83 vs. Winner 84 — Likely **Spain vs. Colombia**.
-- **Match 81/82 (R32 & R16):** 1D USA vs. a 3rd, and 1G Belgium vs. a 3rd — both should advance, meeting in Match 94.
-- **Match 98 (QF):** Winner 93 (Spain) vs. Winner 94 (Belgium/USA) — Spain is the favorite to reach the Semi-Final.
+### "Hard" R32 Draws (Group Winner vs. 2nd Place)
+- **Netherlands (1F)** faces **2C (Morocco)** — a direct rematch of the 2022 quarterfinal.
+- **Brazil (1C)** faces **2F (Japan or Sweden)** — tactically demanding, high-pressing opponents.
+- **Spain (1H)** faces **2J (Austria or Algeria)** — tricky but manageable.
+- **Argentina (1J)** faces **2H (likely Uruguay)** — a brutal Round of 32 matchup between South American heavyweights.
 
-**Verdict on Left Side:** France or Germany must overcome each other, then likely the Netherlands, just to reach a semi-final against Spain. This is the “Hell Bracket.”
+### Critical Bracket Observations
 
-### The Right-Side Battlefield (Quarter-Finals 99 & 100 → Semi-Final 102)
-**Upper-Right Cluster:**
-- **Match 76 (R32):** 1C Brazil vs. 2F Japan — This is the most dangerous R32 fixture for a top seed. Japan’s discipline and European experience make them a genuine upset threat to Brazil.
-- **Match 92 (R16):** Winner 79 (1A Mexico vs. a 3rd) vs. Winner 80 (1L England vs. a 3rd) — Likely **Mexico vs. England**. England’s superior individual quality should prevail, but home-adjacent support for Mexico in Houston/Dallas makes it uncomfortable.
-- **Match 99 (QF):** Winner 91 (likely Brazil, if they survive Japan) vs. Winner 92 (England) — A blockbuster Brazil vs. England quarter-final.
+**The R16 Death Match:** If Germany and France both win their groups, they are slated to meet in **R16 Match 89**. One of the two pre-tournament favorites will be eliminated before the quarterfinals. This is the single most consequential bracket flaw.
 
-**Lower-Right Cluster:**
-- **Match 86 (R32):** 1J Argentina vs. 2H Uruguay — An immediate South American derby. Argentina is favored, but Uruguay’s Bielsa-engineered intensity makes this a grinding physical affair.
-- **Match 88 (R32):** 2D Turkey vs. 2G Egypt — Evenly matched; Turkey’s European tactical edge may prevail.
-- **Match 95 (R16):** Winner 86 (Argentina) vs. Winner 88 (Turkey/Egypt) — Argentina advances.
-- **Match 85/87:** 1B Switzerland vs. a 3rd, and 1K Portugal vs. a 3rd — both advance, meeting in Match 96.
-- **Match 100 (QF):** Winner 95 (Argentina) vs. Winner 96 (Portugal/Switzerland) — Likely **Argentina vs. Portugal**, a dream QF matchup.
+**Argentina’s Gauntlet:** If seeds hold, Argentina plays Uruguay in the Round of 32, then a tough R16 opponent, then likely **Portugal in QF100**, and finally **Brazil or England in SF102**. This is the hardest path of any title contender.
 
-**Verdict on Right Side:** Brazil faces a nightmare path (Japan → England). Argentina must survive Uruguay and then likely Portugal. This side is stacked with flair and rivalries.
+**Brazil’s Collision Course:** Brazil draws the 2F opponent (likely Japan or Sweden) in R32, then faces the winner of Ecuador vs. Senegal/Norway in R16, then likely **Mexico or England in QF99**, and finally **Argentina or Portugal in SF102**. Difficult, but slightly less front-loaded than Argentina’s route.
+
+**England’s Minefield:** R32 vs. Colombia (2K), R16 vs. Spain (1H), QF vs. USA or Belgium, SF vs. Brazil or Argentina. The bottom half is historically stacked.
+
+**Spain’s Favorable Route:** R32 vs. Austria/Algeria, R16 vs. Colombia/Croatia, QF vs. USA/Belgium, SF vs. Germany/France/Netherlands. Spain has the most favorable path of any elite contender to the semifinals.
+
+### Which Side Is "Easier"?
+- **Top Half (SF101):** France/Germany/Netherlands vs. Spain/USA/Belgium. Still brutal, but avoids the South American bloodbath until the final.
+- **Bottom Half (SF102):** Brazil/England vs. Argentina/Portugal. This side is an absolute minefield of former champions and elite talent.
+
+### Potential Early Upsets
+- **Morocco over Netherlands** (R32, Match 75): Morocco’s low block and transition speed perfectly exploit the Netherlands’ lack of a clinical striker.
+- **Uruguay over Argentina** (R32, Match 86): A rivalry match where form is irrelevant; Uruguay’s midfield physicality could overwhelm Argentina’s aging core.
+- **Japan over Brazil** (R32, Match 76): Japan’s tactical preparation for single opponents is elite; if Brazil is disjointed, this is a classic upset scenario.
+- **Turkey over USA** (Group D): Turkey’s aggressive pressing could exploit the USA’s occasional defensive lapses in buildup.
 
 ---
 
 ## 4. Top Contender Assessment
 
 ### 1. France
-**Strengths:** Unmatched athletic depth, generational talent in every line (Mbappé, Tchouaméni, Kolo Muani, Saliba), and a manager who knows how to navigate knockouts.  
-**Weaknesses:** Drawn into the tournament’s most violent side of the bracket. Must play Germany in the R16 and likely Netherlands in QF.  
-**Verdict:** Best squad, hardest path.
+- **Strengths:** Unparalleled depth at every position; Kylian Mbappé in his absolute prime; a defensive spine of Saliba, Konaté, and Upamecano; midfield control through Camavinga and Tchouaméni.
+- **Weaknesses:** Historical internal friction; Didier Deschamps’ conservative knockout instincts; the R16 bracket draw against Germany is a potential early landmine.
+- **Verdict:** The most complete squad in the field. Should reach at least the quarterfinals, but the Germany matchup in the R16 is cruel.
 
-### 2. Spain
-**Strengths:** Technical continuity from Euro 2024, young stars hitting their prime (Yamal, Nico Williams), and a possession-based style perfectly suited to neutralizing athletic defenses.  
-**Weaknesses:** Defensive vulnerability to elite counter-attacking if pressed high.  
-**Verdict:** Most favorable draw among the elite. They avoid another superpower until a potential semi-final.
+### 2. Argentina
+- **Strengths:** Defending champions’ cohesion; Messi’s final-tournament narrative; Emiliano Martínez in goal; a battle-hardened midfield trio (Enzo, Mac Allister, De Paul).
+- **Weaknesses:** Aging Messi and Di María; emotional reliance on narrative; the bracket path is the worst of any favorite (Uruguay R32, Portugal QF, Brazil/England SF).
+- **Verdict:** Mentality monsters who know how to win, but the draw forces them to beat three or four elite teams consecutively.
 
-### 3. Argentina
-**Strengths:** Defending champions’ mentality, tactical flexibility, and midfield control (Enzo Fernández, Mac Allister). Messi’s potential farewell adds emotional lift.  
-**Weaknesses:** Aging core in key areas; Uruguay in R32 is a brutal opener.  
-**Verdict:** Proven winners who know how to survive tight margins.
+### 3. Brazil
+- **Strengths:** Endless attacking talent (Vini Jr., Rodrygo, Endrick, Martinelli); renewed tactical clarity; defensive leadership from Marquinhos and Militão; historical comfort in North America.
+- **Weaknesses:** Goalkeeper uncertainty; defensive transitions under pressure; recent Copa América struggles; R32 against Japan/Sweden is tricky.
+- **Verdict:** If they find chemistry, they can beat anyone. The path to the final goes through England or Argentina.
 
-### 4. England
-**Strengths:** Kane’s reliability, Bellingham’s two-way dominance, and Foden’s creativity. Physically imposing and mentally sharper after recent tournament runs.  
-**Weaknesses:** Southgate-era caution sometimes backfires against elite possession sides (like Brazil in a potential QF).  
-**Verdict:** Strongest attacking unit; QF vs. Brazil is the acid test.
+### 4. Spain
+- **Strengths:** Reigning European champions; Lamine Yamal and Nico Williams will be even better by 2026; Rodri (if fit) dictates tempo; Luis de la Fuente’s tactical flexibility.
+- **Weaknesses:** Historical World Cup inconsistency; over-reliance on a few young stars; potential striker issues if Morata declines.
+- **Verdict:** The bracket gives them a genuine chance to reach the semifinals. They avoid the South American gauntlet until the final.
 
-### 5. Brazil
-**Strengths:** Infinite depth of flair, pace, and goalkeeping talent. Reloads every cycle.  
-**Weaknesses:** Managerial uncertainty and a brutal R32 draw against Japan. If they survive, QF vs. England awaits.  
-**Verdict:** Talent to win it all, but path is treacherous.
+### 5. Germany
+- **Strengths:** Massive fan support across North America; Jamal Musiala and Florian Wirtz as elite creators; Julian Nagelsmann’s innovation; familiarity with Western venues.
+- **Weaknesses:** Defensive frailty against pace; striker questions; the R16 draw against France is devastating if both win their groups.
+- **Verdict:** Built to dominate possession but vulnerable to an early shock exit.
 
-### 6. Germany
-**Strengths:** Tournament DNA, tactical intelligence, and clutch performances from elite players.  
-**Weaknesses:** Drawn against France in the R16 if both win their groups.  
-**Verdict:** Must beat France just to reach the QF—a devastating bracket placement.
+### 6. England
+- **Strengths:** Bellingham, Foden, Kane, Saka—an outrageous attacking arsenal; tournament experience from back-to-back deep runs; physical superiority on the wings.
+- **Weaknesses:** Defensive midfield coverage when Rice is isolated; right-back depth; history of semifinal heartbreak; the bottom-half bracket is vicious.
+- **Verdict:** Strong enough to win the tournament, but likely must beat two of Brazil/Argentina/Portugal/Spain to do so.
+
+### 7. Portugal
+- **Strengths:** Bruno Fernandes, Bernardo Silva, Rafael Leão, João Félix, Rúben Dias—world-class individuals across the pitch.
+- **Weaknesses:** Cristiano Ronaldo’s role if he persists; full-back depth; mental fragility in decisive moments; likely QF draw against Argentina.
+- **Verdict:** Talented enough for a run, but likely fall to Argentina or Brazil in the knockout phase.
 
 ---
 
 ## 5. Dark Horse / Upset Predictions
 
-### Dark Horses
-- **Japan:** Not merely a dark horse but a genuine threat to Brazil in the R32. Their European-based squad plays with tactical maturity and could neutralize Brazil’s wing play before punishing on set pieces.
-- **Colombia:** A physical, high-energy side with Luis Díaz as a difference-maker. Could trouble Croatia in the R32 and push Spain hard in a potential R16.
-- **Norway:** If they advance as a third-place team, their knockout path is unorthodox. Haaland in a one-off game against any defense is terrifying.
+### Dark Horses Capable of a Quarterfinal Run
+- **Morocco:** If they secure second in Group C, they draw Netherlands in R32—a rematch of 2022 they already won. From there, a path through Korea/Switzerland and into a QF against Germany/France is daunting but not impossible for a team with their discipline.
+- **Turkey:** If they get second in Group D, they draw 2G (Egypt/Iran) in R32. Win that, and they face Argentina in R16—Turkey’s pressing could trouble Argentina’s buildup more than expected.
+- **Colombia:** If they hold second in Group K, they draw England in R32. Very difficult, but Colombia has the individual quality (Díaz, James, Sinisterra) to shock anyone in a one-off.
 
-### Upset Alerts
-- **Brazil eliminated by Japan (Match 76):** Japan’s pressing and organization could frustrate a Brazil side still finding its identity under a new generation.
-- **Mexico eliminated by England (Match 92):** While not a seeding upset, England’s ability to control tempo in Dallas heat could end Mexico’s hopes before theQF.
-- **Netherlands falling to Morocco (Match 75):** If Morocco secures second in Group C, their low-block counter-attacking against a Dutch side prone to knockout jitters is a classic trap.
-- **USA over Belgium (Match 94):** Belgium’s aging backline (Vertonghen/Alderweireld era fully ended, but replacement generation untested at this level) could crack under the combined pressure of home support and American transitional pace.
-- **Germany vs. France (Match 89):** One of the two pre-tournament favorites will be eliminated in the Round of 16, opening the door for Spain or the Netherlands to dominate the top half of the bracket.
+### Established Powers Vulnerable to Early Exit
+- **Netherlands:** A R32 date with Morocco is a nightmare stylistic matchup. If they lose, it would be a massive upset—but entirely plausible given their struggles against compact low-blocks.
+- **Belgium:** Aging squad, potential R16 against the USA, then QF against Spain. Belgium’s golden generation has underperformed before, and this draw is unforgiving.
+- **Argentina:** Not vulnerable in the group stage, but the Uruguay R32 matchup is effectively a 50/50 contest disguised as a "Round of 32" game.
 
----
+### Biggest Upset Predictions
+- **Morocco defeats Netherlands** in R32 (Match 75). The Atlas Lions have the defensive structure and wingers to exploit the Dutch lack of a clinical finisher.
+- **Ghana defeats Croatia** in Group L. Ghana’s youthful energy and pace overwhelm Croatia’s aging midfield in a high-tempo match.
+- **Japan pushes Brazil to extra time or wins outright** in R32 (Match 76). Japan’s tactical preparation for single opponents is elite; Brazil’s individual quality prevails slightly more often than not, but this is a potential classic.
 
-**Summary:** The 2026 bracket is unusually unforgiving for the top seeds. France and Germany are on a collision course in the Round of 16, while Brazil and Argentina face immediate South American warfare. Spain and England appear to have the most navigable routes to the latter stages, but the expanded format means third-place durability and R32 adaptability will decide the champion. Expect at least one genuine superpower to exit before the quarter-finals.
+### Projected Final Four (If Seeds Hold)
+- **SF101:** France vs. Spain
+- **SF102:** Brazil vs. Argentina
+
+This would produce a France–Spain semifinal and a Brazil–Argentina semifinal—arguably the two most emotionally charged rivalries in international football. The survivors would meet in a final at MetLife Stadium with the potential to define a generation.
