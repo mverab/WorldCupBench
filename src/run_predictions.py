@@ -154,9 +154,13 @@ def build_messages(prompt: str, model_name: str, rationale: str = None) -> list:
     return messages
 
 
-def call_openrouter(api_key: str, model_id: str, messages: list) -> tuple:
+def call_openrouter(api_key: str, model_id: str, messages: list, json_mode: bool = True) -> tuple:
     """
     Calls the OpenRouter API with retries.
+
+    Args:
+        json_mode: If True, request JSON output via response_format.
+                   Phase 1 (rationale) should use False; Phase 2 (prediction) True.
 
     Returns (response_text, actual_model_id, usage_dict).
     Raises an exception if all attempts fail.
@@ -171,9 +175,9 @@ def call_openrouter(api_key: str, model_id: str, messages: list) -> tuple:
         "model": model_id,
         "messages": messages,
         "temperature": TEMPERATURE,
-        # Request JSON output when the model supports it.
-        "response_format": {"type": "json_object"},
     }
+    if json_mode:
+        payload["response_format"] = {"type": "json_object"}
 
     _log(f"→ POST {model_id} (timeout={REQUEST_TIMEOUT}s)", indent=1)
     phase_start = time.time()
@@ -253,7 +257,7 @@ def call_rationale_phase(api_key: str, model: dict, rationale_prompt: str) -> tu
         {"role": "user", "content": user_msg},
     ]
 
-    raw, actual_model, usage = call_openrouter(api_key, model_id, messages)
+    raw, actual_model, usage = call_openrouter(api_key, model_id, messages, json_mode=False)
     _log("✓ Rationale received — saved", indent=1)
     return raw, actual_model, usage
 
@@ -272,7 +276,7 @@ def call_prediction_phase(
     _log("Phase 2: Prediction", indent=1)
 
     messages = build_messages(prompt, name, rationale=rationale)
-    raw, actual_model, usage = call_openrouter(api_key, model_id, messages)
+    raw, actual_model, usage = call_openrouter(api_key, model_id, messages, json_mode=True)
 
     # Parse the JSON from the response.
     try:
