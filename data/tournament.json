@@ -917,7 +917,7 @@
         "stadium": "SoFi Stadium",
         "city": "Inglewood"
       },
-      "feeds_into": 89
+      "feeds_into": 90
     },
     {
       "match_id": 74,
@@ -953,7 +953,7 @@
         "stadium": "Estadio BBVA",
         "city": "Monterrey"
       },
-      "feeds_into": 90
+      "feeds_into": 91
     },
     {
       "match_id": 77,
@@ -965,7 +965,7 @@
         "stadium": "AT&T Stadium",
         "city": "Arlington"
       },
-      "feeds_into": 91
+      "feeds_into": 89
     },
     {
       "match_id": 78,
@@ -1013,7 +1013,7 @@
         "stadium": "Lumen Field",
         "city": "Seattle"
       },
-      "feeds_into": 93
+      "feeds_into": 94
     },
     {
       "match_id": 82,
@@ -1025,7 +1025,7 @@
         "stadium": "Levi's Stadium",
         "city": "Santa Clara"
       },
-      "feeds_into": 93
+      "feeds_into": 94
     },
     {
       "match_id": 83,
@@ -1037,7 +1037,7 @@
         "stadium": "SoFi Stadium",
         "city": "Inglewood"
       },
-      "feeds_into": 94
+      "feeds_into": 93
     },
     {
       "match_id": 84,
@@ -1049,7 +1049,7 @@
         "stadium": "BMO Field",
         "city": "Toronto"
       },
-      "feeds_into": 94
+      "feeds_into": 93
     },
     {
       "match_id": 85,
@@ -1061,7 +1061,7 @@
         "stadium": "BC Place",
         "city": "Vancouver"
       },
-      "feeds_into": 95
+      "feeds_into": 96
     },
     {
       "match_id": 86,
@@ -1097,25 +1097,13 @@
         "stadium": "GEHA Field at Arrowhead",
         "city": "Kansas City"
       },
-      "feeds_into": 96
+      "feeds_into": 95
     },
     {
       "match_id": 89,
       "round": "round_of_16",
-      "home_team": "W73",
-      "away_team": "W74",
-      "date": "2026-07-04",
-      "venue": {
-        "stadium": "NRG Stadium",
-        "city": "Houston"
-      },
-      "feeds_into": 97
-    },
-    {
-      "match_id": 90,
-      "round": "round_of_16",
-      "home_team": "W75",
-      "away_team": "W76",
+      "home_team": "W74",
+      "away_team": "W77",
       "date": "2026-07-04",
       "venue": {
         "stadium": "Lincoln Financial Field",
@@ -1124,16 +1112,28 @@
       "feeds_into": 97
     },
     {
+      "match_id": 90,
+      "round": "round_of_16",
+      "home_team": "W73",
+      "away_team": "W75",
+      "date": "2026-07-04",
+      "venue": {
+        "stadium": "NRG Stadium",
+        "city": "Houston"
+      },
+      "feeds_into": 97
+    },
+    {
       "match_id": 91,
       "round": "round_of_16",
-      "home_team": "W77",
+      "home_team": "W76",
       "away_team": "W78",
       "date": "2026-07-05",
       "venue": {
         "stadium": "MetLife Stadium",
         "city": "East Rutherford"
       },
-      "feeds_into": 98
+      "feeds_into": 99
     },
     {
       "match_id": 92,
@@ -1145,37 +1145,37 @@
         "stadium": "Estadio Azteca",
         "city": "Mexico City"
       },
-      "feeds_into": 98
-    },
-    {
-      "match_id": 93,
-      "round": "round_of_16",
-      "home_team": "W81",
-      "away_team": "W82",
-      "date": "2026-07-06",
-      "venue": {
-        "stadium": "AT&T Stadium",
-        "city": "Arlington"
-      },
       "feeds_into": 99
     },
     {
-      "match_id": 94,
+      "match_id": 93,
       "round": "round_of_16",
       "home_team": "W83",
       "away_team": "W84",
       "date": "2026-07-06",
       "venue": {
+        "stadium": "AT&T Stadium",
+        "city": "Arlington"
+      },
+      "feeds_into": 98
+    },
+    {
+      "match_id": 94,
+      "round": "round_of_16",
+      "home_team": "W81",
+      "away_team": "W82",
+      "date": "2026-07-06",
+      "venue": {
         "stadium": "Lumen Field",
         "city": "Seattle"
       },
-      "feeds_into": 99
+      "feeds_into": 98
     },
     {
       "match_id": 95,
       "round": "round_of_16",
-      "home_team": "W85",
-      "away_team": "W86",
+      "home_team": "W86",
+      "away_team": "W88",
       "date": "2026-07-07",
       "venue": {
         "stadium": "Mercedes-Benz Stadium",
@@ -1186,8 +1186,8 @@
     {
       "match_id": 96,
       "round": "round_of_16",
-      "home_team": "W87",
-      "away_team": "W88",
+      "home_team": "W85",
+      "away_team": "W87",
       "date": "2026-07-07",
       "venue": {
         "stadium": "BC Place",
@@ -1210,8 +1210,8 @@
     {
       "match_id": 98,
       "round": "quarter_final",
-      "home_team": "W91",
-      "away_team": "W92",
+      "home_team": "W93",
+      "away_team": "W94",
       "date": "2026-07-10",
       "venue": {
         "stadium": "SoFi Stadium",
@@ -1222,8 +1222,8 @@
     {
       "match_id": 99,
       "round": "quarter_final",
-      "home_team": "W93",
-      "away_team": "W94",
+      "home_team": "W91",
+      "away_team": "W92",
       "date": "2026-07-11",
       "venue": {
         "stadium": "Hard Rock Stadium",
