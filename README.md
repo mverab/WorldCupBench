@@ -86,15 +86,16 @@ python src/generate_leaderboard.py --inject-readme
 | Model | Provider | OpenRouter ID |
 |-------|----------|---------------|
 | GPT-5.5 | OpenAI | `openai/gpt-5.5` |
-| Claude Opus 4.8 | Anthropic | `anthropic/claude-opus-4.8` |
-| Gemini 3.1 Ultra | Google | `google/gemini-3.1-ultra` |
-| Grok 3 | xAI | `x-ai/grok-3` |
+| Claude Fable 5 | Anthropic | `anthropic/claude-fable-5` |
+| Gemini 3.5 Flash | Google | `google/gemini-3.5-flash` |
+| Grok 4.3 | xAI | `x-ai/grok-4.3` |
 | DeepSeek V4-Pro | DeepSeek | `deepseek/deepseek-v4-pro` |
 | Qwen 3.7 Max | Alibaba | `qwen/qwen-3.7-max` |
 | Kimi K2.6 | Moonshot AI | `moonshotai/kimi-k2.6` |
-| GLM-5 | Zhipu AI | `zhipuai/glm-5` |
+| GLM-5.1 | Zhipu AI | `z-ai/glm-5.1` |
 | MiniMax M3 | MiniMax | `minimax/minimax-m3` |
 | MiMo V2.5-Pro | Xiaomi | `xiaomi/mimo-v2.5-pro` |
+| Nex-N2-Pro | Nex AGI | `nex-agi/nex-n2-pro:free` |
 
 All models receive the **exact same prompt** with tournament data and must return structured JSON covering all 104 matches. See [`prompts/prediction_prompt.txt`](prompts/prediction_prompt.txt).
 

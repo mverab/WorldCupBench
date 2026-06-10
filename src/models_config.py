@@ -19,18 +19,18 @@ MODELS = [
         "provider": "OpenAI",
     },
     {
-        "name": "Claude-Opus-4.8",
-        "model_id": "anthropic/claude-opus-4.8",
+        "name": "Claude-Fable-5",
+        "model_id": "anthropic/claude-fable-5",
         "provider": "Anthropic",
     },
     {
-        "name": "Gemini-3.1-Ultra",
-        "model_id": "google/gemini-3.1-ultra",
+        "name": "Gemini-3.5-Flash",
+        "model_id": "google/gemini-3.5-flash",
         "provider": "Google",
     },
     {
-        "name": "Grok-3",
-        "model_id": "x-ai/grok-3",
+        "name": "Grok-4.3",
+        "model_id": "x-ai/grok-4.3",
         "provider": "xAI",
     },
     {
@@ -49,8 +49,8 @@ MODELS = [
         "provider": "Moonshot AI",
     },
     {
-        "name": "GLM-5",
-        "model_id": "zhipuai/glm-5",
+        "name": "GLM-5.1",
+        "model_id": "z-ai/glm-5.1",
         "provider": "Zhipu AI",
     },
     {

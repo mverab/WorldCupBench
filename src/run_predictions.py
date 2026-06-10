@@ -247,9 +247,10 @@ def call_rationale_phase(api_key: str, model: dict, rationale_prompt: str) -> tu
         "You are an expert football analyst and sports prediction system. "
         "Provide your strategic analysis in free-form markdown."
     )
+    user_msg = rationale_prompt.replace("<model name>", name)
     messages = [
         {"role": "system", "content": system_msg},
-        {"role": "user", "content": rationale_prompt},
+        {"role": "user", "content": user_msg},
     ]
 
     raw, actual_model, usage = call_openrouter(api_key, model_id, messages)
