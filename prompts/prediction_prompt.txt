@@ -1,77 +1,40 @@
 You are an expert football analyst and sports prediction system. Your task is to predict ALL the results of the FIFA World Cup 2026™ with the highest possible rigor.
 
 ==================================================
-TOURNAMENT CONTEXT: FIFA WORLD CUP 2026
+OFFICIAL TOURNAMENT CONTEXT
 ==================================================
 
-- Hosts: Canada, Mexico, and the United States (3 host countries, 16 cities).
-- Start: June 11, 2026 (opening match: Mexico vs. South Africa at Estadio Azteca).
-- Final: July 19, 2026 at New York New Jersey Stadium.
-- Expanded format: 48 national teams, 104 total matches (historic record).
-
-GROUP STAGE:
-- 48 teams divided into 12 groups of 4 teams (Groups A to L).
-- Each team plays 3 matches in its group. Total: 72 matches.
-
-QUALIFICATION TO KNOCKOUT STAGE:
-- The 1st and 2nd place teams from each of the 12 groups advance (24 teams).
-- The 8 best third-place teams from the overall third-place table advance (8 teams).
-- Total qualified: 32 teams.
-
-KNOCKOUT STAGE (single elimination):
-- Round of 32 (16 matches) -> Round of 16 (8 matches) -> Quarter Finals (4 matches) -> Semi-Finals (2 matches) -> Third Place Match (1 match) + Grand Final (1 match).
-
-QUALIFIED UEFA TEAMS (16 spots):
-Germany, Austria, Belgium, Bosnia and Herzegovina, Croatia, Scotland, Spain, France, England, Norway, Netherlands, Portugal, Czech Republic, Sweden, Switzerland, and Turkey.
-
-OTHER TEAMS AND CONFIRMED GROUPS (partial):
-- Group A: Mexico (A1), South Africa.
-- Group B: Canada (B1).
-- Group D: United States (D1), Paraguay.
-- Group L: England, Croatia.
-- Other confirmed teams: Argentina, Algeria, Brazil, Morocco, Curacao, Tunisia, Japan, Uruguay.
-
-BRACKET STRUCTURE (Round of 32, pairings by group position):
-- Match 73: 1st H vs 2nd J
-- Match 74: 1st I vs best 3rd (from C/D/F/G/H)
-- Match 75: 1st C vs 2nd F
-- Match 76: 2nd E vs 2nd I
-- Match 77: 1st A vs best 3rd (from C/E/F/H/I)
-- Match 78: 2nd D vs 2nd G
-- Match 79: 1st D vs best 3rd (from B/E/F/I/J)
-- Match 80: 1st K vs best 3rd (from D/E/I/J/L)
-- Match 81: 1st G vs best 3rd (from A/E/H/I/J)
-- Match 82: 1st B vs best 3rd (from E/F/G/I/J)
-- Match 84: 1st F vs 2nd C
-- Match 85: 1st L vs best 3rd (from E/H/I/J/K)
-- Match 87: 2nd K vs 2nd L
-- Match 88: 1st E vs best 3rd (from A/B/C/D/F)
-- Match 91: 1st J vs 2nd H
-- Match 96: 2nd A vs 2nd B
-
-TIE-BREAK CRITERIA IN GROUPS (in order):
-1. Points. 2. Goal difference. 3. Goals scored. 4. Head-to-head results among tied teams. 5. Fair play. 6. FIFA draw.
+{{TOURNAMENT_DATA}}
 
 ==================================================
 PREDICTION INSTRUCTIONS
 ==================================================
 
 You must generate predictions for:
-1. ALL group stage matches (include score and winner; the winner can be "Draw").
+1. ALL 72 group stage matches (include exact score and 1X2 probabilities).
 2. The qualifiers from each group: 1st place, 2nd place (12 each) and the 8 best third-place teams.
-3. All matches in each knockout round with their winner and score.
-4. The final tournament positions: Champion (1st), Runner-up (2nd), Third Place (3rd), and Fourth Place (4th).
+3. All matches in each knockout round with their winner, score and probabilities.
+4. The final tournament positions: Champion (1st), Runner-up (2nd), Third Place (3rd) and Fourth Place (4th).
 
 For each match provide:
-- match_id: identifier (e.g., "GS-01" for groups, "R32-73" for Round of 32, "FINAL").
+- match_id: identifier (e.g. "GS-01" for groups, "R32-73" for Round of 32, "FINAL").
 - stage: one of [group_stage, round_of_32, round_of_16, quarter_finals, semi_finals, third_place_match, final].
 - group: group letter (A-L) or null if knockout.
-- team_a and team_b: team names.
-- predicted_winner: winning team (or "Draw" only in group stage).
-- predicted_score: object with goals {"team_a": int, "team_b": int}.
-- confidence: number between 0.0 and 1.0.
+- home_team and away_team: 3-letter FIFA codes (e.g. "MEX", "BRA").
+- predicted_result: one of ["home", "draw", "away"] indicating who wins or if it's a draw.
+  - In group stage, "draw" is valid.
+  - In knockout stages (from Round of 32 onward), "draw" is NOT allowed; you must predict a winner.
+- predicted_score: object with integer goals {"home": int, "away": int}.
+- probs: 1X2 probabilities that SUM to 1.0 (tolerance ±0.02):
+  {
+    "home": float,   // probability of home win
+    "draw": float,   // probability of draw (group stage only; use 0.0 in knockouts)
+    "away": float    // probability of away win
+  }
+  Example: {"home": 0.55, "draw": 0.25, "away": 0.20} → sum = 1.00
 
-NOTE ON UNCONFIRMED TEAMS: Where group composition is not confirmed, use your best estimate based on FIFA ranking and the historical strength of national teams to complete the 12 groups of 4 teams and the 72 group stage predictions.
+IMPORTANT NOTE: Use ONLY 3-letter FIFA codes for teams. Do not use full names.
+For a draw in group stage, predicted_result is "draw" and predicted_score can be a draw (e.g. 1-1).
 
 ==================================================
 OUTPUT FORMAT (MANDATORY)
@@ -80,24 +43,27 @@ OUTPUT FORMAT (MANDATORY)
 Respond ONLY with a valid JSON object (no additional text, no markdown, no explanations) that follows EXACTLY this structure:
 
 {
-  "model_name": "<model_name>",
+  "model_name": "<model name>",
+  "model_id": "<model id on OpenRouter>",
   "timestamp": "<ISO 8601 date-time>",
+  "prompt_version": "2.0",
+  "temperature": 0.3,
   "group_stage_matches": [
     {
       "match_id": "GS-01",
       "stage": "group_stage",
       "group": "A",
-      "team_a": "Mexico",
-      "team_b": "South Africa",
-      "predicted_winner": "Mexico",
-      "predicted_score": {"team_a": 2, "team_b": 0},
-      "confidence": 0.72
+      "home_team": "MEX",
+      "away_team": "RSA",
+      "predicted_result": "home",
+      "predicted_score": {"home": 2, "away": 0},
+      "probs": {"home": 0.65, "draw": 0.20, "away": 0.15}
     }
   ],
   "group_qualifiers": {
-    "first_place": [{"team": "Mexico", "group": "A"}],
-    "second_place": [{"team": "South Africa", "group": "A"}],
-    "best_third_place": [{"team": "<team>", "group": "<letter>"}]
+    "first_place": [{"team_code": "MEX", "group": "A"}],
+    "second_place": [{"team_code": "RSA", "group": "A"}],
+    "best_third_place": [{"team_code": "<code>", "group": "<letter>"}]
   },
   "knockout_stage": {
     "round_of_32": [
@@ -105,11 +71,11 @@ Respond ONLY with a valid JSON object (no additional text, no markdown, no expla
         "match_id": "R32-73",
         "stage": "round_of_32",
         "group": null,
-        "team_a": "<1st H>",
-        "team_b": "<2nd J>",
-        "predicted_winner": "<team>",
-        "predicted_score": {"team_a": 1, "team_b": 0},
-        "confidence": 0.6
+        "home_team": "<code 1st H>",
+        "away_team": "<code 2nd J>",
+        "predicted_result": "home",
+        "predicted_score": {"home": 2, "away": 1},
+        "probs": {"home": 0.60, "draw": 0.00, "away": 0.40}
       }
     ],
     "round_of_16": [],
@@ -119,29 +85,38 @@ Respond ONLY with a valid JSON object (no additional text, no markdown, no expla
       "match_id": "THIRD",
       "stage": "third_place_match",
       "group": null,
-      "team_a": "<team>",
-      "team_b": "<team>",
-      "predicted_winner": "<team>",
-      "predicted_score": {"team_a": 2, "team_b": 1},
-      "confidence": 0.55
+      "home_team": "<code>",
+      "away_team": "<code>",
+      "predicted_result": "home",
+      "predicted_score": {"home": 2, "away": 1},
+      "probs": {"home": 0.55, "draw": 0.00, "away": 0.45}
     },
     "final": {
       "match_id": "FINAL",
       "stage": "final",
       "group": null,
-      "team_a": "<team>",
-      "team_b": "<team>",
-      "predicted_winner": "<team>",
-      "predicted_score": {"team_a": 2, "team_b": 1},
-      "confidence": 0.58
+      "home_team": "<code>",
+      "away_team": "<code>",
+      "predicted_result": "home",
+      "predicted_score": {"home": 2, "away": 1},
+      "probs": {"home": 0.52, "draw": 0.00, "away": 0.48}
     }
   },
   "final_standings": {
-    "champion": "<team>",
-    "runner_up": "<team>",
-    "third_place": "<team>",
-    "fourth_place": "<team>"
+    "champion": "<FIFA code>",
+    "runner_up": "<FIFA code>",
+    "third_place": "<FIFA code>",
+    "fourth_place": "<FIFA code>"
   }
 }
+
+VALIDATION RULES:
+- All group stage match_ids must be "GS-01" to "GS-72".
+- All Round of 32 match_ids must be "R32-73" to "R32-96" (16 matches).
+- All teams must use 3-letter FIFA codes.
+- probs.home + probs.draw + probs.away must sum to 1.0 ± 0.02.
+- In knockouts, probs.draw must be 0.0 (no draws; if you predict a draw in 90 min, indicate the winner of extra time/penalties).
+- There must be exactly 72 matches in group_stage_matches.
+- There must be exactly 12 teams in first_place, 12 in second_place, 8 in best_third_place.
 
 IMPORTANT: The output must be pure, parseable JSON. Do not include comments, markdown code blocks (```), or text before or after the JSON.

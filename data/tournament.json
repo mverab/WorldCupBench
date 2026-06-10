@@ -1,0 +1,1012 @@
+{
+  "edition": "2026",
+  "start_date": "2026-06-11",
+  "end_date": "2026-07-19",
+  "groups": [
+    {
+      "group": "A",
+      "teams": [
+        "MEX",
+        "RSA",
+        "KOR",
+        "DEN"
+      ]
+    },
+    {
+      "group": "B",
+      "teams": [
+        "CAN",
+        "ITA",
+        "QAT",
+        "SUI"
+      ]
+    },
+    {
+      "group": "C",
+      "teams": [
+        "BRA",
+        "MAR",
+        "HAI",
+        "SCO"
+      ]
+    },
+    {
+      "group": "D",
+      "teams": [
+        "USA",
+        "PAR",
+        "AUS",
+        "TUR"
+      ]
+    },
+    {
+      "group": "E",
+      "teams": [
+        "GER",
+        "CUW",
+        "CIV",
+        "ECU"
+      ]
+    },
+    {
+      "group": "F",
+      "teams": [
+        "NED",
+        "JPN",
+        "UKR",
+        "TUN"
+      ]
+    },
+    {
+      "group": "G",
+      "teams": [
+        "BEL",
+        "EGY",
+        "IRN",
+        "NZL"
+      ]
+    },
+    {
+      "group": "H",
+      "teams": [
+        "ESP",
+        "CPV",
+        "KSA",
+        "URU"
+      ]
+    },
+    {
+      "group": "I",
+      "teams": [
+        "FRA",
+        "SEN",
+        "CMR",
+        "NOR"
+      ]
+    },
+    {
+      "group": "J",
+      "teams": [
+        "ARG",
+        "ALG",
+        "AUT",
+        "JOR"
+      ]
+    },
+    {
+      "group": "K",
+      "teams": [
+        "POR",
+        "JAM",
+        "UZB",
+        "COL"
+      ]
+    },
+    {
+      "group": "L",
+      "teams": [
+        "ENG",
+        "CRO",
+        "GHA",
+        "PAN"
+      ]
+    }
+  ],
+  "matches": [
+    {
+      "match_id": 1,
+      "group": "A",
+      "home_team": "MEX",
+      "away_team": "RSA",
+      "date": "2026-06-11",
+      "venue": {
+        "stadium": "Estadio Azteca",
+        "city": "Mexico City"
+      }
+    },
+    {
+      "match_id": 2,
+      "group": "A",
+      "home_team": "KOR",
+      "away_team": "DEN",
+      "date": "2026-06-11",
+      "venue": {
+        "stadium": "BMO Field",
+        "city": "Toronto"
+      }
+    },
+    {
+      "match_id": 3,
+      "group": "A",
+      "home_team": "MEX",
+      "away_team": "KOR",
+      "date": "2026-06-16",
+      "venue": {
+        "stadium": "SoFi Stadium",
+        "city": "Los Angeles"
+      }
+    },
+    {
+      "match_id": 4,
+      "group": "A",
+      "home_team": "RSA",
+      "away_team": "DEN",
+      "date": "2026-06-16",
+      "venue": {
+        "stadium": "MetLife Stadium",
+        "city": "New York/New Jersey"
+      }
+    },
+    {
+      "match_id": 5,
+      "group": "A",
+      "home_team": "MEX",
+      "away_team": "DEN",
+      "date": "2026-06-22",
+      "venue": {
+        "stadium": "NRG Stadium",
+        "city": "Houston"
+      }
+    },
+    {
+      "match_id": 6,
+      "group": "A",
+      "home_team": "RSA",
+      "away_team": "KOR",
+      "date": "2026-06-22",
+      "venue": {
+        "stadium": "GEHA Field at Arrowhead",
+        "city": "Kansas City"
+      }
+    },
+    {
+      "match_id": 7,
+      "group": "B",
+      "home_team": "CAN",
+      "away_team": "ITA",
+      "date": "2026-06-12",
+      "venue": {
+        "stadium": "BMO Field",
+        "city": "Toronto"
+      }
+    },
+    {
+      "match_id": 8,
+      "group": "B",
+      "home_team": "QAT",
+      "away_team": "SUI",
+      "date": "2026-06-12",
+      "venue": {
+        "stadium": "AT&T Stadium",
+        "city": "Dallas"
+      }
+    },
+    {
+      "match_id": 9,
+      "group": "B",
+      "home_team": "CAN",
+      "away_team": "QAT",
+      "date": "2026-06-17",
+      "venue": {
+        "stadium": "Estadio BBVA",
+        "city": "Monterrey"
+      }
+    },
+    {
+      "match_id": 10,
+      "group": "B",
+      "home_team": "ITA",
+      "away_team": "SUI",
+      "date": "2026-06-17",
+      "venue": {
+        "stadium": "Estadio Akron",
+        "city": "Guadalajara"
+      }
+    },
+    {
+      "match_id": 11,
+      "group": "B",
+      "home_team": "CAN",
+      "away_team": "SUI",
+      "date": "2026-06-21",
+      "venue": {
+        "stadium": "Mercedes-Benz Stadium",
+        "city": "Atlanta"
+      }
+    },
+    {
+      "match_id": 12,
+      "group": "B",
+      "home_team": "ITA",
+      "away_team": "QAT",
+      "date": "2026-06-21",
+      "venue": {
+        "stadium": "Gillette Stadium",
+        "city": "Boston"
+      }
+    },
+    {
+      "match_id": 13,
+      "group": "C",
+      "home_team": "BRA",
+      "away_team": "MAR",
+      "date": "2026-06-13",
+      "venue": {
+        "stadium": "MetLife Stadium",
+        "city": "New York/New Jersey"
+      }
+    },
+    {
+      "match_id": 14,
+      "group": "C",
+      "home_team": "HAI",
+      "away_team": "SCO",
+      "date": "2026-06-13",
+      "venue": {
+        "stadium": "Hard Rock Stadium",
+        "city": "Miami"
+      }
+    },
+    {
+      "match_id": 15,
+      "group": "C",
+      "home_team": "BRA",
+      "away_team": "HAI",
+      "date": "2026-06-18",
+      "venue": {
+        "stadium": "Lincoln Financial Field",
+        "city": "Philadelphia"
+      }
+    },
+    {
+      "match_id": 16,
+      "group": "C",
+      "home_team": "MAR",
+      "away_team": "SCO",
+      "date": "2026-06-18",
+      "venue": {
+        "stadium": "Levi's Stadium",
+        "city": "Santa Clara"
+      }
+    },
+    {
+      "match_id": 17,
+      "group": "C",
+      "home_team": "BRA",
+      "away_team": "SCO",
+      "date": "2026-06-23",
+      "venue": {
+        "stadium": "Lumen Field",
+        "city": "Seattle"
+      }
+    },
+    {
+      "match_id": 18,
+      "group": "C",
+      "home_team": "MAR",
+      "away_team": "HAI",
+      "date": "2026-06-23",
+      "venue": {
+        "stadium": "BC Place",
+        "city": "Vancouver"
+      }
+    },
+    {
+      "match_id": 19,
+      "group": "D",
+      "home_team": "USA",
+      "away_team": "PAR",
+      "date": "2026-06-12",
+      "venue": {
+        "stadium": "SoFi Stadium",
+        "city": "Los Angeles"
+      }
+    },
+    {
+      "match_id": 20,
+      "group": "D",
+      "home_team": "AUS",
+      "away_team": "TUR",
+      "date": "2026-06-12",
+      "venue": {
+        "stadium": "Estadio Azteca",
+        "city": "Mexico City"
+      }
+    },
+    {
+      "match_id": 21,
+      "group": "D",
+      "home_team": "USA",
+      "away_team": "AUS",
+      "date": "2026-06-16",
+      "venue": {
+        "stadium": "BMO Field",
+        "city": "Toronto"
+      }
+    },
+    {
+      "match_id": 22,
+      "group": "D",
+      "home_team": "PAR",
+      "away_team": "TUR",
+      "date": "2026-06-16",
+      "venue": {
+        "stadium": "NRG Stadium",
+        "city": "Houston"
+      }
+    },
+    {
+      "match_id": 23,
+      "group": "D",
+      "home_team": "USA",
+      "away_team": "TUR",
+      "date": "2026-06-22",
+      "venue": {
+        "stadium": "AT&T Stadium",
+        "city": "Dallas"
+      }
+    },
+    {
+      "match_id": 24,
+      "group": "D",
+      "home_team": "PAR",
+      "away_team": "AUS",
+      "date": "2026-06-22",
+      "venue": {
+        "stadium": "Estadio BBVA",
+        "city": "Monterrey"
+      }
+    },
+    {
+      "match_id": 25,
+      "group": "E",
+      "home_team": "GER",
+      "away_team": "CUW",
+      "date": "2026-06-14",
+      "venue": {
+        "stadium": "NRG Stadium",
+        "city": "Houston"
+      }
+    },
+    {
+      "match_id": 26,
+      "group": "E",
+      "home_team": "CIV",
+      "away_team": "ECU",
+      "date": "2026-06-14",
+      "venue": {
+        "stadium": "Estadio Akron",
+        "city": "Guadalajara"
+      }
+    },
+    {
+      "match_id": 27,
+      "group": "E",
+      "home_team": "GER",
+      "away_team": "CIV",
+      "date": "2026-06-18",
+      "venue": {
+        "stadium": "Mercedes-Benz Stadium",
+        "city": "Atlanta"
+      }
+    },
+    {
+      "match_id": 28,
+      "group": "E",
+      "home_team": "CUW",
+      "away_team": "ECU",
+      "date": "2026-06-18",
+      "venue": {
+        "stadium": "Gillette Stadium",
+        "city": "Boston"
+      }
+    },
+    {
+      "match_id": 29,
+      "group": "E",
+      "home_team": "GER",
+      "away_team": "ECU",
+      "date": "2026-06-24",
+      "venue": {
+        "stadium": "Hard Rock Stadium",
+        "city": "Miami"
+      }
+    },
+    {
+      "match_id": 30,
+      "group": "E",
+      "home_team": "CUW",
+      "away_team": "CIV",
+      "date": "2026-06-24",
+      "venue": {
+        "stadium": "Lincoln Financial Field",
+        "city": "Philadelphia"
+      }
+    },
+    {
+      "match_id": 31,
+      "group": "F",
+      "home_team": "NED",
+      "away_team": "JPN",
+      "date": "2026-06-15",
+      "venue": {
+        "stadium": "Levi's Stadium",
+        "city": "Santa Clara"
+      }
+    },
+    {
+      "match_id": 32,
+      "group": "F",
+      "home_team": "UKR",
+      "away_team": "TUN",
+      "date": "2026-06-15",
+      "venue": {
+        "stadium": "Lumen Field",
+        "city": "Seattle"
+      }
+    },
+    {
+      "match_id": 33,
+      "group": "F",
+      "home_team": "NED",
+      "away_team": "UKR",
+      "date": "2026-06-20",
+      "venue": {
+        "stadium": "BC Place",
+        "city": "Vancouver"
+      }
+    },
+    {
+      "match_id": 34,
+      "group": "F",
+      "home_team": "TUN",
+      "away_team": "JPN",
+      "date": "2026-06-20",
+      "venue": {
+        "stadium": "Estadio BBVA",
+        "city": "Monterrey"
+      }
+    },
+    {
+      "match_id": 35,
+      "group": "F",
+      "home_team": "NED",
+      "away_team": "TUN",
+      "date": "2026-06-25",
+      "venue": {
+        "stadium": "Estadio Azteca",
+        "city": "Mexico City"
+      }
+    },
+    {
+      "match_id": 36,
+      "group": "F",
+      "home_team": "JPN",
+      "away_team": "UKR",
+      "date": "2026-06-25",
+      "venue": {
+        "stadium": "BMO Field",
+        "city": "Toronto"
+      }
+    },
+    {
+      "match_id": 37,
+      "group": "G",
+      "home_team": "BEL",
+      "away_team": "EGY",
+      "date": "2026-06-14",
+      "venue": {
+        "stadium": "SoFi Stadium",
+        "city": "Los Angeles"
+      }
+    },
+    {
+      "match_id": 38,
+      "group": "G",
+      "home_team": "IRN",
+      "away_team": "NZL",
+      "date": "2026-06-14",
+      "venue": {
+        "stadium": "MetLife Stadium",
+        "city": "New York/New Jersey"
+      }
+    },
+    {
+      "match_id": 39,
+      "group": "G",
+      "home_team": "BEL",
+      "away_team": "IRN",
+      "date": "2026-06-19",
+      "venue": {
+        "stadium": "NRG Stadium",
+        "city": "Houston"
+      }
+    },
+    {
+      "match_id": 40,
+      "group": "G",
+      "home_team": "EGY",
+      "away_team": "NZL",
+      "date": "2026-06-19",
+      "venue": {
+        "stadium": "GEHA Field at Arrowhead",
+        "city": "Kansas City"
+      }
+    },
+    {
+      "match_id": 41,
+      "group": "G",
+      "home_team": "BEL",
+      "away_team": "NZL",
+      "date": "2026-06-24",
+      "venue": {
+        "stadium": "AT&T Stadium",
+        "city": "Dallas"
+      }
+    },
+    {
+      "match_id": 42,
+      "group": "G",
+      "home_team": "EGY",
+      "away_team": "IRN",
+      "date": "2026-06-24",
+      "venue": {
+        "stadium": "Estadio BBVA",
+        "city": "Monterrey"
+      }
+    },
+    {
+      "match_id": 43,
+      "group": "H",
+      "home_team": "ESP",
+      "away_team": "CPV",
+      "date": "2026-06-15",
+      "venue": {
+        "stadium": "Estadio Akron",
+        "city": "Guadalajara"
+      }
+    },
+    {
+      "match_id": 44,
+      "group": "H",
+      "home_team": "KSA",
+      "away_team": "URU",
+      "date": "2026-06-15",
+      "venue": {
+        "stadium": "Mercedes-Benz Stadium",
+        "city": "Atlanta"
+      }
+    },
+    {
+      "match_id": 45,
+      "group": "H",
+      "home_team": "ESP",
+      "away_team": "KSA",
+      "date": "2026-06-19",
+      "venue": {
+        "stadium": "Gillette Stadium",
+        "city": "Boston"
+      }
+    },
+    {
+      "match_id": 46,
+      "group": "H",
+      "home_team": "CPV",
+      "away_team": "URU",
+      "date": "2026-06-19",
+      "venue": {
+        "stadium": "Hard Rock Stadium",
+        "city": "Miami"
+      }
+    },
+    {
+      "match_id": 47,
+      "group": "H",
+      "home_team": "ESP",
+      "away_team": "URU",
+      "date": "2026-06-26",
+      "venue": {
+        "stadium": "Estadio Akron",
+        "city": "Guadalajara"
+      }
+    },
+    {
+      "match_id": 48,
+      "group": "H",
+      "home_team": "CPV",
+      "away_team": "KSA",
+      "date": "2026-06-26",
+      "venue": {
+        "stadium": "Lincoln Financial Field",
+        "city": "Philadelphia"
+      }
+    },
+    {
+      "match_id": 49,
+      "group": "I",
+      "home_team": "FRA",
+      "away_team": "SEN",
+      "date": "2026-06-15",
+      "venue": {
+        "stadium": "BC Place",
+        "city": "Vancouver"
+      }
+    },
+    {
+      "match_id": 50,
+      "group": "I",
+      "home_team": "CMR",
+      "away_team": "NOR",
+      "date": "2026-06-15",
+      "venue": {
+        "stadium": "Estadio Azteca",
+        "city": "Mexico City"
+      }
+    },
+    {
+      "match_id": 51,
+      "group": "I",
+      "home_team": "FRA",
+      "away_team": "CMR",
+      "date": "2026-06-20",
+      "venue": {
+        "stadium": "BMO Field",
+        "city": "Toronto"
+      }
+    },
+    {
+      "match_id": 52,
+      "group": "I",
+      "home_team": "SEN",
+      "away_team": "NOR",
+      "date": "2026-06-20",
+      "venue": {
+        "stadium": "SoFi Stadium",
+        "city": "Los Angeles"
+      }
+    },
+    {
+      "match_id": 53,
+      "group": "I",
+      "home_team": "FRA",
+      "away_team": "NOR",
+      "date": "2026-06-25",
+      "venue": {
+        "stadium": "MetLife Stadium",
+        "city": "New York/New Jersey"
+      }
+    },
+    {
+      "match_id": 54,
+      "group": "I",
+      "home_team": "SEN",
+      "away_team": "CMR",
+      "date": "2026-06-25",
+      "venue": {
+        "stadium": "NRG Stadium",
+        "city": "Houston"
+      }
+    },
+    {
+      "match_id": 55,
+      "group": "J",
+      "home_team": "ARG",
+      "away_team": "ALG",
+      "date": "2026-06-16",
+      "venue": {
+        "stadium": "GEHA Field at Arrowhead",
+        "city": "Kansas City"
+      }
+    },
+    {
+      "match_id": 56,
+      "group": "J",
+      "home_team": "AUT",
+      "away_team": "JOR",
+      "date": "2026-06-16",
+      "venue": {
+        "stadium": "AT&T Stadium",
+        "city": "Dallas"
+      }
+    },
+    {
+      "match_id": 57,
+      "group": "J",
+      "home_team": "ARG",
+      "away_team": "AUT",
+      "date": "2026-06-21",
+      "venue": {
+        "stadium": "Estadio BBVA",
+        "city": "Monterrey"
+      }
+    },
+    {
+      "match_id": 58,
+      "group": "J",
+      "home_team": "ALG",
+      "away_team": "JOR",
+      "date": "2026-06-21",
+      "venue": {
+        "stadium": "Estadio Akron",
+        "city": "Guadalajara"
+      }
+    },
+    {
+      "match_id": 59,
+      "group": "J",
+      "home_team": "ARG",
+      "away_team": "JOR",
+      "date": "2026-06-26",
+      "venue": {
+        "stadium": "Mercedes-Benz Stadium",
+        "city": "Atlanta"
+      }
+    },
+    {
+      "match_id": 60,
+      "group": "J",
+      "home_team": "ALG",
+      "away_team": "AUT",
+      "date": "2026-06-26",
+      "venue": {
+        "stadium": "Gillette Stadium",
+        "city": "Boston"
+      }
+    },
+    {
+      "match_id": 61,
+      "group": "K",
+      "home_team": "POR",
+      "away_team": "JAM",
+      "date": "2026-06-15",
+      "venue": {
+        "stadium": "Hard Rock Stadium",
+        "city": "Miami"
+      }
+    },
+    {
+      "match_id": 62,
+      "group": "K",
+      "home_team": "UZB",
+      "away_team": "COL",
+      "date": "2026-06-15",
+      "venue": {
+        "stadium": "Lincoln Financial Field",
+        "city": "Philadelphia"
+      }
+    },
+    {
+      "match_id": 63,
+      "group": "K",
+      "home_team": "POR",
+      "away_team": "UZB",
+      "date": "2026-06-20",
+      "venue": {
+        "stadium": "Levi's Stadium",
+        "city": "Santa Clara"
+      }
+    },
+    {
+      "match_id": 64,
+      "group": "K",
+      "home_team": "JAM",
+      "away_team": "COL",
+      "date": "2026-06-20",
+      "venue": {
+        "stadium": "Lumen Field",
+        "city": "Seattle"
+      }
+    },
+    {
+      "match_id": 65,
+      "group": "K",
+      "home_team": "POR",
+      "away_team": "COL",
+      "date": "2026-06-25",
+      "venue": {
+        "stadium": "BC Place",
+        "city": "Vancouver"
+      }
+    },
+    {
+      "match_id": 66,
+      "group": "K",
+      "home_team": "JAM",
+      "away_team": "UZB",
+      "date": "2026-06-25",
+      "venue": {
+        "stadium": "SoFi Stadium",
+        "city": "Los Angeles"
+      }
+    },
+    {
+      "match_id": 67,
+      "group": "L",
+      "home_team": "ENG",
+      "away_team": "CRO",
+      "date": "2026-06-17",
+      "venue": {
+        "stadium": "AT&T Stadium",
+        "city": "Dallas"
+      }
+    },
+    {
+      "match_id": 68,
+      "group": "L",
+      "home_team": "GHA",
+      "away_team": "PAN",
+      "date": "2026-06-17",
+      "venue": {
+        "stadium": "MetLife Stadium",
+        "city": "New York/New Jersey"
+      }
+    },
+    {
+      "match_id": 69,
+      "group": "L",
+      "home_team": "ENG",
+      "away_team": "GHA",
+      "date": "2026-06-21",
+      "venue": {
+        "stadium": "NRG Stadium",
+        "city": "Houston"
+      }
+    },
+    {
+      "match_id": 70,
+      "group": "L",
+      "home_team": "CRO",
+      "away_team": "PAN",
+      "date": "2026-06-21",
+      "venue": {
+        "stadium": "GEHA Field at Arrowhead",
+        "city": "Kansas City"
+      }
+    },
+    {
+      "match_id": 71,
+      "group": "L",
+      "home_team": "ENG",
+      "away_team": "PAN",
+      "date": "2026-06-26",
+      "venue": {
+        "stadium": "AT&T Stadium",
+        "city": "Dallas"
+      }
+    },
+    {
+      "match_id": 72,
+      "group": "L",
+      "home_team": "CRO",
+      "away_team": "GHA",
+      "date": "2026-06-26",
+      "venue": {
+        "stadium": "Estadio BBVA",
+        "city": "Monterrey"
+      }
+    }
+  ],
+  "knockout_bracket": [
+    {
+      "match_id": 73,
+      "round": "round_of_32",
+      "home_team": "1H",
+      "away_team": "2J"
+    },
+    {
+      "match_id": 74,
+      "round": "round_of_32",
+      "home_team": "1I",
+      "away_team": "3rd(C/D/F/G/H)"
+    },
+    {
+      "match_id": 75,
+      "round": "round_of_32",
+      "home_team": "1C",
+      "away_team": "2F"
+    },
+    {
+      "match_id": 76,
+      "round": "round_of_32",
+      "home_team": "2E",
+      "away_team": "2I"
+    },
+    {
+      "match_id": 77,
+      "round": "round_of_32",
+      "home_team": "1A",
+      "away_team": "3rd(C/E/F/H/I)"
+    },
+    {
+      "match_id": 78,
+      "round": "round_of_32",
+      "home_team": "2D",
+      "away_team": "2G"
+    },
+    {
+      "match_id": 79,
+      "round": "round_of_32",
+      "home_team": "1D",
+      "away_team": "3rd(B/E/F/I/J)"
+    },
+    {
+      "match_id": 80,
+      "round": "round_of_32",
+      "home_team": "1K",
+      "away_team": "3rd(D/E/I/J/L)"
+    },
+    {
+      "match_id": 81,
+      "round": "round_of_32",
+      "home_team": "1G",
+      "away_team": "3rd(A/E/H/I/J)"
+    },
+    {
+      "match_id": 82,
+      "round": "round_of_32",
+      "home_team": "1B",
+      "away_team": "3rd(E/F/G/I/J)"
+    },
+    {
+      "match_id": 84,
+      "round": "round_of_32",
+      "home_team": "1F",
+      "away_team": "2C"
+    },
+    {
+      "match_id": 85,
+      "round": "round_of_32",
+      "home_team": "1L",
+      "away_team": "3rd(E/H/I/J/K)"
+    },
+    {
+      "match_id": 87,
+      "round": "round_of_32",
+      "home_team": "2K",
+      "away_team": "2L"
+    },
+    {
+      "match_id": 88,
+      "round": "round_of_32",
+      "home_team": "1E",
+      "away_team": "3rd(A/B/C/D/F)"
+    },
+    {
+      "match_id": 91,
+      "round": "round_of_32",
+      "home_team": "1J",
+      "away_team": "2H"
+    },
+    {
+      "match_id": 96,
+      "round": "round_of_32",
+      "home_team": "2A",
+      "away_team": "2B"
+    }
+  ],
+  "metadata": {
+    "source": "FIFA Official Draw 2025-12-05",
+    "last_updated": "2026-06-10T00:00:00Z",
+    "format": "48 teams, 12 groups of 4, 104 matches total"
+  }
+}

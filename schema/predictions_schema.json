@@ -7,6 +7,8 @@
   "required": [
     "model_name",
     "timestamp",
+    "prompt_version",
+    "temperature",
     "group_stage_matches",
     "group_qualifiers",
     "knockout_stage",
@@ -26,9 +28,21 @@
       "format": "date-time",
       "description": "ISO 8601 date and time when the prediction was generated."
     },
+    "prompt_version": {
+      "type": "string",
+      "description": "Version of the prompt used (e.g., '2.0')."
+    },
+    "temperature": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 2,
+      "description": "Temperature used for prediction generation."
+    },
     "group_stage_matches": {
       "type": "array",
       "description": "Predictions for the 72 group stage matches.",
+      "minItems": 72,
+      "maxItems": 72,
       "items": { "$ref": "#/definitions/match_prediction" }
     },
     "group_qualifiers": {
@@ -39,16 +53,22 @@
         "first_place": {
           "type": "array",
           "description": "List of 12 teams that finish first in their groups (A-L).",
+          "minItems": 12,
+          "maxItems": 12,
           "items": { "$ref": "#/definitions/group_position" }
         },
         "second_place": {
           "type": "array",
           "description": "List of 12 teams that finish second in their groups (A-L).",
+          "minItems": 12,
+          "maxItems": 12,
           "items": { "$ref": "#/definitions/group_position" }
         },
         "best_third_place": {
           "type": "array",
           "description": "The 8 best third-place teams that advance to the Round of 32.",
+          "minItems": 8,
+          "maxItems": 8,
           "items": { "$ref": "#/definitions/group_position" }
         }
       }
@@ -68,21 +88,29 @@
         "round_of_32": {
           "type": "array",
           "description": "Predictions for the 16 Round of 32 matches.",
+          "minItems": 16,
+          "maxItems": 16,
           "items": { "$ref": "#/definitions/match_prediction" }
         },
         "round_of_16": {
           "type": "array",
-          "description": "Predictions for the 8 Round of 16 matches (Round of 16).",
+          "description": "Predictions for the 8 Round of 16 matches.",
+          "minItems": 8,
+          "maxItems": 8,
           "items": { "$ref": "#/definitions/match_prediction" }
         },
         "quarter_finals": {
           "type": "array",
           "description": "Predictions for the 4 Quarter Final matches.",
+          "minItems": 4,
+          "maxItems": 4,
           "items": { "$ref": "#/definitions/match_prediction" }
         },
         "semi_finals": {
           "type": "array",
           "description": "Predictions for the 2 Semi-Final matches.",
+          "minItems": 2,
+          "maxItems": 2,
           "items": { "$ref": "#/definitions/match_prediction" }
         },
         "third_place_match": {
@@ -102,19 +130,23 @@
       "properties": {
         "champion": {
           "type": "string",
-          "description": "Champion team (1st place)."
+          "pattern": "^[A-Z]{3}$",
+          "description": "Champion team (1st place), 3-letter FIFA code."
         },
         "runner_up": {
           "type": "string",
-          "description": "Runner-up team (2nd place)."
+          "pattern": "^[A-Z]{3}$",
+          "description": "Runner-up team (2nd place), 3-letter FIFA code."
         },
         "third_place": {
           "type": "string",
-          "description": "Third place team (3rd)."
+          "pattern": "^[A-Z]{3}$",
+          "description": "Third place team (3rd), 3-letter FIFA code."
         },
         "fourth_place": {
           "type": "string",
-          "description": "Fourth place team (4th)."
+          "pattern": "^[A-Z]{3}$",
+          "description": "Fourth place team (4th), 3-letter FIFA code."
         }
       }
     }
@@ -125,11 +157,11 @@
       "description": "Individual match prediction.",
       "required": [
         "match_id",
-        "team_a",
-        "team_b",
-        "predicted_winner",
+        "home_team",
+        "away_team",
+        "predicted_result",
         "predicted_score",
-        "confidence"
+        "probs"
       ],
       "properties": {
         "match_id": {
@@ -153,40 +185,62 @@
           "type": ["string", "null"],
           "description": "Group letter (A-L) if group stage; null in knockout stages."
         },
-        "team_a": {
+        "home_team": {
           "type": "string",
-          "description": "First team in the matchup."
+          "pattern": "^[A-Z]{3}$",
+          "description": "Home team, 3-letter FIFA code."
         },
-        "team_b": {
+        "away_team": {
           "type": "string",
-          "description": "Second team in the matchup."
+          "pattern": "^[A-Z]{3}$",
+          "description": "Away team, 3-letter FIFA code."
         },
-        "predicted_winner": {
+        "predicted_result": {
           "type": "string",
-          "description": "Predicted winning team. In group stage can be 'Draw'."
+          "description": "Predicted result: home win, draw, or away win.",
+          "enum": ["home", "draw", "away"]
         },
         "predicted_score": {
           "type": "object",
           "description": "Predicted score.",
-          "required": ["team_a", "team_b"],
+          "required": ["home", "away"],
           "properties": {
-            "team_a": {
+            "home": {
               "type": "integer",
               "minimum": 0,
-              "description": "Predicted goals for team_a."
+              "description": "Predicted goals for the home team."
             },
-            "team_b": {
+            "away": {
               "type": "integer",
               "minimum": 0,
-              "description": "Predicted goals for team_b."
+              "description": "Predicted goals for the away team."
             }
           }
         },
-        "confidence": {
-          "type": "number",
-          "minimum": 0,
-          "maximum": 1,
-          "description": "Confidence level of the prediction (0.0 to 1.0)."
+        "probs": {
+          "type": "object",
+          "description": "1X2 probabilities that must sum to 1.0 (±0.02).",
+          "required": ["home", "draw", "away"],
+          "properties": {
+            "home": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Probability of home team win."
+            },
+            "draw": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Probability of draw (0.0 in knockouts)."
+            },
+            "away": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 1,
+              "description": "Probability of away team win."
+            }
+          }
         },
         "model_name": {
           "type": "string",
@@ -202,11 +256,12 @@
     "group_position": {
       "type": "object",
       "description": "Qualified team with its group of origin.",
-      "required": ["team", "group"],
+      "required": ["team_code", "group"],
       "properties": {
-        "team": {
+        "team_code": {
           "type": "string",
-          "description": "Name of the qualified team."
+          "pattern": "^[A-Z]{3}$",
+          "description": "3-letter FIFA code of the qualified team."
         },
         "group": {
           "type": "string",

@@ -12,6 +12,7 @@ from datetime import datetime, timezone
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PROMPT_PATH = os.path.join(BASE_DIR, "prompts", "prediction_prompt.txt")
 SCHEMA_PATH = os.path.join(BASE_DIR, "schema", "predictions_schema.json")
+TOURNAMENT_PATH = os.path.join(BASE_DIR, "data", "tournament.json")
 PREDICTIONS_DIR = os.path.join(BASE_DIR, "predictions")
 
 
@@ -23,6 +24,12 @@ def load_prompt(path: str = PROMPT_PATH) -> str:
 
 def load_schema(path: str = SCHEMA_PATH) -> dict:
     """Loads the JSON predictions schema."""
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def load_tournament_data(path: str = TOURNAMENT_PATH) -> dict:
+    """Loads the official tournament data from tournament.json."""
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
@@ -69,7 +76,7 @@ def extract_json(text: str):
 
 def validate_predictions(data: dict, schema: dict) -> tuple:
     """
-    Validates predictions against the JSON schema.
+    Validates predictions against the JSON schema and additional semantic rules.
 
     Returns (is_valid: bool, message: str). If the `jsonschema` library is not
     installed, performs a minimal validation of top-level keys.
@@ -77,11 +84,20 @@ def validate_predictions(data: dict, schema: dict) -> tuple:
     required_top = [
         "model_name",
         "timestamp",
+        "prompt_version",
+        "temperature",
         "group_stage_matches",
         "group_qualifiers",
         "knockout_stage",
         "final_standings",
     ]
+
+    # Minimal top-level key validation (always).
+    missing = [k for k in required_top if k not in data]
+    if missing:
+        return False, f"Missing required keys: {missing}"
+
+    # JSON schema validation.
     try:
         import jsonschema
         from jsonschema import Draft7Validator
@@ -93,13 +109,48 @@ def validate_predictions(data: dict, schema: dict) -> tuple:
                 f"{'/'.join(map(str, e.path))}: {e.message}" for e in errors[:5]
             )
             return False, f"Schema errors: {msgs}"
-        return True, "OK"
     except ImportError:
-        # Minimal fallback validation.
-        missing = [k for k in required_top if k not in data]
-        if missing:
-            return False, f"Missing required keys: {missing}"
-        return True, "OK (minimal validation, install 'jsonschema' for full validation)"
+        pass  # Continue with semantic validations
+
+    # Additional semantic validations.
+    semantic_errors = []
+
+    def _check_probs(match: dict, allow_draw: bool = True):
+        probs = match.get("probs", {})
+        total = probs.get("home", 0) + probs.get("draw", 0) + probs.get("away", 0)
+        if not (0.98 <= total <= 1.02):
+            mid = match.get("match_id", "?")
+            semantic_errors.append(
+                f"{mid}: probs sum {total:.4f} (expected 1.0±0.02)"
+            )
+        if not allow_draw and probs.get("draw", 0) != 0:
+            mid = match.get("match_id", "?")
+            semantic_errors.append(f"{mid}: knockout draw prob must be 0.0")
+
+    # Group stage: draw allowed.
+    group_matches = data.get("group_stage_matches") or []
+    if isinstance(group_matches, list):
+        for match in group_matches:
+            _check_probs(match, allow_draw=True)
+
+    # Knockout stage: draw not allowed.
+    knockout = data.get("knockout_stage") or {}
+    if isinstance(knockout, dict):
+        for stage in ["round_of_32", "round_of_16", "quarter_finals", "semi_finals"]:
+            stage_matches = knockout.get(stage) or []
+            if isinstance(stage_matches, list):
+                for match in stage_matches:
+                    _check_probs(match, allow_draw=False)
+        for key in ["third_place_match", "final"]:
+            match = knockout.get(key)
+            if match:
+                _check_probs(match, allow_draw=False)
+
+    if semantic_errors:
+        msgs = "; ".join(semantic_errors[:5])
+        return False, f"Semantic errors: {msgs}"
+
+    return True, "OK"
 
 
 def save_predictions(model_name: str, data: dict, predictions_dir: str = PREDICTIONS_DIR) -> str:
