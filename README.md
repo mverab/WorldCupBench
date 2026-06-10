@@ -1,17 +1,133 @@
-# WorldCupBench ⚽🏆
+<p align="center">
+  <img src="assets/banner.png" alt="WorldCupBench — 10 Frontier LLMs predicted the entire 2026 FIFA World Cup" width="100%">
+</p>
 
-**WorldCupBench** is a benchmark for comparing predictions from different state-of-the-art (SOTA) AI models for the **FIFA World Cup 2026™** (Canada, Mexico, and USA).
+<h1 align="center">WorldCupBench ⚽🤖</h1>
 
-Each model receives the **same standard prompt** with tournament information and must predict, in JSON format:
+<p align="center">
+  <strong>The World Cup is the ultimate LLM eval.</strong><br>
+  10 frontier AI models predicted every match of the 2026 FIFA World Cup — frozen pre-tournament, scored live.
+</p>
 
-- All matches in the **group stage** (72 matches, 12 groups A–L).
-- The **qualifiers** from each group (1st, 2nd, and the 8 best third-place teams).
-- The winners of each round of the **knockout stage** (Round of 32 → Round of 16 → Quarter Finals → Semi-Finals → Third Place + Final).
-- The **final positions**: Champion (1st), Runner-up (2nd), Third Place (3rd), and Fourth Place (4th).
+<p align="center">
+  <a href="https://github.com/mverab/WorldCupBench/stargazers"><img src="https://img.shields.io/github/stars/mverab/WorldCupBench?style=social" alt="Stars"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+  <img src="https://img.shields.io/badge/🔒%20Predictions%20Frozen-June%2010%2C%202026-red" alt="Frozen">
+  <img src="https://img.shields.io/github/last-commit/mverab/WorldCupBench" alt="Last Commit">
+</p>
 
-The goal is, once the tournament is over, to measure which model predicted the results best.
+<p align="center">
+  <a href="README.es.md">🇪🇸 Versión en Español</a>
+</p>
 
-> The 2026 World Cup begins on **June 11, 2026** (opening match: Mexico vs. South Africa) and the final will be played on **July 19, 2026**.
+---
+
+## 🏆 Live Leaderboard
+
+<!-- LEADERBOARD:START -->
+
+*Leaderboard will be auto-generated once all predictions are collected. Run `python src/generate_leaderboard.py --inject-readme` to update.*
+
+<!-- LEADERBOARD:END -->
+
+---
+
+## ⚡ How It Works (in 4 lines)
+
+1. **Same prompt** → 10 SOTA LLMs via OpenRouter.
+2. **JSON predictions** → every match, every round, every score, with 1X2 probabilities.
+3. **Frozen before kickoff** → no post-hoc editing. Credibility is everything.
+4. **Scored live** → as real results come in, we compute accuracy, Brier score, and ROI vs Polymarket.
+
+---
+
+## 🔮 Featured Predictions
+
+> What do 10 frontier models agree on? What do they disagree on?
+
+<!-- FEATURED:START -->
+
+*Featured predictions will appear here once all models have submitted. Check back soon!*
+
+<!-- FEATURED:END -->
+
+---
+
+## 🚀 Quick Start
+
+```bash
+# Clone and setup
+git clone https://github.com/mverab/WorldCupBench.git
+cd WorldCupBench
+python -m venv venv && source venv/bin/activate
+pip install -r requirements.txt
+
+# Set your OpenRouter API key
+cp .env.example .env
+# Edit .env and add your key
+
+# Run predictions for all models
+python src/run_predictions.py
+
+# Or run specific models only
+python src/run_predictions.py --models GPT-5.5 Grok-3
+
+# Validate setup without calling APIs
+python src/run_predictions.py --dry-run
+
+# Generate leaderboard from collected predictions
+python src/generate_leaderboard.py --inject-readme
+```
+
+---
+
+## 🤖 Compared Models (SOTA, June 2026)
+
+| Model | Provider | OpenRouter ID |
+|-------|----------|---------------|
+| GPT-5.5 | OpenAI | `openai/gpt-5.5` |
+| Claude Opus 4.8 | Anthropic | `anthropic/claude-opus-4.8` |
+| Gemini 3.1 Ultra | Google | `google/gemini-3.1-ultra` |
+| Grok 3 | xAI | `x-ai/grok-3` |
+| DeepSeek V4-Pro | DeepSeek | `deepseek/deepseek-v4-pro` |
+| Qwen 3.7 Max | Alibaba | `qwen/qwen-3.7-max` |
+| Kimi K2.6 | Moonshot AI | `moonshotai/kimi-k2.6` |
+| GLM-5 | Zhipu AI | `zhipuai/glm-5` |
+| MiniMax M3 | MiniMax | `minimax/minimax-m3` |
+| MiMo V2.5-Pro | Xiaomi | `xiaomi/mimo-v2.5-pro` |
+
+All models receive the **exact same prompt** with tournament data and must return structured JSON covering all 104 matches. See [`prompts/prediction_prompt.txt`](prompts/prediction_prompt.txt).
+
+---
+
+## 📐 Methodology
+
+### Prediction Schema
+
+Each model outputs a JSON object validated against [`schema/predictions_schema.json`](schema/predictions_schema.json) (Draft-07):
+
+- **72 group stage matches** with exact score and 1X2 probabilities (sum = 1.0 ± 0.02)
+- **Group qualifiers**: 12× 1st place, 12× 2nd place, 8× best 3rd place
+- **Knockout stage**: Round of 32 → Round of 16 → Quarter Finals → Semi Finals → Third Place + Final
+- **Final standings**: Champion, Runner-up, Third, Fourth
+
+### Key Rules
+
+- **FIFA codes only**: 3-letter codes (e.g., `ARG`, `FRA`, `BRA`)
+- **Knockout = no draws**: `probs.draw` must be `0.0`; if the model predicts a draw in 90 min, it must indicate the winner of extra time/penalties
+- **Frozen timestamp**: All predictions were generated and committed before the opening match (June 11, 2026)
+
+### Scoring (Coming Soon)
+
+As the tournament progresses, we will compute:
+
+| Metric | Description |
+|--------|-------------|
+| **Match Accuracy** | Correct result (home/draw/away) per match |
+| **Exact Score** | Correct scoreline (bonus points) |
+| **Stage Accuracy** | Correct progression through each knockout round |
+| **Brier Score** | Calibration of probability estimates |
+| **Polymarket ROI** | Hypothetical return betting $10 per match following each model |
 
 ---
 
@@ -19,111 +135,72 @@ The goal is, once the tournament is over, to measure which model predicted the r
 
 ```
 .
-├── README.md                  # This file
-├── .env.example               # Template for OPENROUTER_API_KEY
-├── .gitignore
+├── README.md                       # This file
+├── README.es.md                    # Spanish version
+├── FREEZE.md                       # Audit log: commit hash, timestamps, checksums
+├── LICENSE
+├── .env.example
 ├── requirements.txt
 ├── schema/
-│   └── predictions_schema.json   # JSON schema for predictions
+│   └── predictions_schema.json     # JSON Schema draft-07
 ├── prompts/
-│   └── prediction_prompt.txt     # Standard prompt for ALL models
+│   └── prediction_prompt.txt       # Standard prompt for ALL models
 ├── src/
-│   ├── run_predictions.py        # Main script (OpenRouter)
-│   ├── models_config.py          # List of models and their OpenRouter IDs
-│   └── utils.py                  # Utilities (loading, parsing, validation, saving)
-├── predictions/                  # Model prediction JSONs are saved here
+│   ├── run_predictions.py          # Main execution script
+│   ├── models_config.py            # Model definitions
+│   ├── utils.py                    # Parsing, validation, I/O
+│   └── generate_leaderboard.py     # Auto-generate leaderboard
+├── predictions/                    # Model prediction JSONs
 ├── data/
-│   └── world_cup_2026_info.md    # Tournament info (prompt source)
-└── dashboard/                    # Placeholder for visualization (future)
+│   └── tournament.json             # Official FIFA draw data
+└── assets/
+    ├── banner.png                  # README banner
+    └── social-preview.png          # GitHub social preview (1280×640)
 ```
 
 ---
 
-## 🤖 Compared Models (SOTA, June 2026)
+## 🏷️ Repository Topics
 
-| Model | Provider |
-| --- | --- |
-| GPT-5.5 | OpenAI |
-| Claude Opus 4.8 | Anthropic |
-| Gemini 3.1 Ultra | Google |
-| Grok 3 | xAI |
-| DeepSeek V4-Pro | DeepSeek |
-| Qwen 3.7 Max | Alibaba |
-| Kimi K2.6 | Moonshot AI |
-| GLM-5 | Zhipu AI |
-| MiniMax M3 | MiniMax |
-| MiMo V2.5-Pro | Xiaomi |
-
-Exact OpenRouter identifiers are defined in [`src/models_config.py`](src/models_config.py). Verify/adjust the `model_id` values at [openrouter.ai/models](https://openrouter.ai/models) according to availability.
+`llm` `benchmark` `llm-evaluation` `ai` `world-cup` `fifa-world-cup-2026` `predictions` `forecasting` `leaderboard` `sports-analytics` `gpt-5` `claude` `gemini`
 
 ---
 
-## ⚙️ Setup
+## 🤝 Contributing
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/mverab/WorldCupBench.git
-   cd WorldCupBench
+### Add Your Model
+
+Want to add a new model? It's one PR:
+
+1. Add your model to `src/models_config.py`:
+   ```python
+   {
+       "name": "Your-Model-Name",
+       "model_id": "provider/model-name",
+       "provider": "Your Lab",
+   }
    ```
+2. Run `python src/run_predictions.py --models Your-Model-Name`
+3. Submit a PR with the generated JSON
 
-2. **Create a virtual environment and install dependencies:**
-   ```bash
-   python -m venv venv
-   source venv/bin/activate   # On Windows: venv\Scripts\activate
-   pip install -r requirements.txt
-   ```
+### Add Real Results
 
-3. **Configure your OpenRouter key:**
-   ```bash
-   cp .env.example .env
-   # Edit .env and add your key, or export the variable:
-   export OPENROUTER_API_KEY="your_key"
-   ```
-   Get your key at [openrouter.ai/keys](https://openrouter.ai/keys).
+As matches conclude, add actual results to `data/results.json` (format TBD) so we can compute live accuracy.
+
+### Improve Scoring
+
+The scoring system is evolving. Open an issue or PR with your proposed metric.
 
 ---
 
-## ▶️ Usage
+## 📜 License
 
-Run predictions for **all** models:
-```bash
-python src/run_predictions.py
-```
+MIT — see [LICENSE](LICENSE).
 
-Run only **some** models:
-```bash
-python src/run_predictions.py --models GPT-5.5 Grok-3
-```
-
-**Dry-run** mode without calling the API (validates configuration and prompt):
-```bash
-python src/run_predictions.py --dry-run
-```
-
-Each model's predictions are saved to:
-```
-predictions/{model_name}_predictions.json
-```
+> Tournament data sourced from official FIFA sources. This project is for educational and research purposes.
 
 ---
 
-## 🧩 Prediction Schema
-
-The [`schema/predictions_schema.json`](schema/predictions_schema.json) file defines the expected structure (JSON Schema draft-07). Each match prediction includes: `match_id`, `team_a`, `team_b`, `predicted_winner`, `predicted_score`, `confidence`, plus model metadata (`model_name`, `timestamp`). The script automatically validates responses against this schema.
-
----
-
-## 🛣️ Roadmap
-
-- [x] Initial project structure (MVP).
-- [x] Standard prompt and prediction schema.
-- [x] Execution script via OpenRouter with retries.
-- [ ] Collection of actual tournament results.
-- [ ] Accuracy metric calculation (accuracy, Brier score).
-- [ ] Model comparison dashboard.
-
----
-
-## 📄 License
-
-Project for educational and research purposes. Tournament data comes from official FIFA sources (see `data/world_cup_2026_info.md`).
+<p align="center">
+  <sub>Built with ⚽ and 🤖 by <a href="https://github.com/mverab">@mverab</a></sub>
+</p>
