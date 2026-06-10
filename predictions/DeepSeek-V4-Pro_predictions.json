@@ -1,0 +1,1929 @@
+{
+  "model_name": "DeepSeek-Sports-Analyst-V3",
+  "model_id": "deepseek/deepseek-v4-pro",
+  "timestamp": "2026-01-20T12:00:00Z",
+  "prompt_version": "2.0",
+  "temperature": 0.3,
+  "group_stage_matches": [
+    {
+      "match_id": "GS-01",
+      "stage": "group_stage",
+      "group": "A",
+      "home_team": "MEX",
+      "away_team": "RSA",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.65,
+        "draw": 0.2,
+        "away": 0.15
+      }
+    },
+    {
+      "match_id": "GS-02",
+      "stage": "group_stage",
+      "group": "A",
+      "home_team": "KOR",
+      "away_team": "DEN",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.25,
+        "draw": 0.3,
+        "away": 0.45
+      }
+    },
+    {
+      "match_id": "GS-03",
+      "stage": "group_stage",
+      "group": "A",
+      "home_team": "MEX",
+      "away_team": "KOR",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.55,
+        "draw": 0.25,
+        "away": 0.2
+      }
+    },
+    {
+      "match_id": "GS-04",
+      "stage": "group_stage",
+      "group": "A",
+      "home_team": "RSA",
+      "away_team": "DEN",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 2
+      },
+      "probs": {
+        "home": 0.2,
+        "draw": 0.25,
+        "away": 0.55
+      }
+    },
+    {
+      "match_id": "GS-05",
+      "stage": "group_stage",
+      "group": "A",
+      "home_team": "MEX",
+      "away_team": "DEN",
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.35,
+        "draw": 0.35,
+        "away": 0.3
+      }
+    },
+    {
+      "match_id": "GS-06",
+      "stage": "group_stage",
+      "group": "A",
+      "home_team": "RSA",
+      "away_team": "KOR",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 1,
+        "away": 2
+      },
+      "probs": {
+        "home": 0.25,
+        "draw": 0.3,
+        "away": 0.45
+      }
+    },
+    {
+      "match_id": "GS-07",
+      "stage": "group_stage",
+      "group": "B",
+      "home_team": "CAN",
+      "away_team": "ITA",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 2
+      },
+      "probs": {
+        "home": 0.15,
+        "draw": 0.2,
+        "away": 0.65
+      }
+    },
+    {
+      "match_id": "GS-08",
+      "stage": "group_stage",
+      "group": "B",
+      "home_team": "QAT",
+      "away_team": "SUI",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 2
+      },
+      "probs": {
+        "home": 0.2,
+        "draw": 0.25,
+        "away": 0.55
+      }
+    },
+    {
+      "match_id": "GS-09",
+      "stage": "group_stage",
+      "group": "B",
+      "home_team": "CAN",
+      "away_team": "QAT",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.45,
+        "draw": 0.3,
+        "away": 0.25
+      }
+    },
+    {
+      "match_id": "GS-10",
+      "stage": "group_stage",
+      "group": "B",
+      "home_team": "ITA",
+      "away_team": "SUI",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.5,
+        "draw": 0.3,
+        "away": 0.2
+      }
+    },
+    {
+      "match_id": "GS-11",
+      "stage": "group_stage",
+      "group": "B",
+      "home_team": "CAN",
+      "away_team": "SUI",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.25,
+        "draw": 0.3,
+        "away": 0.45
+      }
+    },
+    {
+      "match_id": "GS-12",
+      "stage": "group_stage",
+      "group": "B",
+      "home_team": "ITA",
+      "away_team": "QAT",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 4,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.8,
+        "draw": 0.12,
+        "away": 0.08
+      }
+    },
+    {
+      "match_id": "GS-13",
+      "stage": "group_stage",
+      "group": "C",
+      "home_team": "BRA",
+      "away_team": "MAR",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.6,
+        "draw": 0.25,
+        "away": 0.15
+      }
+    },
+    {
+      "match_id": "GS-14",
+      "stage": "group_stage",
+      "group": "C",
+      "home_team": "HAI",
+      "away_team": "SCO",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.2,
+        "draw": 0.3,
+        "away": 0.5
+      }
+    },
+    {
+      "match_id": "GS-15",
+      "stage": "group_stage",
+      "group": "C",
+      "home_team": "BRA",
+      "away_team": "HAI",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 4,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.85,
+        "draw": 0.1,
+        "away": 0.05
+      }
+    },
+    {
+      "match_id": "GS-16",
+      "stage": "group_stage",
+      "group": "C",
+      "home_team": "MAR",
+      "away_team": "SCO",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.55,
+        "draw": 0.25,
+        "away": 0.2
+      }
+    },
+    {
+      "match_id": "GS-17",
+      "stage": "group_stage",
+      "group": "C",
+      "home_team": "BRA",
+      "away_team": "SCO",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.75,
+        "draw": 0.15,
+        "away": 0.1
+      }
+    },
+    {
+      "match_id": "GS-18",
+      "stage": "group_stage",
+      "group": "C",
+      "home_team": "MAR",
+      "away_team": "HAI",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.7,
+        "draw": 0.2,
+        "away": 0.1
+      }
+    },
+    {
+      "match_id": "GS-19",
+      "stage": "group_stage",
+      "group": "D",
+      "home_team": "USA",
+      "away_team": "PAR",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.75,
+        "draw": 0.15,
+        "away": 0.1
+      }
+    },
+    {
+      "match_id": "GS-20",
+      "stage": "group_stage",
+      "group": "D",
+      "home_team": "AUS",
+      "away_team": "TUR",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 2
+      },
+      "probs": {
+        "home": 0.25,
+        "draw": 0.3,
+        "away": 0.45
+      }
+    },
+    {
+      "match_id": "GS-21",
+      "stage": "group_stage",
+      "group": "D",
+      "home_team": "USA",
+      "away_team": "AUS",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.7,
+        "draw": 0.2,
+        "away": 0.1
+      }
+    },
+    {
+      "match_id": "GS-22",
+      "stage": "group_stage",
+      "group": "D",
+      "home_team": "PAR",
+      "away_team": "TUR",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 1,
+        "away": 2
+      },
+      "probs": {
+        "home": 0.25,
+        "draw": 0.3,
+        "away": 0.45
+      }
+    },
+    {
+      "match_id": "GS-23",
+      "stage": "group_stage",
+      "group": "D",
+      "home_team": "USA",
+      "away_team": "TUR",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.55,
+        "draw": 0.25,
+        "away": 0.2
+      }
+    },
+    {
+      "match_id": "GS-24",
+      "stage": "group_stage",
+      "group": "D",
+      "home_team": "PAR",
+      "away_team": "AUS",
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.3,
+        "draw": 0.4,
+        "away": 0.3
+      }
+    },
+    {
+      "match_id": "GS-25",
+      "stage": "group_stage",
+      "group": "E",
+      "home_team": "GER",
+      "away_team": "CUW",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 5,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.9,
+        "draw": 0.07,
+        "away": 0.03
+      }
+    },
+    {
+      "match_id": "GS-26",
+      "stage": "group_stage",
+      "group": "E",
+      "home_team": "CIV",
+      "away_team": "ECU",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.45,
+        "draw": 0.3,
+        "away": 0.25
+      }
+    },
+    {
+      "match_id": "GS-27",
+      "stage": "group_stage",
+      "group": "E",
+      "home_team": "GER",
+      "away_team": "CIV",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.7,
+        "draw": 0.2,
+        "away": 0.1
+      }
+    },
+    {
+      "match_id": "GS-28",
+      "stage": "group_stage",
+      "group": "E",
+      "home_team": "CUW",
+      "away_team": "ECU",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 3
+      },
+      "probs": {
+        "home": 0.1,
+        "draw": 0.2,
+        "away": 0.7
+      }
+    },
+    {
+      "match_id": "GS-29",
+      "stage": "group_stage",
+      "group": "E",
+      "home_team": "GER",
+      "away_team": "ECU",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.75,
+        "draw": 0.15,
+        "away": 0.1
+      }
+    },
+    {
+      "match_id": "GS-30",
+      "stage": "group_stage",
+      "group": "E",
+      "home_team": "CUW",
+      "away_team": "CIV",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 3
+      },
+      "probs": {
+        "home": 0.08,
+        "draw": 0.15,
+        "away": 0.77
+      }
+    },
+    {
+      "match_id": "GS-31",
+      "stage": "group_stage",
+      "group": "F",
+      "home_team": "NED",
+      "away_team": "JPN",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.55,
+        "draw": 0.25,
+        "away": 0.2
+      }
+    },
+    {
+      "match_id": "GS-32",
+      "stage": "group_stage",
+      "group": "F",
+      "home_team": "UKR",
+      "away_team": "TUN",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.5,
+        "draw": 0.3,
+        "away": 0.2
+      }
+    },
+    {
+      "match_id": "GS-33",
+      "stage": "group_stage",
+      "group": "F",
+      "home_team": "NED",
+      "away_team": "UKR",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.65,
+        "draw": 0.2,
+        "away": 0.15
+      }
+    },
+    {
+      "match_id": "GS-34",
+      "stage": "group_stage",
+      "group": "F",
+      "home_team": "TUN",
+      "away_team": "JPN",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 1,
+        "away": 2
+      },
+      "probs": {
+        "home": 0.25,
+        "draw": 0.25,
+        "away": 0.5
+      }
+    },
+    {
+      "match_id": "GS-35",
+      "stage": "group_stage",
+      "group": "F",
+      "home_team": "NED",
+      "away_team": "TUN",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.75,
+        "draw": 0.18,
+        "away": 0.07
+      }
+    },
+    {
+      "match_id": "GS-36",
+      "stage": "group_stage",
+      "group": "F",
+      "home_team": "JPN",
+      "away_team": "UKR",
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.35,
+        "draw": 0.35,
+        "away": 0.3
+      }
+    },
+    {
+      "match_id": "GS-37",
+      "stage": "group_stage",
+      "group": "G",
+      "home_team": "BEL",
+      "away_team": "EGY",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.7,
+        "draw": 0.2,
+        "away": 0.1
+      }
+    },
+    {
+      "match_id": "GS-38",
+      "stage": "group_stage",
+      "group": "G",
+      "home_team": "IRN",
+      "away_team": "NZL",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.6,
+        "draw": 0.25,
+        "away": 0.15
+      }
+    },
+    {
+      "match_id": "GS-39",
+      "stage": "group_stage",
+      "group": "G",
+      "home_team": "BEL",
+      "away_team": "IRN",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.6,
+        "draw": 0.25,
+        "away": 0.15
+      }
+    },
+    {
+      "match_id": "GS-40",
+      "stage": "group_stage",
+      "group": "G",
+      "home_team": "EGY",
+      "away_team": "NZL",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.65,
+        "draw": 0.2,
+        "away": 0.15
+      }
+    },
+    {
+      "match_id": "GS-41",
+      "stage": "group_stage",
+      "group": "G",
+      "home_team": "BEL",
+      "away_team": "NZL",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.8,
+        "draw": 0.15,
+        "away": 0.05
+      }
+    },
+    {
+      "match_id": "GS-42",
+      "stage": "group_stage",
+      "group": "G",
+      "home_team": "EGY",
+      "away_team": "IRN",
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.35,
+        "draw": 0.35,
+        "away": 0.3
+      }
+    },
+    {
+      "match_id": "GS-43",
+      "stage": "group_stage",
+      "group": "H",
+      "home_team": "ESP",
+      "away_team": "CPV",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.85,
+        "draw": 0.1,
+        "away": 0.05
+      }
+    },
+    {
+      "match_id": "GS-44",
+      "stage": "group_stage",
+      "group": "H",
+      "home_team": "KSA",
+      "away_team": "URU",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 2
+      },
+      "probs": {
+        "home": 0.12,
+        "draw": 0.18,
+        "away": 0.7
+      }
+    },
+    {
+      "match_id": "GS-45",
+      "stage": "group_stage",
+      "group": "H",
+      "home_team": "ESP",
+      "away_team": "KSA",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 4,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.9,
+        "draw": 0.08,
+        "away": 0.02
+      }
+    },
+    {
+      "match_id": "GS-46",
+      "stage": "group_stage",
+      "group": "H",
+      "home_team": "CPV",
+      "away_team": "URU",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 3
+      },
+      "probs": {
+        "home": 0.1,
+        "draw": 0.15,
+        "away": 0.75
+      }
+    },
+    {
+      "match_id": "GS-47",
+      "stage": "group_stage",
+      "group": "H",
+      "home_team": "ESP",
+      "away_team": "URU",
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.45,
+        "draw": 0.3,
+        "away": 0.25
+      }
+    },
+    {
+      "match_id": "GS-48",
+      "stage": "group_stage",
+      "group": "H",
+      "home_team": "CPV",
+      "away_team": "KSA",
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.3,
+        "draw": 0.4,
+        "away": 0.3
+      }
+    },
+    {
+      "match_id": "GS-49",
+      "stage": "group_stage",
+      "group": "I",
+      "home_team": "FRA",
+      "away_team": "SEN",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.6,
+        "draw": 0.25,
+        "away": 0.15
+      }
+    },
+    {
+      "match_id": "GS-50",
+      "stage": "group_stage",
+      "group": "I",
+      "home_team": "CMR",
+      "away_team": "NOR",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.25,
+        "draw": 0.3,
+        "away": 0.45
+      }
+    },
+    {
+      "match_id": "GS-51",
+      "stage": "group_stage",
+      "group": "I",
+      "home_team": "FRA",
+      "away_team": "CMR",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.8,
+        "draw": 0.15,
+        "away": 0.05
+      }
+    },
+    {
+      "match_id": "GS-52",
+      "stage": "group_stage",
+      "group": "I",
+      "home_team": "SEN",
+      "away_team": "NOR",
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.35,
+        "draw": 0.35,
+        "away": 0.3
+      }
+    },
+    {
+      "match_id": "GS-53",
+      "stage": "group_stage",
+      "group": "I",
+      "home_team": "FRA",
+      "away_team": "NOR",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.65,
+        "draw": 0.2,
+        "away": 0.15
+      }
+    },
+    {
+      "match_id": "GS-54",
+      "stage": "group_stage",
+      "group": "I",
+      "home_team": "SEN",
+      "away_team": "CMR",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.55,
+        "draw": 0.25,
+        "away": 0.2
+      }
+    },
+    {
+      "match_id": "GS-55",
+      "stage": "group_stage",
+      "group": "J",
+      "home_team": "ARG",
+      "away_team": "ALG",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.8,
+        "draw": 0.12,
+        "away": 0.08
+      }
+    },
+    {
+      "match_id": "GS-56",
+      "stage": "group_stage",
+      "group": "J",
+      "home_team": "AUT",
+      "away_team": "JOR",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.6,
+        "draw": 0.25,
+        "away": 0.15
+      }
+    },
+    {
+      "match_id": "GS-57",
+      "stage": "group_stage",
+      "group": "J",
+      "home_team": "ARG",
+      "away_team": "AUT",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.7,
+        "draw": 0.2,
+        "away": 0.1
+      }
+    },
+    {
+      "match_id": "GS-58",
+      "stage": "group_stage",
+      "group": "J",
+      "home_team": "ALG",
+      "away_team": "JOR",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.55,
+        "draw": 0.25,
+        "away": 0.2
+      }
+    },
+    {
+      "match_id": "GS-59",
+      "stage": "group_stage",
+      "group": "J",
+      "home_team": "ARG",
+      "away_team": "JOR",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 4,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.85,
+        "draw": 0.1,
+        "away": 0.05
+      }
+    },
+    {
+      "match_id": "GS-60",
+      "stage": "group_stage",
+      "group": "J",
+      "home_team": "ALG",
+      "away_team": "AUT",
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.3,
+        "draw": 0.4,
+        "away": 0.3
+      }
+    },
+    {
+      "match_id": "GS-61",
+      "stage": "group_stage",
+      "group": "K",
+      "home_team": "POR",
+      "away_team": "JAM",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.8,
+        "draw": 0.12,
+        "away": 0.08
+      }
+    },
+    {
+      "match_id": "GS-62",
+      "stage": "group_stage",
+      "group": "K",
+      "home_team": "UZB",
+      "away_team": "COL",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 2
+      },
+      "probs": {
+        "home": 0.2,
+        "draw": 0.25,
+        "away": 0.55
+      }
+    },
+    {
+      "match_id": "GS-63",
+      "stage": "group_stage",
+      "group": "K",
+      "home_team": "POR",
+      "away_team": "UZB",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 4,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.85,
+        "draw": 0.1,
+        "away": 0.05
+      }
+    },
+    {
+      "match_id": "GS-64",
+      "stage": "group_stage",
+      "group": "K",
+      "home_team": "JAM",
+      "away_team": "COL",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 3
+      },
+      "probs": {
+        "home": 0.1,
+        "draw": 0.2,
+        "away": 0.7
+      }
+    },
+    {
+      "match_id": "GS-65",
+      "stage": "group_stage",
+      "group": "K",
+      "home_team": "POR",
+      "away_team": "COL",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.6,
+        "draw": 0.25,
+        "away": 0.15
+      }
+    },
+    {
+      "match_id": "GS-66",
+      "stage": "group_stage",
+      "group": "K",
+      "home_team": "JAM",
+      "away_team": "UZB",
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.3,
+        "draw": 0.4,
+        "away": 0.3
+      }
+    },
+    {
+      "match_id": "GS-67",
+      "stage": "group_stage",
+      "group": "L",
+      "home_team": "ENG",
+      "away_team": "CRO",
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.4,
+        "draw": 0.35,
+        "away": 0.25
+      }
+    },
+    {
+      "match_id": "GS-68",
+      "stage": "group_stage",
+      "group": "L",
+      "home_team": "GHA",
+      "away_team": "PAN",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.55,
+        "draw": 0.3,
+        "away": 0.15
+      }
+    },
+    {
+      "match_id": "GS-69",
+      "stage": "group_stage",
+      "group": "L",
+      "home_team": "ENG",
+      "away_team": "GHA",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.7,
+        "draw": 0.2,
+        "away": 0.1
+      }
+    },
+    {
+      "match_id": "GS-70",
+      "stage": "group_stage",
+      "group": "L",
+      "home_team": "CRO",
+      "away_team": "PAN",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.65,
+        "draw": 0.2,
+        "away": 0.15
+      }
+    },
+    {
+      "match_id": "GS-71",
+      "stage": "group_stage",
+      "group": "L",
+      "home_team": "ENG",
+      "away_team": "PAN",
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 4,
+        "away": 0
+      },
+      "probs": {
+        "home": 0.85,
+        "draw": 0.1,
+        "away": 0.05
+      }
+    },
+    {
+      "match_id": "GS-72",
+      "stage": "group_stage",
+      "group": "L",
+      "home_team": "CRO",
+      "away_team": "GHA",
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      },
+      "probs": {
+        "home": 0.4,
+        "draw": 0.35,
+        "away": 0.25
+      }
+    }
+  ],
+  "group_qualifiers": {
+    "first_place": [
+      {
+        "team_code": "MEX",
+        "group": "A"
+      },
+      {
+        "team_code": "ITA",
+        "group": "B"
+      },
+      {
+        "team_code": "BRA",
+        "group": "C"
+      },
+      {
+        "team_code": "USA",
+        "group": "D"
+      },
+      {
+        "team_code": "GER",
+        "group": "E"
+      },
+      {
+        "team_code": "NED",
+        "group": "F"
+      },
+      {
+        "team_code": "BEL",
+        "group": "G"
+      },
+      {
+        "team_code": "ESP",
+        "group": "H"
+      },
+      {
+        "team_code": "FRA",
+        "group": "I"
+      },
+      {
+        "team_code": "ARG",
+        "group": "J"
+      },
+      {
+        "team_code": "POR",
+        "group": "K"
+      },
+      {
+        "team_code": "ENG",
+        "group": "L"
+      }
+    ],
+    "second_place": [
+      {
+        "team_code": "DEN",
+        "group": "A"
+      },
+      {
+        "team_code": "SUI",
+        "group": "B"
+      },
+      {
+        "team_code": "MAR",
+        "group": "C"
+      },
+      {
+        "team_code": "TUR",
+        "group": "D"
+      },
+      {
+        "team_code": "CIV",
+        "group": "E"
+      },
+      {
+        "team_code": "JPN",
+        "group": "F"
+      },
+      {
+        "team_code": "IRN",
+        "group": "G"
+      },
+      {
+        "team_code": "URU",
+        "group": "H"
+      },
+      {
+        "team_code": "SEN",
+        "group": "I"
+      },
+      {
+        "team_code": "AUT",
+        "group": "J"
+      },
+      {
+        "team_code": "COL",
+        "group": "K"
+      },
+      {
+        "team_code": "CRO",
+        "group": "L"
+      }
+    ],
+    "best_third_place": [
+      {
+        "team_code": "KOR",
+        "group": "A"
+      },
+      {
+        "team_code": "SCO",
+        "group": "C"
+      },
+      {
+        "team_code": "ECU",
+        "group": "E"
+      },
+      {
+        "team_code": "UKR",
+        "group": "F"
+      },
+      {
+        "team_code": "EGY",
+        "group": "G"
+      },
+      {
+        "team_code": "NOR",
+        "group": "I"
+      },
+      {
+        "team_code": "ALG",
+        "group": "J"
+      },
+      {
+        "team_code": "GHA",
+        "group": "L"
+      }
+    ]
+  },
+  "knockout_stage": {
+    "round_of_32": [
+      {
+        "match_id": "R32-73",
+        "stage": "round_of_32",
+        "group": null,
+        "home_team": "ESP",
+        "away_team": "AUT",
+        "predicted_result": "home",
+        "predicted_score": {
+          "home": 2,
+          "away": 0
+        },
+        "probs": {
+          "home": 0.7,
+          "draw": 0.0,
+          "away": 0.3
+        }
+      },
+      {
+        "match_id": "R32-74",
+        "stage": "round_of_32",
+        "group": null,
+        "home_team": "FRA",
+        "away_team": "EGY",
+        "predicted_result": "home",
+        "predicted_score": {
+          "home": 2,
+          "away": 0
+        },
+        "probs": {
+          "home": 0.75,
+          "draw": 0.0,
+          "away": 0.25
+        }
+      },
+      {
+        "match_id": "R32-75",
+        "stage": "round_of_32",
+        "group": null,
+        "home_team": "BRA",
+        "away_team": "JPN",
+        "predicted_result": "home",
+        "predicted_score": {
+          "home": 3,
+          "away": 1
+        },
+        "probs": {
+          "home": 0.7,
+          "draw": 0.0,
+          "away": 0.3
+        }
+      },
+      {
+        "match_id": "R32-76",
+        "stage": "round_of_32",
+        "group": null,
+        "home_team": "CIV",
+        "away_team": "SEN",
+        "predicted_result": "away",
+        "predicted_score": {
+          "home": 1,
+          "away": 1
+        },
+        "probs": {
+          "home": 0.4,
+          "draw": 0.0,
+          "away": 0.6
+        }
+      },
+      {
+        "match_id": "R32-77",
+        "stage": "round_of_32",
+        "group": null,
+        "home_team": "MEX",
+        "away_team": "KOR",
+        "predicted_result": "home",
+        "predicted_score": {
+          "home": 2,
+          "away": 1
+        },
+        "probs": {
+          "home": 0.6,
+          "draw": 0.0,
+          "away": 0.4
+        }
+      },
+      {
+        "match_id": "R32-78",
+        "stage": "round_of_32",
+        "group": null,
+        "home_team": "TUR",
+        "away_team": "IRN",
+        "predicted_result": "away",
+        "predicted_score": {
+          "home": 0,
+          "away": 1
+        },
+        "probs": {
+          "home": 0.35,
+          "draw": 0.0,
+          "away": 0.65
+        }
+      },
+      {
+        "match_id": "R32-79",
+        "stage": "round_of_32",
+        "group": null,
+        "home_team": "USA",
+        "away_team": "ECU",
+        "predicted_result": "home",
+        "predicted_score": {
+          "home": 3,
+          "away": 1
+        },
+        "probs": {
+          "home": 0.65,
+          "draw": 0.0,
+          "away": 0.35
+        }
+      },
+      {
+        "match_id": "R32-80",
+        "stage": "round_of_32",
+        "group": null,
+        "home_team": "POR",
+        "away_team": "UKR",
+        "predicted_result": "home",
+        "predicted_score": {
+          "home": 2,
+          "away": 0
+        },
+        "probs": {
+          "home": 0.8,
+          "draw": 0.0,
+          "away": 0.2
+        }
+      },
+      {
+        "match_id": "R32-81",
+        "stage": "round_of_32",
+        "group": null,
+        "home_team": "BEL",
+        "away_team": "ALG",
+        "predicted_result": "home",
+        "predicted_score": {
+          "home": 2,
+          "away": 1
+        },
+        "probs": {
+          "home": 0.65,
+          "draw": 0.0,
+          "away": 0.35
+        }
+      },
+      {
+        "match_id": "R32-82",
+        "stage": "round_of_32",
+        "group": null,
+        "home_team": "ITA",
+        "away_team": "NOR",
+        "predicted_result": "home",
+        "predicted_score": {
+          "home": 1,
+          "away": 0
+        },
+        "probs": {
+          "home": 0.55,
+          "draw": 0.0,
+          "away": 0.45
+        }
+      },
+      {
+        "match_id": "R32-84",
+        "stage": "round_of_32",
+        "group": null,
+        "home_team": "NED",
+        "away_team": "MAR",
+        "predicted_result": "home",
+        "predicted_score": {
+          "home": 2,
+          "away": 1
+        },
+        "probs": {
+          "home": 0.6,
+          "draw": 0.0,
+          "away": 0.4
+        }
+      },
+      {
+        "match_id": "R32-85",
+        "stage": "round_of_32",
+        "group": null,
+        "home_team": "ENG",
+        "away_team": "SCO",
+        "predicted_result": "home",
+        "predicted_score": {
+          "home": 2,
+          "away": 0
+        },
+        "probs": {
+          "home": 0.75,
+          "draw": 0.0,
+          "away": 0.25
+        }
+      },
+      {
+        "match_id": "R32-87",
+        "stage": "round_of_32",
+        "group": null,
+        "home_team": "COL",
+        "away_team": "CRO",
+        "predicted_result": "away",
+        "predicted_score": {
+          "home": 1,
+          "away": 2
+        },
+        "probs": {
+          "home": 0.4,
+          "draw": 0.0,
+          "away": 0.6
+        }
+      },
+      {
+        "match_id": "R32-88",
+        "stage": "round_of_32",
+        "group": null,
+        "home_team": "GER",
+        "away_team": "GHA",
+        "predicted_result": "home",
+        "predicted_score": {
+          "home": 3,
+          "away": 1
+        },
+        "probs": {
+          "home": 0.75,
+          "draw": 0.0,
+          "away": 0.25
+        }
+      },
+      {
+        "match_id": "R32-91",
+        "stage": "round_of_32",
+        "group": null,
+        "home_team": "ARG",
+        "away_team": "URU",
+        "predicted_result": "home",
+        "predicted_score": {
+          "home": 1,
+          "away": 1
+        },
+        "probs": {
+          "home": 0.55,
+          "draw": 0.0,
+          "away": 0.45
+        }
+      },
+      {
+        "match_id": "R32-96",
+        "stage": "round_of_32",
+        "group": null,
+        "home_team": "DEN",
+        "away_team": "SUI",
+        "predicted_result": "away",
+        "predicted_score": {
+          "home": 1,
+          "away": 1
+        },
+        "probs": {
+          "home": 0.35,
+          "draw": 0.0,
+          "away": 0.65
+        }
+      }
+    ],
+    "round_of_16": [
+      {
+        "match_id": "R16-1",
+        "stage": "round_of_16",
+        "group": null,
+        "home_team": "ESP",
+        "away_team": "FRA",
+        "predicted_result": "away",
+        "predicted_score": {
+          "home": 1,
+          "away": 2
+        },
+        "probs": {
+          "home": 0.4,
+          "draw": 0.0,
+          "away": 0.6
+        }
+      },
+      {
+        "match_id": "R16-2",
+        "stage": "round_of_16",
+        "group": null,
+        "home_team": "BRA",
+        "away_team": "SEN",
+        "predicted_result": "home",
+        "predicted_score": {
+          "home": 2,
+          "away": 0
+        },
+        "probs": {
+          "home": 0.7,
+          "draw": 0.0,
+          "away": 0.3
+        }
+      },
+      {
+        "match_id": "R16-3",
+        "stage": "round_of_16",
+        "group": null,
+        "home_team": "MEX",
+        "away_team": "IRN",
+        "predicted_result": "home",
+        "predicted_score": {
+          "home": 2,
+          "away": 1
+        },
+        "probs": {
+          "home": 0.6,
+          "draw": 0.0,
+          "away": 0.4
+        }
+      },
+      {
+        "match_id": "R16-4",
+        "stage": "round_of_16",
+        "group": null,
+        "home_team": "USA",
+        "away_team": "POR",
+        "predicted_result": "away",
+        "predicted_score": {
+          "home": 1,
+          "away": 2
+        },
+        "probs": {
+          "home": 0.35,
+          "draw": 0.0,
+          "away": 0.65
+        }
+      },
+      {
+        "match_id": "R16-5",
+        "stage": "round_of_16",
+        "group": null,
+        "home_team": "BEL",
+        "away_team": "ITA",
+        "predicted_result": "away",
+        "predicted_score": {
+          "home": 0,
+          "away": 1
+        },
+        "probs": {
+          "home": 0.4,
+          "draw": 0.0,
+          "away": 0.6
+        }
+      },
+      {
+        "match_id": "R16-6",
+        "stage": "round_of_16",
+        "group": null,
+        "home_team": "NED",
+        "away_team": "ENG",
+        "predicted_result": "away",
+        "predicted_score": {
+          "home": 1,
+          "away": 2
+        },
+        "probs": {
+          "home": 0.35,
+          "draw": 0.0,
+          "away": 0.65
+        }
+      },
+      {
+        "match_id": "R16-7",
+        "stage": "round_of_16",
+        "group": null,
+        "home_team": "CRO",
+        "away_team": "GER",
+        "predicted_result": "away",
+        "predicted_score": {
+          "home": 1,
+          "away": 2
+        },
+        "probs": {
+          "home": 0.3,
+          "draw": 0.0,
+          "away": 0.7
+        }
+      },
+      {
+        "match_id": "R16-8",
+        "stage": "round_of_16",
+        "group": null,
+        "home_team": "ARG",
+        "away_team": "SUI",
+        "predicted_result": "home",
+        "predicted_score": {
+          "home": 2,
+          "away": 0
+        },
+        "probs": {
+          "home": 0.75,
+          "draw": 0.0,
+          "away": 0.25
+        }
+      }
+    ],
+    "quarter_finals": [
+      {
+        "match_id": "QF-1",
+        "stage": "quarter_finals",
+        "group": null,
+        "home_team": "FRA",
+        "away_team": "BRA",
+        "predicted_result": "home",
+        "predicted_score": {
+          "home": 2,
+          "away": 1
+        },
+        "probs": {
+          "home": 0.55,
+          "draw": 0.0,
+          "away": 0.45
+        }
+      },
+      {
+        "match_id": "QF-2",
+        "stage": "quarter_finals",
+        "group": null,
+        "home_team": "MEX",
+        "away_team": "POR",
+        "predicted_result": "away",
+        "predicted_score": {
+          "home": 1,
+          "away": 2
+        },
+        "probs": {
+          "home": 0.35,
+          "draw": 0.0,
+          "away": 0.65
+        }
+      },
+      {
+        "match_id": "QF-3",
+        "stage": "quarter_finals",
+        "group": null,
+        "home_team": "ITA",
+        "away_team": "ENG",
+        "predicted_result": "away",
+        "predicted_score": {
+          "home": 1,
+          "away": 2
+        },
+        "probs": {
+          "home": 0.35,
+          "draw": 0.0,
+          "away": 0.65
+        }
+      },
+      {
+        "match_id": "QF-4",
+        "stage": "quarter_finals",
+        "group": null,
+        "home_team": "GER",
+        "away_team": "ARG",
+        "predicted_result": "away",
+        "predicted_score": {
+          "home": 1,
+          "away": 1
+        },
+        "probs": {
+          "home": 0.4,
+          "draw": 0.0,
+          "away": 0.6
+        }
+      }
+    ],
+    "semi_finals": [
+      {
+        "match_id": "SF-1",
+        "stage": "semi_finals",
+        "group": null,
+        "home_team": "FRA",
+        "away_team": "POR",
+        "predicted_result": "home",
+        "predicted_score": {
+          "home": 2,
+          "away": 1
+        },
+        "probs": {
+          "home": 0.6,
+          "draw": 0.0,
+          "away": 0.4
+        }
+      },
+      {
+        "match_id": "SF-2",
+        "stage": "semi_finals",
+        "group": null,
+        "home_team": "ENG",
+        "away_team": "ARG",
+        "predicted_result": "away",
+        "predicted_score": {
+          "home": 1,
+          "away": 2
+        },
+        "probs": {
+          "home": 0.4,
+          "draw": 0.0,
+          "away": 0.6
+        }
+      }
+    ],
+    "third_place_match": {
+      "match_id": "THIRD",
+      "stage": "third_place_match",
+      "group": null,
+      "home_team": "POR",
+      "away_team": "ENG",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 1,
+        "away": 2
+      },
+      "probs": {
+        "home": 0.4,
+        "draw": 0.0,
+        "away": 0.6
+      }
+    },
+    "final": {
+      "match_id": "FINAL",
+      "stage": "final",
+      "group": null,
+      "home_team": "FRA",
+      "away_team": "ARG",
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 1,
+        "away": 2
+      },
+      "probs": {
+        "home": 0.45,
+        "draw": 0.0,
+        "away": 0.55
+      }
+    }
+  },
+  "final_standings": {
+    "champion": "ARG",
+    "runner_up": "FRA",
+    "third_place": "ENG",
+    "fourth_place": "POR"
+  }
+}

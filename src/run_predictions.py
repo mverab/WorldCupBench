@@ -137,12 +137,12 @@ def run_model(api_key: str, model: dict, prompt: str, schema: dict, dry_run: boo
         print(f"    Raw response saved to: {debug_path}")
         return False
 
-    # Ensure model metadata.
-    data.setdefault("model_name", name)
+    # Ensure model metadata (override model-generated values).
+    data["model_name"] = name
     data["model_id"] = model_id
-    data.setdefault("timestamp", utils.now_iso())
+    data["timestamp"] = utils.now_iso()
     data["temperature"] = TEMPERATURE
-    data.setdefault("prompt_version", "2.0")
+    data["prompt_version"] = "2.0"
 
     # Validate against the schema.
     is_valid, msg = utils.validate_predictions(data, schema)
