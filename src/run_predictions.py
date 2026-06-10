@@ -139,7 +139,7 @@ def build_messages(prompt: str, model_name: str, rationale: str = None) -> list:
             "respond with valid JSON predictions and nothing else."
         )
 
-    user_msg = prompt.replace("<model_name>", model_name)
+    user_msg = prompt.replace("<model name>", model_name)
 
     messages = [
         {"role": "system", "content": system_msg},
@@ -247,10 +247,9 @@ def call_rationale_phase(api_key: str, model: dict, rationale_prompt: str) -> tu
         "You are an expert football analyst and sports prediction system. "
         "Provide your strategic analysis in free-form markdown."
     )
-    user_msg = rationale_prompt.replace("<model_name>", name)
     messages = [
         {"role": "system", "content": system_msg},
-        {"role": "user", "content": user_msg},
+        {"role": "user", "content": rationale_prompt},
     ]
 
     raw, actual_model, usage = call_openrouter(api_key, model_id, messages)
