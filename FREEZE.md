@@ -71,8 +71,24 @@ for f in os.listdir('predictions'):
 
 ---
 
+## Invalidated Freezes
+
+The following predictions were generated on 2026-06-10 but are **invalidated** because they were produced with incorrect tournament data (5 wrong playoff teams) and prompt v2.0. They have been moved to `predictions/invalidated/freeze-v1/` for archival purposes.
+
+| File | SHA-256 | Original Timestamp | Reason |
+|------|---------|-------------------|--------|
+| `GPT-5.5_predictions.json` | `c2299e827b15c8d65ae9214a773ff4e7d7ff7494668ac646d38652e1250a446c` | 2026-06-10T07:32:35+00:00 | Generated with incorrect tournament data, prompt v2.0 |
+| `Claude-Opus-4.8_predictions.json` | `2ef8e2624c095bde63967a9156cec4724bd0807bd8dd2d325bb1b0d1898b3783` | 2026-06-10T07:34:11+00:00 | Generated with incorrect tournament data, prompt v2.0 |
+| `DeepSeek-V4-Pro_predictions.json` | `aab8b156ff378a106c6323ed48d422fa169ff6abe01afd54b1cbbdf839526312` | 2026-01-20T12:00:00Z | Generated with incorrect tournament data, prompt v2.0 |
+
+---
+
 ## No-Edit Policy
 
 > **No prediction file in this repository shall be modified after the freeze.**
 > Any correction, re-run, or update must be stored in a separate file with a
 > new timestamp and documented in this file.
+>
+> **Exception:** Predictions may be invalidated (moved to `predictions/invalidated/`) and
+> regenerated when the underlying tournament data or prompt is materially corrected.
+> Each invalidation must be fully documented above with SHA-256, timestamp, and reason.

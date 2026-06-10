@@ -149,6 +149,45 @@
           "description": "Fourth place team (4th), 3-letter FIFA code."
         }
       }
+    },
+    "usage": {
+      "type": "object",
+      "description": "Token usage breakdown for rationale and prediction phases.",
+      "properties": {
+        "rationale": {
+          "type": "object",
+          "properties": {
+            "prompt_tokens": { "type": "integer", "minimum": 0 },
+            "completion_tokens": { "type": "integer", "minimum": 0 },
+            "total_tokens": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "prediction": {
+          "type": "object",
+          "properties": {
+            "prompt_tokens": { "type": "integer", "minimum": 0 },
+            "completion_tokens": { "type": "integer", "minimum": 0 },
+            "total_tokens": { "type": "integer", "minimum": 0 }
+          }
+        },
+        "total": {
+          "type": "object",
+          "properties": {
+            "prompt_tokens": { "type": "integer", "minimum": 0 },
+            "completion_tokens": { "type": "integer", "minimum": 0 },
+            "total_tokens": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "cost_usd": {
+      "type": "object",
+      "description": "Approximate cost in USD per phase and total.",
+      "properties": {
+        "rationale": { "type": "number", "minimum": 0 },
+        "prediction": { "type": "number", "minimum": 0 },
+        "total": { "type": "number", "minimum": 0 }
+      }
     }
   },
   "definitions": {

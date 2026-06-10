@@ -63,6 +63,11 @@ MODELS = [
         "model_id": "xiaomi/mimo-v2.5-pro",
         "provider": "Xiaomi",
     },
+    {
+        "name": "Nex-N2-Pro",
+        "model_id": "nex-agi/nex-n2-pro:free",
+        "provider": "Nex AGI",
+    },
 ]
 
 
