@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-10T22:00:00Z",
+  "lastUpdated": "2026-06-10T22:55:00Z",
   "models": [
     {
       "name": "Claude-Fable-5",
@@ -97,6 +97,16 @@
       "runnerUp": "FRA",
       "thirdPlace": "BRA",
       "fourthPlace": "ESP",
+      "totalPredictions": 72,
+      "correctPredictions": 0,
+      "accuracy": 0
+    },
+    {
+      "name": "Kimi-K2.6",
+      "champion": "ARG",
+      "runnerUp": "ESP",
+      "thirdPlace": "FRA",
+      "fourthPlace": "BRA",
       "totalPredictions": 72,
       "correctPredictions": 0,
       "accuracy": 0
