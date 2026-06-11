@@ -1,14 +1,14 @@
 """
 WorldCupBench Scoring Engine.
 
-Reads prediction JSONs from predictions/pre-tournament/ and actual results
-from data/results/, computes per-model metrics, and outputs data/leaderboard.json.
+Reads prediction JSONs and actual results from data/results/, computes
+per-model metrics, and outputs data/leaderboard.json.
 
 Metrics:
   - Brier score (accumulated over 1X2 probabilities)
-  - Bracket points (1 group-stage / 2 R32 / 4 R16 / 8 QF / 16 SF / 32 Final)
+  - Bracket points (2 R32 / 4 R16 / 8 QF / 16 SF / 32 Final)
   - Correct match outcomes
-  - Exact score predictions
+  - Exact score predictions (when prediction includes predicted_score)
 
 Usage:
     python src/score.py
@@ -27,25 +27,41 @@ import utils  # noqa: E402
 
 # Points awarded per correct knockout winner prediction by round.
 BRACKET_POINTS = {
-    "group_stage": 1,
-    "round_of_32": 2,
-    "round_of_16": 4,
-    "quarter_finals": 8,
-    "semi_finals": 16,
-    "third_place_match": 16,
+    "R32": 2,
+    "R16": 4,
+    "QF": 8,
+    "SF": 16,
     "final": 32,
 }
 
 RESULTS_DIR = os.path.join(utils.BASE_DIR, "data", "results")
 LEADERBOARD_PATH = os.path.join(utils.BASE_DIR, "data", "leaderboard.json")
-PRE_TOURNAMENT_DIR = os.path.join(utils.PREDICTIONS_DIR, "pre-tournament")
+PREDICTIONS_DIR = utils.PREDICTIONS_DIR
+
+
+def _result_is_finished(match: dict) -> bool:
+    """Return True if the match has a usable result."""
+    outcome = match.get("outcome")
+    if outcome in ("home", "draw", "away"):
+        return True
+    score = match.get("score", {})
+    return isinstance(score.get("home"), int) and isinstance(score.get("away"), int)
+
+
+def _winner_team(result: dict) -> str:
+    """Return the FIFA code of the winning team, or None."""
+    outcome = result.get("outcome")
+    if outcome == "home":
+        return result.get("home_team")
+    if outcome == "away":
+        return result.get("away_team")
+    return None
 
 
 def load_results(results_dir: str = RESULTS_DIR) -> dict:
     """Load all actual match results from data/results/*.json.
 
-    Returns a dict mapping match_id -> result dict.
-    Result dict has: home_team, away_team, score {home, away}, outcome (home/draw/away).
+    Returns a dict mapping fd_id and match_id -> result dict.
     """
     results = {}
     if not os.path.isdir(results_dir):
@@ -65,23 +81,30 @@ def load_results(results_dir: str = RESULTS_DIR) -> dict:
         for m in matches:
             if not _result_is_finished(m):
                 continue
+            fd_id = m.get("fd_id")
             mid = m.get("match_id")
-            if mid:
+            if fd_id is not None:
+                results[fd_id] = m
+            if mid is not None:
                 results[mid] = m
 
     return results
 
 
-def load_predictions() -> list:
-    """Load all frozen prediction files."""
+def load_predictions(predictions_dir: str = PREDICTIONS_DIR, override: list = None) -> list:
+    """Load prediction files. If override is provided, use that list instead."""
+    if override is not None:
+        return override
+
     predictions = []
-    if not os.path.isdir(PRE_TOURNAMENT_DIR):
+    pre_tournament_dir = os.path.join(predictions_dir, "pre-tournament")
+    if not os.path.isdir(pre_tournament_dir):
         return predictions
 
-    for filename in sorted(os.listdir(PRE_TOURNAMENT_DIR)):
+    for filename in sorted(os.listdir(pre_tournament_dir)):
         if not filename.endswith("_prediction.json"):
             continue
-        filepath = os.path.join(PRE_TOURNAMENT_DIR, filename)
+        filepath = os.path.join(pre_tournament_dir, filename)
         try:
             with open(filepath, "r", encoding="utf-8") as f:
                 data = json.load(f)
@@ -90,27 +113,6 @@ def load_predictions() -> list:
             continue
 
     return predictions
-
-
-def _outcome_from_score(score: dict) -> str:
-    """Determine outcome from a score dict {home, away}."""
-    h, a = score.get("home", 0), score.get("away", 0)
-    if h is None or a is None:
-        return None
-    if h > a:
-        return "home"
-    elif a > h:
-        return "away"
-    return "draw"
-
-
-def _result_is_finished(match: dict) -> bool:
-    """Return True if the match has a usable result (outcome or numeric score)."""
-    outcome = match.get("outcome")
-    if outcome in ("home", "draw", "away"):
-        return True
-    score = match.get("score", {})
-    return isinstance(score.get("home"), int) and isinstance(score.get("away"), int)
 
 
 def _brier_score(probs: dict, actual_outcome: str) -> float:
@@ -129,137 +131,98 @@ def _brier_score(probs: dict, actual_outcome: str) -> float:
     return brier
 
 
-def _get_stage(match_id: str) -> str:
-    """Infer stage from match_id prefix."""
-    if match_id.startswith("GS"):
-        return "group_stage"
-    elif match_id.startswith("R32"):
-        return "round_of_32"
-    elif match_id.startswith("R16"):
-        return "round_of_16"
-    elif match_id.startswith("QF"):
-        return "quarter_finals"
-    elif match_id.startswith("SF"):
-        return "semi_finals"
-    elif match_id == "THIRD":
-        return "third_place_match"
-    elif match_id == "FINAL":
-        return "final"
-    return "group_stage"
-
-
-def score_model(prediction: dict, results: dict) -> dict:
-    """Score a single model's predictions against actual results.
-
-    Returns a dict with all metrics.
-    """
-    model_name = prediction.get("model_name", "Unknown")
-
-    # Collect all predicted matches (group + knockout).
-    all_predicted = []
-    for m in prediction.get("group_stage_matches", []):
-        all_predicted.append(m)
-
-    knockout = prediction.get("knockout_stage", {})
-    for stage_name in ["round_of_32", "round_of_16", "quarter_finals", "semi_finals"]:
-        for m in knockout.get(stage_name, []):
-            all_predicted.append(m)
-    if knockout.get("third_place_match"):
-        all_predicted.append(knockout["third_place_match"])
-    if knockout.get("final"):
-        all_predicted.append(knockout["final"])
-
-    # Score against actual results.
-    total_evaluated = 0
-    correct_outcomes = 0
+def evaluate_prediction(prediction: dict, results: dict) -> dict:
+    """Score a single prediction dict against actual results."""
+    brier_total = 0.0
+    evaluated = 0
     exact_scores = 0
-    total_brier = 0.0
+    correct_outcomes = 0
     bracket_points = 0
     matches_scored = []
 
-    for pred_match in all_predicted:
-        mid = pred_match.get("match_id")
-        if mid not in results:
+    for gm in prediction.get("group_matches", []):
+        key = gm.get("fd_id") if gm.get("fd_id") is not None else gm.get("match_id")
+        result = results.get(key)
+        if not result:
             continue
+        evaluated += 1
+        actual_outcome = result.get("outcome")
+        probs = gm.get("probs", {})
+        brier_total += _brier_score(probs, actual_outcome)
 
-        actual = results[mid]
-        total_evaluated += 1
-
-        # Actual outcome.
-        actual_score = actual.get("score", {})
-        actual_outcome = actual.get("outcome") or _outcome_from_score(actual_score)
-
-        # Predicted outcome.
-        predicted_outcome = pred_match.get("predicted_result")
-        predicted_score = pred_match.get("predicted_score", {})
-
-        # Brier score.
-        probs = pred_match.get("probs", {})
-        if probs:
-            brier = _brier_score(probs, actual_outcome)
-            total_brier += brier
-
-        # Correct outcome?
-        outcome_correct = predicted_outcome == actual_outcome
-        if outcome_correct:
+        predicted_outcome = max(probs, key=probs.get) if probs else None
+        if predicted_outcome == actual_outcome:
             correct_outcomes += 1
 
-        # Exact score?
-        score_exact = (
-            predicted_score.get("home") == actual_score.get("home")
-            and predicted_score.get("away") == actual_score.get("away")
-        )
-        if score_exact:
-            exact_scores += 1
+        predicted_score = gm.get("predicted_score")
+        if predicted_score is not None:
+            actual_score = result.get("score", {})
+            if (
+                predicted_score.get("home") == actual_score.get("home")
+                and predicted_score.get("away") == actual_score.get("away")
+            ):
+                exact_scores += 1
 
-        # Bracket points.
-        stage = _get_stage(mid)
-        points = BRACKET_POINTS.get(stage, 1)
-        earned = points if outcome_correct else 0
-        bracket_points += earned
+        matches_scored.append({
+            "match_id": gm.get("match_id"),
+            "fd_id": gm.get("fd_id"),
+            "predicted_outcome": predicted_outcome,
+            "actual_outcome": actual_outcome,
+            "brier": _brier_score(probs, actual_outcome),
+        })
 
-        matches_scored.append(
-            {
-                "match_id": mid,
-                "stage": stage,
-                "predicted": predicted_outcome,
-                "actual": actual_outcome,
-                "predicted_score": predicted_score,
-                "actual_score": actual_score,
-                "correct": outcome_correct,
-                "exact": score_exact,
-                "brier": _brier_score(probs, actual_outcome) if probs else None,
-                "points": earned,
-            }
-        )
+    bracket = prediction.get("bracket", {})
+    for round_key, pts in [("R32", 2), ("R16", 4), ("QF", 8), ("SF", 16)]:
+        for m in bracket.get(round_key, []):
+            key = m.get("fd_id") if m.get("fd_id") is not None else m.get("match")
+            result = results.get(key)
+            if result and _winner_team(result) and m.get("winner") == _winner_team(result):
+                bracket_points += pts
 
-    avg_brier = total_brier / total_evaluated if total_evaluated > 0 else None
+    final = bracket.get("final", {})
+    final_result = results.get(final.get("fd_id")) or results.get("final")
+    if final_result and _winner_team(final_result) and final.get("winner") == _winner_team(final_result):
+        bracket_points += BRACKET_POINTS["final"]
+
+    avg_brier = brier_total / evaluated if evaluated > 0 else None
 
     return {
-        "model_name": model_name,
-        "model_id": prediction.get("model_id", ""),
-        "total_evaluated": total_evaluated,
+        "total_evaluated": evaluated,
         "correct_outcomes": correct_outcomes,
         "exact_scores": exact_scores,
-        "accuracy": round(correct_outcomes / total_evaluated * 100, 2) if total_evaluated > 0 else 0,
-        "brier_total": round(total_brier, 4),
+        "brier_total": round(brier_total, 4),
         "brier_avg": round(avg_brier, 4) if avg_brier is not None else None,
         "bracket_points": bracket_points,
-        "champion": prediction.get("final_standings", {}).get("champion"),
-        "runner_up": prediction.get("final_standings", {}).get("runner_up"),
-        "third_place": prediction.get("final_standings", {}).get("third_place"),
-        "fourth_place": prediction.get("final_standings", {}).get("fourth_place"),
         "matches": matches_scored,
     }
 
 
-def generate_leaderboard(results_dir: str = RESULTS_DIR, output_path: str = LEADERBOARD_PATH):
+def score_model(prediction: dict, results: dict) -> dict:
+    """Score a single model's predictions against actual results."""
+    model_name = prediction.get("model", "Unknown")
+    metrics = evaluate_prediction(prediction, results)
+
+    return {
+        "model_name": model_name,
+        "model_id": prediction.get("model_id", ""),
+        **metrics,
+        "champion": prediction.get("champion"),
+        "runner_up": prediction.get("runner_up"),
+        "third_place": prediction.get("third"),
+    }
+
+
+def generate_leaderboard(
+    results_dir: str = RESULTS_DIR,
+    output_path: str = LEADERBOARD_PATH,
+    predictions: list = None,
+):
     """Generate the full leaderboard JSON."""
     results = load_results(results_dir)
-    predictions = load_predictions()
+    predictions = load_predictions(override=predictions)
 
     if not predictions:
-        print("No prediction files found in", PRE_TOURNAMENT_DIR)
+        print("No prediction files found")
         return
 
     print(f"Loaded {len(predictions)} predictions, {len(results)} actual results")
@@ -273,16 +236,15 @@ def generate_leaderboard(results_dir: str = RESULTS_DIR, output_path: str = LEAD
             f"Evaluated: {scored['total_evaluated']:3d} | "
             f"Correct: {scored['correct_outcomes']:3d} | "
             f"Exact: {scored['exact_scores']:2d} | "
-            f"Accuracy: {scored['accuracy']:5.1f}% | "
             f"Brier avg: {scored['brier_avg'] or 'N/A':>6} | "
             f"Bracket pts: {scored['bracket_points']:4d}"
         )
 
-    # Sort by: bracket_points desc, accuracy desc, brier_avg asc.
+    # Sort by: bracket_points desc, correct_outcomes desc, brier_avg asc.
     models_scored.sort(
         key=lambda m: (
             -m["bracket_points"],
-            -m["accuracy"],
+            -m["correct_outcomes"],
             m["brier_avg"] if m["brier_avg"] is not None else 999,
         )
     )
@@ -293,7 +255,7 @@ def generate_leaderboard(results_dir: str = RESULTS_DIR, output_path: str = LEAD
 
     leaderboard = {
         "last_updated": datetime.now(timezone.utc).isoformat(),
-        "total_results": len(results),
+        "total_results": len(results) // 2 if results else 0,  # keys are duplicated (fd_id + match_id)
         "total_models": len(models_scored),
         "models": [
             {
@@ -303,18 +265,15 @@ def generate_leaderboard(results_dir: str = RESULTS_DIR, output_path: str = LEAD
                 "total_evaluated": m["total_evaluated"],
                 "correct_outcomes": m["correct_outcomes"],
                 "exact_scores": m["exact_scores"],
-                "accuracy": m["accuracy"],
                 "brier_avg": m["brier_avg"],
                 "brier_total": m["brier_total"],
                 "bracket_points": m["bracket_points"],
                 "champion": m["champion"],
                 "runner_up": m["runner_up"],
                 "third_place": m["third_place"],
-                "fourth_place": m["fourth_place"],
             }
             for m in models_scored
         ],
-        # Daily history for sparklines (append-only).
         "history": [],
     }
 
@@ -334,16 +293,14 @@ def generate_leaderboard(results_dir: str = RESULTS_DIR, output_path: str = LEAD
         "models": [
             {
                 "model_name": m["model_name"],
-                "accuracy": m["accuracy"],
+                "correct_outcomes": m["correct_outcomes"],
                 "brier_avg": m["brier_avg"],
                 "bracket_points": m["bracket_points"],
-                "correct_outcomes": m["correct_outcomes"],
             }
             for m in models_scored
         ],
     }
 
-    # Replace if today already exists, otherwise append.
     history = leaderboard["history"]
     replaced = False
     for i, h in enumerate(history):
@@ -354,7 +311,6 @@ def generate_leaderboard(results_dir: str = RESULTS_DIR, output_path: str = LEAD
     if not replaced:
         history.append(today_snapshot)
 
-    # Write output.
     os.makedirs(os.path.dirname(output_path), exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(leaderboard, f, ensure_ascii=False, indent=2)
