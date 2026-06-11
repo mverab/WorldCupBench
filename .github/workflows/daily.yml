@@ -24,6 +24,11 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Smoke test scoring pipeline
+        run: |
+          pytest tests/ -v
+          echo "Smoke tests passed."
+
       - name: Fetch latest results
         env:
           FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
