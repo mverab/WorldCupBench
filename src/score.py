@@ -63,6 +63,8 @@ def load_results(results_dir: str = RESULTS_DIR) -> dict:
 
         matches = data if isinstance(data, list) else data.get("matches", [])
         for m in matches:
+            if not _result_is_finished(m):
+                continue
             mid = m.get("match_id")
             if mid:
                 results[mid] = m
@@ -93,11 +95,22 @@ def load_predictions() -> list:
 def _outcome_from_score(score: dict) -> str:
     """Determine outcome from a score dict {home, away}."""
     h, a = score.get("home", 0), score.get("away", 0)
+    if h is None or a is None:
+        return None
     if h > a:
         return "home"
     elif a > h:
         return "away"
     return "draw"
+
+
+def _result_is_finished(match: dict) -> bool:
+    """Return True if the match has a usable result (outcome or numeric score)."""
+    outcome = match.get("outcome")
+    if outcome in ("home", "draw", "away"):
+        return True
+    score = match.get("score", {})
+    return isinstance(score.get("home"), int) and isinstance(score.get("away"), int)
 
 
 def _brier_score(probs: dict, actual_outcome: str) -> float:
