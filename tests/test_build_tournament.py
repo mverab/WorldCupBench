@@ -8,7 +8,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 import build_tournament
 
 
-def test_add_fd_ids_enriches_without_changing_structure(tmp_path):
+def test_build_api_index_and_enrich(tmp_path):
     existing = {
         "edition": "2026",
         "groups": [{"group": "A", "teams": ["MEX", "RSA", "KOR", "CZE"]}],
@@ -36,8 +36,10 @@ def test_add_fd_ids_enriches_without_changing_structure(tmp_path):
         }
     ]
 
-    result = build_tournament.add_fd_ids(existing, api_matches)
+    api_index = build_tournament.build_api_index(api_matches)
+    matched = build_tournament.enrich(existing["matches"], api_index)
 
-    assert result["matches"][0]["fd_id"] == 123456
-    assert result["matches"][0]["venue"] == "Azteca"
-    assert "groups" in result
+    assert matched == 1
+    assert existing["matches"][0]["fd_id"] == 123456
+    assert existing["matches"][0]["venue"] == "Azteca"
+    assert "groups" in existing
