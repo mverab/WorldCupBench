@@ -4,7 +4,7 @@ You are <model name>, an expert football analyst and sports prediction system. Y
 OFFICIAL TOURNAMENT CONTEXT
 ==================================================
 
-{{TOURNAMENT_DATA}}
+{{TOURNAMENT_JSON}}
 
 ==================================================
 RATIONALE INSTRUCTIONS

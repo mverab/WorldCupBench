@@ -24,6 +24,9 @@ import time
 import requests
 
 # Allow running the script from the repo root or from src/.
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "scripts"))
+import validate_predictions  # noqa: E402
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from models_config import MODELS, get_model_by_name  # noqa: E402
@@ -34,7 +37,7 @@ OPENROUTER_MODELS_URL = "https://openrouter.ai/api/v1/models"
 
 # Execution parameters.
 TEMPERATURE = 0.3
-TOURNAMENT_PLACEHOLDER = "{{TOURNAMENT_DATA}}"
+TOURNAMENT_PLACEHOLDER = "{{TOURNAMENT_JSON}}"
 
 # Retry parameters.
 MAX_RETRIES = 3
@@ -126,32 +129,24 @@ def calc_cost(usage: dict, pricing: dict, model_id: str, fallback_model_id: str 
     return (prompt_tokens * prompt_price + completion_tokens * completion_price) / 1_000_000
 
 
-def build_messages(prompt: str, model_name: str, rationale: str = None) -> list:
+def build_messages(model_name: str, prompt: str, tournament_data: dict, rationale: str = None) -> list:
     """Builds the messages array for the chat API."""
+    tournament_json = json.dumps(tournament_data, indent=2, ensure_ascii=False)
+    user_msg = prompt.replace("<model name>", model_name).replace(TOURNAMENT_PLACEHOLDER, tournament_json)
+
+    if not rationale:
+        return [{"role": "user", "content": user_msg}]
+
     system_msg = (
-        "You are an expert sports prediction system. You always respond "
-        "with valid JSON and nothing else."
+        "You are an expert sports prediction system. You have already "
+        "provided a strategic analysis of this tournament. Now you must "
+        "respond with valid JSON predictions and nothing else."
     )
-    if rationale:
-        system_msg = (
-            "You are an expert sports prediction system. You have already "
-            "provided a strategic analysis of this tournament. Now you must "
-            "respond with valid JSON predictions and nothing else."
-        )
-
-    user_msg = prompt.replace("<model name>", model_name)
-
-    messages = [
+    return [
         {"role": "system", "content": system_msg},
+        {"role": "assistant", "content": f"Here is my strategic analysis:\n\n{rationale}"},
+        {"role": "user", "content": user_msg},
     ]
-
-    if rationale:
-        messages.append(
-            {"role": "assistant", "content": f"Here is my strategic analysis:\n\n{rationale}"}
-        )
-
-    messages.append({"role": "user", "content": user_msg})
-    return messages
 
 
 def call_openrouter(api_key: str, model_id: str, messages: list, json_mode: bool = True) -> tuple:
@@ -236,7 +231,7 @@ def call_openrouter(api_key: str, model_id: str, messages: list, json_mode: bool
     raise RuntimeError(f"Failed after {MAX_RETRIES} attempts. Last error: {last_error}")
 
 
-def call_rationale_phase(api_key: str, model: dict, rationale_prompt: str) -> tuple:
+def call_rationale_phase(api_key: str, model: dict, rationale_prompt: str, tournament_data: dict) -> tuple:
     """
     Calls the rationale phase for a model.
 
@@ -246,12 +241,14 @@ def call_rationale_phase(api_key: str, model: dict, rationale_prompt: str) -> tu
     model_id = model["model_id"]
     _log("Phase 1: Rationale", indent=1)
 
+    tournament_json = json.dumps(tournament_data, indent=2, ensure_ascii=False)
+    user_msg = rationale_prompt.replace("<model name>", name).replace(TOURNAMENT_PLACEHOLDER, tournament_json)
+
     # Build messages without rationale context for the first phase.
     system_msg = (
         "You are an expert football analyst and sports prediction system. "
         "Provide your strategic analysis in free-form markdown."
     )
-    user_msg = rationale_prompt.replace("<model name>", name)
     messages = [
         {"role": "system", "content": system_msg},
         {"role": "user", "content": user_msg},
@@ -286,14 +283,13 @@ def call_prediction_phase(
         raise
 
     # Ensure model metadata (override model-generated values).
-    data["model_name"] = name
-    data["model_id"] = actual_model
-    data["timestamp"] = utils.now_iso()
-    data["temperature"] = TEMPERATURE
-    data["prompt_version"] = "2.1"
+    data["model"] = name
+    data["modality"] = "pre_tournament"
+    data["generated_at"] = utils.now_iso()
+    data["seed_or_temp"] = {"temperature": TEMPERATURE}
 
     # Validate against the schema and semantic rules.
-    is_valid, msg = utils.validate_predictions(data, schema, tournament_data)
+    is_valid, msg = validate_predictions.validate(data, tournament_data)
     if not is_valid:
         exc = ValueError(f"Validation failed: {msg}")
         exc.raw_response = raw
@@ -335,7 +331,7 @@ def run_model(
     rationale_path = None
     for attempt in range(1, MAX_RETRIES + 1):
         try:
-            rationale, actual_model_id, usage = call_rationale_phase(api_key, model, rationale_prompt)
+            rationale, actual_model_id, usage = call_rationale_phase(api_key, model, rationale_prompt, tournament_data)
             total_usage["prompt_tokens"] += usage["prompt_tokens"]
             total_usage["completion_tokens"] += usage["completion_tokens"]
             total_usage["total_tokens"] += usage["total_tokens"]
@@ -468,11 +464,6 @@ def main():
     rationale_prompt = utils.load_rationale_prompt()
     schema = utils.load_schema()
     tournament_data = utils.load_tournament_data()
-
-    # Load tournament data and inject it into both prompts.
-    tournament_str = json.dumps(tournament_data, indent=2, ensure_ascii=False)
-    prompt = prompt.replace(TOURNAMENT_PLACEHOLDER, tournament_str)
-    rationale_prompt = rationale_prompt.replace(TOURNAMENT_PLACEHOLDER, tournament_str)
 
     # Fetch model pricing once at startup (for cost tracking).
     pricing = {}
