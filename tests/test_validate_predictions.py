@@ -8,56 +8,59 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "scripts"))
 import validate_predictions
 
 
-def test_valid_prediction_passes():
-    tournament = {
-        "groups": [{"group": "A", "teams": ["MEX", "RSA", "KOR", "CZE"]}],
-        "matches": [
-            {"match_id": "1", "stage": "GROUP_STAGE", "group": "A", "home_team": "MEX", "away_team": "RSA"}
-        ],
-    }
-    prediction = {
-        "model": "test",
-        "modality": "pre_tournament",
-        "generated_at": "2026-06-11T00:00:00Z",
-        "seed_or_temp": {"temperature": 0.3},
-        "group_matches": [
-            {"match_id": "1", "probs": {"home": 0.55, "draw": 0.27, "away": 0.18}}
-        ],
-        "group_tables": {"A": ["MEX", "RSA", "KOR", "CZE"]},
-        "best_thirds": ["MEX", "RSA", "KOR", "CZE", "MEX", "RSA", "KOR", "CZE"],
-        "bracket": {
-            "R32": [], "R16": [], "QF": [], "SF": [],
-            "third_place": "MEX",
-            "final": {"winner": "MEX", "runner_up": "RSA"},
-        },
-        "champion": "MEX", "runner_up": "RSA", "third": "KOR",
-    }
-    valid, msg = validate_predictions.validate(prediction, tournament)
+@pytest.fixture
+def tournament():
+    with open(validate_predictions.TOURNAMENT_PATH, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+@pytest.fixture
+def valid_prediction():
+    path = os.path.join(
+        os.path.dirname(__file__), "..", "predictions", "pre-tournament", "gpt-5.5_prediction.json"
+    )
+    with open(path, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+
+def test_valid_prediction_passes(valid_prediction, tournament):
+    valid, msg = validate_predictions.validate(valid_prediction, tournament)
     assert valid, msg
 
 
-def test_invalid_probs_fail():
-    tournament = {
-        "groups": [{"group": "A", "teams": ["MEX", "RSA", "KOR", "CZE"]}],
-        "matches": [{"match_id": "1", "stage": "GROUP_STAGE", "group": "A", "home_team": "MEX", "away_team": "RSA"}],
+def test_invalid_probs_fail(valid_prediction, tournament):
+    valid_prediction["group_matches"][0]["probs"] = {
+        "home": 0.5,
+        "draw": 0.5,
+        "away": 0.5,
     }
-    prediction = {
-        "model": "test",
-        "modality": "pre_tournament",
-        "generated_at": "2026-06-11T00:00:00Z",
-        "seed_or_temp": {"temperature": 0.3},
-        "group_matches": [
-            {"match_id": "1", "probs": {"home": 0.5, "draw": 0.5, "away": 0.5}}
-        ],
-        "group_tables": {"A": ["MEX", "RSA", "KOR", "CZE"]},
-        "best_thirds": ["MEX"] * 8,
-        "bracket": {
-            "R32": [], "R16": [], "QF": [], "SF": [],
-            "third_place": "MEX",
-            "final": {"winner": "MEX", "runner_up": "RSA"},
-        },
-        "champion": "MEX", "runner_up": "RSA", "third": "KOR",
-    }
-    valid, msg = validate_predictions.validate(prediction, tournament)
+    valid, msg = validate_predictions.validate(valid_prediction, tournament)
     assert not valid
     assert "probs" in msg.lower()
+
+
+def test_knockout_draw_prob_must_be_zero(valid_prediction, tournament):
+    valid_prediction["bracket"]["R32"][0]["probs"]["draw"] = 0.1
+    valid, msg = validate_predictions.validate(valid_prediction, tournament)
+    assert not valid
+    assert "draw" in msg.lower()
+
+
+def test_group_qualifiers_group_mismatch_fails(valid_prediction, tournament):
+    valid_prediction["group_qualifiers"]["first_place"][0]["group"] = "Z"
+    valid, msg = validate_predictions.validate(valid_prediction, tournament)
+    assert not valid
+
+
+def test_invalid_tla_in_qualifiers_fails(valid_prediction, tournament):
+    valid_prediction["group_qualifiers"]["first_place"][0]["team_code"] = "XXX"
+    valid, msg = validate_predictions.validate(valid_prediction, tournament)
+    assert not valid
+    assert "invalid" in msg.lower()
+
+
+def test_winner_must_be_in_match(valid_prediction, tournament):
+    valid_prediction["bracket"]["R32"][0]["winner"] = "FRA"
+    valid, msg = validate_predictions.validate(valid_prediction, tournament)
+    assert not valid
+    assert "winner" in msg.lower()
