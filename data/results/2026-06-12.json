@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-12",
+  "last_updated": "2026-06-12T05:18:33.593382+00:00",
+  "matches": [
+    {
+      "fd_id": null,
+      "match_id": null,
+      "home_team": "KOR",
+      "away_team": "CZE",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "outcome": "home",
+      "date": "2026-06-12",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_A"
+    }
+  ]
+}
