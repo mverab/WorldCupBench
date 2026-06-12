@@ -2,8 +2,8 @@ name: Daily Score Update
 
 on:
   schedule:
-    # Run at 12:00 UTC daily during the World Cup (June - July 2026)
-    - cron: '0 12 * 6,7 *'
+    # Run every 6 hours during the World Cup (June - July 2026)
+    - cron: '0 */6 * 6,7 *'
   workflow_dispatch:  # Allow manual trigger
 
 permissions:
