@@ -38,7 +38,7 @@ jobs:
 
       - name: Run scoring engine
         run: |
-          python src/score.py
+          python scripts/score.py
           echo "Scoring complete."
 
       - name: Update README leaderboard

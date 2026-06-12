@@ -57,12 +57,6 @@ let tournament = null;
 let predictionsSummary = null;
 let resultsByMatchId = {};
 
-function accuracy(m) {
-  if (!m) return null;
-  if (m.accuracy === null || m.accuracy === undefined) return null;
-  return Number(m.accuracy).toFixed(1);
-}
-
 async function loadData() {
   try {
     const [lb, tn, ps, rs] = await Promise.all([
@@ -109,18 +103,18 @@ function renderStats() {
   const models = leaderboard?.total_models || 0;
   const results = leaderboard?.total_results || 0;
   const totalMatches = tournament?.matches?.length || 104;
-  const accuracies = leaderboard?.models?.length
-    ? leaderboard.models.map(m => accuracy(m)).filter(a => a !== null).map(Number)
+  const briers = leaderboard?.models?.length
+    ? leaderboard.models.map(m => m.brier_total).filter(v => v !== null && v !== undefined).map(Number)
     : [];
-  const avgAcc = accuracies.length
-    ? (accuracies.reduce((s, v) => s + v, 0) / accuracies.length).toFixed(1)
+  const avgBrier = briers.length
+    ? (briers.reduce((s, v) => s + v, 0) / briers.length).toFixed(4)
     : null;
 
   el.innerHTML = [
-    { label: 'AI Models', value: models, icon: '\ud83e\udd16', color: 'blue' },
-    { label: 'Results In', value: `${results}/${totalMatches}`, icon: '\u26bd', color: 'green' },
-    { label: 'Avg Accuracy', value: results > 0 && avgAcc !== null ? `${avgAcc}%` : '\u2014', icon: '\ud83c\udfaf', color: 'gold' },
-    { label: 'Tournament', value: results === 0 ? 'Pre-Kickoff' : 'Live', icon: '\ud83d\udcc5', color: 'purple' },
+    { label: 'AI Models', value: models, icon: '🤖', color: 'blue' },
+    { label: 'Results In', value: `${results}/${totalMatches}`, icon: '⚽', color: 'green' },
+    { label: 'Avg Brier', value: results > 0 && avgBrier !== null ? avgBrier : '—', icon: '🎯', color: 'gold' },
+    { label: 'Tournament', value: results === 0 ? 'Pre-Kickoff' : 'Live', icon: '📅', color: 'purple' },
   ].map(s => `
     <div class="glass rounded-xl p-4 hover:border-${s.color === 'gold' ? 'gold' : `accent-${s.color}`}/30 transition">
       <div class="text-2xl mb-2">${s.icon}</div>
@@ -137,7 +131,7 @@ function renderLeaderboard() {
   const podium = document.getElementById('podium');
 
   if (!models.length) {
-    tbody.innerHTML = '<tr><td colspan="9" class="px-4 py-12 text-center text-gray-500">No scoring data yet. Leaderboard will populate as match results come in.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="7" class="px-4 py-12 text-center text-gray-500">No scoring data yet. Leaderboard will populate as match results come in.</td></tr>';
     podium.innerHTML = renderPreKickoffHero();
     return;
   }
@@ -156,37 +150,33 @@ function renderLeaderboard() {
 
   // Table
   tbody.innerHTML = models.map((m, i) => {
-    const color = MODEL_COLORS[m.model_name] || '#9CA3AF';
-    const medal = i === 0 ? '\ud83e\udd47' : i === 1 ? '\ud83e\udd48' : i === 2 ? '\ud83e\udd49' : `${i + 1}`;
+    const color = MODEL_COLORS[m.model] || '#9CA3AF';
+    const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : `${i + 1}`;
+    const brierKO = m.brier_knockout !== null && m.brier_knockout !== undefined
+      ? m.brier_knockout.toFixed(4)
+      : '—';
     return `
       <tr class="border-t border-gray-800 hover:bg-bg-hover transition">
         <td class="px-4 py-3 font-bold">${medal}</td>
         <td class="px-4 py-3">
           <div class="flex items-center gap-2">
             <div class="w-3 h-3 rounded-full" style="background:${color}"></div>
-            <span class="font-medium text-white">${m.model_name}</span>
+            <span class="font-medium text-white">${m.model}</span>
           </div>
         </td>
-        <td class="px-4 py-3 text-center text-gray-300">${m.total_evaluated}</td>
-        <td class="px-4 py-3 text-center text-green-400">${m.correct_outcomes}</td>
-        <td class="px-4 py-3 text-center text-gold">${m.exact_scores}</td>
-        <td class="px-4 py-3 text-center">
-          <span class="font-bold" style="color:${color}">${accuracy(m) !== null ? accuracy(m) + '%' : '—'}</span>
-        </td>
-        <td class="px-4 py-3 text-center text-gray-300">${m.brier_avg ?? '—'}</td>
-        <td class="px-4 py-3 text-center font-bold text-gold">${m.bracket_points}</td>
-        <td class="px-4 py-3">
-          <span class="text-lg">${codeToFlag(m.champion)}</span>
-          <span class="text-xs text-gray-400 ml-1">${m.champion || '—'}</span>
-        </td>
+        <td class="px-4 py-3 text-center text-gray-300">${m.n_matches_scored}</td>
+        <td class="px-4 py-3 text-center text-gray-300">${m.brier_group.toFixed(4)}</td>
+        <td class="px-4 py-3 text-center text-gray-300">${brierKO}</td>
+        <td class="px-4 py-3 text-center font-bold" style="color:${color}">${m.brier_total !== null ? m.brier_total.toFixed(4) : '—'}</td>
+        <td class="px-4 py-3 text-center font-bold text-gold">${m.quiniela_points}</td>
       </tr>
     `;
   }).join('');
 }
 
 function renderPodiumCard(model, position) {
-  const color = MODEL_COLORS[model.model_name] || '#9CA3AF';
-  const medals = { 1: ['\ud83e\udd47', 'medal-1'], 2: ['\ud83e\udd48', 'medal-2'], 3: ['\ud83e\udd49', 'medal-3'] };
+  const color = MODEL_COLORS[model.model] || '#9CA3AF';
+  const medals = { 1: ['🥇', 'medal-1'], 2: ['🥈', 'medal-2'], 3: ['🥉', 'medal-3'] };
   const [emoji, cls] = medals[position];
   const tall = position === 1 ? 'pt-0' : 'pt-8';
   return `
@@ -194,14 +184,12 @@ function renderPodiumCard(model, position) {
       <div class="glass rounded-xl p-5 text-center ${position === 1 ? 'glow pulse-gold' : ''}">
         <div class="text-4xl mb-2">${emoji}</div>
         <div class="w-4 h-4 rounded-full mx-auto mb-2" style="background:${color}"></div>
-        <h3 class="font-bold text-white text-lg">${model.model_name}</h3>
-        <div class="mt-3 text-3xl font-black" style="color:${color}">${accuracy(model) !== null ? accuracy(model) + '%' : '—'}</div>
-        <div class="text-xs text-gray-400 mt-1">accuracy</div>
+        <h3 class="font-bold text-white text-lg">${model.model}</h3>
+        <div class="mt-3 text-3xl font-black" style="color:${color}">${model.brier_total !== null ? model.brier_total.toFixed(4) : '—'}</div>
+        <div class="text-xs text-gray-400 mt-1">brier total</div>
         <div class="mt-3 flex justify-center gap-4 text-xs">
-          <div><span class="text-green-400 font-bold">${model.correct_outcomes}</span> correct</div>
-          <div><span class="text-gold font-bold">${model.bracket_points}</span> pts</div>
+          <div><span class="text-gold font-bold">${model.quiniela_points}</span> pts</div>
         </div>
-        <div class="mt-3 text-2xl">${codeToFlag(model.champion)}</div>
       </div>
     </div>
   `;
@@ -218,12 +206,12 @@ function renderPreKickoffHero() {
 
   return `
     <div class="glass rounded-xl p-8 text-center mb-8 glow">
-      <div class="text-5xl mb-4">\ud83c\udfc6</div>
+      <div class="text-5xl mb-4">🏆</div>
       <h2 class="text-2xl font-bold text-white mb-2">Predictions Frozen</h2>
       <p class="text-gray-400 mb-6">${models.length} frontier AI models have locked in their predictions.<br>Scoring begins when the first match is played.</p>
       ${sorted.length ? `
         <div class="mb-4">
-          <h3 class="text-sm font-semibold text-gray-300 mb-3">\ud83d\udd2e Champion Predictions</h3>
+          <h3 class="text-sm font-semibold text-gray-300 mb-3">🔮 Champion Predictions</h3>
           <div class="flex flex-wrap justify-center gap-3">
             ${sorted.map(([code, count]) => `
               <div class="glass rounded-lg px-4 py-2 flex items-center gap-2">
@@ -238,7 +226,7 @@ function renderPreKickoffHero() {
       ${models.length ? `
         <div class="mt-6 overflow-x-auto">
           <table class="mx-auto text-sm">
-            <thead><tr class="text-gray-400"><th class="px-3 py-1">Model</th><th class="px-3 py-1">\ud83e\udd47</th><th class="px-3 py-1">\ud83e\udd48</th><th class="px-3 py-1">\ud83e\udd49</th></tr></thead>
+            <thead><tr class="text-gray-400"><th class="px-3 py-1">Model</th><th class="px-3 py-1">🏆</th><th class="px-3 py-1">🥈</th><th class="px-3 py-1">🥉</th></tr></thead>
             <tbody>
               ${models.map(m => {
                 const color = MODEL_COLORS[m.model_name] || '#9CA3AF';
@@ -309,9 +297,9 @@ function renderConsensus() {
     `;
   };
 
-  el.innerHTML = renderBar(champCounts, 'Champion Predictions', '\ud83c\udfc6') +
-                 renderBar(runnerCounts, 'Runner-Up Predictions', '\ud83e\udd48') +
-                 renderBar(thirdCounts, 'Third Place Predictions', '\ud83e\udd49');
+  el.innerHTML = renderBar(champCounts, 'Champion Predictions', '🏆') +
+                 renderBar(runnerCounts, 'Runner-Up Predictions', '🥈') +
+                 renderBar(thirdCounts, 'Third Place Predictions', '🥉');
 }
 
 // === MATCHES ===
@@ -392,15 +380,15 @@ function renderBracket() {
 
   el.innerHTML = `
     <div class="glass rounded-xl p-6">
-      <h2 class="text-lg font-bold mb-4">\ud83c\udfc5 Predicted Final Standings by Model</h2>
+      <h2 class="text-lg font-bold mb-4">🏅 Predicted Final Standings by Model</h2>
       <div class="overflow-x-auto">
         <table class="w-full text-sm">
           <thead>
             <tr class="text-gray-400 border-b border-gray-800">
               <th class="px-4 py-3 text-left">Model</th>
-              <th class="px-4 py-3 text-center">\ud83e\udd47 Champion</th>
-              <th class="px-4 py-3 text-center">\ud83e\udd48 Runner-Up</th>
-              <th class="px-4 py-3 text-center">\ud83e\udd49 Third</th>
+              <th class="px-4 py-3 text-center">🏆 Champion</th>
+              <th class="px-4 py-3 text-center">🥈 Runner-Up</th>
+              <th class="px-4 py-3 text-center">🥉 Third</th>
               <th class="px-4 py-3 text-center">4th</th>
             </tr>
           </thead>
