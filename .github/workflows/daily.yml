@@ -2,8 +2,8 @@ name: Daily Score Update
 
 on:
   schedule:
-    # Run at 06:00 UTC daily during the World Cup (June 11 - July 19, 2026)
-    - cron: '0 6 * 6-7 *'
+    # Run at 12:00 UTC daily during the World Cup (June - July 2026)
+    - cron: '0 12 * 6,7 *'
   workflow_dispatch:  # Allow manual trigger
 
 permissions:
@@ -33,7 +33,7 @@ jobs:
         env:
           FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
         run: |
-          python src/fetch_results.py --all
+          python scripts/fetch_results.py --all
           echo "Results fetched."
 
       - name: Run scoring engine
