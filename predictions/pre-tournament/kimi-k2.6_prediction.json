@@ -1,0 +1,1019 @@
+{
+  "model": "Kimi-K2.6",
+  "modality": "pre_tournament",
+  "generated_at": "2026-06-11T04:55:31.288883+00:00",
+  "seed_or_temp": {
+    "temperature": 0.3
+  },
+  "source_schema": "2.1",
+  "group_matches": [
+    {
+      "match_id": "1",
+      "probs": {
+        "home": 0.65,
+        "draw": 0.2,
+        "away": 0.15
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "2",
+      "probs": {
+        "home": 0.55,
+        "draw": 0.25,
+        "away": 0.2
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "3",
+      "probs": {
+        "home": 0.35,
+        "draw": 0.3,
+        "away": 0.35
+      },
+      "orientation_flipped": false,
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "4",
+      "probs": {
+        "home": 0.5,
+        "draw": 0.25,
+        "away": 0.25
+      },
+      "orientation_flipped": true,
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    {
+      "match_id": "5",
+      "probs": {
+        "home": 0.15,
+        "draw": 0.25,
+        "away": 0.6
+      },
+      "orientation_flipped": true,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "6",
+      "probs": {
+        "home": 0.15,
+        "draw": 0.2,
+        "away": 0.65
+      },
+      "orientation_flipped": false,
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    {
+      "match_id": "7",
+      "probs": {
+        "home": 0.5,
+        "draw": 0.25,
+        "away": 0.25
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "8",
+      "probs": {
+        "home": 0.15,
+        "draw": 0.2,
+        "away": 0.65
+      },
+      "orientation_flipped": false,
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    {
+      "match_id": "9",
+      "probs": {
+        "home": 0.7,
+        "draw": 0.2,
+        "away": 0.1
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "10",
+      "probs": {
+        "home": 0.35,
+        "draw": 0.35,
+        "away": 0.3
+      },
+      "orientation_flipped": true,
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "11",
+      "probs": {
+        "home": 0.3,
+        "draw": 0.3,
+        "away": 0.4
+      },
+      "orientation_flipped": true,
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "12",
+      "probs": {
+        "home": 0.55,
+        "draw": 0.25,
+        "away": 0.2
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "13",
+      "probs": {
+        "home": 0.45,
+        "draw": 0.3,
+        "away": 0.25
+      },
+      "orientation_flipped": false,
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "14",
+      "probs": {
+        "home": 0.2,
+        "draw": 0.25,
+        "away": 0.55
+      },
+      "orientation_flipped": false,
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    {
+      "match_id": "15",
+      "probs": {
+        "home": 0.85,
+        "draw": 0.1,
+        "away": 0.05
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 4,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "16",
+      "probs": {
+        "home": 0.2,
+        "draw": 0.25,
+        "away": 0.55
+      },
+      "orientation_flipped": true,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "17",
+      "probs": {
+        "home": 0.1,
+        "draw": 0.2,
+        "away": 0.7
+      },
+      "orientation_flipped": true,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "18",
+      "probs": {
+        "home": 0.75,
+        "draw": 0.15,
+        "away": 0.1
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "19",
+      "probs": {
+        "home": 0.65,
+        "draw": 0.2,
+        "away": 0.15
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "20",
+      "probs": {
+        "home": 0.3,
+        "draw": 0.25,
+        "away": 0.45
+      },
+      "orientation_flipped": false,
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    {
+      "match_id": "21",
+      "probs": {
+        "home": 0.55,
+        "draw": 0.25,
+        "away": 0.2
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "22",
+      "probs": {
+        "home": 0.35,
+        "draw": 0.35,
+        "away": 0.3
+      },
+      "orientation_flipped": true,
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "23",
+      "probs": {
+        "home": 0.25,
+        "draw": 0.3,
+        "away": 0.45
+      },
+      "orientation_flipped": true,
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "24",
+      "probs": {
+        "home": 0.3,
+        "draw": 0.25,
+        "away": 0.45
+      },
+      "orientation_flipped": false,
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    {
+      "match_id": "25",
+      "probs": {
+        "home": 0.9,
+        "draw": 0.08,
+        "away": 0.02
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 4,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "26",
+      "probs": {
+        "home": 0.3,
+        "draw": 0.25,
+        "away": 0.45
+      },
+      "orientation_flipped": false,
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    {
+      "match_id": "27",
+      "probs": {
+        "home": 0.8,
+        "draw": 0.15,
+        "away": 0.05
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "28",
+      "probs": {
+        "home": 0.65,
+        "draw": 0.2,
+        "away": 0.15
+      },
+      "orientation_flipped": true,
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    {
+      "match_id": "29",
+      "probs": {
+        "home": 0.15,
+        "draw": 0.25,
+        "away": 0.6
+      },
+      "orientation_flipped": true,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "30",
+      "probs": {
+        "home": 0.25,
+        "draw": 0.25,
+        "away": 0.5
+      },
+      "orientation_flipped": false,
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    {
+      "match_id": "31",
+      "probs": {
+        "home": 0.5,
+        "draw": 0.25,
+        "away": 0.25
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "32",
+      "probs": {
+        "home": 0.5,
+        "draw": 0.3,
+        "away": 0.2
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 1,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "33",
+      "probs": {
+        "home": 0.6,
+        "draw": 0.25,
+        "away": 0.15
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "34",
+      "probs": {
+        "home": 0.15,
+        "draw": 0.2,
+        "away": 0.65
+      },
+      "orientation_flipped": false,
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    {
+      "match_id": "35",
+      "probs": {
+        "home": 0.1,
+        "draw": 0.15,
+        "away": 0.75
+      },
+      "orientation_flipped": true,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "36",
+      "probs": {
+        "home": 0.55,
+        "draw": 0.25,
+        "away": 0.2
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "37",
+      "probs": {
+        "home": 0.55,
+        "draw": 0.25,
+        "away": 0.2
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "38",
+      "probs": {
+        "home": 0.6,
+        "draw": 0.25,
+        "away": 0.15
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "39",
+      "probs": {
+        "home": 0.65,
+        "draw": 0.2,
+        "away": 0.15
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "40",
+      "probs": {
+        "home": 0.1,
+        "draw": 0.2,
+        "away": 0.7
+      },
+      "orientation_flipped": true,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "41",
+      "probs": {
+        "home": 0.05,
+        "draw": 0.15,
+        "away": 0.8
+      },
+      "orientation_flipped": true,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "42",
+      "probs": {
+        "home": 0.4,
+        "draw": 0.3,
+        "away": 0.3
+      },
+      "orientation_flipped": false,
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "43",
+      "probs": {
+        "home": 0.8,
+        "draw": 0.15,
+        "away": 0.05
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "44",
+      "probs": {
+        "home": 0.2,
+        "draw": 0.25,
+        "away": 0.55
+      },
+      "orientation_flipped": false,
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    {
+      "match_id": "45",
+      "probs": {
+        "home": 0.75,
+        "draw": 0.15,
+        "away": 0.1
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "46",
+      "probs": {
+        "home": 0.5,
+        "draw": 0.25,
+        "away": 0.25
+      },
+      "orientation_flipped": true,
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    {
+      "match_id": "47",
+      "probs": {
+        "home": 0.3,
+        "draw": 0.3,
+        "away": 0.4
+      },
+      "orientation_flipped": true,
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "48",
+      "probs": {
+        "home": 0.3,
+        "draw": 0.25,
+        "away": 0.45
+      },
+      "orientation_flipped": false,
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    {
+      "match_id": "49",
+      "probs": {
+        "home": 0.7,
+        "draw": 0.2,
+        "away": 0.1
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "50",
+      "probs": {
+        "home": 0.2,
+        "draw": 0.2,
+        "away": 0.6
+      },
+      "orientation_flipped": false,
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 1,
+        "away": 3
+      }
+    },
+    {
+      "match_id": "51",
+      "probs": {
+        "home": 0.9,
+        "draw": 0.08,
+        "away": 0.02
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 4,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "52",
+      "probs": {
+        "home": 0.25,
+        "draw": 0.25,
+        "away": 0.5
+      },
+      "orientation_flipped": true,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "53",
+      "probs": {
+        "home": 0.1,
+        "draw": 0.15,
+        "away": 0.75
+      },
+      "orientation_flipped": true,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "54",
+      "probs": {
+        "home": 0.65,
+        "draw": 0.2,
+        "away": 0.15
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "55",
+      "probs": {
+        "home": 0.7,
+        "draw": 0.2,
+        "away": 0.1
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "56",
+      "probs": {
+        "home": 0.75,
+        "draw": 0.15,
+        "away": 0.1
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "57",
+      "probs": {
+        "home": 0.6,
+        "draw": 0.25,
+        "away": 0.15
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "58",
+      "probs": {
+        "home": 0.15,
+        "draw": 0.2,
+        "away": 0.65
+      },
+      "orientation_flipped": true,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "59",
+      "probs": {
+        "home": 0.05,
+        "draw": 0.1,
+        "away": 0.85
+      },
+      "orientation_flipped": true,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "60",
+      "probs": {
+        "home": 0.3,
+        "draw": 0.35,
+        "away": 0.35
+      },
+      "orientation_flipped": false,
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "61",
+      "probs": {
+        "home": 0.8,
+        "draw": 0.15,
+        "away": 0.05
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "62",
+      "probs": {
+        "home": 0.2,
+        "draw": 0.25,
+        "away": 0.55
+      },
+      "orientation_flipped": false,
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 0,
+        "away": 2
+      }
+    },
+    {
+      "match_id": "63",
+      "probs": {
+        "home": 0.75,
+        "draw": 0.15,
+        "away": 0.1
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "64",
+      "probs": {
+        "home": 0.6,
+        "draw": 0.2,
+        "away": 0.2
+      },
+      "orientation_flipped": true,
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 1,
+        "away": 3
+      }
+    },
+    {
+      "match_id": "65",
+      "probs": {
+        "home": 0.3,
+        "draw": 0.3,
+        "away": 0.4
+      },
+      "orientation_flipped": true,
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "66",
+      "probs": {
+        "home": 0.3,
+        "draw": 0.25,
+        "away": 0.45
+      },
+      "orientation_flipped": false,
+      "predicted_result": "away",
+      "predicted_score": {
+        "home": 1,
+        "away": 2
+      }
+    },
+    {
+      "match_id": "67",
+      "probs": {
+        "home": 0.55,
+        "draw": 0.25,
+        "away": 0.2
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 1
+      }
+    },
+    {
+      "match_id": "68",
+      "probs": {
+        "home": 0.6,
+        "draw": 0.25,
+        "away": 0.15
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "69",
+      "probs": {
+        "home": 0.75,
+        "draw": 0.15,
+        "away": 0.1
+      },
+      "orientation_flipped": false,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 3,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "70",
+      "probs": {
+        "home": 0.15,
+        "draw": 0.2,
+        "away": 0.65
+      },
+      "orientation_flipped": true,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "71",
+      "probs": {
+        "home": 0.05,
+        "draw": 0.15,
+        "away": 0.8
+      },
+      "orientation_flipped": true,
+      "predicted_result": "home",
+      "predicted_score": {
+        "home": 2,
+        "away": 0
+      }
+    },
+    {
+      "match_id": "72",
+      "probs": {
+        "home": 0.4,
+        "draw": 0.3,
+        "away": 0.3
+      },
+      "orientation_flipped": false,
+      "predicted_result": "draw",
+      "predicted_score": {
+        "home": 1,
+        "away": 1
+      }
+    }
+  ]
+}
