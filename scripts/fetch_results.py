@@ -77,8 +77,14 @@ def _outcome_from_score(home_goals: int, away_goals: int) -> str:
 
 def map_api_match(api_match: dict, tournament: dict) -> dict:
     """Map a single football-data.org match to our result format using fd_id."""
-    home = api_match.get("homeTeam", {}).get("tla", "")
-    away = api_match.get("awayTeam", {}).get("tla", "")
+    home = utils.API_TO_FIFA_TLA.get(
+        api_match.get("homeTeam", {}).get("tla", ""),
+        api_match.get("homeTeam", {}).get("tla", ""),
+    )
+    away = utils.API_TO_FIFA_TLA.get(
+        api_match.get("awayTeam", {}).get("tla", ""),
+        api_match.get("awayTeam", {}).get("tla", ""),
+    )
     date = api_match.get("utcDate", "")[:10]
     score = api_match.get("score", {}).get("fullTime", {})
 
@@ -118,7 +124,7 @@ def fetch_from_api(api_key: str, date: str = None, fetch_all: bool = False) -> l
     headers = {"X-Auth-Token": api_key}
 
     url = f"{API_BASE}/competitions/{COMPETITION_ID}/matches"
-    params = {"status": "FINISHED", "season": SEASON_ID}
+    params = {"status": "FINISHED"}
     if date and not fetch_all:
         params["dateFrom"] = date
         params["dateTo"] = date

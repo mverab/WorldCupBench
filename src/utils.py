@@ -18,6 +18,12 @@ TOURNAMENT_PATH = os.path.join(BASE_DIR, "data", "tournament.json")
 PREDICTIONS_DIR = os.path.join(BASE_DIR, "predictions")
 RATIONALE_DIR = os.path.join(BASE_DIR, "predictions", "pre-tournament")
 
+# football-data.org uses a few TLAs that differ from canonical FIFA codes.
+API_TO_FIFA_TLA = {
+    "URY": "URU",  # Uruguay: ISO code → FIFA code
+}
+FIFA_TO_API_TLA = {v: k for k, v in API_TO_FIFA_TLA.items()}
+
 
 def load_prompt(path: str = PROMPT_PATH) -> str:
     """Reads and returns the standard prompt content."""

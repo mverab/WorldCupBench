@@ -2,6 +2,7 @@
 
 import json
 import os
+import sys
 
 import requests
 
@@ -10,13 +11,20 @@ TOURNAMENT_PATH = os.path.join(BASE_DIR, "data", "tournament.json")
 COMPETITION_ID = 2000
 API_BASE = "https://api.football-data.org/v4"
 
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
+from utils import API_TO_FIFA_TLA  # noqa: E402
+
+
+def to_fifa_tla(api_tla: str) -> str:
+    return API_TO_FIFA_TLA.get(api_tla, api_tla)
+
 
 def build_api_index(api_matches: list) -> dict:
-    """Index API matches by (home_tla, away_tla, date)."""
+    """Index API matches by (home_tla, away_tla, date) using FIFA TLAs."""
     api_index = {}
     for m in api_matches:
-        home = (m.get("homeTeam") or {}).get("tla")
-        away = (m.get("awayTeam") or {}).get("tla")
+        home = to_fifa_tla((m.get("homeTeam") or {}).get("tla"))
+        away = to_fifa_tla((m.get("awayTeam") or {}).get("tla"))
         date = (m.get("utcDate") or "")[:10]
         if home and away and date:
             api_index[(home, away, date)] = m["id"]
