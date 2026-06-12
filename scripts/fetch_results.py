@@ -98,8 +98,50 @@ def _outcome_from_score(home_goals: int, away_goals: int) -> str:
     return "draw"
 
 
+def _match_tournament_fixture(api_match: dict, home: str, away: str, api_date: str, tournament: dict) -> dict:
+    """Find the tournament fixture that corresponds to an API match.
+
+    Matching is resilient to the football-data.org UTC date shift (a match that
+    kicks off in the evening local time is reported on the *next* calendar day in
+    UTC). We therefore prefer identity-based keys over the date:
+
+      1. football-data match id  ==  tournament fd_id   (most reliable)
+      2. ordered (home_team, away_team) pair            (unique per group stage)
+      3. (home_team, away_team) pair + exact date       (last-resort tiebreaker)
+
+    Returns the matching tournament match dict, or ``None``.
+    """
+    matches = tournament.get("matches", []) + tournament.get("knockout_bracket", [])
+
+    api_id = api_match.get("id")
+    if api_id is not None:
+        for m in matches:
+            if m.get("fd_id") == api_id:
+                return m
+
+    pair_hits = [
+        m for m in matches
+        if m.get("home_team") == home and m.get("away_team") == away
+    ]
+    if len(pair_hits) == 1:
+        return pair_hits[0]
+    if len(pair_hits) > 1:
+        for m in pair_hits:
+            if m.get("date") == api_date:
+                return m
+        return pair_hits[0]
+
+    return None
+
+
 def map_api_match(api_match: dict, tournament: dict) -> dict:
-    """Map a single football-data.org match to our result format using fd_id."""
+    """Map a single football-data.org match to our result format.
+
+    The ``match_id``/``fd_id``/``date``/``stage``/``group`` fields are taken from
+    the canonical tournament fixture when a match is found, so results are always
+    filed under the correct (local) tournament date and carry the integer
+    ``match_id`` the scorer and dashboard expect.
+    """
     home = utils.API_TO_FIFA_TLA.get(
         api_match.get("homeTeam", {}).get("tla", ""),
         api_match.get("homeTeam", {}).get("tla", ""),
@@ -108,17 +150,27 @@ def map_api_match(api_match: dict, tournament: dict) -> dict:
         api_match.get("awayTeam", {}).get("tla", ""),
         api_match.get("awayTeam", {}).get("tla", ""),
     )
-    date = api_match.get("utcDate", "")[:10]
+    api_date = api_match.get("utcDate", "")[:10]
     score = api_match.get("score", {}).get("fullTime", {})
 
-    fd_id = None
-    match_id = None
-    for m in tournament.get("matches", []):
-        if (m.get("home_team") == home and m.get("away_team") == away and m.get("date") == date):
-            fd_id = m.get("fd_id")
-            # match_id is canonically an integer in tournament.json; keep the type.
-            match_id = m.get("match_id")
-            break
+    fixture = _match_tournament_fixture(api_match, home, away, api_date, tournament)
+
+    if fixture is not None:
+        fd_id = fixture.get("fd_id")
+        # match_id is canonically an integer in tournament.json; keep the type.
+        match_id = fixture.get("match_id")
+        # Prefer the tournament's canonical (local) date over the API's UTC date
+        # so the result lands in the right data/results/YYYY-MM-DD.json file.
+        date = fixture.get("date") or api_date
+        stage = _stage_label(match_id) or api_match.get("stage", "")
+        grp = fixture.get("group")
+        group = f"GROUP_{grp}" if grp else api_match.get("group", "")
+    else:
+        fd_id = None
+        match_id = None
+        date = api_date
+        stage = api_match.get("stage", "")
+        group = api_match.get("group", "")
 
     home_goals = score.get("home")
     away_goals = score.get("away")
@@ -134,8 +186,8 @@ def map_api_match(api_match: dict, tournament: dict) -> dict:
         "score": {"home": home_goals, "away": away_goals},
         "outcome": outcome,
         "date": date,
-        "stage": api_match.get("stage", ""),
-        "group": api_match.get("group", ""),
+        "stage": stage,
+        "group": group,
     }
 
 

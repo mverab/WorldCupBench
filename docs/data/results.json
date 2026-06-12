@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-12T05:18:34.468966+00:00",
+  "last_updated": "2026-06-12T05:36:36.809516+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -9,6 +9,20 @@
       "score": {
         "home": 2,
         "away": 0
+      },
+      "outcome": "home",
+      "date": "2026-06-11",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_A"
+    },
+    {
+      "fd_id": 537328,
+      "match_id": 2,
+      "home_team": "KOR",
+      "away_team": "CZE",
+      "score": {
+        "home": 2,
+        "away": 1
       },
       "outcome": "home",
       "date": "2026-06-11",
