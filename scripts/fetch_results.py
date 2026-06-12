@@ -67,6 +67,29 @@ def load_tournament_schedule() -> dict:
     return schedule
 
 
+def _stage_label(match_id) -> str:
+    """Derive the canonical stage label from an integer match_id (1..104)."""
+    try:
+        mid = int(match_id)
+    except (TypeError, ValueError):
+        return ""
+    if 1 <= mid <= 72:
+        return "GROUP_STAGE"
+    if 73 <= mid <= 88:
+        return "R32"
+    if 89 <= mid <= 96:
+        return "R16"
+    if 97 <= mid <= 100:
+        return "QF"
+    if 101 <= mid <= 102:
+        return "SF"
+    if mid == 103:
+        return "THIRD_PLACE"
+    if mid == 104:
+        return "FINAL"
+    return ""
+
+
 def _outcome_from_score(home_goals: int, away_goals: int) -> str:
     if home_goals > away_goals:
         return "home"
@@ -93,7 +116,8 @@ def map_api_match(api_match: dict, tournament: dict) -> dict:
     for m in tournament.get("matches", []):
         if (m.get("home_team") == home and m.get("away_team") == away and m.get("date") == date):
             fd_id = m.get("fd_id")
-            match_id = str(m.get("match_id"))
+            # match_id is canonically an integer in tournament.json; keep the type.
+            match_id = m.get("match_id")
             break
 
     home_goals = score.get("home")
@@ -206,17 +230,18 @@ def create_manual_template(date: str, results_dir: str = RESULTS_DIR):
         day_matches = []
         for mid, match in schedule.items():
             if match.get("date") == date:
+                grp = match.get("group")
                 day_matches.append(
                     {
                         "fd_id": match.get("fd_id"),
-                        "match_id": str(mid),
+                        "match_id": mid,
                         "home_team": match.get("home_team", ""),
                         "away_team": match.get("away_team", ""),
                         "score": {"home": None, "away": None},
                         "outcome": None,
                         "date": date,
-                        "stage": match.get("stage", ""),
-                        "group": match.get("group", ""),
+                        "stage": _stage_label(mid),
+                        "group": f"GROUP_{grp}" if grp else "",
                     }
                 )
     except Exception:
