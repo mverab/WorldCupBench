@@ -276,6 +276,7 @@ def generate_leaderboard(
 
     leaderboard = {
         "last_updated": datetime.now(timezone.utc).isoformat(),
+        "total_results": len({id(m) for m in results.values()}),
         "total_models": len(models),
         "models": models,
     }

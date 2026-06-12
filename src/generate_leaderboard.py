@@ -63,11 +63,10 @@ def build_consensus(predictions: list) -> dict:
     semi_finalists = Counter()
 
     for p in predictions:
-        fs = p.get("final_standings", {})
-        champions[fs.get("champion", "?")] += 1
-        runners_up[fs.get("runner_up", "?")] += 1
-        third_places[fs.get("third_place", "?")] += 1
-        fourth_places[fs.get("fourth_place", "?")] += 1
+        champions[p.get("champion", "?")] += 1
+        runners_up[p.get("runner_up", "?")] += 1
+        third_places[p.get("third", "?")] += 1
+        fourth_places[p.get("fourth_place", "?")] += 1
 
         # Group winners
         gq = p.get("group_qualifiers", {})
@@ -77,9 +76,9 @@ def build_consensus(predictions: list) -> dict:
             if grp and code and grp in group_winners:
                 group_winners[grp][code] += 1
 
-        # Semi-finalists from knockout_stage
-        ko = p.get("knockout_stage", {})
-        for match in ko.get("semi_finals", []):
+        # Semi-finalists from bracket SF
+        bracket = p.get("bracket", {})
+        for match in bracket.get("SF", []):
             semi_finalists[match.get("home_team", "?")] += 1
             semi_finalists[match.get("away_team", "?")] += 1
 
