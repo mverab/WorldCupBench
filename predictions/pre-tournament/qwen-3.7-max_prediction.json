@@ -1,11 +1,12 @@
 {
   "model": "Qwen-3.7-Max",
+  "model_id": "qwen/qwen3.7-max-20260520",
   "modality": "pre_tournament",
   "generated_at": "2026-06-10T22:09:27.905051+00:00",
   "seed_or_temp": {
     "temperature": 0.3
   },
-  "source_schema": "2.1",
+  "source_schema": "freeze-v3",
   "group_matches": [
     {
       "match_id": "1",
@@ -57,10 +58,10 @@
         "away": 0.25
       },
       "orientation_flipped": true,
-      "predicted_result": "away",
+      "predicted_result": "home",
       "predicted_score": {
-        "home": 0,
-        "away": 1
+        "home": 1,
+        "away": 0
       }
     },
     {
@@ -71,10 +72,10 @@
         "away": 0.6
       },
       "orientation_flipped": true,
-      "predicted_result": "home",
+      "predicted_result": "away",
       "predicted_score": {
-        "home": 2,
-        "away": 0
+        "home": 0,
+        "away": 2
       }
     },
     {
@@ -141,10 +142,10 @@
         "away": 0.2
       },
       "orientation_flipped": true,
-      "predicted_result": "away",
+      "predicted_result": "home",
       "predicted_score": {
-        "home": 0,
-        "away": 1
+        "home": 1,
+        "away": 0
       }
     },
     {
@@ -225,10 +226,10 @@
         "away": 0.55
       },
       "orientation_flipped": true,
-      "predicted_result": "home",
+      "predicted_result": "away",
       "predicted_score": {
-        "home": 1,
-        "away": 0
+        "home": 0,
+        "away": 1
       }
     },
     {
@@ -239,10 +240,10 @@
         "away": 0.75
       },
       "orientation_flipped": true,
-      "predicted_result": "home",
+      "predicted_result": "away",
       "predicted_score": {
-        "home": 2,
-        "away": 0
+        "home": 0,
+        "away": 2
       }
     },
     {
@@ -393,10 +394,10 @@
         "away": 0.1
       },
       "orientation_flipped": true,
-      "predicted_result": "away",
+      "predicted_result": "home",
       "predicted_score": {
-        "home": 0,
-        "away": 2
+        "home": 2,
+        "away": 0
       }
     },
     {
@@ -491,10 +492,10 @@
         "away": 0.75
       },
       "orientation_flipped": true,
-      "predicted_result": "home",
+      "predicted_result": "away",
       "predicted_score": {
-        "home": 2,
-        "away": 0
+        "home": 0,
+        "away": 2
       }
     },
     {
@@ -561,10 +562,10 @@
         "away": 0.65
       },
       "orientation_flipped": true,
-      "predicted_result": "home",
+      "predicted_result": "away",
       "predicted_score": {
-        "home": 2,
-        "away": 0
+        "home": 0,
+        "away": 2
       }
     },
     {
@@ -575,10 +576,10 @@
         "away": 0.85
       },
       "orientation_flipped": true,
-      "predicted_result": "home",
+      "predicted_result": "away",
       "predicted_score": {
-        "home": 3,
-        "away": 0
+        "home": 0,
+        "away": 3
       }
     },
     {
@@ -645,10 +646,10 @@
         "away": 0.1
       },
       "orientation_flipped": true,
-      "predicted_result": "away",
+      "predicted_result": "home",
       "predicted_score": {
-        "home": 0,
-        "away": 1
+        "home": 1,
+        "away": 0
       }
     },
     {
@@ -743,10 +744,10 @@
         "away": 0.65
       },
       "orientation_flipped": true,
-      "predicted_result": "home",
+      "predicted_result": "away",
       "predicted_score": {
-        "home": 2,
-        "away": 1
+        "home": 1,
+        "away": 2
       }
     },
     {
@@ -813,10 +814,10 @@
         "away": 0.55
       },
       "orientation_flipped": true,
-      "predicted_result": "home",
+      "predicted_result": "away",
       "predicted_score": {
-        "home": 1,
-        "away": 0
+        "home": 0,
+        "away": 1
       }
     },
     {
@@ -827,10 +828,10 @@
         "away": 0.85
       },
       "orientation_flipped": true,
-      "predicted_result": "home",
+      "predicted_result": "away",
       "predicted_score": {
-        "home": 3,
-        "away": 0
+        "home": 0,
+        "away": 3
       }
     },
     {
@@ -897,10 +898,10 @@
         "away": 0.15
       },
       "orientation_flipped": true,
-      "predicted_result": "away",
+      "predicted_result": "home",
       "predicted_score": {
-        "home": 0,
-        "away": 1
+        "home": 1,
+        "away": 0
       }
     },
     {
@@ -981,10 +982,10 @@
         "away": 0.7
       },
       "orientation_flipped": true,
-      "predicted_result": "home",
+      "predicted_result": "away",
       "predicted_score": {
-        "home": 2,
-        "away": 0
+        "home": 0,
+        "away": 2
       }
     },
     {
@@ -995,10 +996,10 @@
         "away": 0.85
       },
       "orientation_flipped": true,
-      "predicted_result": "home",
+      "predicted_result": "away",
       "predicted_score": {
-        "home": 3,
-        "away": 0
+        "home": 0,
+        "away": 3
       }
     },
     {

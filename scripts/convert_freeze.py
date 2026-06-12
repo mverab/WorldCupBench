@@ -1,6 +1,7 @@
 """Convierte predicciones freeze-v3 (schema viejo) al schema nuevo.
-Reformateo PURO: no toca probabilidades ni picks. Mapea por (home, away),
-pero indexa también el orden invertido y corrige las probs cuando es necesario."""
+Mapea por (home, away), indexa también el orden invertido y, cuando es
+necesario, corrige probs, predicted_result y predicted_score al marco de
+referencia oficial del torneo."""
 import json, os, glob
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,10 +22,11 @@ def build_team_index(tournament):
 def convert(old, team_index):
     new = {
         "model": old.get("model_name") or old.get("model"),
+        "model_id": old.get("model_id"),
         "modality": "pre_tournament",
         "generated_at": old.get("timestamp") or old.get("generated_at"),
         "seed_or_temp": {"temperature": old.get("temperature")},
-        "source_schema": old.get("prompt_version"),
+        "source_schema": "freeze-v3",
         "group_matches": [],
     }
     unmatched = []
@@ -41,8 +43,14 @@ def convert(old, team_index):
             raise ValueError(f'{old.get("model_name")} {gm["match_id"]}: probs suman {total}')
         if inverted:
             probs = {"home": p["away"], "draw": p["draw"], "away": p["home"]}
+            pr = gm.get("predicted_result")
+            predicted_result = {"home": "away", "away": "home", "draw": "draw"}.get(pr, pr)
+            ps = gm.get("predicted_score")
+            predicted_score = {"home": ps.get("away"), "away": ps.get("home")} if ps else None
         else:
             probs = {"home": p["home"], "draw": p["draw"], "away": p["away"]}
+            predicted_result = gm.get("predicted_result")
+            predicted_score = gm.get("predicted_score")
         match_entry = {
             "match_id": mid,
             "probs": {
@@ -52,10 +60,10 @@ def convert(old, team_index):
             },
             "orientation_flipped": inverted,
         }
-        if "predicted_result" in gm:
-            match_entry["predicted_result"] = gm["predicted_result"]
-        if "predicted_score" in gm:
-            match_entry["predicted_score"] = gm["predicted_score"]
+        if predicted_result is not None:
+            match_entry["predicted_result"] = predicted_result
+        if predicted_score:
+            match_entry["predicted_score"] = predicted_score
         new["group_matches"].append(match_entry)
     if unmatched:
         raise ValueError(f'{old.get("model_name")}: sin mapear {unmatched}')
