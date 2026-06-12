@@ -1156,8 +1156,8 @@
   "bracket": {
     "R32": [
       {
-        "match_id": "32",
-        "match": "32",
+        "match_id": "73",
+        "match": "73",
         "home_team": "KOR",
         "away_team": "SUI",
         "predicted_result": "home",
@@ -1173,8 +1173,8 @@
         "winner": "KOR"
       },
       {
-        "match_id": "32",
-        "match": "32",
+        "match_id": "74",
+        "match": "74",
         "home_team": "GER",
         "away_team": "AUS",
         "predicted_result": "home",
@@ -1190,8 +1190,8 @@
         "winner": "GER"
       },
       {
-        "match_id": "32",
-        "match": "32",
+        "match_id": "75",
+        "match": "75",
         "home_team": "NED",
         "away_team": "MAR",
         "predicted_result": "home",
@@ -1207,8 +1207,8 @@
         "winner": "NED"
       },
       {
-        "match_id": "32",
-        "match": "32",
+        "match_id": "76",
+        "match": "76",
         "home_team": "BRA",
         "away_team": "JPN",
         "predicted_result": "home",
@@ -1224,8 +1224,8 @@
         "winner": "BRA"
       },
       {
-        "match_id": "32",
-        "match": "32",
+        "match_id": "77",
+        "match": "77",
         "home_team": "FRA",
         "away_team": "SCO",
         "predicted_result": "home",
@@ -1241,8 +1241,8 @@
         "winner": "FRA"
       },
       {
-        "match_id": "32",
-        "match": "32",
+        "match_id": "78",
+        "match": "78",
         "home_team": "ECU",
         "away_team": "SEN",
         "predicted_result": "home",
@@ -1258,8 +1258,8 @@
         "winner": "ECU"
       },
       {
-        "match_id": "32",
-        "match": "32",
+        "match_id": "79",
+        "match": "79",
         "home_team": "MEX",
         "away_team": "NOR",
         "predicted_result": "home",
@@ -1275,8 +1275,8 @@
         "winner": "MEX"
       },
       {
-        "match_id": "32",
-        "match": "32",
+        "match_id": "80",
+        "match": "80",
         "home_team": "ENG",
         "away_team": "ALG",
         "predicted_result": "home",
@@ -1292,8 +1292,8 @@
         "winner": "ENG"
       },
       {
-        "match_id": "32",
-        "match": "32",
+        "match_id": "81",
+        "match": "81",
         "home_team": "USA",
         "away_team": "BIH",
         "predicted_result": "home",
@@ -1309,8 +1309,8 @@
         "winner": "USA"
       },
       {
-        "match_id": "32",
-        "match": "32",
+        "match_id": "82",
+        "match": "82",
         "home_team": "BEL",
         "away_team": "CZE",
         "predicted_result": "home",
@@ -1326,8 +1326,8 @@
         "winner": "BEL"
       },
       {
-        "match_id": "32",
-        "match": "32",
+        "match_id": "83",
+        "match": "83",
         "home_team": "COL",
         "away_team": "CRO",
         "predicted_result": "home",
@@ -1343,8 +1343,8 @@
         "winner": "COL"
       },
       {
-        "match_id": "32",
-        "match": "32",
+        "match_id": "84",
+        "match": "84",
         "home_team": "ESP",
         "away_team": "AUT",
         "predicted_result": "home",
@@ -1360,8 +1360,8 @@
         "winner": "ESP"
       },
       {
-        "match_id": "32",
-        "match": "32",
+        "match_id": "85",
+        "match": "85",
         "home_team": "CAN",
         "away_team": "IRN",
         "predicted_result": "home",
@@ -1377,8 +1377,8 @@
         "winner": "CAN"
       },
       {
-        "match_id": "32",
-        "match": "32",
+        "match_id": "86",
+        "match": "86",
         "home_team": "ARG",
         "away_team": "URU",
         "predicted_result": "home",
@@ -1394,8 +1394,8 @@
         "winner": "ARG"
       },
       {
-        "match_id": "32",
-        "match": "32",
+        "match_id": "87",
+        "match": "87",
         "home_team": "POR",
         "away_team": "GHA",
         "predicted_result": "home",
@@ -1411,8 +1411,8 @@
         "winner": "POR"
       },
       {
-        "match_id": "32",
-        "match": "32",
+        "match_id": "88",
+        "match": "88",
         "home_team": "TUR",
         "away_team": "EGY",
         "predicted_result": "home",
@@ -1430,8 +1430,8 @@
     ],
     "R16": [
       {
-        "match_id": "16",
-        "match": "16",
+        "match_id": "89",
+        "match": "89",
         "home_team": "GER",
         "away_team": "FRA",
         "predicted_result": "away",
@@ -1447,8 +1447,8 @@
         "winner": "FRA"
       },
       {
-        "match_id": "16",
-        "match": "16",
+        "match_id": "90",
+        "match": "90",
         "home_team": "KOR",
         "away_team": "NED",
         "predicted_result": "away",
@@ -1464,8 +1464,8 @@
         "winner": "NED"
       },
       {
-        "match_id": "16",
-        "match": "16",
+        "match_id": "91",
+        "match": "91",
         "home_team": "BRA",
         "away_team": "ECU",
         "predicted_result": "home",
@@ -1481,8 +1481,8 @@
         "winner": "BRA"
       },
       {
-        "match_id": "16",
-        "match": "16",
+        "match_id": "92",
+        "match": "92",
         "home_team": "MEX",
         "away_team": "ENG",
         "predicted_result": "away",
@@ -1498,8 +1498,8 @@
         "winner": "ENG"
       },
       {
-        "match_id": "16",
-        "match": "16",
+        "match_id": "93",
+        "match": "93",
         "home_team": "COL",
         "away_team": "ESP",
         "predicted_result": "away",
@@ -1515,8 +1515,8 @@
         "winner": "ESP"
       },
       {
-        "match_id": "16",
-        "match": "16",
+        "match_id": "94",
+        "match": "94",
         "home_team": "USA",
         "away_team": "BEL",
         "predicted_result": "home",
@@ -1532,8 +1532,8 @@
         "winner": "USA"
       },
       {
-        "match_id": "16",
-        "match": "16",
+        "match_id": "95",
+        "match": "95",
         "home_team": "ARG",
         "away_team": "TUR",
         "predicted_result": "home",
@@ -1549,8 +1549,8 @@
         "winner": "ARG"
       },
       {
-        "match_id": "16",
-        "match": "16",
+        "match_id": "96",
+        "match": "96",
         "home_team": "CAN",
         "away_team": "POR",
         "predicted_result": "away",
@@ -1710,11 +1710,5 @@
   "champion": "ARG",
   "runner_up": "ESP",
   "third": "FRA",
-  "fourth_place": "BRA",
-  "final_standings": {
-    "champion": "ARG",
-    "runner_up": "ESP",
-    "third_place": "FRA",
-    "fourth_place": "BRA"
-  }
+  "fourth_place": "BRA"
 }
