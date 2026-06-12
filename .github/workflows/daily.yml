@@ -59,6 +59,8 @@ jobs:
             cp data/tournament.json docs/data/tournament.json
             # Generate predictions summary
             python scripts/generate_predictions_summary.py
+            # Consolidate daily results for the dashboard
+            python scripts/build_dashboard_results.py
           fi
 
       - name: Commit and push

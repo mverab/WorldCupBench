@@ -14,12 +14,9 @@ const MODEL_COLORS = {
   'Nex-N2-Pro': '#C084FC',
 };
 
-// Country code to flag emoji.
-const FLAGS = {};
-const A = 0x1F1E6;
+// FIFA 3-letter code to flag image (flagcdn) for reliable cross-platform rendering.
 function codeToFlag(code) {
-  if (!code || code.length < 2) return '\u{1F3F3}';
-  // FIFA 3-letter to 2-letter mapping for common cases.
+  if (!code) return '';
   const map3to2 = {
     'MEX':'MX','RSA':'ZA','KOR':'KR','CZE':'CZ','USA':'US','ENG':'GB','BRA':'BR','ARG':'AR',
     'FRA':'FR','GER':'DE','ESP':'ES','POR':'PT','NED':'NL','BEL':'BE','CRO':'HR','SUI':'CH',
@@ -49,17 +46,16 @@ function codeToFlag(code) {
     'CYP':'CY','MLT':'MT','LUX':'LU','LIE':'LI','AND':'AD','FRO':'FO','ISL':'IS',
     'SMR':'SM','GIB':'GI',
   };
-  let c2 = map3to2[code] || code.substring(0, 2).toUpperCase();
-  try {
-    return String.fromCodePoint(c2.charCodeAt(0) - 65 + A, c2.charCodeAt(1) - 65 + A);
-  } catch {
-    return '\u{1F3F3}';
-  }
+  const iso2 = map3to2[code];
+  if (!iso2) return '';
+  const iso = iso2.toLowerCase();
+  return `<img src="https://flagcdn.com/24x18/${iso}.png" width="24" height="18" alt="${code}" style="display:inline-block;vertical-align:middle;border-radius:2px;" onerror="this.style.display='none'">`;
 }
 
 let leaderboard = null;
 let tournament = null;
 let predictionsSummary = null;
+let resultsByMatchId = {};
 
 function accuracy(m) {
   if (!m) return null;
@@ -69,14 +65,25 @@ function accuracy(m) {
 
 async function loadData() {
   try {
-    const [lb, tn, ps] = await Promise.all([
+    const [lb, tn, ps, rs] = await Promise.all([
       fetch('data/leaderboard.json').then(r => r.ok ? r.json() : null).catch(() => null),
       fetch('data/tournament.json').then(r => r.ok ? r.json() : null).catch(() => null),
       fetch('data/predictions_summary.json').then(r => r.ok ? r.json() : null).catch(() => null),
+      fetch('data/results.json').then(r => r.ok ? r.json() : null).catch(() => null),
     ]);
     leaderboard = lb;
     tournament = tn;
     predictionsSummary = ps;
+
+    resultsByMatchId = {};
+    if (rs) {
+      const list = Array.isArray(rs) ? rs : (rs.matches || []);
+      for (const m of list) {
+        if (m.match_id != null) {
+          resultsByMatchId[String(m.match_id)] = m;
+        }
+      }
+    }
   } catch (e) {
     console.error('Data load error:', e);
   }
@@ -334,21 +341,36 @@ function renderMatches() {
     gridEl.innerHTML = matches.map(m => {
       const date = new Date(m.date + 'T00:00:00');
       const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+      const result = resultsByMatchId[String(m.match_id)];
+      const played = result && result.outcome != null;
+      const homeScore = played ? result.score?.home : null;
+      const awayScore = played ? result.score?.away : null;
+      const homeWon = played && result.outcome === 'home';
+      const awayWon = played && result.outcome === 'away';
+      const draw = played && result.outcome === 'draw';
+      const centerHtml = played
+        ? `<div class="text-white font-black text-xl px-4">${homeScore} - ${awayScore}</div>`
+        : `<div class="text-gray-500 text-sm font-bold px-4">vs</div>`;
+      const homeClass = homeWon ? 'text-gold font-bold' : (draw ? 'text-white' : 'text-gray-400');
+      const awayClass = awayWon ? 'text-gold font-bold' : (draw ? 'text-white' : 'text-gray-400');
       return `
         <div class="glass rounded-xl p-4 hover:border-gold/30 transition">
           <div class="flex items-center justify-between mb-3">
             <span class="text-xs px-2 py-0.5 rounded bg-gray-800 text-gray-400">Group ${m.group}</span>
-            <span class="text-xs text-gray-500">${dateStr}</span>
+            <div class="flex items-center gap-2">
+              ${played ? '<span class="text-[10px] px-1.5 py-0.5 rounded bg-green-900/50 text-green-400 font-bold">FT</span>' : ''}
+              <span class="text-xs text-gray-500">${dateStr}</span>
+            </div>
           </div>
           <div class="flex items-center justify-between">
             <div class="text-center flex-1">
               <div class="text-2xl mb-1">${codeToFlag(m.home_team)}</div>
-              <div class="text-xs font-medium text-white">${m.home_team}</div>
+              <div class="text-xs font-medium ${homeClass}">${m.home_team}</div>
             </div>
-            <div class="text-gray-500 text-sm font-bold px-4">vs</div>
+            ${centerHtml}
             <div class="text-center flex-1">
               <div class="text-2xl mb-1">${codeToFlag(m.away_team)}</div>
-              <div class="text-xs font-medium text-white">${m.away_team}</div>
+              <div class="text-xs font-medium ${awayClass}">${m.away_team}</div>
             </div>
           </div>
           <div class="mt-3 text-xs text-gray-500 text-center">${m.venue?.stadium || ''}</div>

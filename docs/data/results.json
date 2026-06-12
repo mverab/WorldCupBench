@@ -1,0 +1,19 @@
+{
+  "last_updated": "2026-06-12T03:28:21.660922+00:00",
+  "matches": [
+    {
+      "fd_id": 537327,
+      "match_id": "1",
+      "home_team": "MEX",
+      "away_team": "RSA",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "outcome": "home",
+      "date": "2026-06-11",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_A"
+    }
+  ]
+}
