@@ -1,104 +1,234 @@
 {
-  "last_updated": "2026-06-10T21:00:00+00:00",
-  "total_results": 0,
-  "total_models": 6,
+  "last_updated": "2026-06-12T01:34:47.486457+00:00",
+  "total_results": 1,
+  "total_models": 11,
   "models": [
     {
       "rank": 1,
-      "model_name": "Claude-Fable-5",
-      "model_id": "anthropic/claude-5-fable-20260609",
-      "total_evaluated": 0,
-      "correct_outcomes": 0,
+      "model_name": "Grok-4.3",
+      "model_id": "x-ai/grok-4.3-20260430",
+      "total_evaluated": 1,
+      "correct_outcomes": 1,
       "exact_scores": 0,
-      "accuracy": 0,
-      "brier_avg": null,
-      "brier_total": 0,
+      "brier_avg": 0.0518,
+      "brier_total": 0.0518,
       "bracket_points": 0,
-      "champion": "ESP",
-      "runner_up": "ARG",
-      "third_place": "FRA",
-      "fourth_place": "ENG"
+      "champion": null,
+      "runner_up": null,
+      "third_place": null
     },
     {
       "rank": 2,
-      "model_name": "DeepSeek-V4-Pro",
-      "model_id": "deepseek/deepseek-v4-pro-20260423",
-      "total_evaluated": 0,
-      "correct_outcomes": 0,
-      "exact_scores": 0,
-      "accuracy": 0,
-      "brier_avg": null,
-      "brier_total": 0,
+      "model_name": "MiniMax-M3",
+      "model_id": "minimax/minimax-m3-20260531",
+      "total_evaluated": 1,
+      "correct_outcomes": 1,
+      "exact_scores": 1,
+      "brier_avg": 0.1194,
+      "brier_total": 0.1194,
       "bracket_points": 0,
-      "champion": "ARG",
-      "runner_up": "USA",
-      "third_place": "ENG",
-      "fourth_place": "GER"
+      "champion": null,
+      "runner_up": null,
+      "third_place": null
     },
     {
       "rank": 3,
-      "model_name": "GPT-5.5",
-      "model_id": "openai/gpt-5.5-20260423",
-      "total_evaluated": 0,
-      "correct_outcomes": 0,
-      "exact_scores": 0,
-      "accuracy": 0,
-      "brier_avg": null,
-      "brier_total": 0,
+      "model_name": "DeepSeek-V4-Pro",
+      "model_id": "deepseek/deepseek-v4-pro-20260423",
+      "total_evaluated": 1,
+      "correct_outcomes": 1,
+      "exact_scores": 1,
+      "brier_avg": 0.14,
+      "brier_total": 0.14,
       "bracket_points": 0,
-      "champion": "FRA",
-      "runner_up": "BRA",
-      "third_place": "ARG",
-      "fourth_place": "ESP"
+      "champion": null,
+      "runner_up": null,
+      "third_place": null
     },
     {
       "rank": 4,
       "model_name": "Gemini-3.5-Flash",
       "model_id": "google/gemini-3.5-flash-20260519",
-      "total_evaluated": 0,
-      "correct_outcomes": 0,
-      "exact_scores": 0,
-      "accuracy": 0,
-      "brier_avg": null,
-      "brier_total": 0,
+      "total_evaluated": 1,
+      "correct_outcomes": 1,
+      "exact_scores": 1,
+      "brier_avg": 0.14,
+      "brier_total": 0.14,
       "bracket_points": 0,
-      "champion": "FRA",
-      "runner_up": "ARG",
-      "third_place": "ESP",
-      "fourth_place": "ENG"
+      "champion": null,
+      "runner_up": null,
+      "third_place": null
     },
     {
       "rank": 5,
-      "model_name": "Grok-4.3",
-      "model_id": "x-ai/grok-4.3-20260430",
-      "total_evaluated": 0,
-      "correct_outcomes": 0,
-      "exact_scores": 0,
-      "accuracy": 0,
-      "brier_avg": null,
-      "brier_total": 0,
+      "model_name": "Claude-Fable-5",
+      "model_id": "anthropic/claude-5-fable-20260609",
+      "total_evaluated": 1,
+      "correct_outcomes": 1,
+      "exact_scores": 1,
+      "brier_avg": 0.1568,
+      "brier_total": 0.1568,
       "bracket_points": 0,
-      "champion": "BRA",
-      "runner_up": "ENG",
-      "third_place": "FRA",
-      "fourth_place": "POR"
+      "champion": null,
+      "runner_up": null,
+      "third_place": null
     },
     {
       "rank": 6,
+      "model_name": "GPT-5.5",
+      "model_id": "openai/gpt-5.5-20260423",
+      "total_evaluated": 1,
+      "correct_outcomes": 1,
+      "exact_scores": 1,
+      "brier_avg": 0.1568,
+      "brier_total": 0.1568,
+      "bracket_points": 0,
+      "champion": null,
+      "runner_up": null,
+      "third_place": null
+    },
+    {
+      "rank": 7,
       "model_name": "Nex-N2-Pro",
       "model_id": "nex-agi/nex-n2-pro:free",
-      "total_evaluated": 0,
-      "correct_outcomes": 0,
-      "exact_scores": 0,
-      "accuracy": 0,
-      "brier_avg": null,
-      "brier_total": 0,
+      "total_evaluated": 1,
+      "correct_outcomes": 1,
+      "exact_scores": 1,
+      "brier_avg": 0.1784,
+      "brier_total": 0.1784,
       "bracket_points": 0,
-      "champion": "FRA",
-      "runner_up": "BRA",
-      "third_place": "ESP",
-      "fourth_place": "POR"
+      "champion": null,
+      "runner_up": null,
+      "third_place": null
+    },
+    {
+      "rank": 8,
+      "model_name": "GLM-5.1",
+      "model_id": "z-ai/glm-5.1-20260406",
+      "total_evaluated": 1,
+      "correct_outcomes": 1,
+      "exact_scores": 1,
+      "brier_avg": 0.185,
+      "brier_total": 0.185,
+      "bracket_points": 0,
+      "champion": null,
+      "runner_up": null,
+      "third_place": null
+    },
+    {
+      "rank": 9,
+      "model_name": "Kimi-K2.6",
+      "model_id": "moonshotai/kimi-k2.6-20260420",
+      "total_evaluated": 1,
+      "correct_outcomes": 1,
+      "exact_scores": 1,
+      "brier_avg": 0.185,
+      "brier_total": 0.185,
+      "bracket_points": 0,
+      "champion": null,
+      "runner_up": null,
+      "third_place": null
+    },
+    {
+      "rank": 10,
+      "model_name": "MiMo-V2.5-Pro",
+      "model_id": "xiaomi/mimo-v2.5-pro-20260422",
+      "total_evaluated": 1,
+      "correct_outcomes": 1,
+      "exact_scores": 1,
+      "brier_avg": 0.185,
+      "brier_total": 0.185,
+      "bracket_points": 0,
+      "champion": null,
+      "runner_up": null,
+      "third_place": null
+    },
+    {
+      "rank": 11,
+      "model_name": "Qwen-3.7-Max",
+      "model_id": "qwen/qwen3.7-max-20260520",
+      "total_evaluated": 1,
+      "correct_outcomes": 1,
+      "exact_scores": 1,
+      "brier_avg": 0.185,
+      "brier_total": 0.185,
+      "bracket_points": 0,
+      "champion": null,
+      "runner_up": null,
+      "third_place": null
     }
   ],
-  "history": []
+  "history": [
+    {
+      "date": "2026-06-12",
+      "models": [
+        {
+          "model_name": "Grok-4.3",
+          "correct_outcomes": 1,
+          "brier_avg": 0.0518,
+          "bracket_points": 0
+        },
+        {
+          "model_name": "MiniMax-M3",
+          "correct_outcomes": 1,
+          "brier_avg": 0.1194,
+          "bracket_points": 0
+        },
+        {
+          "model_name": "DeepSeek-V4-Pro",
+          "correct_outcomes": 1,
+          "brier_avg": 0.14,
+          "bracket_points": 0
+        },
+        {
+          "model_name": "Gemini-3.5-Flash",
+          "correct_outcomes": 1,
+          "brier_avg": 0.14,
+          "bracket_points": 0
+        },
+        {
+          "model_name": "Claude-Fable-5",
+          "correct_outcomes": 1,
+          "brier_avg": 0.1568,
+          "bracket_points": 0
+        },
+        {
+          "model_name": "GPT-5.5",
+          "correct_outcomes": 1,
+          "brier_avg": 0.1568,
+          "bracket_points": 0
+        },
+        {
+          "model_name": "Nex-N2-Pro",
+          "correct_outcomes": 1,
+          "brier_avg": 0.1784,
+          "bracket_points": 0
+        },
+        {
+          "model_name": "GLM-5.1",
+          "correct_outcomes": 1,
+          "brier_avg": 0.185,
+          "bracket_points": 0
+        },
+        {
+          "model_name": "Kimi-K2.6",
+          "correct_outcomes": 1,
+          "brier_avg": 0.185,
+          "bracket_points": 0
+        },
+        {
+          "model_name": "MiMo-V2.5-Pro",
+          "correct_outcomes": 1,
+          "brier_avg": 0.185,
+          "bracket_points": 0
+        },
+        {
+          "model_name": "Qwen-3.7-Max",
+          "correct_outcomes": 1,
+          "brier_avg": 0.185,
+          "bracket_points": 0
+        }
+      ]
+    }
+  ]
 }

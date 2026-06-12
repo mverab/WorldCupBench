@@ -26,7 +26,7 @@
 
 <!-- LEADERBOARD:START -->
 
-*Leaderboard will be auto-generated once all predictions are collected. Run `python src/generate_leaderboard.py --inject-readme` to update.*
+_No predictions available yet._
 
 <!-- LEADERBOARD:END -->
 
