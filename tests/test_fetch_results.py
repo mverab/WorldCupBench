@@ -9,7 +9,7 @@ import fetch_results
 def test_map_api_to_tournament_uses_fd_id():
     tournament = {
         "matches": [
-            {"match_id": "1", "home_team": "MEX", "away_team": "RSA", "date": "2026-06-11", "fd_id": 123}
+            {"match_id": 1, "home_team": "MEX", "away_team": "RSA", "date": "2026-06-11", "fd_id": 123}
         ]
     }
     api_match = {
@@ -22,5 +22,6 @@ def test_map_api_to_tournament_uses_fd_id():
     }
     result = fetch_results.map_api_match(api_match, tournament)
     assert result["fd_id"] == 123
-    assert result["match_id"] == "1"
+    # match_id is preserved as-is from tournament.json (canonically an integer).
+    assert result["match_id"] == 1
     assert result["outcome"] == "home"
