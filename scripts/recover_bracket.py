@@ -82,8 +82,12 @@ def canonical_match_id(old_match_id: str) -> str:
     """Extract the numeric match id the tournament uses (e.g. 'R32-73' -> '73')."""
     if old_match_id is None:
         return None
-    m = re.search(r"(\d+)", str(old_match_id))
-    return m.group(1) if m else str(old_match_id)
+    # Old ids are like 'R32-73', 'R16-89', 'QF-97', 'FINAL', 'THIRD'.
+    # We need the number after the dash, not the round digits.
+    m = re.search(r"-(\d+)$", str(old_match_id))
+    if m:
+        return m.group(1)
+    return str(old_match_id)
 
 
 def compute_winner(match: dict) -> str:
@@ -165,9 +169,8 @@ def merge_prediction(current_path: str, old_files: list, dry_run: bool = False) 
     if final_standings.get("fourth_place"):
         merged["fourth_place"] = final_standings["fourth_place"]
 
-    # Also keep the original final_standings object for downstream convenience.
-    if final_standings:
-        merged["final_standings"] = final_standings
+    # Avoid double source of truth: remove the nested final_standings copy.
+    merged.pop("final_standings", None)
 
     if not dry_run:
         with open(current_path, "w", encoding="utf-8") as f:
