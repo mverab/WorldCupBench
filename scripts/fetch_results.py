@@ -1,5 +1,4 @@
-"""
-WorldCupBench — Fetch Real Match Results.
+"""WorldCupBench — Fetch Real Match Results.
 
 Ingests actual World Cup 2026 match results into data/results/YYYY-MM-DD.json.
 Supports two modes:
@@ -8,17 +7,17 @@ Supports two modes:
 
 Usage:
     # Manual mode (create/edit data/results/2026-06-11.json by hand, then run score.py)
-    python src/fetch_results.py --manual
+    python scripts/fetch_results.py --manual
 
     # API mode
     export FOOTBALL_DATA_API_KEY="your_key"
-    python src/fetch_results.py
+    python scripts/fetch_results.py
 
     # Fetch specific date
-    python src/fetch_results.py --date 2026-06-11
+    python scripts/fetch_results.py --date 2026-06-11
 
     # Fetch all played matches
-    python src/fetch_results.py --all
+    python scripts/fetch_results.py --all
 """
 
 import argparse
@@ -32,15 +31,15 @@ try:
 except ImportError:
     requests = None
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 import utils  # noqa: E402
 
 RESULTS_DIR = os.path.join(utils.BASE_DIR, "data", "results")
 TOURNAMENT_PATH = utils.TOURNAMENT_PATH
 
 # football-data.org — FIFA World Cup 2026 competition ID.
-# Check https://api.football-data.org/v4/competitions for the actual ID.
-COMPETITION_ID = 2000  # FIFA World Cup (may need adjustment for 2026)
+COMPETITION_ID = 2000
+SEASON_ID = 2398
 API_BASE = "https://api.football-data.org/v4"
 
 
@@ -58,17 +57,8 @@ def load_tournament_schedule() -> dict:
     for match in data.get("matches", []):
         mid = match.get("match_id")
         if mid:
-            # Convert numeric match_id to our format.
-            if isinstance(mid, int):
-                if mid <= 72:
-                    match["match_id_str"] = f"GS-{mid:02d}"
-                else:
-                    match["match_id_str"] = str(mid)
-            else:
-                match["match_id_str"] = str(mid)
             schedule[mid] = match
 
-    # Also index knockout bracket.
     for match in data.get("knockout_bracket", []):
         mid = match.get("match_id")
         if mid:
@@ -83,6 +73,46 @@ def _outcome_from_score(home_goals: int, away_goals: int) -> str:
     elif away_goals > home_goals:
         return "away"
     return "draw"
+
+
+def map_api_match(api_match: dict, tournament: dict) -> dict:
+    """Map a single football-data.org match to our result format using fd_id."""
+    home = utils.API_TO_FIFA_TLA.get(
+        api_match.get("homeTeam", {}).get("tla", ""),
+        api_match.get("homeTeam", {}).get("tla", ""),
+    )
+    away = utils.API_TO_FIFA_TLA.get(
+        api_match.get("awayTeam", {}).get("tla", ""),
+        api_match.get("awayTeam", {}).get("tla", ""),
+    )
+    date = api_match.get("utcDate", "")[:10]
+    score = api_match.get("score", {}).get("fullTime", {})
+
+    fd_id = None
+    match_id = None
+    for m in tournament.get("matches", []):
+        if (m.get("home_team") == home and m.get("away_team") == away and m.get("date") == date):
+            fd_id = m.get("fd_id")
+            match_id = str(m.get("match_id"))
+            break
+
+    home_goals = score.get("home")
+    away_goals = score.get("away")
+    outcome = None
+    if home_goals is not None and away_goals is not None:
+        outcome = _outcome_from_score(home_goals, away_goals)
+
+    return {
+        "fd_id": fd_id,
+        "match_id": match_id,
+        "home_team": home,
+        "away_team": away,
+        "score": {"home": home_goals, "away": away_goals},
+        "outcome": outcome,
+        "date": date,
+        "stage": api_match.get("stage", ""),
+        "group": api_match.get("group", ""),
+    }
 
 
 def fetch_from_api(api_key: str, date: str = None, fetch_all: bool = False) -> list:
@@ -104,59 +134,18 @@ def fetch_from_api(api_key: str, date: str = None, fetch_all: bool = False) -> l
     resp.raise_for_status()
     data = resp.json()
 
+    tournament = utils.load_tournament_data()
     matches = []
     for m in data.get("matches", []):
-        score = m.get("score", {})
-        ft = score.get("fullTime", {})
-        if ft.get("home") is None:
+        if m.get("status") != "FINISHED":
             continue
-
-        home_goals = ft["home"]
-        away_goals = ft["away"]
-
-        result = {
-            "match_id": _map_api_match_id(m),
-            "home_team": m.get("homeTeam", {}).get("tla", ""),
-            "away_team": m.get("awayTeam", {}).get("tla", ""),
-            "score": {"home": home_goals, "away": away_goals},
-            "outcome": _outcome_from_score(home_goals, away_goals),
-            "date": m.get("utcDate", "")[:10],
-            "stage": m.get("stage", ""),
-            "group": m.get("group", ""),
-        }
-        matches.append(result)
+        score = m.get("score", {}).get("fullTime", {})
+        if score.get("home") is None:
+            continue
+        matches.append(map_api_match(m, tournament))
 
     _log(f"Fetched {len(matches)} finished matches")
     return matches
-
-
-def _map_api_match_id(api_match: dict) -> str:
-    """Map football-data.org match to our match_id convention.
-
-    This is approximate — ideally we match by teams + date against tournament.json.
-    """
-    stage = api_match.get("stage", "")
-    matchday = api_match.get("matchday", 0)
-
-    # Load schedule for mapping.
-    home = api_match.get("homeTeam", {}).get("tla", "")
-    away = api_match.get("awayTeam", {}).get("tla", "")
-    date = api_match.get("utcDate", "")[:10]
-
-    # Try to match against tournament.json.
-    try:
-        schedule = load_tournament_schedule()
-        for mid, match in schedule.items():
-            m_home = match.get("home_team", "")
-            m_away = match.get("away_team", "")
-            m_date = match.get("date", "")
-            if m_home == home and m_away == away and m_date == date:
-                return match.get("match_id_str", str(mid))
-    except Exception:
-        pass
-
-    # Fallback: construct from stage.
-    return f"{stage}_{home}v{away}_{date}"
 
 
 def save_results(matches: list, results_dir: str = RESULTS_DIR):
@@ -181,15 +170,14 @@ def save_results(matches: list, results_dir: str = RESULTS_DIR):
             except (json.JSONDecodeError, OSError):
                 pass
 
-        # Merge: update existing by match_id, add new.
-        existing_ids = {m["match_id"] for m in existing}
-        merged = existing[:]
+        # Merge keyed by fd_id when available, otherwise match_id.
+        def _key(x):
+            return x.get("fd_id") if x.get("fd_id") is not None else x.get("match_id")
+
+        existing_by_key = {_key(e): e for e in existing}
         for m in day_matches:
-            if m["match_id"] in existing_ids:
-                # Update existing.
-                merged = [e if e["match_id"] != m["match_id"] else m for e in merged]
-            else:
-                merged.append(m)
+            existing_by_key[_key(m)] = m
+        merged = list(existing_by_key.values())
 
         output = {
             "date": date,
@@ -220,13 +208,14 @@ def create_manual_template(date: str, results_dir: str = RESULTS_DIR):
             if match.get("date") == date:
                 day_matches.append(
                     {
-                        "match_id": match.get("match_id_str", str(mid)),
+                        "fd_id": match.get("fd_id"),
+                        "match_id": str(mid),
                         "home_team": match.get("home_team", ""),
                         "away_team": match.get("away_team", ""),
                         "score": {"home": None, "away": None},
                         "outcome": None,
                         "date": date,
-                        "stage": "group_stage" if isinstance(mid, int) and mid <= 72 else "knockout",
+                        "stage": match.get("stage", ""),
                         "group": match.get("group", ""),
                     }
                 )
