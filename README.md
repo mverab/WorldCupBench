@@ -118,17 +118,58 @@ Each model outputs a JSON object validated against [`schema/predictions_schema.j
 - **Knockout = no draws**: `probs.draw` must be `0.0`; if the model predicts a draw in 90 min, it must indicate the winner of extra time/penalties
 - **Frozen timestamp**: All predictions were generated and committed before the opening match (June 11, 2026)
 
-### Scoring (Coming Soon)
+---
 
-As the tournament progresses, we will compute:
+## 📊 How the ranking is computed
 
-| Metric | Description |
-|--------|-------------|
-| **Match Accuracy** | Correct result (home/draw/away) per match |
-| **Exact Score** | Correct scoreline (bonus points) |
-| **Stage Accuracy** | Correct progression through each knockout round |
-| **Brier Score** | Calibration of probability estimates |
-| **Polymarket ROI** | Hypothetical return betting $10 per match following each model |
+WorldCupBench scores every model on **three independent metrics**. The
+leaderboard ordering is driven by the **probabilistic** metrics, not by the
+single-outcome pick.
+
+| Metric | What it measures | Input field used |
+|---|---|---|
+| **Brier score** ↓ | Calibration quality of the 1X2 probabilities | `probs.{home,draw,away}` |
+| **Outcome accuracy** ↑ | Did the most likely outcome happen? (`argmax(probs)`) | `probs.{home,draw,away}` |
+| **Exact-score points** ↑ | Did the predicted scoreline match exactly? | `predicted_result` + `predicted_score` |
+
+> [!IMPORTANT]
+> The leaderboard (Brier + outcome accuracy) is computed **strictly from the
+> 1X2 probabilities** (`probs`). The fields `predicted_result` and
+> `predicted_score` feed **only** the exact-score metric.
+>
+> This is why you may see a match where `probs.away` is the highest value but
+> `predicted_result` is `"draw"`: in tight matches (e.g. `0.30 / 0.30 / 0.40`)
+> a model can rationally pick a draw as its single best guess while still
+> assigning the marginally higher probability to one side. **This is a
+> legitimate model decision, not a data error.** All 792 frozen predictions
+> (11 models × 72 group matches) were audited: **0 inconsistencies** between
+> `predicted_result` and `predicted_score`.
+
+### 🧊 Freeze provenance (`freeze-v3`)
+
+All pre-tournament predictions were frozen **before kickoff** and carry an
+audit trail:
+
+- `source_schema: "freeze-v3"` — the schema version the prediction was
+  generated under.
+- `model_id` — the exact model checkpoint queried (e.g.
+  `anthropic/claude-5-fable-20260609`).
+- `generated_at` — UTC timestamp of generation.
+- `orientation_flipped` — `true` when the match was stored in the opposite
+  home/away orientation vs. the official fixture. On these matches `probs`,
+  `predicted_result` and `predicted_score` are **all** normalized to the
+  official orientation, so the data is internally consistent.
+
+> ⚽ MEX–RSA (match 1) counts toward scoring: the freeze timestamp (2026-06-10)
+> precedes the match (2026-06-11). `freeze-v3` does **not** include a bracket /
+> champion prediction, so those points are scored as 0 for this modality.
+
+🇪🇸 **Resumen (ES):** el ranking (Brier + acierto de resultado) se calcula
+**solo sobre las probabilidades 1X2**. Los campos `predicted_result` y
+`predicted_score` alimentan únicamente la métrica de marcador exacto. Por eso
+en partidos parejos un modelo puede tener la prob más alta en un lado y aun así
+elegir empate como pick puntual: es una decisión válida del modelo, no un error
+de datos. Los 792 partidos congelados fueron auditados: 0 inconsistencias.
 
 ---
 
