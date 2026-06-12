@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-12T01:34:47.486457+00:00",
+  "last_updated": "2026-06-12T01:59:27.925103+00:00",
   "total_results": 1,
   "total_models": 11,
   "models": [
@@ -13,9 +13,9 @@
       "brier_avg": 0.0518,
       "brier_total": 0.0518,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "BRA",
+      "runner_up": "ENG",
+      "third_place": "FRA"
     },
     {
       "rank": 2,
@@ -27,9 +27,9 @@
       "brier_avg": 0.1194,
       "brier_total": 0.1194,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "FRA",
+      "runner_up": "ENG",
+      "third_place": "ARG"
     },
     {
       "rank": 3,
@@ -41,9 +41,9 @@
       "brier_avg": 0.14,
       "brier_total": 0.14,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "ARG",
+      "runner_up": "USA",
+      "third_place": "ENG"
     },
     {
       "rank": 4,
@@ -55,9 +55,9 @@
       "brier_avg": 0.14,
       "brier_total": 0.14,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "FRA",
+      "runner_up": "ARG",
+      "third_place": "ESP"
     },
     {
       "rank": 5,
@@ -69,9 +69,9 @@
       "brier_avg": 0.1568,
       "brier_total": 0.1568,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "ESP",
+      "runner_up": "ARG",
+      "third_place": "FRA"
     },
     {
       "rank": 6,
@@ -83,9 +83,9 @@
       "brier_avg": 0.1568,
       "brier_total": 0.1568,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "FRA",
+      "runner_up": "BRA",
+      "third_place": "ARG"
     },
     {
       "rank": 7,
@@ -97,9 +97,9 @@
       "brier_avg": 0.1784,
       "brier_total": 0.1784,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "FRA",
+      "runner_up": "BRA",
+      "third_place": "ESP"
     },
     {
       "rank": 8,
@@ -111,9 +111,9 @@
       "brier_avg": 0.185,
       "brier_total": 0.185,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "BRA",
+      "runner_up": "FRA",
+      "third_place": "ARG"
     },
     {
       "rank": 9,
@@ -125,9 +125,9 @@
       "brier_avg": 0.185,
       "brier_total": 0.185,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "ARG",
+      "runner_up": "ESP",
+      "third_place": "FRA"
     },
     {
       "rank": 10,
@@ -139,9 +139,9 @@
       "brier_avg": 0.185,
       "brier_total": 0.185,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "ARG",
+      "runner_up": "FRA",
+      "third_place": "ESP"
     },
     {
       "rank": 11,
@@ -153,9 +153,9 @@
       "brier_avg": 0.185,
       "brier_total": 0.185,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "ARG",
+      "runner_up": "FRA",
+      "third_place": "BRA"
     }
   ],
   "history": [
