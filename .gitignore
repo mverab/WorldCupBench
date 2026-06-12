@@ -18,3 +18,7 @@ predictions/*_raw_error.txt
 .idea/
 .vscode/
 *.log
+
+# Worktrees
+.worktrees/
+worktrees/
