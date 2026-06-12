@@ -202,10 +202,18 @@ def score_model(prediction: dict, results: dict) -> dict:
     model_name = prediction.get("model", "Unknown")
     metrics = evaluate_prediction(prediction, results)
 
+    total_evaluated = metrics["total_evaluated"]
+    correct_outcomes = metrics["correct_outcomes"]
+    exact_scores = metrics["exact_scores"]
+    accuracy = (correct_outcomes / total_evaluated * 100) if total_evaluated > 0 else None
+
     return {
         "model_name": model_name,
         "model_id": prediction.get("model_id", ""),
         **metrics,
+        "accuracy": round(accuracy, 2) if accuracy is not None else None,
+        "correct": correct_outcomes,
+        "exact": exact_scores,
         "champion": prediction.get("champion"),
         "runner_up": prediction.get("runner_up"),
         "third_place": prediction.get("third"),
@@ -265,6 +273,9 @@ def generate_leaderboard(
                 "total_evaluated": m["total_evaluated"],
                 "correct_outcomes": m["correct_outcomes"],
                 "exact_scores": m["exact_scores"],
+                "accuracy": m["accuracy"],
+                "correct": m["correct"],
+                "exact": m["exact"],
                 "brier_avg": m["brier_avg"],
                 "brier_total": m["brier_total"],
                 "bracket_points": m["bracket_points"],

@@ -87,3 +87,71 @@ def test_score_with_real_result_computes_metrics():
         assert leaderboard["total_results"] == 1
         assert leaderboard["total_models"] == 1
         assert leaderboard["models"][0]["total_evaluated"] == 1
+
+
+def test_score_includes_accuracy_correct_exact():
+    """A finished match should expose accuracy, correct, and exact fields."""
+    with tempfile.TemporaryDirectory() as results_dir, tempfile.TemporaryDirectory() as out_dir:
+        result_path = os.path.join(results_dir, "2026-06-11.json")
+        with open(result_path, "w", encoding="utf-8") as f:
+            json.dump({
+                "date": "2026-06-11",
+                "matches": [{
+                    "fd_id": 1,
+                    "match_id": "1",
+                    "home_team": "USA",
+                    "away_team": "MEX",
+                    "score": {"home": 2, "away": 1},
+                    "outcome": "home",
+                    "date": "2026-06-11",
+                    "stage": "GROUP_STAGE",
+                    "group": "A",
+                }]
+            }, f)
+
+        predictions = [_make_prediction("1", {"home": 0.6, "draw": 0.2, "away": 0.2})]
+        output_path = os.path.join(out_dir, "leaderboard.json")
+        leaderboard = score.generate_leaderboard(results_dir, output_path, predictions)
+
+        model = leaderboard["models"][0]
+        assert "accuracy" in model
+        assert "correct" in model
+        assert "exact" in model
+        assert model["accuracy"] == 100.0
+        assert model["correct"] == 1
+        assert model["exact"] == 0
+
+
+def test_score_null_accuracy_when_no_matches_evaluated():
+    """Accuracy must be null (not 0 or undefined) when no matches have results."""
+    with tempfile.TemporaryDirectory() as results_dir, tempfile.TemporaryDirectory() as out_dir:
+        template_path = os.path.join(results_dir, "2026-06-11.json")
+        with open(template_path, "w", encoding="utf-8") as f:
+            json.dump(
+                {
+                    "date": "2026-06-11",
+                    "matches": [
+                        {
+                            "fd_id": 1,
+                            "match_id": "1",
+                            "home_team": "USA",
+                            "away_team": "MEX",
+                            "score": {"home": None, "away": None},
+                            "outcome": None,
+                            "date": "2026-06-11",
+                            "stage": "group_stage",
+                            "group": "A",
+                        }
+                    ],
+                },
+                f,
+            )
+
+        output_path = os.path.join(out_dir, "leaderboard.json")
+        predictions = [_make_prediction("1")]
+        leaderboard = score.generate_leaderboard(results_dir, output_path, predictions)
+
+        model = leaderboard["models"][0]
+        assert model["accuracy"] is None
+        assert model["correct"] == 0
+        assert model["exact"] == 0

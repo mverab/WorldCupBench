@@ -62,8 +62,9 @@ let tournament = null;
 let predictionsSummary = null;
 
 function accuracy(m) {
-  if (!m || m.total_evaluated <= 0) return '0.0';
-  return (m.correct_outcomes / m.total_evaluated * 100).toFixed(1);
+  if (!m) return null;
+  if (m.accuracy === null || m.accuracy === undefined) return null;
+  return Number(m.accuracy).toFixed(1);
 }
 
 async function loadData() {
@@ -101,14 +102,17 @@ function renderStats() {
   const models = leaderboard?.total_models || 0;
   const results = leaderboard?.total_results || 0;
   const totalMatches = tournament?.matches?.length || 104;
-  const avgAcc = leaderboard?.models?.length
-    ? (leaderboard.models.reduce((s, m) => s + parseFloat(accuracy(m)), 0) / leaderboard.models.length).toFixed(1)
-    : '0.0';
+  const accuracies = leaderboard?.models?.length
+    ? leaderboard.models.map(m => accuracy(m)).filter(a => a !== null).map(Number)
+    : [];
+  const avgAcc = accuracies.length
+    ? (accuracies.reduce((s, v) => s + v, 0) / accuracies.length).toFixed(1)
+    : null;
 
   el.innerHTML = [
     { label: 'AI Models', value: models, icon: '\ud83e\udd16', color: 'blue' },
     { label: 'Results In', value: `${results}/${totalMatches}`, icon: '\u26bd', color: 'green' },
-    { label: 'Avg Accuracy', value: results > 0 ? `${avgAcc}%` : 'Pending', icon: '\ud83c\udfaf', color: 'gold' },
+    { label: 'Avg Accuracy', value: results > 0 && avgAcc !== null ? `${avgAcc}%` : '\u2014', icon: '\ud83c\udfaf', color: 'gold' },
     { label: 'Tournament', value: results === 0 ? 'Pre-Kickoff' : 'Live', icon: '\ud83d\udcc5', color: 'purple' },
   ].map(s => `
     <div class="glass rounded-xl p-4 hover:border-${s.color === 'gold' ? 'gold' : `accent-${s.color}`}/30 transition">
@@ -160,7 +164,7 @@ function renderLeaderboard() {
         <td class="px-4 py-3 text-center text-green-400">${m.correct_outcomes}</td>
         <td class="px-4 py-3 text-center text-gold">${m.exact_scores}</td>
         <td class="px-4 py-3 text-center">
-          <span class="font-bold" style="color:${color}">${accuracy(m)}%</span>
+          <span class="font-bold" style="color:${color}">${accuracy(m) !== null ? accuracy(m) + '%' : '—'}</span>
         </td>
         <td class="px-4 py-3 text-center text-gray-300">${m.brier_avg ?? '—'}</td>
         <td class="px-4 py-3 text-center font-bold text-gold">${m.bracket_points}</td>
@@ -184,7 +188,7 @@ function renderPodiumCard(model, position) {
         <div class="text-4xl mb-2">${emoji}</div>
         <div class="w-4 h-4 rounded-full mx-auto mb-2" style="background:${color}"></div>
         <h3 class="font-bold text-white text-lg">${model.model_name}</h3>
-        <div class="mt-3 text-3xl font-black" style="color:${color}">${accuracy(model)}%</div>
+        <div class="mt-3 text-3xl font-black" style="color:${color}">${accuracy(model) !== null ? accuracy(model) + '%' : '—'}</div>
         <div class="text-xs text-gray-400 mt-1">accuracy</div>
         <div class="mt-3 flex justify-center gap-4 text-xs">
           <div><span class="text-green-400 font-bold">${model.correct_outcomes}</span> correct</div>

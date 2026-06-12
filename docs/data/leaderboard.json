@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-12T01:34:47.486457+00:00",
+  "last_updated": "2026-06-12T02:57:16.640874+00:00",
   "total_results": 1,
   "total_models": 11,
   "models": [
@@ -10,12 +10,15 @@
       "total_evaluated": 1,
       "correct_outcomes": 1,
       "exact_scores": 0,
+      "accuracy": 100.0,
+      "correct": 1,
+      "exact": 0,
       "brier_avg": 0.0518,
       "brier_total": 0.0518,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "BRA",
+      "runner_up": "ENG",
+      "third_place": "FRA"
     },
     {
       "rank": 2,
@@ -24,12 +27,15 @@
       "total_evaluated": 1,
       "correct_outcomes": 1,
       "exact_scores": 1,
+      "accuracy": 100.0,
+      "correct": 1,
+      "exact": 1,
       "brier_avg": 0.1194,
       "brier_total": 0.1194,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "FRA",
+      "runner_up": "ENG",
+      "third_place": "ARG"
     },
     {
       "rank": 3,
@@ -38,12 +44,15 @@
       "total_evaluated": 1,
       "correct_outcomes": 1,
       "exact_scores": 1,
+      "accuracy": 100.0,
+      "correct": 1,
+      "exact": 1,
       "brier_avg": 0.14,
       "brier_total": 0.14,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "ARG",
+      "runner_up": "USA",
+      "third_place": "ENG"
     },
     {
       "rank": 4,
@@ -52,12 +61,15 @@
       "total_evaluated": 1,
       "correct_outcomes": 1,
       "exact_scores": 1,
+      "accuracy": 100.0,
+      "correct": 1,
+      "exact": 1,
       "brier_avg": 0.14,
       "brier_total": 0.14,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "FRA",
+      "runner_up": "ARG",
+      "third_place": "ESP"
     },
     {
       "rank": 5,
@@ -66,12 +78,15 @@
       "total_evaluated": 1,
       "correct_outcomes": 1,
       "exact_scores": 1,
+      "accuracy": 100.0,
+      "correct": 1,
+      "exact": 1,
       "brier_avg": 0.1568,
       "brier_total": 0.1568,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "ESP",
+      "runner_up": "ARG",
+      "third_place": "FRA"
     },
     {
       "rank": 6,
@@ -80,12 +95,15 @@
       "total_evaluated": 1,
       "correct_outcomes": 1,
       "exact_scores": 1,
+      "accuracy": 100.0,
+      "correct": 1,
+      "exact": 1,
       "brier_avg": 0.1568,
       "brier_total": 0.1568,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "FRA",
+      "runner_up": "BRA",
+      "third_place": "ARG"
     },
     {
       "rank": 7,
@@ -94,12 +112,15 @@
       "total_evaluated": 1,
       "correct_outcomes": 1,
       "exact_scores": 1,
+      "accuracy": 100.0,
+      "correct": 1,
+      "exact": 1,
       "brier_avg": 0.1784,
       "brier_total": 0.1784,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "FRA",
+      "runner_up": "BRA",
+      "third_place": "ESP"
     },
     {
       "rank": 8,
@@ -108,12 +129,15 @@
       "total_evaluated": 1,
       "correct_outcomes": 1,
       "exact_scores": 1,
+      "accuracy": 100.0,
+      "correct": 1,
+      "exact": 1,
       "brier_avg": 0.185,
       "brier_total": 0.185,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "BRA",
+      "runner_up": "FRA",
+      "third_place": "ARG"
     },
     {
       "rank": 9,
@@ -122,12 +146,15 @@
       "total_evaluated": 1,
       "correct_outcomes": 1,
       "exact_scores": 1,
+      "accuracy": 100.0,
+      "correct": 1,
+      "exact": 1,
       "brier_avg": 0.185,
       "brier_total": 0.185,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "ARG",
+      "runner_up": "ESP",
+      "third_place": "FRA"
     },
     {
       "rank": 10,
@@ -136,12 +163,15 @@
       "total_evaluated": 1,
       "correct_outcomes": 1,
       "exact_scores": 1,
+      "accuracy": 100.0,
+      "correct": 1,
+      "exact": 1,
       "brier_avg": 0.185,
       "brier_total": 0.185,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "ARG",
+      "runner_up": "FRA",
+      "third_place": "ESP"
     },
     {
       "rank": 11,
@@ -150,12 +180,15 @@
       "total_evaluated": 1,
       "correct_outcomes": 1,
       "exact_scores": 1,
+      "accuracy": 100.0,
+      "correct": 1,
+      "exact": 1,
       "brier_avg": 0.185,
       "brier_total": 0.185,
       "bracket_points": 0,
-      "champion": null,
-      "runner_up": null,
-      "third_place": null
+      "champion": "ARG",
+      "runner_up": "FRA",
+      "third_place": "BRA"
     }
   ],
   "history": [
