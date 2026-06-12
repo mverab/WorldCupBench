@@ -2,25 +2,28 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://github.com/mverab/WorldCupBench/schema/predictions_schema.json",
   "title": "WorldCupBench Predictions Schema v3",
-  "description": "Prediction format using explicit 1X2 probabilities and canonical FIFA TLAs.",
+  "description": "Prediction format using explicit 1X2 probabilities, canonical FIFA TLAs, and group_qualifiers.",
   "type": "object",
   "required": [
     "model",
+    "model_id",
     "modality",
     "generated_at",
     "seed_or_temp",
     "group_matches",
-    "group_tables",
-    "best_thirds",
+    "group_qualifiers",
     "bracket",
     "champion",
     "runner_up",
-    "third"
+    "third",
+    "fourth_place"
   ],
   "properties": {
     "model": {"type": "string"},
+    "model_id": {"type": "string"},
     "modality": {"enum": ["pre_tournament", "daily"]},
     "generated_at": {"type": "string", "format": "date-time"},
+    "source_schema": {"type": "string"},
     "seed_or_temp": {
       "type": "object",
       "properties": {
@@ -30,39 +33,69 @@
     },
     "group_matches": {
       "type": "array",
+      "minItems": 72,
+      "maxItems": 72,
       "items": {"$ref": "#/definitions/group_match"}
     },
-    "group_tables": {
+    "group_qualifiers": {
       "type": "object",
-      "additionalProperties": {
-        "type": "array",
-        "minItems": 4,
-        "maxItems": 4,
-        "items": {"$ref": "#/definitions/tla"}
+      "required": ["first_place", "second_place", "best_third_place"],
+      "properties": {
+        "first_place": {
+          "type": "array",
+          "minItems": 12,
+          "maxItems": 12,
+          "items": {"$ref": "#/definitions/qualifier"}
+        },
+        "second_place": {
+          "type": "array",
+          "minItems": 12,
+          "maxItems": 12,
+          "items": {"$ref": "#/definitions/qualifier"}
+        },
+        "best_third_place": {
+          "type": "array",
+          "minItems": 8,
+          "maxItems": 8,
+          "items": {"$ref": "#/definitions/qualifier"}
+        }
       }
-    },
-    "best_thirds": {
-      "type": "array",
-      "minItems": 8,
-      "maxItems": 8,
-      "items": {"$ref": "#/definitions/tla"}
     },
     "bracket": {"$ref": "#/definitions/bracket"},
     "champion": {"$ref": "#/definitions/tla"},
     "runner_up": {"$ref": "#/definitions/tla"},
-    "third": {"$ref": "#/definitions/tla"}
+    "third": {"$ref": "#/definitions/tla"},
+    "fourth_place": {"$ref": "#/definitions/tla"}
   },
   "definitions": {
     "tla": {
       "type": "string",
       "pattern": "^[A-Z]{3}$"
     },
+    "qualifier": {
+      "type": "object",
+      "required": ["team_code", "group"],
+      "properties": {
+        "team_code": {"$ref": "#/definitions/tla"},
+        "group": {"type": "string", "pattern": "^[A-L]$"}
+      }
+    },
     "group_match": {
       "type": "object",
-      "required": ["match_id", "probs"],
+      "required": ["match_id", "probs", "predicted_result", "predicted_score"],
       "properties": {
         "match_id": {"type": "string"},
-        "probs": {"$ref": "#/definitions/probs"}
+        "probs": {"$ref": "#/definitions/probs"},
+        "predicted_result": {"enum": ["home", "draw", "away"]},
+        "predicted_score": {
+          "type": "object",
+          "required": ["home", "away"],
+          "properties": {
+            "home": {"type": "integer"},
+            "away": {"type": "integer"}
+          }
+        },
+        "orientation_flipped": {"type": "boolean"}
       }
     },
     "probs": {
@@ -82,26 +115,33 @@
         "R16": {"$ref": "#/definitions/knockout_round"},
         "QF": {"$ref": "#/definitions/knockout_round"},
         "SF": {"$ref": "#/definitions/knockout_round"},
-        "third_place": {"$ref": "#/definitions/tla"},
-        "final": {
-          "type": "object",
-          "required": ["winner", "runner_up"],
-          "properties": {
-            "winner": {"$ref": "#/definitions/tla"},
-            "runner_up": {"$ref": "#/definitions/tla"}
-          }
-        }
+        "third_place": {"$ref": "#/definitions/knockout_match"},
+        "final": {"$ref": "#/definitions/knockout_match"}
       }
     },
     "knockout_round": {
       "type": "array",
-      "items": {
-        "type": "object",
-        "required": ["match", "winner"],
-        "properties": {
-          "match": {"type": "string"},
-          "winner": {"$ref": "#/definitions/tla"}
-        }
+      "items": {"$ref": "#/definitions/knockout_match"}
+    },
+    "knockout_match": {
+      "type": "object",
+      "required": ["match_id", "home_team", "away_team", "probs", "predicted_result", "predicted_score", "winner"],
+      "properties": {
+        "match_id": {"type": "string"},
+        "home_team": {"$ref": "#/definitions/tla"},
+        "away_team": {"$ref": "#/definitions/tla"},
+        "probs": {"$ref": "#/definitions/probs"},
+        "predicted_result": {"enum": ["home", "away"]},
+        "predicted_score": {
+          "type": "object",
+          "required": ["home", "away"],
+          "properties": {
+            "home": {"type": "integer"},
+            "away": {"type": "integer"}
+          }
+        },
+        "winner": {"$ref": "#/definitions/tla"},
+        "orientation_flipped": {"type": "boolean"}
       }
     }
   }
