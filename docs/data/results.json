@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-12T14:32:16.999586+00:00",
+  "last_updated": "2026-06-13T04:27:45.247559+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -28,6 +28,34 @@
       "date": "2026-06-11",
       "stage": "GROUP_STAGE",
       "group": "GROUP_A"
+    },
+    {
+      "fd_id": 537333,
+      "match_id": 7,
+      "home_team": "CAN",
+      "away_team": "BIH",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "outcome": "draw",
+      "date": "2026-06-12",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_B"
+    },
+    {
+      "fd_id": 537345,
+      "match_id": 19,
+      "home_team": "USA",
+      "away_team": "PAR",
+      "score": {
+        "home": 4,
+        "away": 1
+      },
+      "outcome": "home",
+      "date": "2026-06-12",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_D"
     }
   ]
 }
