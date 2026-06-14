@@ -1,0 +1,34 @@
+{
+  "date": "2026-06-13",
+  "last_updated": "2026-06-14T02:51:12.946831+00:00",
+  "matches": [
+    {
+      "fd_id": 537334,
+      "match_id": 8,
+      "home_team": "QAT",
+      "away_team": "SUI",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "outcome": "draw",
+      "date": "2026-06-13",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_B"
+    },
+    {
+      "fd_id": 537339,
+      "match_id": 13,
+      "home_team": "BRA",
+      "away_team": "MAR",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "outcome": "draw",
+      "date": "2026-06-13",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_C"
+    }
+  ]
+}
