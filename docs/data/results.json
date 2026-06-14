@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-14T02:51:14.420254+00:00",
+  "last_updated": "2026-06-14T09:21:11.637282+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -84,6 +84,34 @@
       "date": "2026-06-13",
       "stage": "GROUP_STAGE",
       "group": "GROUP_C"
+    },
+    {
+      "fd_id": 537340,
+      "match_id": 14,
+      "home_team": "HAI",
+      "away_team": "SCO",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "outcome": "away",
+      "date": "2026-06-13",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_C"
+    },
+    {
+      "fd_id": 537346,
+      "match_id": 20,
+      "home_team": "AUS",
+      "away_team": "TUR",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "outcome": "home",
+      "date": "2026-06-13",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_D"
     }
   ]
 }
