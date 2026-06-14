@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-14",
+  "last_updated": "2026-06-14T19:13:06.141581+00:00",
+  "matches": [
+    {
+      "fd_id": 537351,
+      "match_id": 25,
+      "home_team": "GER",
+      "away_team": "CUW",
+      "score": {
+        "home": 7,
+        "away": 1
+      },
+      "outcome": "home",
+      "date": "2026-06-14",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_E"
+    }
+  ]
+}
