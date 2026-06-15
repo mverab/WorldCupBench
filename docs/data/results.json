@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-15T17:02:27.721257+00:00",
+  "last_updated": "2026-06-15T20:47:56.502263+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -168,6 +168,20 @@
       "date": "2026-06-14",
       "stage": "GROUP_STAGE",
       "group": "GROUP_F"
+    },
+    {
+      "fd_id": 537369,
+      "match_id": 43,
+      "home_team": "ESP",
+      "away_team": "CPV",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "outcome": "draw",
+      "date": "2026-06-15",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_H"
     }
   ]
 }
