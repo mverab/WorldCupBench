@@ -1,6 +1,6 @@
 {
   "date": "2026-06-14",
-  "last_updated": "2026-06-14T19:13:06.141581+00:00",
+  "last_updated": "2026-06-15T00:55:02.086114+00:00",
   "matches": [
     {
       "fd_id": 537351,
@@ -15,6 +15,20 @@
       "date": "2026-06-14",
       "stage": "GROUP_STAGE",
       "group": "GROUP_E"
+    },
+    {
+      "fd_id": 537357,
+      "match_id": 31,
+      "home_team": "NED",
+      "away_team": "JPN",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "outcome": "draw",
+      "date": "2026-06-14",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_F"
     }
   ]
 }
