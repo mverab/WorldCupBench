@@ -1,6 +1,6 @@
 {
   "date": "2026-06-14",
-  "last_updated": "2026-06-15T02:55:48.290329+00:00",
+  "last_updated": "2026-06-15T11:49:54.020523+00:00",
   "matches": [
     {
       "fd_id": 537351,
@@ -43,6 +43,20 @@
       "date": "2026-06-14",
       "stage": "GROUP_STAGE",
       "group": "GROUP_E"
+    },
+    {
+      "fd_id": 537358,
+      "match_id": 32,
+      "home_team": "SWE",
+      "away_team": "TUN",
+      "score": {
+        "home": 5,
+        "away": 1
+      },
+      "outcome": "home",
+      "date": "2026-06-14",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_F"
     }
   ]
 }
