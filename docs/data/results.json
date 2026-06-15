@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-15T00:55:03.064594+00:00",
+  "last_updated": "2026-06-15T02:55:49.804010+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -140,6 +140,20 @@
       "date": "2026-06-14",
       "stage": "GROUP_STAGE",
       "group": "GROUP_F"
+    },
+    {
+      "fd_id": 537352,
+      "match_id": 26,
+      "home_team": "CIV",
+      "away_team": "ECU",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "outcome": "home",
+      "date": "2026-06-14",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_E"
     }
   ]
 }
