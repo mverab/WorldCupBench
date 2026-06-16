@@ -69,6 +69,7 @@
       <button onclick="showTab('consensus')" id="tab-consensus" class="tab-inactive pb-3 text-sm font-medium whitespace-nowrap transition">🔮 Consensus</button>
       <button onclick="showTab('matches')" id="tab-matches" class="tab-inactive pb-3 text-sm font-medium whitespace-nowrap transition">⚽ Matches</button>
       <button onclick="showTab('bracket')" id="tab-bracket" class="tab-inactive pb-3 text-sm font-medium whitespace-nowrap transition">🏅 Bracket</button>
+      <button onclick="showTab('disagreement')" id="tab-disagreement" class="tab-inactive pb-3 text-sm font-medium whitespace-nowrap transition">📊 Disagreement</button>
     </div>
   </nav>
 
@@ -121,6 +122,18 @@
     <!-- Bracket Tab -->
     <section id="section-bracket" class="fade-in hidden">
       <div id="bracket-content"></div>
+    </section>
+
+    <!-- Disagreement Tab -->
+    <section id="section-disagreement" class="fade-in hidden">
+      <div class="mb-6">
+        <h2 class="text-2xl font-bold text-white mb-2">Model Disagreement</h2>
+        <p class="text-gray-400 text-sm">Matches where models disagree most on the 1X2 probabilities.</p>
+      </div>
+      <div id="disagreement-filters" class="flex flex-wrap gap-2 mb-6"></div>
+      <div id="disagreement-content">
+        <p class="text-gray-500 text-center py-12">Loading disagreement data...</p>
+      </div>
     </section>
 
   </main>

@@ -14,7 +14,9 @@ const MODEL_COLORS = {
   'Nex-N2-Pro': '#C084FC',
 };
 
-// FIFA 3-letter code to flag image (flagcdn) for reliable cross-platform rendering.
+const API_BASE_URL = window.location.hostname === 'localhost'
+  ? 'http://localhost:8000'
+  : '';  // served behind same-origin proxy in production
 function codeToFlag(code) {
   if (!code) return '';
   const map3to2 = {
@@ -82,6 +84,22 @@ async function loadData() {
     console.error('Data load error:', e);
   }
   render();
+}
+
+async function loadDisagreement(phase = 'all') {
+  const el = document.getElementById('disagreement-content');
+  el.innerHTML = '<p class="text-gray-500 text-center py-12">Loading...</p>';
+  try {
+    const url = new URL(`${API_BASE_URL}/api/disagreement`);
+    if (phase !== 'all') url.searchParams.set('phase', phase);
+    const response = await fetch(url);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const data = await response.json();
+    renderDisagreement(data.matches, phase);
+  } catch (e) {
+    el.innerHTML = `<p class="text-red-400 text-center py-12">Could not load disagreement data. Make sure the API server is running.</p>`;
+    console.error('Disagreement load error:', e);
+  }
 }
 
 function render() {
@@ -417,12 +435,112 @@ function renderBracket() {
   `;
 }
 
+function renderDisagreement(matches, activePhase) {
+  const filtersEl = document.getElementById('disagreement-filters');
+  const contentEl = document.getElementById('disagreement-content');
+
+  const phases = [
+    { key: 'all', label: 'All' },
+    { key: 'group', label: 'Group Stage' },
+    { key: 'knockout', label: 'Knockout' },
+  ];
+
+  filtersEl.innerHTML = phases.map(p => `
+    <button onclick="loadDisagreement('${p.key}')"
+      class="px-3 py-1 rounded-full text-xs font-medium ${p.key === activePhase ? 'bg-gold text-black' : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}">
+      ${p.label}
+    </button>
+  `).join('');
+
+  if (!matches.length) {
+    contentEl.innerHTML = '<p class="text-gray-500 text-center py-12">No disagreement data available.</p>';
+    return;
+  }
+
+  contentEl.innerHTML = `
+    <div class="space-y-4">
+      ${matches.map((m, index) => renderDisagreementCard(m, index)).join('')}
+    </div>
+  `;
+}
+
+function renderDisagreementCard(match, index) {
+  const isHot = index < 10;
+  const date = new Date(match.date + 'T00:00:00');
+  const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  const phaseLabel = match.phase === 'group' ? `Group ${match.group}` : match.round.replace(/_/g, ' ');
+  const maxProb = Math.max(...match.model_predictions.map(mp => Math.max(mp.home, mp.draw || 0, mp.away)));
+
+  return `
+    <div class="glass rounded-xl p-4 ${isHot ? 'border-red-500/40' : ''} hover:border-gold/30 transition">
+      <div class="flex items-center justify-between mb-3">
+        <div class="flex items-center gap-2">
+          <span class="text-xs px-2 py-0.5 rounded bg-gray-800 text-gray-400">${phaseLabel}</span>
+          ${isHot ? '<span class="text-xs px-2 py-0.5 rounded bg-red-900/50 text-red-400 font-bold">Top Disagreement</span>' : ''}
+        </div>
+        <span class="text-xs text-gray-500">${dateStr}</span>
+      </div>
+      <div class="flex items-center justify-between mb-4">
+        <div class="text-center flex-1">
+          <div class="text-2xl mb-1">${codeToFlag(match.home_team)}</div>
+          <div class="text-xs font-medium text-white">${match.home_team}</div>
+        </div>
+        <div class="text-center px-4">
+          <div class="text-xs text-gray-400">vs</div>
+        </div>
+        <div class="text-center flex-1">
+          <div class="text-2xl mb-1">${codeToFlag(match.away_team)}</div>
+          <div class="text-xs font-medium text-white">${match.away_team}</div>
+        </div>
+      </div>
+      <div class="mb-3">
+        <div class="text-xs text-gray-400 mb-1">Disagreement score</div>
+        <div class="text-xl font-bold ${isHot ? 'text-red-400' : 'text-gold'}">${match.disagreement_score.toFixed(6)}</div>
+      </div>
+      <div class="space-y-2">
+        ${match.model_predictions.map(mp => renderModelPrediction(mp, match.phase, maxProb)).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function renderModelPrediction(mp, phase, maxProb) {
+  const color = MODEL_COLORS[mp.model] || '#9CA3AF';
+  const outcomes = phase === 'knockout'
+    ? [['home', mp.home], ['away', mp.away]]
+    : [['home', mp.home], ['draw', mp.draw], ['away', mp.away]];
+
+  return `
+    <div class="flex items-center gap-3 text-xs">
+      <div class="w-28 flex items-center gap-2">
+        <div class="w-2 h-2 rounded-full" style="background:${color}"></div>
+        <span class="text-white truncate">${mp.model}</span>
+      </div>
+      <div class="flex-1 flex gap-1">
+        ${outcomes.map(([label, value]) => `
+          <div class="flex-1 bg-gray-800 rounded h-5 overflow-hidden relative">
+            <div class="h-full flex items-center justify-end px-1 text-[10px] font-bold text-black" style="width:${(value / maxProb * 100).toFixed(0)}%; background:${color}80">
+              ${label[0].toUpperCase()}
+            </div>
+          </div>
+        `).join('')}
+      </div>
+      <div class="w-24 text-right text-gray-400">
+        ${outcomes.map(([label, value]) => `${label[0].toUpperCase()}:${value.toFixed(2)}`).join(' ')}
+      </div>
+    </div>
+  `;
+}
+
 // === TAB SWITCHING ===
 function showTab(name) {
-  ['leaderboard', 'consensus', 'matches', 'bracket'].forEach(t => {
+  ['leaderboard', 'consensus', 'matches', 'bracket', 'disagreement'].forEach(t => {
     document.getElementById(`section-${t}`).classList.toggle('hidden', t !== name);
     document.getElementById(`tab-${t}`).className = t === name ? 'tab-active pb-3 text-sm font-medium whitespace-nowrap transition' : 'tab-inactive pb-3 text-sm font-medium whitespace-nowrap transition';
   });
+  if (name === 'disagreement') {
+    loadDisagreement('all');
+  }
 }
 
 // === INIT ===

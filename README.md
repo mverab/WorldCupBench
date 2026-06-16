@@ -77,7 +77,12 @@ python src/run_predictions.py --dry-run
 
 # Generate leaderboard from collected predictions
 python src/generate_leaderboard.py --inject-readme
+
+# Run the API server (for the dashboard disagreement view)
+uvicorn src.api.main:app --reload --port 8000
 ```
+
+The disagreement endpoint is available at `http://localhost:8000/api/disagreement`.
 
 ---
 
