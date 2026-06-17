@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-17T14:56:01.927891+00:00",
+  "last_updated": "2026-06-17T20:03:27.501848+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -280,6 +280,20 @@
       "date": "2026-06-16",
       "stage": "GROUP_STAGE",
       "group": "GROUP_J"
+    },
+    {
+      "fd_id": 537403,
+      "match_id": 61,
+      "home_team": "POR",
+      "away_team": "COD",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "outcome": "draw",
+      "date": "2026-06-17",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_K"
     }
   ]
 }
