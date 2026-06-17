@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-17T04:25:42.563298+00:00",
+  "last_updated": "2026-06-17T10:28:58.463531+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -261,6 +261,20 @@
       "score": {
         "home": 3,
         "away": 0
+      },
+      "outcome": "home",
+      "date": "2026-06-16",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_J"
+    },
+    {
+      "fd_id": 537398,
+      "match_id": 56,
+      "home_team": "AUT",
+      "away_team": "JOR",
+      "score": {
+        "home": 3,
+        "away": 1
       },
       "outcome": "home",
       "date": "2026-06-16",
