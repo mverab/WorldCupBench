@@ -1,6 +1,6 @@
 {
   "date": "2026-06-17",
-  "last_updated": "2026-06-17T20:03:26.182083+00:00",
+  "last_updated": "2026-06-18T02:48:56.456565+00:00",
   "matches": [
     {
       "fd_id": 537403,
@@ -15,6 +15,20 @@
       "date": "2026-06-17",
       "stage": "GROUP_STAGE",
       "group": "GROUP_K"
+    },
+    {
+      "fd_id": 537409,
+      "match_id": 67,
+      "home_team": "ENG",
+      "away_team": "CRO",
+      "score": {
+        "home": 4,
+        "away": 2
+      },
+      "outcome": "home",
+      "date": "2026-06-17",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_L"
     }
   ]
 }
