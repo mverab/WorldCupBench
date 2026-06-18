@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-18T14:51:28.269074+00:00",
+  "last_updated": "2026-06-18T20:14:24.701954+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -336,6 +336,20 @@
       "date": "2026-06-17",
       "stage": "GROUP_STAGE",
       "group": "GROUP_K"
+    },
+    {
+      "fd_id": 537329,
+      "match_id": 4,
+      "home_team": "CZE",
+      "away_team": "RSA",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "outcome": "draw",
+      "date": "2026-06-18",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_A"
     }
   ]
 }
