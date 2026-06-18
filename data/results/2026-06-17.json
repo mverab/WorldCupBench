@@ -1,6 +1,6 @@
 {
   "date": "2026-06-17",
-  "last_updated": "2026-06-18T02:48:56.456565+00:00",
+  "last_updated": "2026-06-18T10:09:23.858303+00:00",
   "matches": [
     {
       "fd_id": 537403,
@@ -29,6 +29,34 @@
       "date": "2026-06-17",
       "stage": "GROUP_STAGE",
       "group": "GROUP_L"
+    },
+    {
+      "fd_id": 537410,
+      "match_id": 68,
+      "home_team": "GHA",
+      "away_team": "PAN",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "outcome": "home",
+      "date": "2026-06-17",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_L"
+    },
+    {
+      "fd_id": 537404,
+      "match_id": 62,
+      "home_team": "UZB",
+      "away_team": "COL",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "outcome": "away",
+      "date": "2026-06-17",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_K"
     }
   ]
 }

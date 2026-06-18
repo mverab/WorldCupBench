@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-18T01:36:40.582798+00:00",
+  "generated_at": "2026-06-18T10:09:23.983030+00:00",
   "model_count": 11,
-  "match_count": 21,
+  "match_count": 24,
   "matches": [
     {
       "match_id": 2,
@@ -924,6 +924,121 @@
       ]
     },
     {
+      "match_id": 62,
+      "date": "2026-06-17",
+      "phase": "group",
+      "group": "K",
+      "round": "GROUP_STAGE",
+      "home_team": "UZB",
+      "away_team": "COL",
+      "outcome": "away",
+      "disagreement_score": 0.128565,
+      "variance": 0.006106,
+      "consensus": {
+        "home": 0.1809,
+        "draw": 0.2527,
+        "away": 0.5664
+      },
+      "std": {
+        "home": 0.0345,
+        "draw": 0.0314,
+        "away": 0.0627
+      },
+      "outliers": [
+        {
+          "model": "DeepSeek-V4-Pro",
+          "distance": 0.1649
+        },
+        {
+          "model": "Grok-4.3",
+          "distance": 0.1059
+        },
+        {
+          "model": "Qwen-3.7-Max",
+          "distance": 0.1036
+        }
+      ],
+      "model_predictions": [
+        {
+          "model": "DeepSeek-V4-Pro",
+          "home": 0.1,
+          "draw": 0.2,
+          "away": 0.7,
+          "distance": 0.1649
+        },
+        {
+          "model": "Grok-4.3",
+          "home": 0.22,
+          "draw": 0.3,
+          "away": 0.48,
+          "distance": 0.1059
+        },
+        {
+          "model": "Qwen-3.7-Max",
+          "home": 0.15,
+          "draw": 0.2,
+          "away": 0.65,
+          "distance": 0.1036
+        },
+        {
+          "model": "Gemini-3.5-Flash",
+          "home": 0.2,
+          "draw": 0.3,
+          "away": 0.5,
+          "distance": 0.0837
+        },
+        {
+          "model": "Nex-N2-Pro",
+          "home": 0.22,
+          "draw": 0.28,
+          "away": 0.5,
+          "distance": 0.0817
+        },
+        {
+          "model": "Claude-Fable-5",
+          "home": 0.15,
+          "draw": 0.25,
+          "away": 0.6,
+          "distance": 0.0458
+        },
+        {
+          "model": "GLM-5.1",
+          "home": 0.2,
+          "draw": 0.25,
+          "away": 0.55,
+          "distance": 0.0253
+        },
+        {
+          "model": "Kimi-K2.6",
+          "home": 0.2,
+          "draw": 0.25,
+          "away": 0.55,
+          "distance": 0.0253
+        },
+        {
+          "model": "MiMo-V2.5-Pro",
+          "home": 0.2,
+          "draw": 0.25,
+          "away": 0.55,
+          "distance": 0.0253
+        },
+        {
+          "model": "GPT-5.5",
+          "home": 0.17,
+          "draw": 0.25,
+          "away": 0.58,
+          "distance": 0.0177
+        },
+        {
+          "model": "MiniMax-M3",
+          "home": 0.18,
+          "draw": 0.25,
+          "away": 0.57,
+          "distance": 0.0046
+        }
+      ]
+    },
+    {
       "match_id": 13,
       "date": "2026-06-13",
       "phase": "group",
@@ -1725,6 +1840,236 @@
           "draw": 0.25,
           "away": 0.2,
           "distance": 0.0136
+        }
+      ]
+    },
+    {
+      "match_id": 68,
+      "date": "2026-06-17",
+      "phase": "group",
+      "group": "L",
+      "round": "GROUP_STAGE",
+      "home_team": "GHA",
+      "away_team": "PAN",
+      "outcome": "home",
+      "disagreement_score": 0.106949,
+      "variance": 0.004225,
+      "consensus": {
+        "home": 0.5618,
+        "draw": 0.2509,
+        "away": 0.1873
+      },
+      "std": {
+        "home": 0.0486,
+        "draw": 0.0202,
+        "away": 0.0382
+      },
+      "outliers": [
+        {
+          "model": "DeepSeek-V4-Pro",
+          "distance": 0.1084
+        },
+        {
+          "model": "MiMo-V2.5-Pro",
+          "distance": 0.0881
+        },
+        {
+          "model": "Qwen-3.7-Max",
+          "distance": 0.0881
+        }
+      ],
+      "model_predictions": [
+        {
+          "model": "DeepSeek-V4-Pro",
+          "home": 0.65,
+          "draw": 0.2,
+          "away": 0.15,
+          "distance": 0.1084
+        },
+        {
+          "model": "MiMo-V2.5-Pro",
+          "home": 0.5,
+          "draw": 0.25,
+          "away": 0.25,
+          "distance": 0.0881
+        },
+        {
+          "model": "Qwen-3.7-Max",
+          "home": 0.5,
+          "draw": 0.25,
+          "away": 0.25,
+          "distance": 0.0881
+        },
+        {
+          "model": "Claude-Fable-5",
+          "home": 0.5,
+          "draw": 0.28,
+          "away": 0.22,
+          "distance": 0.0758
+        },
+        {
+          "model": "Nex-N2-Pro",
+          "home": 0.62,
+          "draw": 0.24,
+          "away": 0.14,
+          "distance": 0.0758
+        },
+        {
+          "model": "Kimi-K2.6",
+          "home": 0.6,
+          "draw": 0.25,
+          "away": 0.15,
+          "distance": 0.0534
+        },
+        {
+          "model": "MiniMax-M3",
+          "home": 0.6,
+          "draw": 0.25,
+          "away": 0.15,
+          "distance": 0.0534
+        },
+        {
+          "model": "Grok-4.3",
+          "home": 0.55,
+          "draw": 0.28,
+          "away": 0.17,
+          "distance": 0.0358
+        },
+        {
+          "model": "Gemini-3.5-Flash",
+          "home": 0.55,
+          "draw": 0.25,
+          "away": 0.2,
+          "distance": 0.0174
+        },
+        {
+          "model": "GLM-5.1",
+          "home": 0.55,
+          "draw": 0.25,
+          "away": 0.2,
+          "distance": 0.0174
+        },
+        {
+          "model": "GPT-5.5",
+          "home": 0.56,
+          "draw": 0.26,
+          "away": 0.18,
+          "distance": 0.0118
+        }
+      ]
+    },
+    {
+      "match_id": 67,
+      "date": "2026-06-17",
+      "phase": "group",
+      "group": "L",
+      "round": "GROUP_STAGE",
+      "home_team": "ENG",
+      "away_team": "CRO",
+      "outcome": "home",
+      "disagreement_score": 0.100536,
+      "variance": 0.003805,
+      "consensus": {
+        "home": 0.5255,
+        "draw": 0.2627,
+        "away": 0.2118
+      },
+      "std": {
+        "home": 0.0436,
+        "draw": 0.0166,
+        "away": 0.0404
+      },
+      "outliers": [
+        {
+          "model": "GLM-5.1",
+          "distance": 0.1168
+        },
+        {
+          "model": "Qwen-3.7-Max",
+          "distance": 0.0977
+        },
+        {
+          "model": "Claude-Fable-5",
+          "distance": 0.0562
+        }
+      ],
+      "model_predictions": [
+        {
+          "model": "GLM-5.1",
+          "home": 0.45,
+          "draw": 0.25,
+          "away": 0.3,
+          "distance": 0.1168
+        },
+        {
+          "model": "Qwen-3.7-Max",
+          "home": 0.6,
+          "draw": 0.25,
+          "away": 0.15,
+          "distance": 0.0977
+        },
+        {
+          "model": "Claude-Fable-5",
+          "home": 0.48,
+          "draw": 0.28,
+          "away": 0.24,
+          "distance": 0.0562
+        },
+        {
+          "model": "Grok-4.3",
+          "home": 0.48,
+          "draw": 0.28,
+          "away": 0.24,
+          "distance": 0.0562
+        },
+        {
+          "model": "GPT-5.5",
+          "home": 0.56,
+          "draw": 0.27,
+          "away": 0.17,
+          "distance": 0.0547
+        },
+        {
+          "model": "MiMo-V2.5-Pro",
+          "home": 0.5,
+          "draw": 0.25,
+          "away": 0.25,
+          "distance": 0.0476
+        },
+        {
+          "model": "Nex-N2-Pro",
+          "home": 0.56,
+          "draw": 0.26,
+          "away": 0.18,
+          "distance": 0.047
+        },
+        {
+          "model": "Gemini-3.5-Flash",
+          "home": 0.5,
+          "draw": 0.3,
+          "away": 0.2,
+          "distance": 0.0467
+        },
+        {
+          "model": "DeepSeek-V4-Pro",
+          "home": 0.55,
+          "draw": 0.25,
+          "away": 0.2,
+          "distance": 0.0301
+        },
+        {
+          "model": "Kimi-K2.6",
+          "home": 0.55,
+          "draw": 0.25,
+          "away": 0.2,
+          "distance": 0.0301
+        },
+        {
+          "model": "MiniMax-M3",
+          "home": 0.55,
+          "draw": 0.25,
+          "away": 0.2,
+          "distance": 0.0301
         }
       ]
     },
