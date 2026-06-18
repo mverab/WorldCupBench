@@ -44,8 +44,8 @@ def test_compute_disagreement_group_variance():
         {"home": 0.0, "draw": 1.0, "away": 0.0},
     ]
     score = compute_disagreement(predictions, PHASE_GROUP)
-    # population variance: home=0.25, draw=0.25, away=0.0; mean=0.1667
-    assert score == pytest.approx(1 / 6, abs=1e-9)
+    # population std dev: home=0.5, draw=0.5, away=0.0; sum=1.0
+    assert score == pytest.approx(1.0, abs=1e-9)
 
 
 def test_compute_disagreement_knockout_ignores_draw():
@@ -55,8 +55,8 @@ def test_compute_disagreement_knockout_ignores_draw():
     ]
     score = compute_disagreement(predictions, PHASE_KNOCKOUT)
     # normalized: [0.875, 0.125] and [0.125, 0.875]
-    # population variance home = variance away = 0.140625; mean = 0.140625
-    assert score == pytest.approx(0.140625, abs=1e-9)
+    # population std dev home = std dev away = sqrt(0.140625) = 0.375; sum = 0.75
+    assert score == pytest.approx(0.75, abs=1e-9)
 
 
 def test_compute_disagreement_knockout_all_draw_still_works():

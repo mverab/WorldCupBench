@@ -1,7 +1,7 @@
 import json
 import re
 from pathlib import Path
-from statistics import pvariance
+from statistics import pstdev
 from typing import Any
 
 BASE_DIR = Path(__file__).resolve().parents[2]
@@ -62,7 +62,7 @@ def compute_disagreement(
         away = [p["away"] for p in predictions]
         values = [home, draw, away]
 
-    return sum(pvariance(v) for v in values) / len(values)
+    return sum(pstdev(v) for v in values)
 
 
 def _normalise_model_name(name: str) -> str:
