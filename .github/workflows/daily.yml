@@ -41,6 +41,9 @@ jobs:
           python scripts/score.py
           echo "Scoring complete."
 
+      - name: Generate disagreement data
+        run: python scripts/generate_disagreement.py
+
       - name: Update README leaderboard
         run: |
           python src/generate_leaderboard.py --inject-readme
