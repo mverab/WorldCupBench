@@ -1,6 +1,6 @@
 {
   "date": "2026-06-18",
-  "last_updated": "2026-06-18T20:14:23.531082+00:00",
+  "last_updated": "2026-06-19T03:34:28.670089+00:00",
   "matches": [
     {
       "fd_id": 537329,
@@ -12,6 +12,48 @@
         "away": 1
       },
       "outcome": "draw",
+      "date": "2026-06-18",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_A"
+    },
+    {
+      "fd_id": 537335,
+      "match_id": 10,
+      "home_team": "SUI",
+      "away_team": "BIH",
+      "score": {
+        "home": 4,
+        "away": 1
+      },
+      "outcome": "home",
+      "date": "2026-06-18",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_B"
+    },
+    {
+      "fd_id": 537336,
+      "match_id": 9,
+      "home_team": "CAN",
+      "away_team": "QAT",
+      "score": {
+        "home": 6,
+        "away": 0
+      },
+      "outcome": "home",
+      "date": "2026-06-18",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_B"
+    },
+    {
+      "fd_id": 537330,
+      "match_id": 3,
+      "home_team": "MEX",
+      "away_team": "KOR",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "outcome": "home",
       "date": "2026-06-18",
       "stage": "GROUP_STAGE",
       "group": "GROUP_A"
