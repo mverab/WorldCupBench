@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-20T13:43:53.096190+00:00",
+  "last_updated": "2026-06-20T19:13:09.942436+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -448,6 +448,20 @@
       "date": "2026-06-19",
       "stage": "GROUP_STAGE",
       "group": "GROUP_D"
+    },
+    {
+      "fd_id": 537359,
+      "match_id": 33,
+      "home_team": "NED",
+      "away_team": "SWE",
+      "score": {
+        "home": 5,
+        "away": 1
+      },
+      "outcome": "home",
+      "date": "2026-06-20",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_F"
     }
   ]
 }
