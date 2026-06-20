@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-20T02:38:31.513446+00:00",
+  "last_updated": "2026-06-20T08:43:45.283274+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -434,6 +434,20 @@
       "date": "2026-06-19",
       "stage": "GROUP_STAGE",
       "group": "GROUP_C"
+    },
+    {
+      "fd_id": 537347,
+      "match_id": 22,
+      "home_team": "TUR",
+      "away_team": "PAR",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "outcome": "away",
+      "date": "2026-06-19",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_D"
     }
   ]
 }
