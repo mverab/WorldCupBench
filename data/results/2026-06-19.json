@@ -1,0 +1,48 @@
+{
+  "date": "2026-06-19",
+  "last_updated": "2026-06-20T02:38:30.381472+00:00",
+  "matches": [
+    {
+      "fd_id": 537348,
+      "match_id": 21,
+      "home_team": "USA",
+      "away_team": "AUS",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "outcome": "home",
+      "date": "2026-06-19",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_D"
+    },
+    {
+      "fd_id": 537342,
+      "match_id": 16,
+      "home_team": "SCO",
+      "away_team": "MAR",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "outcome": "away",
+      "date": "2026-06-19",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_C"
+    },
+    {
+      "fd_id": 537341,
+      "match_id": 15,
+      "home_team": "BRA",
+      "away_team": "HAI",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "outcome": "home",
+      "date": "2026-06-19",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_C"
+    }
+  ]
+}
