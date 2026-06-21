@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-21T02:54:47.465468+00:00",
+  "last_updated": "2026-06-21T09:38:51.981417+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -490,6 +490,20 @@
       "date": "2026-06-20",
       "stage": "GROUP_STAGE",
       "group": "GROUP_E"
+    },
+    {
+      "fd_id": 537360,
+      "match_id": 34,
+      "home_team": "TUN",
+      "away_team": "JPN",
+      "score": {
+        "home": 0,
+        "away": 4
+      },
+      "outcome": "away",
+      "date": "2026-06-20",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_F"
     }
   ]
 }

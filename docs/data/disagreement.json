@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-06-21T02:54:46.302916+00:00",
+  "generated_at": "2026-06-21T09:38:51.039426+00:00",
   "model_count": 11,
-  "match_count": 35,
+  "match_count": 36,
   "matches": [
     {
       "match_id": 4,
@@ -805,6 +805,121 @@
           "draw": 0.3,
           "away": 0.35,
           "distance": 0.0342
+        }
+      ]
+    },
+    {
+      "match_id": 34,
+      "date": "2026-06-20",
+      "phase": "group",
+      "group": "F",
+      "round": "GROUP_STAGE",
+      "home_team": "TUN",
+      "away_team": "JPN",
+      "outcome": "away",
+      "disagreement_score": 0.15855,
+      "variance": 0.009266,
+      "consensus": {
+        "home": 0.1936,
+        "draw": 0.2527,
+        "away": 0.5536
+      },
+      "std": {
+        "home": 0.0452,
+        "draw": 0.0367,
+        "away": 0.0767
+      },
+      "outliers": [
+        {
+          "model": "MiniMax-M3",
+          "distance": 0.1927
+        },
+        {
+          "model": "DeepSeek-V4-Pro",
+          "distance": 0.1182
+        },
+        {
+          "model": "Kimi-K2.6",
+          "distance": 0.1182
+        }
+      ],
+      "model_predictions": [
+        {
+          "model": "MiniMax-M3",
+          "home": 0.3,
+          "draw": 0.3,
+          "away": 0.4,
+          "distance": 0.1927
+        },
+        {
+          "model": "DeepSeek-V4-Pro",
+          "home": 0.15,
+          "draw": 0.2,
+          "away": 0.65,
+          "distance": 0.1182
+        },
+        {
+          "model": "Kimi-K2.6",
+          "home": 0.15,
+          "draw": 0.2,
+          "away": 0.65,
+          "distance": 0.1182
+        },
+        {
+          "model": "Qwen-3.7-Max",
+          "home": 0.15,
+          "draw": 0.2,
+          "away": 0.65,
+          "distance": 0.1182
+        },
+        {
+          "model": "Nex-N2-Pro",
+          "home": 0.25,
+          "draw": 0.29,
+          "away": 0.46,
+          "distance": 0.1155
+        },
+        {
+          "model": "Gemini-3.5-Flash",
+          "home": 0.15,
+          "draw": 0.25,
+          "away": 0.6,
+          "distance": 0.0637
+        },
+        {
+          "model": "Grok-4.3",
+          "home": 0.18,
+          "draw": 0.3,
+          "away": 0.52,
+          "distance": 0.0596
+        },
+        {
+          "model": "Claude-Fable-5",
+          "home": 0.2,
+          "draw": 0.27,
+          "away": 0.53,
+          "distance": 0.03
+        },
+        {
+          "model": "GPT-5.5",
+          "home": 0.2,
+          "draw": 0.27,
+          "away": 0.53,
+          "distance": 0.03
+        },
+        {
+          "model": "GLM-5.1",
+          "home": 0.2,
+          "draw": 0.25,
+          "away": 0.55,
+          "distance": 0.0078
+        },
+        {
+          "model": "MiMo-V2.5-Pro",
+          "home": 0.2,
+          "draw": 0.25,
+          "away": 0.55,
+          "distance": 0.0078
         }
       ]
     },

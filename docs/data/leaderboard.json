@@ -1,128 +1,128 @@
 {
-  "last_updated": "2026-06-21T02:54:46.242402+00:00",
-  "total_results": 35,
+  "last_updated": "2026-06-21T09:38:50.981296+00:00",
+  "total_results": 36,
   "total_models": 11,
   "models": [
     {
       "model": "DeepSeek-V4-Pro",
       "model_id": "deepseek/deepseek-v4-pro-20260423",
-      "brier_group": 18.1534,
+      "brier_group": 18.3384,
       "brier_knockout": null,
-      "brier_total": 9.0767,
-      "quiniela_points": 21,
+      "brier_total": 9.1692,
+      "quiniela_points": 22,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 35
-    },
-    {
-      "model": "MiniMax-M3",
-      "model_id": "minimax/minimax-m3-20260531",
-      "brier_group": 18.336,
-      "brier_knockout": null,
-      "brier_total": 9.168,
-      "quiniela_points": 21,
-      "roi": null,
-      "roi_status": "no_market_data",
-      "n_matches_scored": 35
+      "n_matches_scored": 36
     },
     {
       "model": "Kimi-K2.6",
       "model_id": "moonshotai/kimi-k2.6-20260420",
-      "brier_group": 18.4918,
+      "brier_group": 18.6768,
       "brier_knockout": null,
-      "brier_total": 9.2459,
-      "quiniela_points": 20,
+      "brier_total": 9.3384,
+      "quiniela_points": 21,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 35
+      "n_matches_scored": 36
     },
     {
       "model": "Gemini-3.5-Flash",
       "model_id": "google/gemini-3.5-flash-20260519",
-      "brier_group": 18.505,
+      "brier_group": 18.75,
       "brier_knockout": null,
-      "brier_total": 9.2525,
-      "quiniela_points": 21,
+      "brier_total": 9.375,
+      "quiniela_points": 22,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 35
+      "n_matches_scored": 36
+    },
+    {
+      "model": "MiniMax-M3",
+      "model_id": "minimax/minimax-m3-20260531",
+      "brier_group": 18.876,
+      "brier_knockout": null,
+      "brier_total": 9.438,
+      "quiniela_points": 22,
+      "roi": null,
+      "roi_status": "no_market_data",
+      "n_matches_scored": 36
     },
     {
       "model": "GPT-5.5",
       "model_id": "openai/gpt-5.5-20260423",
-      "brier_group": 18.6226,
+      "brier_group": 18.9564,
       "brier_knockout": null,
-      "brier_total": 9.3113,
-      "quiniela_points": 19,
+      "brier_total": 9.4782,
+      "quiniela_points": 20,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 35
+      "n_matches_scored": 36
     },
     {
       "model": "Grok-4.3",
       "model_id": "x-ai/grok-4.3-20260430",
-      "brier_group": 18.6692,
+      "brier_group": 19.022,
       "brier_knockout": null,
-      "brier_total": 9.3346,
-      "quiniela_points": 22,
+      "brier_total": 9.511,
+      "quiniela_points": 23,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 35
-    },
-    {
-      "model": "MiMo-V2.5-Pro",
-      "model_id": "xiaomi/mimo-v2.5-pro-20260422",
-      "brier_group": 18.8332,
-      "brier_knockout": null,
-      "brier_total": 9.4166,
-      "quiniela_points": 22,
-      "roi": null,
-      "roi_status": "no_market_data",
-      "n_matches_scored": 35
+      "n_matches_scored": 36
     },
     {
       "model": "Qwen-3.7-Max",
       "model_id": "qwen/qwen3.7-max-20260520",
-      "brier_group": 18.84,
+      "brier_group": 19.025,
       "brier_knockout": null,
-      "brier_total": 9.42,
-      "quiniela_points": 20,
+      "brier_total": 9.5125,
+      "quiniela_points": 21,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 35
+      "n_matches_scored": 36
+    },
+    {
+      "model": "MiMo-V2.5-Pro",
+      "model_id": "xiaomi/mimo-v2.5-pro-20260422",
+      "brier_group": 19.1382,
+      "brier_knockout": null,
+      "brier_total": 9.5691,
+      "quiniela_points": 23,
+      "roi": null,
+      "roi_status": "no_market_data",
+      "n_matches_scored": 36
     },
     {
       "model": "GLM-5.1",
       "model_id": "z-ai/glm-5.1-20260406",
-      "brier_group": 18.885,
+      "brier_group": 19.19,
       "brier_knockout": null,
-      "brier_total": 9.4425,
-      "quiniela_points": 21,
+      "brier_total": 9.595,
+      "quiniela_points": 22,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 35
+      "n_matches_scored": 36
     },
     {
       "model": "Nex-N2-Pro",
       "model_id": "nex-agi/nex-n2-pro:free",
-      "brier_group": 18.974,
+      "brier_group": 19.4122,
       "brier_knockout": null,
-      "brier_total": 9.487,
-      "quiniela_points": 20,
+      "brier_total": 9.7061,
+      "quiniela_points": 21,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 35
+      "n_matches_scored": 36
     },
     {
       "model": "Claude-Fable-5",
       "model_id": "anthropic/claude-5-fable-20260609",
-      "brier_group": 19.3916,
+      "brier_group": 19.7254,
       "brier_knockout": null,
-      "brier_total": 9.6958,
-      "quiniela_points": 19,
+      "brier_total": 9.8627,
+      "quiniela_points": 20,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 35
+      "n_matches_scored": 36
     }
   ]
 }
