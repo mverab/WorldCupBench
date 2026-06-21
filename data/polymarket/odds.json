@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-21T13:51:44.154474+00:00",
+  "last_updated": "2026-06-21T19:19:00.981884+00:00",
   "total_events": 20,
   "events": [
     {
@@ -143,12 +143,12 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:36:01.131Z",
-          "updatedAt": "2026-06-21T13:51:04.470978Z",
+          "updatedAt": "2026-06-21T19:16:56.742995Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 11.073004,
           "startDate": "2021-01-01T17:00:00Z",
-          "commentCount": 6275,
+          "commentCount": 6276,
           "requiresTranslation": false
         }
       ],
@@ -317,12 +317,12 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:34:06.557Z",
-          "updatedAt": "2026-06-21T13:51:04.470978Z",
+          "updatedAt": "2026-06-21T19:16:56.742995Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 7943.585086,
           "startDate": "2023-07-01T19:00:00Z",
-          "commentCount": 3097,
+          "commentCount": 3098,
           "requiresTranslation": false
         }
       ],
@@ -487,12 +487,12 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:34:06.557Z",
-          "updatedAt": "2026-06-21T13:51:04.470978Z",
+          "updatedAt": "2026-06-21T19:16:56.742995Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 7943.585086,
           "startDate": "2023-07-01T19:00:00Z",
-          "commentCount": 3097,
+          "commentCount": 3098,
           "requiresTranslation": false
         }
       ],
@@ -814,12 +814,12 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:36:01.131Z",
-          "updatedAt": "2026-06-21T13:51:04.470978Z",
+          "updatedAt": "2026-06-21T19:16:56.742995Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 11.073004,
           "startDate": "2021-01-01T17:00:00Z",
-          "commentCount": 6275,
+          "commentCount": 6276,
           "requiresTranslation": false
         }
       ],
@@ -988,12 +988,12 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:34:06.557Z",
-          "updatedAt": "2026-06-21T13:51:04.470978Z",
+          "updatedAt": "2026-06-21T19:16:56.742995Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 7943.585086,
           "startDate": "2023-07-01T19:00:00Z",
-          "commentCount": 3097,
+          "commentCount": 3098,
           "requiresTranslation": false
         }
       ],
@@ -1162,12 +1162,12 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:36:01.131Z",
-          "updatedAt": "2026-06-21T13:51:04.470978Z",
+          "updatedAt": "2026-06-21T19:16:56.742995Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 11.073004,
           "startDate": "2021-01-01T17:00:00Z",
-          "commentCount": 6275,
+          "commentCount": 6276,
           "requiresTranslation": false
         }
       ],
@@ -1334,12 +1334,12 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:34:06.557Z",
-          "updatedAt": "2026-06-21T13:51:04.470978Z",
+          "updatedAt": "2026-06-21T19:16:56.742995Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 7943.585086,
           "startDate": "2023-07-01T19:00:00Z",
-          "commentCount": 3097,
+          "commentCount": 3098,
           "requiresTranslation": false
         }
       ],
@@ -1515,14 +1515,14 @@
           "createdBy": "15",
           "updatedBy": "9",
           "createdAt": "2023-06-12T16:25:03.836Z",
-          "updatedAt": "2026-06-21T13:51:04.470978Z",
+          "updatedAt": "2026-06-21T19:16:56.742995Z",
           "commentsEnabled": false,
           "competitive": "0",
-          "volume24hr": 232115.11555400002,
-          "volume": 609845.5758009999,
-          "liquidity": 353856.69838,
+          "volume24hr": 219956.04137900006,
+          "volume": 664619.7173679996,
+          "liquidity": 359639.89457,
           "startDate": "2023-06-07T16:00:00Z",
-          "commentCount": 5257,
+          "commentCount": 5268,
           "requiresTranslation": false
         }
       ],
@@ -1691,12 +1691,12 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:34:06.557Z",
-          "updatedAt": "2026-06-21T13:51:04.470978Z",
+          "updatedAt": "2026-06-21T19:16:56.742995Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 7943.585086,
           "startDate": "2023-07-01T19:00:00Z",
-          "commentCount": 3097,
+          "commentCount": 3098,
           "requiresTranslation": false
         }
       ],
@@ -2014,12 +2014,12 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:36:01.131Z",
-          "updatedAt": "2026-06-21T13:51:04.470978Z",
+          "updatedAt": "2026-06-21T19:16:56.742995Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 11.073004,
           "startDate": "2021-01-01T17:00:00Z",
-          "commentCount": 6275,
+          "commentCount": 6276,
           "requiresTranslation": false
         }
       ],
@@ -3077,12 +3077,12 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:36:01.131Z",
-          "updatedAt": "2026-06-21T13:51:04.470978Z",
+          "updatedAt": "2026-06-21T19:16:56.742995Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 11.073004,
           "startDate": "2021-01-01T17:00:00Z",
-          "commentCount": 6275,
+          "commentCount": 6276,
           "requiresTranslation": false
         }
       ],
