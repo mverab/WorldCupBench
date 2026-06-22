@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-21T19:19:01.062137+00:00",
+  "last_updated": "2026-06-22T02:57:29.864726+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -511,10 +511,38 @@
       "home_team": "ESP",
       "away_team": "KSA",
       "score": {
-        "home": 5,
+        "home": 4,
         "away": 0
       },
       "outcome": "home",
+      "date": "2026-06-21",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_H"
+    },
+    {
+      "fd_id": 537365,
+      "match_id": 39,
+      "home_team": "BEL",
+      "away_team": "IRN",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "outcome": "draw",
+      "date": "2026-06-21",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_G"
+    },
+    {
+      "fd_id": 537372,
+      "match_id": 46,
+      "home_team": "URU",
+      "away_team": "CPV",
+      "score": {
+        "home": 2,
+        "away": 2
+      },
+      "outcome": "draw",
       "date": "2026-06-21",
       "stage": "GROUP_STAGE",
       "group": "GROUP_H"
