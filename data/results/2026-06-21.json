@@ -1,6 +1,6 @@
 {
   "date": "2026-06-21",
-  "last_updated": "2026-06-22T02:57:28.742911+00:00",
+  "last_updated": "2026-06-22T11:38:55.900012+00:00",
   "matches": [
     {
       "fd_id": 537371,
@@ -43,6 +43,20 @@
       "date": "2026-06-21",
       "stage": "GROUP_STAGE",
       "group": "GROUP_H"
+    },
+    {
+      "fd_id": 537366,
+      "match_id": 40,
+      "home_team": "NZL",
+      "away_team": "EGY",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "outcome": "away",
+      "date": "2026-06-21",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_G"
     }
   ]
 }
