@@ -1,6 +1,6 @@
 {
   "date": "2026-06-22",
-  "last_updated": "2026-06-22T20:36:03.002421+00:00",
+  "last_updated": "2026-06-23T02:32:18.933614+00:00",
   "matches": [
     {
       "fd_id": 537399,
@@ -15,6 +15,34 @@
       "date": "2026-06-22",
       "stage": "GROUP_STAGE",
       "group": "GROUP_J"
+    },
+    {
+      "fd_id": 537393,
+      "match_id": 51,
+      "home_team": "FRA",
+      "away_team": "IRQ",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "outcome": "home",
+      "date": "2026-06-22",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_I"
+    },
+    {
+      "fd_id": 537394,
+      "match_id": 52,
+      "home_team": "NOR",
+      "away_team": "SEN",
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "outcome": "home",
+      "date": "2026-06-22",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_I"
     }
   ]
 }
