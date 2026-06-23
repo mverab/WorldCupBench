@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-23T14:31:50.502611+00:00",
+  "last_updated": "2026-06-23T19:52:04.228574+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -117,7 +117,7 @@
       "fd_id": 537351,
       "match_id": 25,
       "home_team": "GER",
-      "away_team": "CUW",
+      "away_team": "CUR",
       "score": {
         "home": 7,
         "away": 1
@@ -481,7 +481,7 @@
       "fd_id": 537354,
       "match_id": 28,
       "home_team": "ECU",
-      "away_team": "CUW",
+      "away_team": "CUR",
       "score": {
         "home": 0,
         "away": 0
@@ -616,6 +616,20 @@
       "date": "2026-06-22",
       "stage": "GROUP_STAGE",
       "group": "GROUP_J"
+    },
+    {
+      "fd_id": 537405,
+      "match_id": 63,
+      "home_team": "POR",
+      "away_team": "UZB",
+      "score": {
+        "home": 5,
+        "away": 0
+      },
+      "outcome": "home",
+      "date": "2026-06-23",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_K"
     }
   ]
 }
