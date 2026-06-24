@@ -1,6 +1,6 @@
 {
   "date": "2026-06-23",
-  "last_updated": "2026-06-23T19:52:03.150914+00:00",
+  "last_updated": "2026-06-24T02:33:11.641643+00:00",
   "matches": [
     {
       "fd_id": 537405,
@@ -15,6 +15,34 @@
       "date": "2026-06-23",
       "stage": "GROUP_STAGE",
       "group": "GROUP_K"
+    },
+    {
+      "fd_id": 537411,
+      "match_id": 69,
+      "home_team": "ENG",
+      "away_team": "GHA",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "outcome": "draw",
+      "date": "2026-06-23",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_L"
+    },
+    {
+      "fd_id": 537412,
+      "match_id": 70,
+      "home_team": "PAN",
+      "away_team": "CRO",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "outcome": "away",
+      "date": "2026-06-23",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_L"
     }
   ]
 }
