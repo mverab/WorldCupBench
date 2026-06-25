@@ -1,0 +1,62 @@
+{
+  "date": "2026-06-24",
+  "last_updated": "2026-06-25T02:35:02.011748+00:00",
+  "matches": [
+    {
+      "fd_id": 537337,
+      "match_id": 11,
+      "home_team": "SUI",
+      "away_team": "CAN",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "outcome": "home",
+      "date": "2026-06-24",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_B"
+    },
+    {
+      "fd_id": 537338,
+      "match_id": 12,
+      "home_team": "BIH",
+      "away_team": "QAT",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "outcome": "home",
+      "date": "2026-06-24",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_B"
+    },
+    {
+      "fd_id": 537344,
+      "match_id": 18,
+      "home_team": "MAR",
+      "away_team": "HAI",
+      "score": {
+        "home": 4,
+        "away": 2
+      },
+      "outcome": "home",
+      "date": "2026-06-24",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_C"
+    },
+    {
+      "fd_id": 537343,
+      "match_id": 17,
+      "home_team": "SCO",
+      "away_team": "BRA",
+      "score": {
+        "home": 0,
+        "away": 3
+      },
+      "outcome": "away",
+      "date": "2026-06-24",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_C"
+    }
+  ]
+}
