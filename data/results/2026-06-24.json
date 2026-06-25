@@ -1,6 +1,6 @@
 {
   "date": "2026-06-24",
-  "last_updated": "2026-06-25T02:35:02.011748+00:00",
+  "last_updated": "2026-06-25T08:50:01.295298+00:00",
   "matches": [
     {
       "fd_id": 537337,
@@ -57,6 +57,34 @@
       "date": "2026-06-24",
       "stage": "GROUP_STAGE",
       "group": "GROUP_C"
+    },
+    {
+      "fd_id": 537331,
+      "match_id": 5,
+      "home_team": "CZE",
+      "away_team": "MEX",
+      "score": {
+        "home": 0,
+        "away": 3
+      },
+      "outcome": "away",
+      "date": "2026-06-24",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_A"
+    },
+    {
+      "fd_id": 537332,
+      "match_id": 6,
+      "home_team": "RSA",
+      "away_team": "KOR",
+      "score": {
+        "home": 1,
+        "away": 0
+      },
+      "outcome": "home",
+      "date": "2026-06-24",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_A"
     }
   ]
 }
