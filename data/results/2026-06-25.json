@@ -1,6 +1,6 @@
 {
   "date": "2026-06-25",
-  "last_updated": "2026-06-26T02:37:23.023319+00:00",
+  "last_updated": "2026-06-26T08:52:47.236721+00:00",
   "matches": [
     {
       "fd_id": 537355,
@@ -57,6 +57,34 @@
       "date": "2026-06-25",
       "stage": "GROUP_STAGE",
       "group": "GROUP_F"
+    },
+    {
+      "fd_id": 537349,
+      "match_id": 23,
+      "home_team": "TUR",
+      "away_team": "USA",
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "outcome": "home",
+      "date": "2026-06-25",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_D"
+    },
+    {
+      "fd_id": 537350,
+      "match_id": 24,
+      "home_team": "PAR",
+      "away_team": "AUS",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "outcome": "draw",
+      "date": "2026-06-25",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_D"
     }
   ]
 }
