@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-25T19:47:56.146140+00:00",
+  "last_updated": "2026-06-26T02:37:24.000030+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -756,6 +756,62 @@
       "date": "2026-06-24",
       "stage": "GROUP_STAGE",
       "group": "GROUP_A"
+    },
+    {
+      "fd_id": 537355,
+      "match_id": 29,
+      "home_team": "ECU",
+      "away_team": "GER",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "outcome": "home",
+      "date": "2026-06-25",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_E"
+    },
+    {
+      "fd_id": 537356,
+      "match_id": 30,
+      "home_team": "CUW",
+      "away_team": "CIV",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "outcome": "away",
+      "date": "2026-06-25",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_E"
+    },
+    {
+      "fd_id": 537361,
+      "match_id": 35,
+      "home_team": "TUN",
+      "away_team": "NED",
+      "score": {
+        "home": 1,
+        "away": 3
+      },
+      "outcome": "away",
+      "date": "2026-06-25",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_F"
+    },
+    {
+      "fd_id": 537362,
+      "match_id": 36,
+      "home_team": "JPN",
+      "away_team": "SWE",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "outcome": "draw",
+      "date": "2026-06-25",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_F"
     }
   ]
 }
