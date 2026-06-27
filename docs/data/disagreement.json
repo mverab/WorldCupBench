@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-06-27T13:15:47.380826+00:00",
+  "generated_at": "2026-06-27T19:06:44.130606+00:00",
   "model_count": 11,
   "match_count": 66,
   "matches": [
@@ -3461,7 +3461,7 @@
       "round": "GROUP_STAGE",
       "home_team": "EGY",
       "away_team": "IRN",
-      "outcome": "draw",
+      "outcome": "away",
       "disagreement_score": 0.141856,
       "variance": 0.00701,
       "consensus": {
