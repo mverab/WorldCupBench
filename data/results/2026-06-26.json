@@ -1,0 +1,62 @@
+{
+  "date": "2026-06-26",
+  "last_updated": "2026-06-27T02:30:08.443731+00:00",
+  "matches": [
+    {
+      "fd_id": 537395,
+      "match_id": 53,
+      "home_team": "NOR",
+      "away_team": "FRA",
+      "score": {
+        "home": 1,
+        "away": 4
+      },
+      "outcome": "away",
+      "date": "2026-06-26",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_I"
+    },
+    {
+      "fd_id": 537396,
+      "match_id": 54,
+      "home_team": "SEN",
+      "away_team": "IRQ",
+      "score": {
+        "home": 5,
+        "away": 0
+      },
+      "outcome": "home",
+      "date": "2026-06-26",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_I"
+    },
+    {
+      "fd_id": 537373,
+      "match_id": 47,
+      "home_team": "URU",
+      "away_team": "ESP",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "outcome": "away",
+      "date": "2026-06-26",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_H"
+    },
+    {
+      "fd_id": 537374,
+      "match_id": 48,
+      "home_team": "CPV",
+      "away_team": "KSA",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "outcome": "draw",
+      "date": "2026-06-26",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_H"
+    }
+  ]
+}
