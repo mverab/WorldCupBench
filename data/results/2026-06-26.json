@@ -1,6 +1,6 @@
 {
   "date": "2026-06-26",
-  "last_updated": "2026-06-27T02:30:08.443731+00:00",
+  "last_updated": "2026-06-27T08:28:10.640259+00:00",
   "matches": [
     {
       "fd_id": 537395,
@@ -57,6 +57,34 @@
       "date": "2026-06-26",
       "stage": "GROUP_STAGE",
       "group": "GROUP_H"
+    },
+    {
+      "fd_id": 537367,
+      "match_id": 41,
+      "home_team": "NZL",
+      "away_team": "BEL",
+      "score": {
+        "home": 1,
+        "away": 5
+      },
+      "outcome": "away",
+      "date": "2026-06-26",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_G"
+    },
+    {
+      "fd_id": 537368,
+      "match_id": 42,
+      "home_team": "EGY",
+      "away_team": "IRN",
+      "score": {
+        "home": 1,
+        "away": 1
+      },
+      "outcome": "draw",
+      "date": "2026-06-26",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_G"
     }
   ]
 }
