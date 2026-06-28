@@ -1,6 +1,6 @@
 {
   "date": "2026-06-26",
-  "last_updated": "2026-06-27T19:06:44.017151+00:00",
+  "last_updated": "2026-06-28T02:43:00.349935+00:00",
   "matches": [
     {
       "fd_id": 537395,
@@ -79,9 +79,9 @@
       "away_team": "IRN",
       "score": {
         "home": 1,
-        "away": 2
+        "away": 1
       },
-      "outcome": "away",
+      "outcome": "draw",
       "date": "2026-06-26",
       "stage": "GROUP_STAGE",
       "group": "GROUP_G"

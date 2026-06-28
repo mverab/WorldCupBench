@@ -1,0 +1,62 @@
+{
+  "date": "2026-06-27",
+  "last_updated": "2026-06-28T02:43:00.350047+00:00",
+  "matches": [
+    {
+      "fd_id": 537413,
+      "match_id": 71,
+      "home_team": "PAN",
+      "away_team": "ENG",
+      "score": {
+        "home": 0,
+        "away": 2
+      },
+      "outcome": "away",
+      "date": "2026-06-27",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_L"
+    },
+    {
+      "fd_id": 537414,
+      "match_id": 72,
+      "home_team": "CRO",
+      "away_team": "GHA",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "outcome": "home",
+      "date": "2026-06-27",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_L"
+    },
+    {
+      "fd_id": 537407,
+      "match_id": 65,
+      "home_team": "COL",
+      "away_team": "POR",
+      "score": {
+        "home": 0,
+        "away": 0
+      },
+      "outcome": "draw",
+      "date": "2026-06-27",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_K"
+    },
+    {
+      "fd_id": 537408,
+      "match_id": 66,
+      "home_team": "COD",
+      "away_team": "UZB",
+      "score": {
+        "home": 3,
+        "away": 1
+      },
+      "outcome": "home",
+      "date": "2026-06-27",
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_K"
+    }
+  ]
+}
