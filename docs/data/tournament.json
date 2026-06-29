@@ -982,194 +982,226 @@
     {
       "match_id": 73,
       "round": "round_of_32",
-      "home_team": "2A",
-      "away_team": "2B",
+      "home_team": "RSA",
+      "away_team": "CAN",
       "date": "2026-06-28",
       "venue": {
         "stadium": "SoFi Stadium",
         "city": "Inglewood"
       },
-      "feeds_into": 90
+      "feeds_into": 90,
+      "home_slot": "2A",
+      "away_slot": "2B"
     },
     {
       "match_id": 74,
       "round": "round_of_32",
-      "home_team": "1E",
-      "away_team": "3rd(A/B/C/D/F)",
+      "home_team": "GER",
+      "away_team": "BIH",
       "date": "2026-06-29",
       "venue": {
         "stadium": "Gillette Stadium",
         "city": "Foxborough"
       },
-      "feeds_into": 89
+      "feeds_into": 89,
+      "home_slot": "1E",
+      "away_slot": "3rd(A/B/C/D/F)"
     },
     {
       "match_id": 75,
       "round": "round_of_32",
-      "home_team": "1F",
-      "away_team": "2C",
+      "home_team": "NED",
+      "away_team": "MAR",
       "date": "2026-06-29",
       "venue": {
         "stadium": "Estadio BBVA",
         "city": "Guadalupe"
       },
-      "feeds_into": 90
+      "feeds_into": 90,
+      "home_slot": "1F",
+      "away_slot": "2C"
     },
     {
       "match_id": 76,
       "round": "round_of_32",
-      "home_team": "1C",
-      "away_team": "2F",
+      "home_team": "BRA",
+      "away_team": "JPN",
       "date": "2026-06-29",
       "venue": {
         "stadium": "NRG Stadium",
         "city": "Houston"
       },
-      "feeds_into": 91
+      "feeds_into": 91,
+      "home_slot": "1C",
+      "away_slot": "2F"
     },
     {
       "match_id": 77,
       "round": "round_of_32",
-      "home_team": "1I",
-      "away_team": "3rd(C/D/F/G/H)",
+      "home_team": "FRA",
+      "away_team": "PAR",
       "date": "2026-06-30",
       "venue": {
         "stadium": "MetLife Stadium",
         "city": "East Rutherford"
       },
-      "feeds_into": 89
+      "feeds_into": 89,
+      "home_slot": "1I",
+      "away_slot": "3rd(C/D/F/G/H)"
     },
     {
       "match_id": 78,
       "round": "round_of_32",
-      "home_team": "2E",
-      "away_team": "2I",
+      "home_team": "CIV",
+      "away_team": "NOR",
       "date": "2026-06-30",
       "venue": {
         "stadium": "AT&T Stadium",
         "city": "Arlington"
       },
-      "feeds_into": 91
+      "feeds_into": 91,
+      "home_slot": "2E",
+      "away_slot": "2I"
     },
     {
       "match_id": 79,
       "round": "round_of_32",
-      "home_team": "1A",
-      "away_team": "3rd(C/E/F/H/I)",
+      "home_team": "MEX",
+      "away_team": "ECU",
       "date": "2026-06-30",
       "venue": {
         "stadium": "Estadio Azteca",
         "city": "Mexico City"
       },
-      "feeds_into": 92
+      "feeds_into": 92,
+      "home_slot": "1A",
+      "away_slot": "3rd(C/E/F/H/I)"
     },
     {
       "match_id": 80,
       "round": "round_of_32",
-      "home_team": "1L",
-      "away_team": "3rd(E/H/I/J/K)",
+      "home_team": "ENG",
+      "away_team": "COD",
       "date": "2026-07-01",
       "venue": {
         "stadium": "Mercedes-Benz Stadium",
         "city": "Atlanta"
       },
-      "feeds_into": 92
+      "feeds_into": 92,
+      "home_slot": "1L",
+      "away_slot": "3rd(E/H/I/J/K)"
     },
     {
       "match_id": 81,
       "round": "round_of_32",
-      "home_team": "1D",
-      "away_team": "3rd(B/E/F/I/J)",
+      "home_team": "USA",
+      "away_team": "ALG",
       "date": "2026-07-01",
       "venue": {
         "stadium": "Levi's Stadium",
         "city": "Santa Clara"
       },
-      "feeds_into": 94
+      "feeds_into": 94,
+      "home_slot": "1D",
+      "away_slot": "3rd(B/E/F/I/J)"
     },
     {
       "match_id": 82,
       "round": "round_of_32",
-      "home_team": "1G",
-      "away_team": "3rd(A/E/H/I/J)",
+      "home_team": "BEL",
+      "away_team": "SEN",
       "date": "2026-07-01",
       "venue": {
         "stadium": "Lumen Field",
         "city": "Seattle"
       },
-      "feeds_into": 94
+      "feeds_into": 94,
+      "home_slot": "1G",
+      "away_slot": "3rd(A/E/H/I/J)"
     },
     {
       "match_id": 83,
       "round": "round_of_32",
-      "home_team": "2K",
-      "away_team": "2L",
+      "home_team": "POR",
+      "away_team": "CRO",
       "date": "2026-07-02",
       "venue": {
         "stadium": "BMO Field",
         "city": "Toronto"
       },
-      "feeds_into": 93
+      "feeds_into": 93,
+      "home_slot": "2K",
+      "away_slot": "2L"
     },
     {
       "match_id": 84,
       "round": "round_of_32",
-      "home_team": "1H",
-      "away_team": "2J",
+      "home_team": "ESP",
+      "away_team": "AUT",
       "date": "2026-07-02",
       "venue": {
         "stadium": "SoFi Stadium",
         "city": "Inglewood"
       },
-      "feeds_into": 93
+      "feeds_into": 93,
+      "home_slot": "1H",
+      "away_slot": "2J"
     },
     {
       "match_id": 85,
       "round": "round_of_32",
-      "home_team": "1B",
-      "away_team": "3rd(E/F/G/I/J)",
+      "home_team": "SUI",
+      "away_team": "SWE",
       "date": "2026-07-02",
       "venue": {
         "stadium": "BC Place",
         "city": "Vancouver"
       },
-      "feeds_into": 96
+      "feeds_into": 96,
+      "home_slot": "1B",
+      "away_slot": "3rd(E/F/G/I/J)"
     },
     {
       "match_id": 86,
       "round": "round_of_32",
-      "home_team": "1J",
-      "away_team": "2H",
+      "home_team": "ARG",
+      "away_team": "CPV",
       "date": "2026-07-03",
       "venue": {
         "stadium": "Hard Rock Stadium",
         "city": "Miami Gardens"
       },
-      "feeds_into": 95
+      "feeds_into": 95,
+      "home_slot": "1J",
+      "away_slot": "2H"
     },
     {
       "match_id": 87,
       "round": "round_of_32",
-      "home_team": "1K",
-      "away_team": "3rd(D/E/I/J/L)",
+      "home_team": "COL",
+      "away_team": "GHA",
       "date": "2026-07-03",
       "venue": {
         "stadium": "GEHA Field at Arrowhead",
         "city": "Kansas City"
       },
-      "feeds_into": 96
+      "feeds_into": 96,
+      "home_slot": "1K",
+      "away_slot": "3rd(D/E/I/J/L)"
     },
     {
       "match_id": 88,
       "round": "round_of_32",
-      "home_team": "2D",
-      "away_team": "2G",
+      "home_team": "AUS",
+      "away_team": "EGY",
       "date": "2026-07-03",
       "venue": {
         "stadium": "AT&T Stadium",
         "city": "Arlington"
       },
-      "feeds_into": 95
+      "feeds_into": 95,
+      "home_slot": "2D",
+      "away_slot": "2G"
     },
     {
       "match_id": 89,
@@ -1181,7 +1213,9 @@
         "stadium": "Lincoln Financial Field",
         "city": "Philadelphia"
       },
-      "feeds_into": 97
+      "feeds_into": 97,
+      "home_slot": "W74",
+      "away_slot": "W77"
     },
     {
       "match_id": 90,
@@ -1193,7 +1227,9 @@
         "stadium": "NRG Stadium",
         "city": "Houston"
       },
-      "feeds_into": 97
+      "feeds_into": 97,
+      "home_slot": "W73",
+      "away_slot": "W75"
     },
     {
       "match_id": 91,
@@ -1205,7 +1241,9 @@
         "stadium": "MetLife Stadium",
         "city": "East Rutherford"
       },
-      "feeds_into": 99
+      "feeds_into": 99,
+      "home_slot": "W76",
+      "away_slot": "W78"
     },
     {
       "match_id": 92,
@@ -1217,7 +1255,9 @@
         "stadium": "Estadio Azteca",
         "city": "Mexico City"
       },
-      "feeds_into": 99
+      "feeds_into": 99,
+      "home_slot": "W79",
+      "away_slot": "W80"
     },
     {
       "match_id": 93,
@@ -1229,7 +1269,9 @@
         "stadium": "AT&T Stadium",
         "city": "Arlington"
       },
-      "feeds_into": 98
+      "feeds_into": 98,
+      "home_slot": "W83",
+      "away_slot": "W84"
     },
     {
       "match_id": 94,
@@ -1241,7 +1283,9 @@
         "stadium": "Lumen Field",
         "city": "Seattle"
       },
-      "feeds_into": 98
+      "feeds_into": 98,
+      "home_slot": "W81",
+      "away_slot": "W82"
     },
     {
       "match_id": 95,
@@ -1253,7 +1297,9 @@
         "stadium": "Mercedes-Benz Stadium",
         "city": "Atlanta"
       },
-      "feeds_into": 100
+      "feeds_into": 100,
+      "home_slot": "W86",
+      "away_slot": "W88"
     },
     {
       "match_id": 96,
@@ -1265,7 +1311,9 @@
         "stadium": "BC Place",
         "city": "Vancouver"
       },
-      "feeds_into": 100
+      "feeds_into": 100,
+      "home_slot": "W85",
+      "away_slot": "W87"
     },
     {
       "match_id": 97,
@@ -1277,7 +1325,9 @@
         "stadium": "Gillette Stadium",
         "city": "Foxborough"
       },
-      "feeds_into": 101
+      "feeds_into": 101,
+      "home_slot": "W89",
+      "away_slot": "W90"
     },
     {
       "match_id": 98,
@@ -1289,7 +1339,9 @@
         "stadium": "SoFi Stadium",
         "city": "Inglewood"
       },
-      "feeds_into": 101
+      "feeds_into": 101,
+      "home_slot": "W93",
+      "away_slot": "W94"
     },
     {
       "match_id": 99,
@@ -1301,7 +1353,9 @@
         "stadium": "Hard Rock Stadium",
         "city": "Miami Gardens"
       },
-      "feeds_into": 102
+      "feeds_into": 102,
+      "home_slot": "W91",
+      "away_slot": "W92"
     },
     {
       "match_id": 100,
@@ -1313,7 +1367,9 @@
         "stadium": "GEHA Field at Arrowhead",
         "city": "Kansas City"
       },
-      "feeds_into": 102
+      "feeds_into": 102,
+      "home_slot": "W95",
+      "away_slot": "W96"
     },
     {
       "match_id": 101,
@@ -1325,7 +1381,9 @@
         "stadium": "AT&T Stadium",
         "city": "Arlington"
       },
-      "feeds_into": 104
+      "feeds_into": 104,
+      "home_slot": "W97",
+      "away_slot": "W98"
     },
     {
       "match_id": 102,
@@ -1337,7 +1395,9 @@
         "stadium": "Mercedes-Benz Stadium",
         "city": "Atlanta"
       },
-      "feeds_into": 104
+      "feeds_into": 104,
+      "home_slot": "W99",
+      "away_slot": "W100"
     },
     {
       "match_id": 103,
@@ -1348,7 +1408,9 @@
       "venue": {
         "stadium": "Hard Rock Stadium",
         "city": "Miami Gardens"
-      }
+      },
+      "home_slot": "L101",
+      "away_slot": "L102"
     },
     {
       "match_id": 104,
@@ -1359,12 +1421,148 @@
       "venue": {
         "stadium": "MetLife Stadium",
         "city": "East Rutherford"
-      }
+      },
+      "home_slot": "W101",
+      "away_slot": "W102"
     }
   ],
   "metadata": {
     "source": "FIFA Official Schedule (post-2025-12-05 draw) verified vs Wikipedia per-group fixtures + football-data.org fd_id sync",
     "last_updated": "2026-06-12T04:58:05.740427+00:00",
     "format": "48 teams, 12 groups of 4, 104 matches total"
+  },
+  "qualified": {
+    "teams": [
+      "ALG",
+      "ARG",
+      "AUS",
+      "AUT",
+      "BEL",
+      "BIH",
+      "BRA",
+      "CAN",
+      "CIV",
+      "COD",
+      "COL",
+      "CPV",
+      "CRO",
+      "ECU",
+      "EGY",
+      "ENG",
+      "ESP",
+      "FRA",
+      "GER",
+      "GHA",
+      "JPN",
+      "MAR",
+      "MEX",
+      "NED",
+      "NOR",
+      "PAR",
+      "POR",
+      "RSA",
+      "SEN",
+      "SUI",
+      "SWE",
+      "USA"
+    ],
+    "by_group": {
+      "A": {
+        "1st": "MEX",
+        "2nd": "RSA",
+        "3rd": "KOR"
+      },
+      "B": {
+        "1st": "SUI",
+        "2nd": "CAN",
+        "3rd": "BIH"
+      },
+      "C": {
+        "1st": "BRA",
+        "2nd": "MAR",
+        "3rd": "SCO"
+      },
+      "D": {
+        "1st": "USA",
+        "2nd": "AUS",
+        "3rd": "PAR"
+      },
+      "E": {
+        "1st": "GER",
+        "2nd": "CIV",
+        "3rd": "ECU"
+      },
+      "F": {
+        "1st": "NED",
+        "2nd": "JPN",
+        "3rd": "SWE"
+      },
+      "G": {
+        "1st": "BEL",
+        "2nd": "EGY",
+        "3rd": "IRN"
+      },
+      "H": {
+        "1st": "ESP",
+        "2nd": "CPV",
+        "3rd": "URU"
+      },
+      "I": {
+        "1st": "FRA",
+        "2nd": "NOR",
+        "3rd": "SEN"
+      },
+      "J": {
+        "1st": "ARG",
+        "2nd": "AUT",
+        "3rd": "ALG"
+      },
+      "K": {
+        "1st": "COL",
+        "2nd": "POR",
+        "3rd": "COD"
+      },
+      "L": {
+        "1st": "ENG",
+        "2nd": "CRO",
+        "3rd": "GHA"
+      }
+    },
+    "best_thirds": [
+      "COD",
+      "SWE",
+      "ECU",
+      "GHA",
+      "BIH",
+      "ALG",
+      "PAR",
+      "SEN"
+    ],
+    "third_slot_assignment": {
+      "77": "D",
+      "74": "B",
+      "79": "E",
+      "82": "I",
+      "80": "K",
+      "85": "F",
+      "81": "J",
+      "87": "L"
+    },
+    "groups_complete": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E",
+      "F",
+      "G",
+      "H",
+      "I",
+      "J",
+      "K",
+      "L"
+    ],
+    "all_groups_complete": true,
+    "last_updated": "2026-06-29T20:41:02.063879+00:00"
   }
 }

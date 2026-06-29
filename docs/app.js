@@ -172,7 +172,7 @@ function renderLeaderboard() {
   const podium = document.getElementById('podium');
 
   if (!models.length) {
-    tbody.innerHTML = '<tr><td colspan="7" class="px-4 py-12 text-center text-gray-500">No scoring data yet. Leaderboard will populate as match results come in.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="8" class="px-4 py-12 text-center text-gray-500">No scoring data yet. Leaderboard will populate as match results come in.</td></tr>';
     podium.innerHTML = renderPreKickoffHero();
     return;
   }
@@ -210,9 +210,55 @@ function renderLeaderboard() {
         <td class="px-4 py-3 text-center text-gray-300">${brierKO}</td>
         <td class="px-4 py-3 text-center font-bold" style="color:${color}">${m.brier_total !== null ? m.brier_total.toFixed(4) : '—'}</td>
         <td class="px-4 py-3 text-center font-bold text-gold">${m.quiniela_points}</td>
+        ${renderQualifierCell(m.qualifier_accuracy)}
       </tr>
     `;
   }).join('');
+}
+
+// Renders the "Clasificados acertados (n/32)" cell with a hover tooltip
+// listing the teams the model missed and the ones it wrongly predicted.
+function renderQualifierCell(qa) {
+  if (!qa || !qa.ready || (qa.qualified_count || 0) === 0) {
+    return '<td class="px-4 py-3 text-center text-gray-500">—</td>';
+  }
+  const hits = qa.hits ?? 0;
+  const total = 32;
+  const pct = hits / total;
+  const color = pct >= 0.85 ? '#34D399' : pct >= 0.7 ? '#FBBF24' : '#FF6363';
+  const missed = qa.missed || [];
+  const fps = qa.false_positives || [];
+
+  const chip = (code, cls) =>
+    `<span class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded ${cls} text-[11px] m-0.5">${codeToFlag(code)} ${code}</span>`;
+
+  const missedHtml = missed.length
+    ? missed.map(c => chip(c, 'bg-red-900/40 text-red-300')).join('')
+    : '<span class="text-gray-500 text-[11px]">none</span>';
+  const fpHtml = fps.length
+    ? fps.map(c => chip(c, 'bg-amber-900/40 text-amber-300')).join('')
+    : '<span class="text-gray-500 text-[11px]">none</span>';
+
+  const tooltip = `
+    <div class="qa-tooltip hidden group-hover:block absolute z-30 right-0 mt-2 w-72 text-left glass rounded-lg p-3 shadow-xl border border-gray-700">
+      <div class="text-xs font-bold text-white mb-1">Clasificados: ${hits}/${total} acertados</div>
+      <div class="text-[11px] text-gray-400 mb-2">Posición exacta (1º/2º/3º): ${qa.with_position_bonus ?? 0} · Terceros: ${qa.third_place_hits ?? 0}/8</div>
+      <div class="text-[11px] font-semibold text-red-400">No predichos (${missed.length})</div>
+      <div class="mb-2">${missedHtml}</div>
+      <div class="text-[11px] font-semibold text-amber-400">Falsos positivos (${fps.length})</div>
+      <div>${fpHtml}</div>
+    </div>`;
+
+  const titleText =
+    `Clasificados ${hits}/${total} | posición exacta ${qa.with_position_bonus ?? 0} | terceros ${qa.third_place_hits ?? 0}/8\n` +
+    `No predichos: ${missed.join(', ') || 'ninguno'}\n` +
+    `Falsos positivos: ${fps.join(', ') || 'ninguno'}`;
+
+  return `
+    <td class="px-4 py-3 text-center relative group cursor-help" title="${titleText.replace(/"/g, '&quot;')}">
+      <span class="font-bold" style="color:${color}">${hits}/${total}</span>
+      ${tooltip}
+    </td>`;
 }
 
 function renderPodiumCard(model, position) {

@@ -5,7 +5,30 @@
     "champion": "ESP",
     "runner_up": "ARG",
     "third_place": "FRA",
-    "fourth_place": "ENG"
+    "fourth_place": "ENG",
+    "qualifier_accuracy": {
+      "hits": 27,
+      "score": 0.84375,
+      "with_position_bonus": 23,
+      "third_place_hits": 6,
+      "missed": [
+        "AUS",
+        "BIH",
+        "COD",
+        "CPV",
+        "RSA"
+      ],
+      "false_positives": [
+        "IRN",
+        "KOR",
+        "SCO",
+        "TUR",
+        "URU"
+      ],
+      "predicted_count": 32,
+      "qualified_count": 32,
+      "ready": true
+    }
   },
   {
     "model_name": "DeepSeek-V4-Pro",
@@ -13,7 +36,30 @@
     "champion": "ARG",
     "runner_up": "USA",
     "third_place": "ENG",
-    "fourth_place": "GER"
+    "fourth_place": "GER",
+    "qualifier_accuracy": {
+      "hits": 27,
+      "score": 0.84375,
+      "with_position_bonus": 21,
+      "third_place_hits": 6,
+      "missed": [
+        "ALG",
+        "AUS",
+        "CPV",
+        "GHA",
+        "RSA"
+      ],
+      "false_positives": [
+        "CZE",
+        "KOR",
+        "SCO",
+        "TUR",
+        "URU"
+      ],
+      "predicted_count": 32,
+      "qualified_count": 32,
+      "ready": true
+    }
   },
   {
     "model_name": "Gemini-3.5-Flash",
@@ -21,7 +67,32 @@
     "champion": "FRA",
     "runner_up": "ARG",
     "third_place": "ESP",
-    "fourth_place": "ENG"
+    "fourth_place": "ENG",
+    "qualifier_accuracy": {
+      "hits": 26,
+      "score": 0.8125,
+      "with_position_bonus": 20,
+      "third_place_hits": 5,
+      "missed": [
+        "AUS",
+        "BIH",
+        "COD",
+        "CPV",
+        "PAR",
+        "RSA"
+      ],
+      "false_positives": [
+        "CZE",
+        "KOR",
+        "SCO",
+        "TUR",
+        "URU",
+        "UZB"
+      ],
+      "predicted_count": 32,
+      "qualified_count": 32,
+      "ready": true
+    }
   },
   {
     "model_name": "GLM-5.1",
@@ -29,7 +100,32 @@
     "champion": "BRA",
     "runner_up": "FRA",
     "third_place": "ARG",
-    "fourth_place": "ESP"
+    "fourth_place": "ESP",
+    "qualifier_accuracy": {
+      "hits": 26,
+      "score": 0.8125,
+      "with_position_bonus": 22,
+      "third_place_hits": 5,
+      "missed": [
+        "AUS",
+        "BIH",
+        "COD",
+        "CPV",
+        "GHA",
+        "RSA"
+      ],
+      "false_positives": [
+        "CZE",
+        "IRN",
+        "KOR",
+        "SCO",
+        "TUR",
+        "URU"
+      ],
+      "predicted_count": 32,
+      "qualified_count": 32,
+      "ready": true
+    }
   },
   {
     "model_name": "GPT-5.5",
@@ -37,7 +133,30 @@
     "champion": "FRA",
     "runner_up": "BRA",
     "third_place": "ARG",
-    "fourth_place": "ESP"
+    "fourth_place": "ESP",
+    "qualifier_accuracy": {
+      "hits": 27,
+      "score": 0.84375,
+      "with_position_bonus": 21,
+      "third_place_hits": 6,
+      "missed": [
+        "AUS",
+        "BIH",
+        "COD",
+        "CPV",
+        "RSA"
+      ],
+      "false_positives": [
+        "CZE",
+        "IRN",
+        "KOR",
+        "TUR",
+        "URU"
+      ],
+      "predicted_count": 32,
+      "qualified_count": 32,
+      "ready": true
+    }
   },
   {
     "model_name": "Grok-4.3",
@@ -45,7 +164,34 @@
     "champion": "BRA",
     "runner_up": "ENG",
     "third_place": "FRA",
-    "fourth_place": "POR"
+    "fourth_place": "POR",
+    "qualifier_accuracy": {
+      "hits": 25,
+      "score": 0.78125,
+      "with_position_bonus": 16,
+      "third_place_hits": 6,
+      "missed": [
+        "AUS",
+        "AUT",
+        "COD",
+        "CPV",
+        "GHA",
+        "NOR",
+        "RSA"
+      ],
+      "false_positives": [
+        "CZE",
+        "IRN",
+        "KOR",
+        "KSA",
+        "SCO",
+        "TUR",
+        "URU"
+      ],
+      "predicted_count": 32,
+      "qualified_count": 32,
+      "ready": true
+    }
   },
   {
     "model_name": "Kimi-K2.6",
@@ -53,7 +199,32 @@
     "champion": "ARG",
     "runner_up": "ESP",
     "third_place": "FRA",
-    "fourth_place": "BRA"
+    "fourth_place": "BRA",
+    "qualifier_accuracy": {
+      "hits": 26,
+      "score": 0.8125,
+      "with_position_bonus": 18,
+      "third_place_hits": 5,
+      "missed": [
+        "CIV",
+        "COD",
+        "CPV",
+        "PAR",
+        "RSA",
+        "SWE"
+      ],
+      "false_positives": [
+        "CZE",
+        "IRN",
+        "KOR",
+        "SCO",
+        "TUR",
+        "URU"
+      ],
+      "predicted_count": 32,
+      "qualified_count": 32,
+      "ready": true
+    }
   },
   {
     "model_name": "MiMo-V2.5-Pro",
@@ -61,7 +232,32 @@
     "champion": "ARG",
     "runner_up": "FRA",
     "third_place": "ESP",
-    "fourth_place": "BRA"
+    "fourth_place": "BRA",
+    "qualifier_accuracy": {
+      "hits": 26,
+      "score": 0.8125,
+      "with_position_bonus": 23,
+      "third_place_hits": 4,
+      "missed": [
+        "BIH",
+        "COD",
+        "CPV",
+        "GHA",
+        "PAR",
+        "RSA"
+      ],
+      "false_positives": [
+        "CZE",
+        "IRN",
+        "KOR",
+        "SCO",
+        "TUR",
+        "URU"
+      ],
+      "predicted_count": 32,
+      "qualified_count": 32,
+      "ready": true
+    }
   },
   {
     "model_name": "MiniMax-M3",
@@ -69,7 +265,30 @@
     "champion": "FRA",
     "runner_up": "ENG",
     "third_place": "ARG",
-    "fourth_place": "ESP"
+    "fourth_place": "ESP",
+    "qualifier_accuracy": {
+      "hits": 27,
+      "score": 0.84375,
+      "with_position_bonus": 20,
+      "third_place_hits": 5,
+      "missed": [
+        "BIH",
+        "CPV",
+        "PAR",
+        "RSA",
+        "SWE"
+      ],
+      "false_positives": [
+        "IRN",
+        "KOR",
+        "SCO",
+        "TUR",
+        "URU"
+      ],
+      "predicted_count": 32,
+      "qualified_count": 32,
+      "ready": true
+    }
   },
   {
     "model_name": "Nex-N2-Pro",
@@ -77,7 +296,30 @@
     "champion": "FRA",
     "runner_up": "BRA",
     "third_place": "ESP",
-    "fourth_place": "POR"
+    "fourth_place": "POR",
+    "qualifier_accuracy": {
+      "hits": 27,
+      "score": 0.84375,
+      "with_position_bonus": 20,
+      "third_place_hits": 6,
+      "missed": [
+        "AUS",
+        "BIH",
+        "COD",
+        "CPV",
+        "RSA"
+      ],
+      "false_positives": [
+        "IRN",
+        "KOR",
+        "KSA",
+        "TUR",
+        "URU"
+      ],
+      "predicted_count": 32,
+      "qualified_count": 32,
+      "ready": true
+    }
   },
   {
     "model_name": "Qwen-3.7-Max",
@@ -85,6 +327,29 @@
     "champion": "ARG",
     "runner_up": "FRA",
     "third_place": "BRA",
-    "fourth_place": "ESP"
+    "fourth_place": "ESP",
+    "qualifier_accuracy": {
+      "hits": 27,
+      "score": 0.84375,
+      "with_position_bonus": 21,
+      "third_place_hits": 6,
+      "missed": [
+        "AUS",
+        "BIH",
+        "COD",
+        "CPV",
+        "RSA"
+      ],
+      "false_positives": [
+        "CZE",
+        "IRN",
+        "KOR",
+        "TUR",
+        "URU"
+      ],
+      "predicted_count": 32,
+      "qualified_count": 32,
+      "ready": true
+    }
   }
 ]

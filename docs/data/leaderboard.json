@@ -1,7 +1,9 @@
 {
-  "last_updated": "2026-06-29T19:45:58.298876+00:00",
+  "last_updated": "2026-06-29T20:42:24.491027+00:00",
   "total_results": 72,
   "total_models": 11,
+  "qualifiers_known": 32,
+  "qualifiers_ready": true,
   "models": [
     {
       "model": "MiMo-V2.5-Pro",
@@ -12,7 +14,32 @@
       "quiniela_points": 48,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 72
+      "n_matches_scored": 72,
+      "qualifier_accuracy": {
+        "hits": 26,
+        "score": 0.8125,
+        "with_position_bonus": 23,
+        "third_place_hits": 4,
+        "missed": [
+          "BIH",
+          "COD",
+          "CPV",
+          "GHA",
+          "PAR",
+          "RSA"
+        ],
+        "false_positives": [
+          "CZE",
+          "IRN",
+          "KOR",
+          "SCO",
+          "TUR",
+          "URU"
+        ],
+        "predicted_count": 32,
+        "qualified_count": 32,
+        "ready": true
+      }
     },
     {
       "model": "DeepSeek-V4-Pro",
@@ -23,7 +50,30 @@
       "quiniela_points": 44,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 72
+      "n_matches_scored": 72,
+      "qualifier_accuracy": {
+        "hits": 27,
+        "score": 0.84375,
+        "with_position_bonus": 21,
+        "third_place_hits": 6,
+        "missed": [
+          "ALG",
+          "AUS",
+          "CPV",
+          "GHA",
+          "RSA"
+        ],
+        "false_positives": [
+          "CZE",
+          "KOR",
+          "SCO",
+          "TUR",
+          "URU"
+        ],
+        "predicted_count": 32,
+        "qualified_count": 32,
+        "ready": true
+      }
     },
     {
       "model": "Nex-N2-Pro",
@@ -34,7 +84,30 @@
       "quiniela_points": 45,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 72
+      "n_matches_scored": 72,
+      "qualifier_accuracy": {
+        "hits": 27,
+        "score": 0.84375,
+        "with_position_bonus": 20,
+        "third_place_hits": 6,
+        "missed": [
+          "AUS",
+          "BIH",
+          "COD",
+          "CPV",
+          "RSA"
+        ],
+        "false_positives": [
+          "IRN",
+          "KOR",
+          "KSA",
+          "TUR",
+          "URU"
+        ],
+        "predicted_count": 32,
+        "qualified_count": 32,
+        "ready": true
+      }
     },
     {
       "model": "MiniMax-M3",
@@ -45,7 +118,30 @@
       "quiniela_points": 47,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 72
+      "n_matches_scored": 72,
+      "qualifier_accuracy": {
+        "hits": 27,
+        "score": 0.84375,
+        "with_position_bonus": 20,
+        "third_place_hits": 5,
+        "missed": [
+          "BIH",
+          "CPV",
+          "PAR",
+          "RSA",
+          "SWE"
+        ],
+        "false_positives": [
+          "IRN",
+          "KOR",
+          "SCO",
+          "TUR",
+          "URU"
+        ],
+        "predicted_count": 32,
+        "qualified_count": 32,
+        "ready": true
+      }
     },
     {
       "model": "Gemini-3.5-Flash",
@@ -56,7 +152,32 @@
       "quiniela_points": 45,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 72
+      "n_matches_scored": 72,
+      "qualifier_accuracy": {
+        "hits": 26,
+        "score": 0.8125,
+        "with_position_bonus": 20,
+        "third_place_hits": 5,
+        "missed": [
+          "AUS",
+          "BIH",
+          "COD",
+          "CPV",
+          "PAR",
+          "RSA"
+        ],
+        "false_positives": [
+          "CZE",
+          "KOR",
+          "SCO",
+          "TUR",
+          "URU",
+          "UZB"
+        ],
+        "predicted_count": 32,
+        "qualified_count": 32,
+        "ready": true
+      }
     },
     {
       "model": "Qwen-3.7-Max",
@@ -67,7 +188,30 @@
       "quiniela_points": 44,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 72
+      "n_matches_scored": 72,
+      "qualifier_accuracy": {
+        "hits": 27,
+        "score": 0.84375,
+        "with_position_bonus": 21,
+        "third_place_hits": 6,
+        "missed": [
+          "AUS",
+          "BIH",
+          "COD",
+          "CPV",
+          "RSA"
+        ],
+        "false_positives": [
+          "CZE",
+          "IRN",
+          "KOR",
+          "TUR",
+          "URU"
+        ],
+        "predicted_count": 32,
+        "qualified_count": 32,
+        "ready": true
+      }
     },
     {
       "model": "GPT-5.5",
@@ -78,7 +222,30 @@
       "quiniela_points": 43,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 72
+      "n_matches_scored": 72,
+      "qualifier_accuracy": {
+        "hits": 27,
+        "score": 0.84375,
+        "with_position_bonus": 21,
+        "third_place_hits": 6,
+        "missed": [
+          "AUS",
+          "BIH",
+          "COD",
+          "CPV",
+          "RSA"
+        ],
+        "false_positives": [
+          "CZE",
+          "IRN",
+          "KOR",
+          "TUR",
+          "URU"
+        ],
+        "predicted_count": 32,
+        "qualified_count": 32,
+        "ready": true
+      }
     },
     {
       "model": "Grok-4.3",
@@ -89,7 +256,34 @@
       "quiniela_points": 45,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 72
+      "n_matches_scored": 72,
+      "qualifier_accuracy": {
+        "hits": 25,
+        "score": 0.78125,
+        "with_position_bonus": 16,
+        "third_place_hits": 6,
+        "missed": [
+          "AUS",
+          "AUT",
+          "COD",
+          "CPV",
+          "GHA",
+          "NOR",
+          "RSA"
+        ],
+        "false_positives": [
+          "CZE",
+          "IRN",
+          "KOR",
+          "KSA",
+          "SCO",
+          "TUR",
+          "URU"
+        ],
+        "predicted_count": 32,
+        "qualified_count": 32,
+        "ready": true
+      }
     },
     {
       "model": "Kimi-K2.6",
@@ -100,7 +294,32 @@
       "quiniela_points": 43,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 72
+      "n_matches_scored": 72,
+      "qualifier_accuracy": {
+        "hits": 26,
+        "score": 0.8125,
+        "with_position_bonus": 18,
+        "third_place_hits": 5,
+        "missed": [
+          "CIV",
+          "COD",
+          "CPV",
+          "PAR",
+          "RSA",
+          "SWE"
+        ],
+        "false_positives": [
+          "CZE",
+          "IRN",
+          "KOR",
+          "SCO",
+          "TUR",
+          "URU"
+        ],
+        "predicted_count": 32,
+        "qualified_count": 32,
+        "ready": true
+      }
     },
     {
       "model": "Claude-Fable-5",
@@ -111,7 +330,30 @@
       "quiniela_points": 42,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 72
+      "n_matches_scored": 72,
+      "qualifier_accuracy": {
+        "hits": 27,
+        "score": 0.84375,
+        "with_position_bonus": 23,
+        "third_place_hits": 6,
+        "missed": [
+          "AUS",
+          "BIH",
+          "COD",
+          "CPV",
+          "RSA"
+        ],
+        "false_positives": [
+          "IRN",
+          "KOR",
+          "SCO",
+          "TUR",
+          "URU"
+        ],
+        "predicted_count": 32,
+        "qualified_count": 32,
+        "ready": true
+      }
     },
     {
       "model": "GLM-5.1",
@@ -122,7 +364,32 @@
       "quiniela_points": 46,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 72
+      "n_matches_scored": 72,
+      "qualifier_accuracy": {
+        "hits": 26,
+        "score": 0.8125,
+        "with_position_bonus": 22,
+        "third_place_hits": 5,
+        "missed": [
+          "AUS",
+          "BIH",
+          "COD",
+          "CPV",
+          "GHA",
+          "RSA"
+        ],
+        "false_positives": [
+          "CZE",
+          "IRN",
+          "KOR",
+          "SCO",
+          "TUR",
+          "URU"
+        ],
+        "predicted_count": 32,
+        "qualified_count": 32,
+        "ready": true
+      }
     }
   ]
 }
