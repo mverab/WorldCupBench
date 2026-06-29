@@ -1,0 +1,2179 @@
+{
+  "last_updated": "2026-06-29T23:17:24.617101+00:00",
+  "rounds_order": [
+    "R32",
+    "R16",
+    "QF",
+    "SF",
+    "FINAL",
+    "THIRD_PLACE"
+  ],
+  "n_models": 11,
+  "matches": [
+    {
+      "match_id": 73,
+      "stage": "R32",
+      "round": "round_of_32",
+      "home_team": "RSA",
+      "away_team": "CAN",
+      "home_slot": "2A",
+      "away_slot": "2B",
+      "date": "2026-06-28",
+      "venue": {
+        "stadium": "SoFi Stadium",
+        "city": "Inglewood"
+      },
+      "feeds_into": 90,
+      "played": true,
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "outcome": "away",
+      "winner": "CAN",
+      "target_round": "R16",
+      "model_picks": {
+        "home": {
+          "count": 0,
+          "models": []
+        },
+        "away": {
+          "count": 8,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "Gemini-3.5-Flash",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Grok-4.3",
+            "Kimi-K2.6",
+            "MiniMax-M3"
+          ]
+        }
+      }
+    },
+    {
+      "match_id": 74,
+      "stage": "R32",
+      "round": "round_of_32",
+      "home_team": "GER",
+      "away_team": "BIH",
+      "home_slot": "1E",
+      "away_slot": "3rd(A/B/C/D/F)",
+      "date": "2026-06-29",
+      "venue": {
+        "stadium": "Gillette Stadium",
+        "city": "Foxborough"
+      },
+      "feeds_into": 89,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "R16",
+      "model_picks": {
+        "home": {
+          "count": 11,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "Gemini-3.5-Flash",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Grok-4.3",
+            "Kimi-K2.6",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3",
+            "Nex-N2-Pro",
+            "Qwen-3.7-Max"
+          ]
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 75,
+      "stage": "R32",
+      "round": "round_of_32",
+      "home_team": "NED",
+      "away_team": "MAR",
+      "home_slot": "1F",
+      "away_slot": "2C",
+      "date": "2026-06-29",
+      "venue": {
+        "stadium": "Estadio BBVA",
+        "city": "Guadalupe"
+      },
+      "feeds_into": 90,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "R16",
+      "model_picks": {
+        "home": {
+          "count": 11,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "Gemini-3.5-Flash",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Grok-4.3",
+            "Kimi-K2.6",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3",
+            "Nex-N2-Pro",
+            "Qwen-3.7-Max"
+          ]
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 76,
+      "stage": "R32",
+      "round": "round_of_32",
+      "home_team": "BRA",
+      "away_team": "JPN",
+      "home_slot": "1C",
+      "away_slot": "2F",
+      "date": "2026-06-29",
+      "venue": {
+        "stadium": "NRG Stadium",
+        "city": "Houston"
+      },
+      "feeds_into": 91,
+      "played": true,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "outcome": "home",
+      "winner": "BRA",
+      "target_round": "R16",
+      "model_picks": {
+        "home": {
+          "count": 11,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "Gemini-3.5-Flash",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Grok-4.3",
+            "Kimi-K2.6",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3",
+            "Nex-N2-Pro",
+            "Qwen-3.7-Max"
+          ]
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 77,
+      "stage": "R32",
+      "round": "round_of_32",
+      "home_team": "FRA",
+      "away_team": "PAR",
+      "home_slot": "1I",
+      "away_slot": "3rd(C/D/F/G/H)",
+      "date": "2026-06-30",
+      "venue": {
+        "stadium": "MetLife Stadium",
+        "city": "East Rutherford"
+      },
+      "feeds_into": 89,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "R16",
+      "model_picks": {
+        "home": {
+          "count": 11,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "Gemini-3.5-Flash",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Grok-4.3",
+            "Kimi-K2.6",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3",
+            "Nex-N2-Pro",
+            "Qwen-3.7-Max"
+          ]
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 78,
+      "stage": "R32",
+      "round": "round_of_32",
+      "home_team": "CIV",
+      "away_team": "NOR",
+      "home_slot": "2E",
+      "away_slot": "2I",
+      "date": "2026-06-30",
+      "venue": {
+        "stadium": "AT&T Stadium",
+        "city": "Arlington"
+      },
+      "feeds_into": 91,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "R16",
+      "model_picks": {
+        "home": {
+          "count": 1,
+          "models": [
+            "Nex-N2-Pro"
+          ]
+        },
+        "away": {
+          "count": 4,
+          "models": [
+            "Claude-Fable-5",
+            "Gemini-3.5-Flash",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3"
+          ]
+        }
+      }
+    },
+    {
+      "match_id": 79,
+      "stage": "R32",
+      "round": "round_of_32",
+      "home_team": "MEX",
+      "away_team": "ECU",
+      "home_slot": "1A",
+      "away_slot": "3rd(C/E/F/H/I)",
+      "date": "2026-06-30",
+      "venue": {
+        "stadium": "Estadio Azteca",
+        "city": "Mexico City"
+      },
+      "feeds_into": 92,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "R16",
+      "model_picks": {
+        "home": {
+          "count": 11,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "Gemini-3.5-Flash",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Grok-4.3",
+            "Kimi-K2.6",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3",
+            "Nex-N2-Pro",
+            "Qwen-3.7-Max"
+          ]
+        },
+        "away": {
+          "count": 1,
+          "models": [
+            "Kimi-K2.6"
+          ]
+        }
+      }
+    },
+    {
+      "match_id": 80,
+      "stage": "R32",
+      "round": "round_of_32",
+      "home_team": "ENG",
+      "away_team": "COD",
+      "home_slot": "1L",
+      "away_slot": "3rd(E/H/I/J/K)",
+      "date": "2026-07-01",
+      "venue": {
+        "stadium": "Mercedes-Benz Stadium",
+        "city": "Atlanta"
+      },
+      "feeds_into": 92,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "R16",
+      "model_picks": {
+        "home": {
+          "count": 11,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "Gemini-3.5-Flash",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Grok-4.3",
+            "Kimi-K2.6",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3",
+            "Nex-N2-Pro",
+            "Qwen-3.7-Max"
+          ]
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 81,
+      "stage": "R32",
+      "round": "round_of_32",
+      "home_team": "USA",
+      "away_team": "ALG",
+      "home_slot": "1D",
+      "away_slot": "3rd(B/E/F/I/J)",
+      "date": "2026-07-01",
+      "venue": {
+        "stadium": "Levi's Stadium",
+        "city": "Santa Clara"
+      },
+      "feeds_into": 94,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "R16",
+      "model_picks": {
+        "home": {
+          "count": 11,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "Gemini-3.5-Flash",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Grok-4.3",
+            "Kimi-K2.6",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3",
+            "Nex-N2-Pro",
+            "Qwen-3.7-Max"
+          ]
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 82,
+      "stage": "R32",
+      "round": "round_of_32",
+      "home_team": "BEL",
+      "away_team": "SEN",
+      "home_slot": "1G",
+      "away_slot": "3rd(A/E/H/I/J)",
+      "date": "2026-07-01",
+      "venue": {
+        "stadium": "Lumen Field",
+        "city": "Seattle"
+      },
+      "feeds_into": 94,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "R16",
+      "model_picks": {
+        "home": {
+          "count": 8,
+          "models": [
+            "DeepSeek-V4-Pro",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Grok-4.3",
+            "Kimi-K2.6",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3",
+            "Qwen-3.7-Max"
+          ]
+        },
+        "away": {
+          "count": 7,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Grok-4.3",
+            "Nex-N2-Pro",
+            "Qwen-3.7-Max"
+          ]
+        }
+      }
+    },
+    {
+      "match_id": 83,
+      "stage": "R32",
+      "round": "round_of_32",
+      "home_team": "POR",
+      "away_team": "CRO",
+      "home_slot": "2K",
+      "away_slot": "2L",
+      "date": "2026-07-02",
+      "venue": {
+        "stadium": "BMO Field",
+        "city": "Toronto"
+      },
+      "feeds_into": 93,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "R16",
+      "model_picks": {
+        "home": {
+          "count": 11,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "Gemini-3.5-Flash",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Grok-4.3",
+            "Kimi-K2.6",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3",
+            "Nex-N2-Pro",
+            "Qwen-3.7-Max"
+          ]
+        },
+        "away": {
+          "count": 4,
+          "models": [
+            "DeepSeek-V4-Pro",
+            "GLM-5.1",
+            "Grok-4.3",
+            "Qwen-3.7-Max"
+          ]
+        }
+      }
+    },
+    {
+      "match_id": 84,
+      "stage": "R32",
+      "round": "round_of_32",
+      "home_team": "ESP",
+      "away_team": "AUT",
+      "home_slot": "1H",
+      "away_slot": "2J",
+      "date": "2026-07-02",
+      "venue": {
+        "stadium": "SoFi Stadium",
+        "city": "Inglewood"
+      },
+      "feeds_into": 93,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "R16",
+      "model_picks": {
+        "home": {
+          "count": 11,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "Gemini-3.5-Flash",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Grok-4.3",
+            "Kimi-K2.6",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3",
+            "Nex-N2-Pro",
+            "Qwen-3.7-Max"
+          ]
+        },
+        "away": {
+          "count": 1,
+          "models": [
+            "Gemini-3.5-Flash"
+          ]
+        }
+      }
+    },
+    {
+      "match_id": 85,
+      "stage": "R32",
+      "round": "round_of_32",
+      "home_team": "SUI",
+      "away_team": "SWE",
+      "home_slot": "1B",
+      "away_slot": "3rd(E/F/G/I/J)",
+      "date": "2026-07-02",
+      "venue": {
+        "stadium": "BC Place",
+        "city": "Vancouver"
+      },
+      "feeds_into": 96,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "R16",
+      "model_picks": {
+        "home": {
+          "count": 10,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "Gemini-3.5-Flash",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Grok-4.3",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3",
+            "Nex-N2-Pro",
+            "Qwen-3.7-Max"
+          ]
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 86,
+      "stage": "R32",
+      "round": "round_of_32",
+      "home_team": "ARG",
+      "away_team": "CPV",
+      "home_slot": "1J",
+      "away_slot": "2H",
+      "date": "2026-07-03",
+      "venue": {
+        "stadium": "Hard Rock Stadium",
+        "city": "Miami Gardens"
+      },
+      "feeds_into": 95,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "R16",
+      "model_picks": {
+        "home": {
+          "count": 11,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "Gemini-3.5-Flash",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Grok-4.3",
+            "Kimi-K2.6",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3",
+            "Nex-N2-Pro",
+            "Qwen-3.7-Max"
+          ]
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 87,
+      "stage": "R32",
+      "round": "round_of_32",
+      "home_team": "COL",
+      "away_team": "GHA",
+      "home_slot": "1K",
+      "away_slot": "3rd(D/E/I/J/L)",
+      "date": "2026-07-03",
+      "venue": {
+        "stadium": "Arrowhead Stadium",
+        "city": "Kansas City"
+      },
+      "feeds_into": 96,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "R16",
+      "model_picks": {
+        "home": {
+          "count": 7,
+          "models": [
+            "Claude-Fable-5",
+            "Gemini-3.5-Flash",
+            "GPT-5.5",
+            "Kimi-K2.6",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3",
+            "Nex-N2-Pro"
+          ]
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 88,
+      "stage": "R32",
+      "round": "round_of_32",
+      "home_team": "AUS",
+      "away_team": "EGY",
+      "home_slot": "2D",
+      "away_slot": "2G",
+      "date": "2026-07-03",
+      "venue": {
+        "stadium": "AT&T Stadium",
+        "city": "Arlington"
+      },
+      "feeds_into": 95,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "R16",
+      "model_picks": {
+        "home": {
+          "count": 0,
+          "models": []
+        },
+        "away": {
+          "count": 4,
+          "models": [
+            "DeepSeek-V4-Pro",
+            "Grok-4.3",
+            "MiniMax-M3",
+            "Nex-N2-Pro"
+          ]
+        }
+      }
+    },
+    {
+      "match_id": 89,
+      "stage": "R16",
+      "round": "round_of_16",
+      "home_team": "W74",
+      "away_team": "W77",
+      "home_slot": "W74",
+      "away_slot": "W77",
+      "date": "2026-07-04",
+      "venue": {
+        "stadium": "Lincoln Financial Field",
+        "city": "Philadelphia"
+      },
+      "feeds_into": 97,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "QF",
+      "model_picks": {
+        "home": {
+          "count": 0,
+          "models": []
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 90,
+      "stage": "R16",
+      "round": "round_of_16",
+      "home_team": "CAN",
+      "away_team": "W75",
+      "home_slot": "W73",
+      "away_slot": "W75",
+      "date": "2026-07-04",
+      "venue": {
+        "stadium": "NRG Stadium",
+        "city": "Houston"
+      },
+      "feeds_into": 97,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "QF",
+      "model_picks": {
+        "home": {
+          "count": 0,
+          "models": []
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 91,
+      "stage": "R16",
+      "round": "round_of_16",
+      "home_team": "BRA",
+      "away_team": "W78",
+      "home_slot": "W76",
+      "away_slot": "W78",
+      "date": "2026-07-05",
+      "venue": {
+        "stadium": "MetLife Stadium",
+        "city": "East Rutherford"
+      },
+      "feeds_into": 99,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "QF",
+      "model_picks": {
+        "home": {
+          "count": 11,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "Gemini-3.5-Flash",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Grok-4.3",
+            "Kimi-K2.6",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3",
+            "Nex-N2-Pro",
+            "Qwen-3.7-Max"
+          ]
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 92,
+      "stage": "R16",
+      "round": "round_of_16",
+      "home_team": "W79",
+      "away_team": "W80",
+      "home_slot": "W79",
+      "away_slot": "W80",
+      "date": "2026-07-05",
+      "venue": {
+        "stadium": "Estadio Azteca",
+        "city": "Mexico City"
+      },
+      "feeds_into": 99,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "QF",
+      "model_picks": {
+        "home": {
+          "count": 0,
+          "models": []
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 93,
+      "stage": "R16",
+      "round": "round_of_16",
+      "home_team": "W83",
+      "away_team": "W84",
+      "home_slot": "W83",
+      "away_slot": "W84",
+      "date": "2026-07-06",
+      "venue": {
+        "stadium": "AT&T Stadium",
+        "city": "Arlington"
+      },
+      "feeds_into": 98,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "QF",
+      "model_picks": {
+        "home": {
+          "count": 0,
+          "models": []
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 94,
+      "stage": "R16",
+      "round": "round_of_16",
+      "home_team": "W81",
+      "away_team": "W82",
+      "home_slot": "W81",
+      "away_slot": "W82",
+      "date": "2026-07-06",
+      "venue": {
+        "stadium": "Lumen Field",
+        "city": "Seattle"
+      },
+      "feeds_into": 98,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "QF",
+      "model_picks": {
+        "home": {
+          "count": 0,
+          "models": []
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 95,
+      "stage": "R16",
+      "round": "round_of_16",
+      "home_team": "W86",
+      "away_team": "W88",
+      "home_slot": "W86",
+      "away_slot": "W88",
+      "date": "2026-07-07",
+      "venue": {
+        "stadium": "Mercedes-Benz Stadium",
+        "city": "Atlanta"
+      },
+      "feeds_into": 100,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "QF",
+      "model_picks": {
+        "home": {
+          "count": 0,
+          "models": []
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 96,
+      "stage": "R16",
+      "round": "round_of_16",
+      "home_team": "W85",
+      "away_team": "W87",
+      "home_slot": "W85",
+      "away_slot": "W87",
+      "date": "2026-07-07",
+      "venue": {
+        "stadium": "BC Place",
+        "city": "Vancouver"
+      },
+      "feeds_into": 100,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "QF",
+      "model_picks": {
+        "home": {
+          "count": 0,
+          "models": []
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 97,
+      "stage": "QF",
+      "round": "quarter_final",
+      "home_team": "W89",
+      "away_team": "W90",
+      "home_slot": "W89",
+      "away_slot": "W90",
+      "date": "2026-07-09",
+      "venue": {
+        "stadium": "Gillette Stadium",
+        "city": "Foxborough"
+      },
+      "feeds_into": 101,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "SF",
+      "model_picks": {
+        "home": {
+          "count": 0,
+          "models": []
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 98,
+      "stage": "QF",
+      "round": "quarter_final",
+      "home_team": "W93",
+      "away_team": "W94",
+      "home_slot": "W93",
+      "away_slot": "W94",
+      "date": "2026-07-10",
+      "venue": {
+        "stadium": "SoFi Stadium",
+        "city": "Inglewood"
+      },
+      "feeds_into": 101,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "SF",
+      "model_picks": {
+        "home": {
+          "count": 0,
+          "models": []
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 99,
+      "stage": "QF",
+      "round": "quarter_final",
+      "home_team": "W91",
+      "away_team": "W92",
+      "home_slot": "W91",
+      "away_slot": "W92",
+      "date": "2026-07-11",
+      "venue": {
+        "stadium": "Hard Rock Stadium",
+        "city": "Miami Gardens"
+      },
+      "feeds_into": 102,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "SF",
+      "model_picks": {
+        "home": {
+          "count": 0,
+          "models": []
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 100,
+      "stage": "QF",
+      "round": "quarter_final",
+      "home_team": "W95",
+      "away_team": "W96",
+      "home_slot": "W95",
+      "away_slot": "W96",
+      "date": "2026-07-11",
+      "venue": {
+        "stadium": "Arrowhead Stadium",
+        "city": "Kansas City"
+      },
+      "feeds_into": 102,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "SF",
+      "model_picks": {
+        "home": {
+          "count": 0,
+          "models": []
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 101,
+      "stage": "SF",
+      "round": "semi_final",
+      "home_team": "W97",
+      "away_team": "W98",
+      "home_slot": "W97",
+      "away_slot": "W98",
+      "date": "2026-07-14",
+      "venue": {
+        "stadium": "AT&T Stadium",
+        "city": "Arlington"
+      },
+      "feeds_into": 104,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "FINAL",
+      "model_picks": {
+        "home": {
+          "count": 0,
+          "models": []
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 102,
+      "stage": "SF",
+      "round": "semi_final",
+      "home_team": "W99",
+      "away_team": "W100",
+      "home_slot": "W99",
+      "away_slot": "W100",
+      "date": "2026-07-15",
+      "venue": {
+        "stadium": "Mercedes-Benz Stadium",
+        "city": "Atlanta"
+      },
+      "feeds_into": 104,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "FINAL",
+      "model_picks": {
+        "home": {
+          "count": 0,
+          "models": []
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 103,
+      "stage": "THIRD_PLACE",
+      "round": "third_place",
+      "home_team": "L101",
+      "away_team": "L102",
+      "home_slot": "L101",
+      "away_slot": "L102",
+      "date": "2026-07-18",
+      "venue": {
+        "stadium": "Hard Rock Stadium",
+        "city": "Miami Gardens"
+      },
+      "feeds_into": null,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "THIRD_PLACE",
+      "model_picks": {
+        "home": {
+          "count": 0,
+          "models": []
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    },
+    {
+      "match_id": 104,
+      "stage": "FINAL",
+      "round": "final",
+      "home_team": "W101",
+      "away_team": "W102",
+      "home_slot": "W101",
+      "away_slot": "W102",
+      "date": "2026-07-19",
+      "venue": {
+        "stadium": "MetLife Stadium",
+        "city": "East Rutherford"
+      },
+      "feeds_into": null,
+      "played": false,
+      "score": null,
+      "outcome": null,
+      "winner": null,
+      "target_round": "CHAMPION",
+      "model_picks": {
+        "home": {
+          "count": 0,
+          "models": []
+        },
+        "away": {
+          "count": 0,
+          "models": []
+        }
+      }
+    }
+  ],
+  "model_advancement": [
+    {
+      "model": "Claude-Fable-5",
+      "advancement_accuracy": {
+        "rounds": {
+          "R16": {
+            "hits": 2,
+            "total": 16,
+            "predicted_count": 16,
+            "reached_count": 2,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "COL",
+              "ENG",
+              "ESP",
+              "FRA",
+              "GER",
+              "MEX",
+              "NED",
+              "NOR",
+              "POR",
+              "SEN",
+              "SUI",
+              "TUR",
+              "USA"
+            ],
+            "ready": false
+          },
+          "QF": {
+            "hits": 0,
+            "total": 8,
+            "predicted_count": 8,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BRA",
+              "ENG",
+              "ESP",
+              "FRA",
+              "NED",
+              "POR",
+              "USA"
+            ],
+            "ready": false
+          },
+          "SF": {
+            "hits": 0,
+            "total": 4,
+            "predicted_count": 4,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "ENG",
+              "ESP",
+              "FRA"
+            ],
+            "ready": false
+          },
+          "FINAL": {
+            "hits": 0,
+            "total": 2,
+            "predicted_count": 2,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "ESP"
+            ],
+            "ready": false
+          },
+          "CHAMPION": {
+            "hits": 0,
+            "total": 1,
+            "predicted_count": 1,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ESP"
+            ],
+            "ready": false
+          }
+        },
+        "hits": 0,
+        "total": 0,
+        "score": 0.0,
+        "ready": false
+      }
+    },
+    {
+      "model": "DeepSeek-V4-Pro",
+      "advancement_accuracy": {
+        "rounds": {
+          "R16": {
+            "hits": 2,
+            "total": 16,
+            "predicted_count": 16,
+            "reached_count": 2,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BEL",
+              "CRO",
+              "EGY",
+              "ENG",
+              "ESP",
+              "FRA",
+              "GER",
+              "MEX",
+              "NED",
+              "POR",
+              "SEN",
+              "SUI",
+              "USA"
+            ],
+            "ready": false
+          },
+          "QF": {
+            "hits": 0,
+            "total": 8,
+            "predicted_count": 8,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BRA",
+              "ENG",
+              "ESP",
+              "GER",
+              "NED",
+              "POR",
+              "USA"
+            ],
+            "ready": false
+          },
+          "SF": {
+            "hits": 0,
+            "total": 4,
+            "predicted_count": 4,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "ENG",
+              "GER",
+              "USA"
+            ],
+            "ready": false
+          },
+          "FINAL": {
+            "hits": 0,
+            "total": 2,
+            "predicted_count": 2,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "USA"
+            ],
+            "ready": false
+          },
+          "CHAMPION": {
+            "hits": 0,
+            "total": 1,
+            "predicted_count": 1,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG"
+            ],
+            "ready": false
+          }
+        },
+        "hits": 0,
+        "total": 0,
+        "score": 0.0,
+        "ready": false
+      }
+    },
+    {
+      "model": "Gemini-3.5-Flash",
+      "advancement_accuracy": {
+        "rounds": {
+          "R16": {
+            "hits": 2,
+            "total": 16,
+            "predicted_count": 16,
+            "reached_count": 2,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "AUT",
+              "COL",
+              "ENG",
+              "ESP",
+              "FRA",
+              "GER",
+              "MEX",
+              "NED",
+              "NOR",
+              "POR",
+              "SUI",
+              "TUR",
+              "USA"
+            ],
+            "ready": false
+          },
+          "QF": {
+            "hits": 0,
+            "total": 8,
+            "predicted_count": 8,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BRA",
+              "ENG",
+              "ESP",
+              "FRA",
+              "NED",
+              "POR",
+              "USA"
+            ],
+            "ready": false
+          },
+          "SF": {
+            "hits": 0,
+            "total": 4,
+            "predicted_count": 4,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "ENG",
+              "ESP",
+              "FRA"
+            ],
+            "ready": false
+          },
+          "FINAL": {
+            "hits": 0,
+            "total": 2,
+            "predicted_count": 2,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "FRA"
+            ],
+            "ready": false
+          },
+          "CHAMPION": {
+            "hits": 0,
+            "total": 1,
+            "predicted_count": 1,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "FRA"
+            ],
+            "ready": false
+          }
+        },
+        "hits": 0,
+        "total": 0,
+        "score": 0.0,
+        "ready": false
+      }
+    },
+    {
+      "model": "GLM-5.1",
+      "advancement_accuracy": {
+        "rounds": {
+          "R16": {
+            "hits": 2,
+            "total": 16,
+            "predicted_count": 16,
+            "reached_count": 2,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BEL",
+              "CRO",
+              "ENG",
+              "ESP",
+              "FRA",
+              "GER",
+              "MEX",
+              "NED",
+              "POR",
+              "SEN",
+              "SUI",
+              "TUR",
+              "USA"
+            ],
+            "ready": false
+          },
+          "QF": {
+            "hits": 0,
+            "total": 8,
+            "predicted_count": 8,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BEL",
+              "BRA",
+              "ENG",
+              "ESP",
+              "FRA",
+              "NED",
+              "POR"
+            ],
+            "ready": false
+          },
+          "SF": {
+            "hits": 0,
+            "total": 4,
+            "predicted_count": 4,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BRA",
+              "ESP",
+              "FRA"
+            ],
+            "ready": false
+          },
+          "FINAL": {
+            "hits": 0,
+            "total": 2,
+            "predicted_count": 2,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "BRA",
+              "FRA"
+            ],
+            "ready": false
+          },
+          "CHAMPION": {
+            "hits": 0,
+            "total": 1,
+            "predicted_count": 1,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "BRA"
+            ],
+            "ready": false
+          }
+        },
+        "hits": 0,
+        "total": 0,
+        "score": 0.0,
+        "ready": false
+      }
+    },
+    {
+      "model": "GPT-5.5",
+      "advancement_accuracy": {
+        "rounds": {
+          "R16": {
+            "hits": 2,
+            "total": 16,
+            "predicted_count": 16,
+            "reached_count": 2,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BEL",
+              "COL",
+              "ENG",
+              "ESP",
+              "FRA",
+              "GER",
+              "MEX",
+              "NED",
+              "POR",
+              "SEN",
+              "SUI",
+              "TUR",
+              "USA"
+            ],
+            "ready": false
+          },
+          "QF": {
+            "hits": 0,
+            "total": 8,
+            "predicted_count": 8,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BRA",
+              "ENG",
+              "ESP",
+              "FRA",
+              "NED",
+              "POR",
+              "USA"
+            ],
+            "ready": false
+          },
+          "SF": {
+            "hits": 0,
+            "total": 4,
+            "predicted_count": 4,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BRA",
+              "ESP",
+              "FRA"
+            ],
+            "ready": false
+          },
+          "FINAL": {
+            "hits": 0,
+            "total": 2,
+            "predicted_count": 2,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "BRA",
+              "FRA"
+            ],
+            "ready": false
+          },
+          "CHAMPION": {
+            "hits": 0,
+            "total": 1,
+            "predicted_count": 1,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "FRA"
+            ],
+            "ready": false
+          }
+        },
+        "hits": 0,
+        "total": 0,
+        "score": 0.0,
+        "ready": false
+      }
+    },
+    {
+      "model": "Grok-4.3",
+      "advancement_accuracy": {
+        "rounds": {
+          "R16": {
+            "hits": 2,
+            "total": 16,
+            "predicted_count": 16,
+            "reached_count": 2,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BEL",
+              "CRO",
+              "EGY",
+              "ENG",
+              "ESP",
+              "FRA",
+              "GER",
+              "MEX",
+              "NED",
+              "POR",
+              "SEN",
+              "SUI",
+              "USA"
+            ],
+            "ready": false
+          },
+          "QF": {
+            "hits": 0,
+            "total": 8,
+            "predicted_count": 8,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "BEL",
+              "BRA",
+              "ENG",
+              "ESP",
+              "FRA",
+              "NED",
+              "POR",
+              "URU"
+            ],
+            "ready": false
+          },
+          "SF": {
+            "hits": 0,
+            "total": 4,
+            "predicted_count": 4,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "BRA",
+              "ENG",
+              "FRA",
+              "POR"
+            ],
+            "ready": false
+          },
+          "FINAL": {
+            "hits": 0,
+            "total": 2,
+            "predicted_count": 2,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "BRA",
+              "ENG"
+            ],
+            "ready": false
+          },
+          "CHAMPION": {
+            "hits": 0,
+            "total": 1,
+            "predicted_count": 1,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "BRA"
+            ],
+            "ready": false
+          }
+        },
+        "hits": 0,
+        "total": 0,
+        "score": 0.0,
+        "ready": false
+      }
+    },
+    {
+      "model": "Kimi-K2.6",
+      "advancement_accuracy": {
+        "rounds": {
+          "R16": {
+            "hits": 2,
+            "total": 16,
+            "predicted_count": 16,
+            "reached_count": 2,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BEL",
+              "COL",
+              "ECU",
+              "ENG",
+              "ESP",
+              "FRA",
+              "GER",
+              "KOR",
+              "MEX",
+              "NED",
+              "POR",
+              "TUR",
+              "USA"
+            ],
+            "ready": false
+          },
+          "QF": {
+            "hits": 0,
+            "total": 8,
+            "predicted_count": 8,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BRA",
+              "ENG",
+              "ESP",
+              "FRA",
+              "NED",
+              "POR",
+              "USA"
+            ],
+            "ready": false
+          },
+          "SF": {
+            "hits": 0,
+            "total": 4,
+            "predicted_count": 4,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BRA",
+              "ESP",
+              "FRA"
+            ],
+            "ready": false
+          },
+          "FINAL": {
+            "hits": 0,
+            "total": 2,
+            "predicted_count": 2,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "ESP"
+            ],
+            "ready": false
+          },
+          "CHAMPION": {
+            "hits": 0,
+            "total": 1,
+            "predicted_count": 1,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG"
+            ],
+            "ready": false
+          }
+        },
+        "hits": 0,
+        "total": 0,
+        "score": 0.0,
+        "ready": false
+      }
+    },
+    {
+      "model": "MiMo-V2.5-Pro",
+      "advancement_accuracy": {
+        "rounds": {
+          "R16": {
+            "hits": 1,
+            "total": 16,
+            "predicted_count": 16,
+            "reached_count": 2,
+            "missed": [
+              "CAN"
+            ],
+            "false_positives": [
+              "ARG",
+              "BEL",
+              "COL",
+              "ENG",
+              "ESP",
+              "FRA",
+              "GER",
+              "KOR",
+              "MEX",
+              "NED",
+              "NOR",
+              "POR",
+              "SUI",
+              "TUR",
+              "USA"
+            ],
+            "ready": false
+          },
+          "QF": {
+            "hits": 0,
+            "total": 8,
+            "predicted_count": 8,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BEL",
+              "BRA",
+              "ENG",
+              "ESP",
+              "FRA",
+              "NED",
+              "POR"
+            ],
+            "ready": false
+          },
+          "SF": {
+            "hits": 0,
+            "total": 4,
+            "predicted_count": 4,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BRA",
+              "ESP",
+              "FRA"
+            ],
+            "ready": false
+          },
+          "FINAL": {
+            "hits": 0,
+            "total": 2,
+            "predicted_count": 2,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "FRA"
+            ],
+            "ready": false
+          },
+          "CHAMPION": {
+            "hits": 0,
+            "total": 1,
+            "predicted_count": 1,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG"
+            ],
+            "ready": false
+          }
+        },
+        "hits": 0,
+        "total": 0,
+        "score": 0.0,
+        "ready": false
+      }
+    },
+    {
+      "model": "MiniMax-M3",
+      "advancement_accuracy": {
+        "rounds": {
+          "R16": {
+            "hits": 2,
+            "total": 16,
+            "predicted_count": 16,
+            "reached_count": 2,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BEL",
+              "COL",
+              "EGY",
+              "ENG",
+              "ESP",
+              "FRA",
+              "GER",
+              "MEX",
+              "NED",
+              "NOR",
+              "POR",
+              "SUI",
+              "USA"
+            ],
+            "ready": false
+          },
+          "QF": {
+            "hits": 0,
+            "total": 8,
+            "predicted_count": 8,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BEL",
+              "BRA",
+              "ENG",
+              "ESP",
+              "FRA",
+              "NED",
+              "POR"
+            ],
+            "ready": false
+          },
+          "SF": {
+            "hits": 0,
+            "total": 4,
+            "predicted_count": 4,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "ENG",
+              "ESP",
+              "FRA"
+            ],
+            "ready": false
+          },
+          "FINAL": {
+            "hits": 0,
+            "total": 2,
+            "predicted_count": 2,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ENG",
+              "FRA"
+            ],
+            "ready": false
+          },
+          "CHAMPION": {
+            "hits": 0,
+            "total": 1,
+            "predicted_count": 1,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "FRA"
+            ],
+            "ready": false
+          }
+        },
+        "hits": 0,
+        "total": 0,
+        "score": 0.0,
+        "ready": false
+      }
+    },
+    {
+      "model": "Nex-N2-Pro",
+      "advancement_accuracy": {
+        "rounds": {
+          "R16": {
+            "hits": 1,
+            "total": 16,
+            "predicted_count": 16,
+            "reached_count": 2,
+            "missed": [
+              "CAN"
+            ],
+            "false_positives": [
+              "ARG",
+              "CIV",
+              "COL",
+              "EGY",
+              "ENG",
+              "ESP",
+              "FRA",
+              "GER",
+              "KOR",
+              "MEX",
+              "NED",
+              "POR",
+              "SEN",
+              "SUI",
+              "USA"
+            ],
+            "ready": false
+          },
+          "QF": {
+            "hits": 0,
+            "total": 8,
+            "predicted_count": 8,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BRA",
+              "ESP",
+              "FRA",
+              "MEX",
+              "NED",
+              "POR",
+              "USA"
+            ],
+            "ready": false
+          },
+          "SF": {
+            "hits": 0,
+            "total": 4,
+            "predicted_count": 4,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "BRA",
+              "FRA",
+              "POR",
+              "USA"
+            ],
+            "ready": false
+          },
+          "FINAL": {
+            "hits": 0,
+            "total": 2,
+            "predicted_count": 2,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "BRA",
+              "FRA"
+            ],
+            "ready": false
+          },
+          "CHAMPION": {
+            "hits": 0,
+            "total": 1,
+            "predicted_count": 1,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "FRA"
+            ],
+            "ready": false
+          }
+        },
+        "hits": 0,
+        "total": 0,
+        "score": 0.0,
+        "ready": false
+      }
+    },
+    {
+      "model": "Qwen-3.7-Max",
+      "advancement_accuracy": {
+        "rounds": {
+          "R16": {
+            "hits": 1,
+            "total": 16,
+            "predicted_count": 16,
+            "reached_count": 2,
+            "missed": [
+              "CAN"
+            ],
+            "false_positives": [
+              "ARG",
+              "BEL",
+              "CRO",
+              "ENG",
+              "ESP",
+              "FRA",
+              "GER",
+              "KOR",
+              "MEX",
+              "NED",
+              "POR",
+              "SEN",
+              "SUI",
+              "TUR",
+              "USA"
+            ],
+            "ready": false
+          },
+          "QF": {
+            "hits": 0,
+            "total": 8,
+            "predicted_count": 8,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BRA",
+              "ENG",
+              "ESP",
+              "FRA",
+              "NED",
+              "POR",
+              "USA"
+            ],
+            "ready": false
+          },
+          "SF": {
+            "hits": 0,
+            "total": 4,
+            "predicted_count": 4,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BRA",
+              "ESP",
+              "FRA"
+            ],
+            "ready": false
+          },
+          "FINAL": {
+            "hits": 0,
+            "total": 2,
+            "predicted_count": 2,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "FRA"
+            ],
+            "ready": false
+          },
+          "CHAMPION": {
+            "hits": 0,
+            "total": 1,
+            "predicted_count": 1,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG"
+            ],
+            "ready": false
+          }
+        },
+        "hits": 0,
+        "total": 0,
+        "score": 0.0,
+        "ready": false
+      }
+    }
+  ]
+}

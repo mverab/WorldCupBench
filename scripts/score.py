@@ -13,6 +13,7 @@ from datetime import datetime, timezone
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import utils
+import advancement
 
 BASE_DIR = utils.BASE_DIR
 RESULTS_DIR = os.path.join(BASE_DIR, "data", "results")
@@ -35,7 +36,15 @@ QUINIELA_POINTS = {
 
 
 def load_results(results_dir: str = RESULTS_DIR) -> dict:
-    """Load actual match results from data/results/*.json."""
+    """Load actual match results from data/results/*.json.
+
+    Results are indexed by every key a prediction might use to look them up:
+      * ``str(fd_id)`` and ``str(match_id)`` (the canonical integer ids), and
+      * the string sentinels ``"FINAL"`` / ``"THIRD"`` used by the frozen
+        prediction brackets — bridged here from the canonical stage so the
+        final (match_id 104) and third-place (103) results are scored even
+        though predictions key them as "FINAL"/"THIRD".
+    """
     results = {}
     if not os.path.isdir(results_dir):
         return results
@@ -56,6 +65,13 @@ def load_results(results_dir: str = RESULTS_DIR) -> dict:
                 val = m.get(key)
                 if val is not None:
                     results[str(val)] = m
+            # Bridge canonical final/third-place results to the "FINAL"/"THIRD"
+            # sentinel keys the prediction brackets use.
+            canonical = utils.normalize_stage(m.get("stage"), m.get("match_id"))
+            if canonical == "FINAL":
+                results.setdefault("FINAL", m)
+            elif canonical == "THIRD_PLACE":
+                results.setdefault("THIRD", m)
     return results
 
 
@@ -84,23 +100,12 @@ def load_predictions(predictions_dir: str = PREDICTIONS_DIR) -> list:
 
 
 def _match_stage(match_id: str) -> str:
-    if match_id in ("FINAL", "THIRD"):
-        return "FINAL" if match_id == "FINAL" else "THIRD_PLACE"
-    try:
-        mid = int(match_id)
-    except (ValueError, TypeError):
-        return "UNKNOWN"
-    if 1 <= mid <= 72:
-        return "GROUP_STAGE"
-    if 73 <= mid <= 88:
-        return "R32"
-    if 89 <= mid <= 96:
-        return "R16"
-    if 97 <= mid <= 100:
-        return "QF"
-    if 101 <= mid <= 102:
-        return "SF"
-    return "UNKNOWN"
+    """Canonical stage for a match_id (delegates to the single taxonomy point).
+
+    Returns the canonical label (GROUP_STAGE, R32, R16, QF, SF, THIRD_PLACE,
+    FINAL) or ``"UNKNOWN"`` when the id cannot be resolved.
+    """
+    return utils.stage_from_match_id(match_id) or "UNKNOWN"
 
 
 def _brier_group(probs: dict, actual: str) -> float:
@@ -285,7 +290,8 @@ def score_qualifiers(prediction: dict, qualified: dict) -> dict:
     }
 
 
-def score_model(prediction: dict, results: dict, qualified: dict = None) -> dict:
+def score_model(prediction: dict, results: dict, qualified: dict = None,
+                real_advancement: dict = None) -> dict:
     group_briers = []
     knockout_briers = []
     quiniela = 0
@@ -337,6 +343,9 @@ def score_model(prediction: dict, results: dict, qualified: dict = None) -> dict
     }
     qualifier_detail = score_qualifiers(prediction, qual_lookup)
 
+    adv_lookup = real_advancement if real_advancement is not None else {}
+    advancement_detail = advancement.score_advancement(prediction, adv_lookup)
+
     return {
         "model": prediction.get("model", "Unknown"),
         "model_id": prediction.get("model_id", ""),
@@ -348,6 +357,7 @@ def score_model(prediction: dict, results: dict, qualified: dict = None) -> dict
         "roi_status": "no_market_data",
         "n_matches_scored": n_group + n_ko,
         "qualifier_accuracy": qualifier_detail,
+        "advancement_accuracy": advancement_detail,
     }
 
 
@@ -369,6 +379,7 @@ def generate_leaderboard(
     results = load_results(results_dir)
     predictions = load_predictions() if predictions is None else predictions
     qualified = load_qualified(tournament_path)
+    real_advancement = advancement.compute_real_advancement(results)
 
     if not predictions:
         print("No prediction files found")
@@ -376,7 +387,7 @@ def generate_leaderboard(
 
     models = []
     for pred in predictions:
-        scored = score_model(pred, results, qualified)
+        scored = score_model(pred, results, qualified, real_advancement)
         roi, roi_status = _compute_roi(pred, results)
         scored["roi"] = roi
         scored["roi_status"] = roi_status
@@ -390,12 +401,18 @@ def generate_leaderboard(
         )
     )
 
+    advancement_rounds_ready = [
+        rnd for rnd in advancement.ROUND_ORDER
+        if real_advancement.get(rnd, {}).get("ready")
+    ]
+
     leaderboard = {
         "last_updated": datetime.now(timezone.utc).isoformat(),
         "total_results": len({id(m) for m in results.values()}),
         "total_models": len(models),
         "qualifiers_known": len(qualified.get("teams", set())),
         "qualifiers_ready": bool(qualified.get("ready", False)),
+        "advancement_rounds_ready": advancement_rounds_ready,
         "models": models,
     }
 

@@ -24,6 +24,107 @@ API_TO_FIFA_TLA = {
 }
 FIFA_TO_API_TLA = {v: k for k, v in API_TO_FIFA_TLA.items()}
 
+# ---------------------------------------------------------------------------
+# Canonical stage taxonomy (single source of truth).
+#
+# The football-data.org API and various hand-edited results use several labels
+# for the same round ("LAST_32" / "ROUND_OF_32" / "R32"). The scoring engine,
+# the dashboard and the bracket builder must all speak ONE language, so every
+# stage string in the project is funnelled through ``normalize_stage`` /
+# ``stage_from_match_id`` defined here. The canonical labels are:
+#
+#     GROUP_STAGE, R32, R16, QF, SF, THIRD_PLACE, FINAL
+# ---------------------------------------------------------------------------
+CANONICAL_STAGES = ["GROUP_STAGE", "R32", "R16", "QF", "SF", "THIRD_PLACE", "FINAL"]
+
+# Map every alias we have ever seen (API, manual, internal) to its canonical
+# form. Keys are upper-cased and stripped before lookup.
+STAGE_ALIASES = {
+    # Group stage
+    "GROUP_STAGE": "GROUP_STAGE",
+    "GROUP": "GROUP_STAGE",
+    "GROUPS": "GROUP_STAGE",
+    "REGULAR_SEASON": "GROUP_STAGE",
+    # Round of 32
+    "R32": "R32",
+    "LAST_32": "R32",
+    "ROUND_OF_32": "R32",
+    "ROUND_OF_32_FINALS": "R32",
+    # Round of 16
+    "R16": "R16",
+    "LAST_16": "R16",
+    "ROUND_OF_16": "R16",
+    # Quarter-finals
+    "QF": "QF",
+    "QUARTER_FINAL": "QF",
+    "QUARTER_FINALS": "QF",
+    "QUARTERFINALS": "QF",
+    "LAST_8": "QF",
+    # Semi-finals
+    "SF": "SF",
+    "SEMI_FINAL": "SF",
+    "SEMI_FINALS": "SF",
+    "SEMIFINALS": "SF",
+    "LAST_4": "SF",
+    # Third place play-off
+    "THIRD_PLACE": "THIRD_PLACE",
+    "THIRD": "THIRD_PLACE",
+    "3RD_PLACE": "THIRD_PLACE",
+    "PLAY_OFF_FOR_THIRD_PLACE": "THIRD_PLACE",
+    # Final
+    "FINAL": "FINAL",
+}
+
+# Knockout match_id ranges (canonical tournament numbering 1..104).
+_STAGE_RANGES = [
+    (1, 72, "GROUP_STAGE"),
+    (73, 88, "R32"),
+    (89, 96, "R16"),
+    (97, 100, "QF"),
+    (101, 102, "SF"),
+    (103, 103, "THIRD_PLACE"),
+    (104, 104, "FINAL"),
+]
+
+
+def stage_from_match_id(match_id) -> str:
+    """Return the canonical stage for an integer match_id, or "" if unknown.
+
+    Also accepts the string sentinels ``"FINAL"`` / ``"THIRD"`` used by the
+    frozen prediction brackets.
+    """
+    if isinstance(match_id, str):
+        key = match_id.strip().upper()
+        if key in ("FINAL",):
+            return "FINAL"
+        if key in ("THIRD", "THIRD_PLACE"):
+            return "THIRD_PLACE"
+    try:
+        mid = int(match_id)
+    except (TypeError, ValueError):
+        return ""
+    for lo, hi, label in _STAGE_RANGES:
+        if lo <= mid <= hi:
+            return label
+    return ""
+
+
+def normalize_stage(stage=None, match_id=None) -> str:
+    """Normalise any stage label / match_id to a single canonical stage.
+
+    Resolution order (most reliable first):
+      1. the integer/​sentinel ``match_id`` range, when it resolves;
+      2. the alias table applied to the free-text ``stage`` label;
+      3. the original (upper-cased) label as a last resort.
+    """
+    by_id = stage_from_match_id(match_id) if match_id is not None else ""
+    if by_id:
+        return by_id
+    if stage is None:
+        return ""
+    key = str(stage).strip().upper().replace("-", "_").replace(" ", "_")
+    return STAGE_ALIASES.get(key, key)
+
 
 def load_prompt(path: str = PROMPT_PATH) -> str:
     """Reads and returns the standard prompt content."""

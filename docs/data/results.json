@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-29T20:42:46.254485+00:00",
+  "last_updated": "2026-06-29T23:17:24.570271+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -1008,6 +1008,36 @@
       "date": "2026-06-27",
       "stage": "GROUP_STAGE",
       "group": "GROUP_J"
+    },
+    {
+      "fd_id": null,
+      "match_id": 73,
+      "home_team": "RSA",
+      "away_team": "CAN",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "outcome": "away",
+      "date": "2026-06-28",
+      "stage": "R32",
+      "group": null,
+      "round": "round_of_32"
+    },
+    {
+      "fd_id": null,
+      "match_id": 76,
+      "home_team": "BRA",
+      "away_team": "JPN",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "outcome": "home",
+      "date": "2026-06-29",
+      "stage": "R32",
+      "group": null,
+      "round": "round_of_32"
     }
   ]
 }

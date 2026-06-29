@@ -68,26 +68,8 @@ def load_tournament_schedule() -> dict:
 
 
 def _stage_label(match_id) -> str:
-    """Derive the canonical stage label from an integer match_id (1..104)."""
-    try:
-        mid = int(match_id)
-    except (TypeError, ValueError):
-        return ""
-    if 1 <= mid <= 72:
-        return "GROUP_STAGE"
-    if 73 <= mid <= 88:
-        return "R32"
-    if 89 <= mid <= 96:
-        return "R16"
-    if 97 <= mid <= 100:
-        return "QF"
-    if 101 <= mid <= 102:
-        return "SF"
-    if mid == 103:
-        return "THIRD_PLACE"
-    if mid == 104:
-        return "FINAL"
-    return ""
+    """Canonical stage label for an integer match_id (single taxonomy point)."""
+    return utils.stage_from_match_id(match_id)
 
 
 def _outcome_from_score(home_goals: int, away_goals: int) -> str:
@@ -162,14 +144,18 @@ def map_api_match(api_match: dict, tournament: dict) -> dict:
         # Prefer the tournament's canonical (local) date over the API's UTC date
         # so the result lands in the right data/results/YYYY-MM-DD.json file.
         date = fixture.get("date") or api_date
-        stage = _stage_label(match_id) or api_match.get("stage", "")
+        # Single taxonomy point: the match_id range wins, the API label is a
+        # fallback that is still normalised (e.g. "LAST_32" -> "R32").
+        stage = utils.normalize_stage(api_match.get("stage"), match_id)
         grp = fixture.get("group")
         group = f"GROUP_{grp}" if grp else api_match.get("group", "")
     else:
         fd_id = None
         match_id = None
         date = api_date
-        stage = api_match.get("stage", "")
+        # No fixture matched yet (e.g. an unresolved knockout slot): still
+        # normalise the raw API label so the dashboard taxonomy is consistent.
+        stage = utils.normalize_stage(api_match.get("stage"), None)
         group = api_match.get("group", "")
 
     home_goals = score.get("home")

@@ -28,6 +28,93 @@
       "predicted_count": 32,
       "qualified_count": 32,
       "ready": true
+    },
+    "advancement_accuracy": {
+      "rounds": {
+        "R16": {
+          "hits": 2,
+          "total": 16,
+          "predicted_count": 16,
+          "reached_count": 2,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "COL",
+            "ENG",
+            "ESP",
+            "FRA",
+            "GER",
+            "MEX",
+            "NED",
+            "NOR",
+            "POR",
+            "SEN",
+            "SUI",
+            "TUR",
+            "USA"
+          ],
+          "ready": false
+        },
+        "QF": {
+          "hits": 0,
+          "total": 8,
+          "predicted_count": 8,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BRA",
+            "ENG",
+            "ESP",
+            "FRA",
+            "NED",
+            "POR",
+            "USA"
+          ],
+          "ready": false
+        },
+        "SF": {
+          "hits": 0,
+          "total": 4,
+          "predicted_count": 4,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "ENG",
+            "ESP",
+            "FRA"
+          ],
+          "ready": false
+        },
+        "FINAL": {
+          "hits": 0,
+          "total": 2,
+          "predicted_count": 2,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "ESP"
+          ],
+          "ready": false
+        },
+        "CHAMPION": {
+          "hits": 0,
+          "total": 1,
+          "predicted_count": 1,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ESP"
+          ],
+          "ready": false
+        }
+      },
+      "hits": 0,
+      "total": 0,
+      "score": 0.0,
+      "ready": false
     }
   },
   {
@@ -59,6 +146,93 @@
       "predicted_count": 32,
       "qualified_count": 32,
       "ready": true
+    },
+    "advancement_accuracy": {
+      "rounds": {
+        "R16": {
+          "hits": 2,
+          "total": 16,
+          "predicted_count": 16,
+          "reached_count": 2,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BEL",
+            "CRO",
+            "EGY",
+            "ENG",
+            "ESP",
+            "FRA",
+            "GER",
+            "MEX",
+            "NED",
+            "POR",
+            "SEN",
+            "SUI",
+            "USA"
+          ],
+          "ready": false
+        },
+        "QF": {
+          "hits": 0,
+          "total": 8,
+          "predicted_count": 8,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BRA",
+            "ENG",
+            "ESP",
+            "GER",
+            "NED",
+            "POR",
+            "USA"
+          ],
+          "ready": false
+        },
+        "SF": {
+          "hits": 0,
+          "total": 4,
+          "predicted_count": 4,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "ENG",
+            "GER",
+            "USA"
+          ],
+          "ready": false
+        },
+        "FINAL": {
+          "hits": 0,
+          "total": 2,
+          "predicted_count": 2,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "USA"
+          ],
+          "ready": false
+        },
+        "CHAMPION": {
+          "hits": 0,
+          "total": 1,
+          "predicted_count": 1,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG"
+          ],
+          "ready": false
+        }
+      },
+      "hits": 0,
+      "total": 0,
+      "score": 0.0,
+      "ready": false
     }
   },
   {
@@ -92,6 +266,93 @@
       "predicted_count": 32,
       "qualified_count": 32,
       "ready": true
+    },
+    "advancement_accuracy": {
+      "rounds": {
+        "R16": {
+          "hits": 2,
+          "total": 16,
+          "predicted_count": 16,
+          "reached_count": 2,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "AUT",
+            "COL",
+            "ENG",
+            "ESP",
+            "FRA",
+            "GER",
+            "MEX",
+            "NED",
+            "NOR",
+            "POR",
+            "SUI",
+            "TUR",
+            "USA"
+          ],
+          "ready": false
+        },
+        "QF": {
+          "hits": 0,
+          "total": 8,
+          "predicted_count": 8,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BRA",
+            "ENG",
+            "ESP",
+            "FRA",
+            "NED",
+            "POR",
+            "USA"
+          ],
+          "ready": false
+        },
+        "SF": {
+          "hits": 0,
+          "total": 4,
+          "predicted_count": 4,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "ENG",
+            "ESP",
+            "FRA"
+          ],
+          "ready": false
+        },
+        "FINAL": {
+          "hits": 0,
+          "total": 2,
+          "predicted_count": 2,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "FRA"
+          ],
+          "ready": false
+        },
+        "CHAMPION": {
+          "hits": 0,
+          "total": 1,
+          "predicted_count": 1,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "FRA"
+          ],
+          "ready": false
+        }
+      },
+      "hits": 0,
+      "total": 0,
+      "score": 0.0,
+      "ready": false
     }
   },
   {
@@ -125,6 +386,93 @@
       "predicted_count": 32,
       "qualified_count": 32,
       "ready": true
+    },
+    "advancement_accuracy": {
+      "rounds": {
+        "R16": {
+          "hits": 2,
+          "total": 16,
+          "predicted_count": 16,
+          "reached_count": 2,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BEL",
+            "CRO",
+            "ENG",
+            "ESP",
+            "FRA",
+            "GER",
+            "MEX",
+            "NED",
+            "POR",
+            "SEN",
+            "SUI",
+            "TUR",
+            "USA"
+          ],
+          "ready": false
+        },
+        "QF": {
+          "hits": 0,
+          "total": 8,
+          "predicted_count": 8,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BEL",
+            "BRA",
+            "ENG",
+            "ESP",
+            "FRA",
+            "NED",
+            "POR"
+          ],
+          "ready": false
+        },
+        "SF": {
+          "hits": 0,
+          "total": 4,
+          "predicted_count": 4,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BRA",
+            "ESP",
+            "FRA"
+          ],
+          "ready": false
+        },
+        "FINAL": {
+          "hits": 0,
+          "total": 2,
+          "predicted_count": 2,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "BRA",
+            "FRA"
+          ],
+          "ready": false
+        },
+        "CHAMPION": {
+          "hits": 0,
+          "total": 1,
+          "predicted_count": 1,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "BRA"
+          ],
+          "ready": false
+        }
+      },
+      "hits": 0,
+      "total": 0,
+      "score": 0.0,
+      "ready": false
     }
   },
   {
@@ -156,6 +504,93 @@
       "predicted_count": 32,
       "qualified_count": 32,
       "ready": true
+    },
+    "advancement_accuracy": {
+      "rounds": {
+        "R16": {
+          "hits": 2,
+          "total": 16,
+          "predicted_count": 16,
+          "reached_count": 2,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BEL",
+            "COL",
+            "ENG",
+            "ESP",
+            "FRA",
+            "GER",
+            "MEX",
+            "NED",
+            "POR",
+            "SEN",
+            "SUI",
+            "TUR",
+            "USA"
+          ],
+          "ready": false
+        },
+        "QF": {
+          "hits": 0,
+          "total": 8,
+          "predicted_count": 8,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BRA",
+            "ENG",
+            "ESP",
+            "FRA",
+            "NED",
+            "POR",
+            "USA"
+          ],
+          "ready": false
+        },
+        "SF": {
+          "hits": 0,
+          "total": 4,
+          "predicted_count": 4,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BRA",
+            "ESP",
+            "FRA"
+          ],
+          "ready": false
+        },
+        "FINAL": {
+          "hits": 0,
+          "total": 2,
+          "predicted_count": 2,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "BRA",
+            "FRA"
+          ],
+          "ready": false
+        },
+        "CHAMPION": {
+          "hits": 0,
+          "total": 1,
+          "predicted_count": 1,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "FRA"
+          ],
+          "ready": false
+        }
+      },
+      "hits": 0,
+      "total": 0,
+      "score": 0.0,
+      "ready": false
     }
   },
   {
@@ -191,6 +626,93 @@
       "predicted_count": 32,
       "qualified_count": 32,
       "ready": true
+    },
+    "advancement_accuracy": {
+      "rounds": {
+        "R16": {
+          "hits": 2,
+          "total": 16,
+          "predicted_count": 16,
+          "reached_count": 2,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BEL",
+            "CRO",
+            "EGY",
+            "ENG",
+            "ESP",
+            "FRA",
+            "GER",
+            "MEX",
+            "NED",
+            "POR",
+            "SEN",
+            "SUI",
+            "USA"
+          ],
+          "ready": false
+        },
+        "QF": {
+          "hits": 0,
+          "total": 8,
+          "predicted_count": 8,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "BEL",
+            "BRA",
+            "ENG",
+            "ESP",
+            "FRA",
+            "NED",
+            "POR",
+            "URU"
+          ],
+          "ready": false
+        },
+        "SF": {
+          "hits": 0,
+          "total": 4,
+          "predicted_count": 4,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "BRA",
+            "ENG",
+            "FRA",
+            "POR"
+          ],
+          "ready": false
+        },
+        "FINAL": {
+          "hits": 0,
+          "total": 2,
+          "predicted_count": 2,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "BRA",
+            "ENG"
+          ],
+          "ready": false
+        },
+        "CHAMPION": {
+          "hits": 0,
+          "total": 1,
+          "predicted_count": 1,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "BRA"
+          ],
+          "ready": false
+        }
+      },
+      "hits": 0,
+      "total": 0,
+      "score": 0.0,
+      "ready": false
     }
   },
   {
@@ -224,6 +746,93 @@
       "predicted_count": 32,
       "qualified_count": 32,
       "ready": true
+    },
+    "advancement_accuracy": {
+      "rounds": {
+        "R16": {
+          "hits": 2,
+          "total": 16,
+          "predicted_count": 16,
+          "reached_count": 2,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BEL",
+            "COL",
+            "ECU",
+            "ENG",
+            "ESP",
+            "FRA",
+            "GER",
+            "KOR",
+            "MEX",
+            "NED",
+            "POR",
+            "TUR",
+            "USA"
+          ],
+          "ready": false
+        },
+        "QF": {
+          "hits": 0,
+          "total": 8,
+          "predicted_count": 8,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BRA",
+            "ENG",
+            "ESP",
+            "FRA",
+            "NED",
+            "POR",
+            "USA"
+          ],
+          "ready": false
+        },
+        "SF": {
+          "hits": 0,
+          "total": 4,
+          "predicted_count": 4,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BRA",
+            "ESP",
+            "FRA"
+          ],
+          "ready": false
+        },
+        "FINAL": {
+          "hits": 0,
+          "total": 2,
+          "predicted_count": 2,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "ESP"
+          ],
+          "ready": false
+        },
+        "CHAMPION": {
+          "hits": 0,
+          "total": 1,
+          "predicted_count": 1,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG"
+          ],
+          "ready": false
+        }
+      },
+      "hits": 0,
+      "total": 0,
+      "score": 0.0,
+      "ready": false
     }
   },
   {
@@ -257,6 +866,96 @@
       "predicted_count": 32,
       "qualified_count": 32,
       "ready": true
+    },
+    "advancement_accuracy": {
+      "rounds": {
+        "R16": {
+          "hits": 1,
+          "total": 16,
+          "predicted_count": 16,
+          "reached_count": 2,
+          "missed": [
+            "CAN"
+          ],
+          "false_positives": [
+            "ARG",
+            "BEL",
+            "COL",
+            "ENG",
+            "ESP",
+            "FRA",
+            "GER",
+            "KOR",
+            "MEX",
+            "NED",
+            "NOR",
+            "POR",
+            "SUI",
+            "TUR",
+            "USA"
+          ],
+          "ready": false
+        },
+        "QF": {
+          "hits": 0,
+          "total": 8,
+          "predicted_count": 8,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BEL",
+            "BRA",
+            "ENG",
+            "ESP",
+            "FRA",
+            "NED",
+            "POR"
+          ],
+          "ready": false
+        },
+        "SF": {
+          "hits": 0,
+          "total": 4,
+          "predicted_count": 4,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BRA",
+            "ESP",
+            "FRA"
+          ],
+          "ready": false
+        },
+        "FINAL": {
+          "hits": 0,
+          "total": 2,
+          "predicted_count": 2,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "FRA"
+          ],
+          "ready": false
+        },
+        "CHAMPION": {
+          "hits": 0,
+          "total": 1,
+          "predicted_count": 1,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG"
+          ],
+          "ready": false
+        }
+      },
+      "hits": 0,
+      "total": 0,
+      "score": 0.0,
+      "ready": false
     }
   },
   {
@@ -288,6 +987,93 @@
       "predicted_count": 32,
       "qualified_count": 32,
       "ready": true
+    },
+    "advancement_accuracy": {
+      "rounds": {
+        "R16": {
+          "hits": 2,
+          "total": 16,
+          "predicted_count": 16,
+          "reached_count": 2,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BEL",
+            "COL",
+            "EGY",
+            "ENG",
+            "ESP",
+            "FRA",
+            "GER",
+            "MEX",
+            "NED",
+            "NOR",
+            "POR",
+            "SUI",
+            "USA"
+          ],
+          "ready": false
+        },
+        "QF": {
+          "hits": 0,
+          "total": 8,
+          "predicted_count": 8,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BEL",
+            "BRA",
+            "ENG",
+            "ESP",
+            "FRA",
+            "NED",
+            "POR"
+          ],
+          "ready": false
+        },
+        "SF": {
+          "hits": 0,
+          "total": 4,
+          "predicted_count": 4,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "ENG",
+            "ESP",
+            "FRA"
+          ],
+          "ready": false
+        },
+        "FINAL": {
+          "hits": 0,
+          "total": 2,
+          "predicted_count": 2,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ENG",
+            "FRA"
+          ],
+          "ready": false
+        },
+        "CHAMPION": {
+          "hits": 0,
+          "total": 1,
+          "predicted_count": 1,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "FRA"
+          ],
+          "ready": false
+        }
+      },
+      "hits": 0,
+      "total": 0,
+      "score": 0.0,
+      "ready": false
     }
   },
   {
@@ -319,6 +1105,96 @@
       "predicted_count": 32,
       "qualified_count": 32,
       "ready": true
+    },
+    "advancement_accuracy": {
+      "rounds": {
+        "R16": {
+          "hits": 1,
+          "total": 16,
+          "predicted_count": 16,
+          "reached_count": 2,
+          "missed": [
+            "CAN"
+          ],
+          "false_positives": [
+            "ARG",
+            "CIV",
+            "COL",
+            "EGY",
+            "ENG",
+            "ESP",
+            "FRA",
+            "GER",
+            "KOR",
+            "MEX",
+            "NED",
+            "POR",
+            "SEN",
+            "SUI",
+            "USA"
+          ],
+          "ready": false
+        },
+        "QF": {
+          "hits": 0,
+          "total": 8,
+          "predicted_count": 8,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BRA",
+            "ESP",
+            "FRA",
+            "MEX",
+            "NED",
+            "POR",
+            "USA"
+          ],
+          "ready": false
+        },
+        "SF": {
+          "hits": 0,
+          "total": 4,
+          "predicted_count": 4,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "BRA",
+            "FRA",
+            "POR",
+            "USA"
+          ],
+          "ready": false
+        },
+        "FINAL": {
+          "hits": 0,
+          "total": 2,
+          "predicted_count": 2,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "BRA",
+            "FRA"
+          ],
+          "ready": false
+        },
+        "CHAMPION": {
+          "hits": 0,
+          "total": 1,
+          "predicted_count": 1,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "FRA"
+          ],
+          "ready": false
+        }
+      },
+      "hits": 0,
+      "total": 0,
+      "score": 0.0,
+      "ready": false
     }
   },
   {
@@ -350,6 +1226,96 @@
       "predicted_count": 32,
       "qualified_count": 32,
       "ready": true
+    },
+    "advancement_accuracy": {
+      "rounds": {
+        "R16": {
+          "hits": 1,
+          "total": 16,
+          "predicted_count": 16,
+          "reached_count": 2,
+          "missed": [
+            "CAN"
+          ],
+          "false_positives": [
+            "ARG",
+            "BEL",
+            "CRO",
+            "ENG",
+            "ESP",
+            "FRA",
+            "GER",
+            "KOR",
+            "MEX",
+            "NED",
+            "POR",
+            "SEN",
+            "SUI",
+            "TUR",
+            "USA"
+          ],
+          "ready": false
+        },
+        "QF": {
+          "hits": 0,
+          "total": 8,
+          "predicted_count": 8,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BRA",
+            "ENG",
+            "ESP",
+            "FRA",
+            "NED",
+            "POR",
+            "USA"
+          ],
+          "ready": false
+        },
+        "SF": {
+          "hits": 0,
+          "total": 4,
+          "predicted_count": 4,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "BRA",
+            "ESP",
+            "FRA"
+          ],
+          "ready": false
+        },
+        "FINAL": {
+          "hits": 0,
+          "total": 2,
+          "predicted_count": 2,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG",
+            "FRA"
+          ],
+          "ready": false
+        },
+        "CHAMPION": {
+          "hits": 0,
+          "total": 1,
+          "predicted_count": 1,
+          "reached_count": 0,
+          "missed": [],
+          "false_positives": [
+            "ARG"
+          ],
+          "ready": false
+        }
+      },
+      "hits": 0,
+      "total": 0,
+      "score": 0.0,
+      "ready": false
     }
   }
 ]

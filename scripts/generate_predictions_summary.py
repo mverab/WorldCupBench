@@ -14,23 +14,24 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 LEADERBOARD_PATH = os.path.join(BASE_DIR, "data", "leaderboard.json")
 
 
-def _load_qualifier_details() -> dict:
-    """Return {model_name: qualifier_accuracy} from the leaderboard, if present."""
-    details = {}
+def _load_leaderboard_details() -> tuple:
+    """Return ({model: qualifier_accuracy}, {model: advancement_accuracy})."""
+    qual, adv = {}, {}
     try:
         with open(LEADERBOARD_PATH, "r", encoding="utf-8") as fp:
             lb = json.load(fp)
     except (json.JSONDecodeError, OSError):
-        return details
+        return qual, adv
     for m in lb.get("models", []):
-        qa = m.get("qualifier_accuracy")
-        if qa is not None:
-            details[m.get("model")] = qa
-    return details
+        if m.get("qualifier_accuracy") is not None:
+            qual[m.get("model")] = m["qualifier_accuracy"]
+        if m.get("advancement_accuracy") is not None:
+            adv[m.get("model")] = m["advancement_accuracy"]
+    return qual, adv
 
 
 def main():
-    qual_details = _load_qualifier_details()
+    qual_details, adv_details = _load_leaderboard_details()
     preds = []
     for f in sorted(glob.glob(os.path.join(BASE_DIR, "predictions/pre-tournament/*_prediction.json"))):
         with open(f) as fp:
@@ -45,6 +46,7 @@ def main():
                 "third_place": d.get("third") or d.get("third_place") or d.get("final_standings", {}).get("third_place"),
                 "fourth_place": d.get("fourth_place") or d.get("final_standings", {}).get("fourth_place"),
                 "qualifier_accuracy": qual_details.get(model_name),
+                "advancement_accuracy": adv_details.get(model_name),
             }
         )
 
