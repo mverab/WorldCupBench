@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-29",
+  "last_updated": "2026-06-29T19:45:58.235522+00:00",
+  "matches": [
+    {
+      "fd_id": null,
+      "match_id": null,
+      "home_team": "BRA",
+      "away_team": "JPN",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "outcome": "home",
+      "date": "2026-06-29",
+      "stage": "LAST_32",
+      "group": null
+    }
+  ]
+}
