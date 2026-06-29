@@ -11,13 +11,17 @@ import sys
 from datetime import datetime, timezone
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import utils
 
 BASE_DIR = utils.BASE_DIR
 RESULTS_DIR = os.path.join(BASE_DIR, "data", "results")
 PREDICTIONS_DIR = os.path.join(utils.PREDICTIONS_DIR, "pre-tournament")
 LEADERBOARD_PATH = os.path.join(BASE_DIR, "data", "leaderboard.json")
+TOURNAMENT_PATH = os.path.join(BASE_DIR, "data", "tournament.json")
 POLYMARKET_DIR = os.path.join(BASE_DIR, "data", "polymarket")
+
+TOTAL_QUALIFIERS = 32
 
 QUINIELA_POINTS = {
     "GROUP_STAGE": 1,
@@ -177,7 +181,111 @@ def _iterate_knockout_matches(bracket: dict):
             yield m
 
 
-def score_model(prediction: dict, results: dict) -> dict:
+def load_qualified(tournament_path: str = TOURNAMENT_PATH) -> dict:
+    """Build the real-qualifiers lookup from the tournament 'qualified' block.
+
+    Returns a dict with:
+      * ``teams``       – set of qualified team codes (real)
+      * ``positions``   – {team: "1st"|"2nd"|"3rd"} for qualified teams
+      * ``best_thirds`` – set of the 8 best third-placed team codes
+      * ``ready``       – True once every group is complete (full 32 known)
+    """
+    empty = {"teams": set(), "positions": {}, "best_thirds": set(), "ready": False}
+    try:
+        with open(tournament_path, "r", encoding="utf-8") as f:
+            tournament = json.load(f)
+    except (json.JSONDecodeError, OSError):
+        return empty
+    qual = tournament.get("qualified")
+    if not qual:
+        return empty
+
+    teams = set(qual.get("teams", []))
+    best_thirds = set(qual.get("best_thirds", []))
+    positions = {}
+    for grp, entry in qual.get("by_group", {}).items():
+        if entry.get("1st"):
+            positions[entry["1st"]] = "1st"
+        if entry.get("2nd"):
+            positions[entry["2nd"]] = "2nd"
+    for t in best_thirds:
+        positions[t] = "3rd"
+    return {
+        "teams": teams,
+        "positions": positions,
+        "best_thirds": best_thirds,
+        "ready": bool(qual.get("all_groups_complete", False)),
+    }
+
+
+def _predicted_qualifiers(prediction: dict) -> dict:
+    """Extract a model's predicted qualifiers as {team: predicted_position}."""
+    gq = prediction.get("group_qualifiers", {}) or {}
+    predicted = {}
+    for info in gq.get("first_place", []):
+        code = info.get("team_code")
+        if code:
+            predicted[code] = "1st"
+    for info in gq.get("second_place", []):
+        code = info.get("team_code")
+        if code:
+            predicted.setdefault(code, "2nd")
+    for info in gq.get("best_third_place", []):
+        code = info.get("team_code")
+        if code:
+            predicted.setdefault(code, "3rd")
+    return predicted
+
+
+def score_qualifiers(prediction: dict, qualified: dict) -> dict:
+    """Score a model's predicted set of 32 qualifiers against the real set.
+
+    ``qualified`` is the lookup produced by :func:`load_qualified`.
+
+    Returns a dict with:
+      * ``hits``                – |predicted ∩ real| (teams correctly qualified)
+      * ``score``               – hits / 32 (main metric, 0.0 - 1.0)
+      * ``with_position_bonus`` – hits where the predicted position
+                                  (1st/2nd/3rd) also matched the real position
+      * ``third_place_hits``    – how many of the 8 real best thirds were
+                                  predicted to qualify
+      * ``missed``              – real qualified teams the model did NOT predict
+      * ``false_positives``     – teams the model predicted that did NOT qualify
+      * ``predicted_count`` / ``qualified_count`` – set sizes
+      * ``ready``               – whether the full real set is known yet
+    """
+    real_teams = set(qualified.get("teams", set()))
+    real_positions = qualified.get("positions", {})
+    real_thirds = set(qualified.get("best_thirds", set()))
+
+    predicted = _predicted_qualifiers(prediction)
+    predicted_set = set(predicted.keys())
+
+    hit_teams = predicted_set & real_teams
+    hits = len(hit_teams)
+
+    with_position_bonus = sum(
+        1 for t in hit_teams if predicted.get(t) == real_positions.get(t)
+    )
+    third_place_hits = len(predicted_set & real_thirds)
+
+    missed = sorted(real_teams - predicted_set)
+    false_positives = sorted(predicted_set - real_teams)
+
+    return {
+        "hits": hits,
+        "score": round(hits / TOTAL_QUALIFIERS, 6),
+        "with_position_bonus": with_position_bonus,
+        "third_place_hits": third_place_hits,
+        "missed": missed,
+        "false_positives": false_positives,
+        "predicted_count": len(predicted_set),
+        "qualified_count": len(real_teams),
+        "ready": bool(qualified.get("ready", False)),
+    }
+
+
+def score_model(prediction: dict, results: dict, qualified: dict = None) -> dict:
     group_briers = []
     knockout_briers = []
     quiniela = 0
@@ -224,6 +332,11 @@ def score_model(prediction: dict, results: dict) -> dict:
             n_group * (brier_group / 2.0) + n_ko * brier_knockout
         ) / (n_group + n_ko)
 
+    qual_lookup = qualified if qualified is not None else {
+        "teams": set(), "positions": {}, "best_thirds": set(), "ready": False
+    }
+    qualifier_detail = score_qualifiers(prediction, qual_lookup)
+
     return {
         "model": prediction.get("model", "Unknown"),
         "model_id": prediction.get("model_id", ""),
@@ -234,6 +347,7 @@ def score_model(prediction: dict, results: dict) -> dict:
         "roi": None,
         "roi_status": "no_market_data",
         "n_matches_scored": n_group + n_ko,
+        "qualifier_accuracy": qualifier_detail,
     }
 
 
@@ -250,9 +364,11 @@ def generate_leaderboard(
     results_dir: str = RESULTS_DIR,
     output_path: str = LEADERBOARD_PATH,
     predictions: list = None,
+    tournament_path: str = TOURNAMENT_PATH,
 ) -> dict:
     results = load_results(results_dir)
     predictions = load_predictions() if predictions is None else predictions
+    qualified = load_qualified(tournament_path)
 
     if not predictions:
         print("No prediction files found")
@@ -260,7 +376,7 @@ def generate_leaderboard(
 
     models = []
     for pred in predictions:
-        scored = score_model(pred, results)
+        scored = score_model(pred, results, qualified)
         roi, roi_status = _compute_roi(pred, results)
         scored["roi"] = roi
         scored["roi_status"] = roi_status
@@ -278,6 +394,8 @@ def generate_leaderboard(
         "last_updated": datetime.now(timezone.utc).isoformat(),
         "total_results": len({id(m) for m in results.values()}),
         "total_models": len(models),
+        "qualifiers_known": len(qualified.get("teams", set())),
+        "qualifiers_ready": bool(qualified.get("ready", False)),
         "models": models,
     }
 

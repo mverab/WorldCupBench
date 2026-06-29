@@ -150,6 +150,44 @@ single-outcome pick.
 > (11 models × 72 group matches) were audited: **0 inconsistencies** between
 > `predicted_result` and `predicted_score`.
 
+### ⚠️ Knockout Brier vs. Qualifier Accuracy
+
+The **knockout Brier** (`brier_knockout`) is scored against the **bracket the
+model itself predicted**, slot by slot — *not* against the real bracket. Each
+model laid out its own Round-of-32 → Final tree before kickoff, so a model is
+graded on whether the team it placed in a given slot actually won that tie. If
+the real bracket diverges from a model's predicted bracket (e.g. a different
+team reaches that slot), the comparison is made on the **predicted matchup**,
+which can reward or penalize a model for a tie that never happened as it
+imagined it. Treat `brier_knockout` as a **soft, intra-bracket calibration
+signal**, not as a ground-truth measure of knockout performance.
+
+The robust, ground-truth metric for the knockout phase is **`qualifier_accuracy`**
+(`scripts/qualifiers.py` + `score.score_qualifiers`). It compares the model's
+predicted set of qualified teams against the **real 32 teams** that advanced to
+the Round of 32, derived from actual group results using FIFA tie-breaking
+rules (points → goal difference → goals for → head-to-head → fair-play / draw
+of lots). It reports, per model:
+
+| Field | Meaning |
+|---|---|
+| `hits` / `score` | Correctly predicted qualifiers (`hits/32`) |
+| `with_position_bonus` | Hits where the predicted slot (1st/2nd/3rd) also matched |
+| `third_place_hits` | How many of the 8 real best-third teams were predicted |
+| `missed` / `false_positives` | Qualified teams not predicted / predicted teams that did not qualify |
+
+Because it is computed against the **actual** qualified set (not a
+model-specific bracket), `qualifier_accuracy` is the recommended metric for
+comparing knockout-stage foresight across models.
+
+🇪🇸 **Resumen (ES):** el Brier de knockout se calcula sobre el cruce **que
+predijo cada modelo** (slot a slot), no sobre el cruce real, así que es solo
+una señal blanda de calibración dentro del propio bracket. La métrica robusta
+de clasificación es `qualifier_accuracy`: compara los clasificados predichos
+contra los **32 equipos reales** que avanzaron (derivados con las reglas de
+desempate FIFA), y reporta aciertos sobre 32, bonus de posición, terceros
+acertados y falsos positivos.
+
 ### 🧊 Freeze provenance (`freeze-v3`)
 
 All pre-tournament predictions were frozen **before kickoff** and carry an
