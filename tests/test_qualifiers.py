@@ -149,3 +149,119 @@ def test_score_qualifiers_not_ready():
     assert res["hits"] == 0
     assert res["score"] == 0.0
     assert res["ready"] is False
+
+
+
+# ---------------------------------------------------------------------------
+# FIFA third-place slot constraint matching
+# ---------------------------------------------------------------------------
+
+import update_qualified as uq  # noqa: E402
+
+LETTERS = [chr(ord("A") + i) for i in range(12)]
+
+# Official 2026 Round-of-32 slots that receive a best-third team, with the
+# group combinations allowed by the FIFA bracket table.
+THIRD_SLOT_CONSTRAINTS = {
+    "74": ["A", "B", "C", "D", "F"],
+    "77": ["C", "D", "F", "G", "H"],
+    "79": ["C", "E", "F", "H", "I"],
+    "80": ["E", "H", "I", "J", "K"],
+    "81": ["B", "E", "F", "I", "J"],
+    "82": ["A", "E", "H", "I", "J"],
+    "85": ["E", "F", "G", "I", "J"],
+    "87": ["D", "E", "I", "J", "L"],
+}
+
+
+def _det_group(letter, third_strength):
+    """Deterministic complete group: t1=9pts, t2=6, t3=3 (third), t4=0.
+
+    ``third_strength`` controls the third-placed team's goals-for / goal
+    difference so thirds can be ranked deterministically across groups.
+    """
+    t = [f"{letter}1", f"{letter}2", f"{letter}3", f"{letter}4"]
+    out = []
+    n = 0
+
+    def add(home, away, hs, as_):
+        nonlocal n
+        n += 1
+        out.append(_match(f"{letter}{n}", f"GROUP_{letter}", home, away, hs, as_))
+
+    add(t[0], t[1], 1, 0)
+    add(t[0], t[2], 1, 0)
+    add(t[0], t[3], 1, 0)
+    add(t[1], t[2], 1, 0)
+    add(t[1], t[3], 1, 0)
+    add(t[2], t[3], third_strength, 0)  # third team's only win; controls GD
+    return out
+
+
+def _twelve_complete_groups():
+    """Build 12 complete groups; thirds rank A (best) .. L (worst)."""
+    tourn = {"groups": [{"group": g, "teams": [f"{g}1", f"{g}2", f"{g}3", f"{g}4"]}
+                        for g in LETTERS]}
+    results = []
+    for i, g in enumerate(LETTERS):
+        results += _det_group(g, 12 - i)  # A=12 (best third) ... L=1 (worst)
+    return tourn, results
+
+
+def _bracket_with_third_slots():
+    return [
+        {"match_id": int(mid), "home_slot": "1X",
+         "away_slot": f"3rd({'/'.join(groups)})"}
+        for mid, groups in THIRD_SLOT_CONSTRAINTS.items()
+    ]
+
+
+def test_exactly_eight_best_thirds_selected():
+    tourn, results = _twelve_complete_groups()
+    out = q.compute_qualified(results, tourn)
+    assert out["all_groups_complete"] is True
+    assert len(out["best_thirds"]) == 8
+    # A..H have the strongest thirds; I..L are eliminated.
+    assert set(out["best_thirds"]) == {f"{g}3" for g in "ABCDEFGH"}
+
+
+def test_third_slot_assignment_respects_fifa_constraints():
+    tourn, results = _twelve_complete_groups()
+    out = q.compute_qualified(results, tourn)
+
+    third_groups = sorted(
+        g for g, e in out["by_group"].items() if e.get("3rd") in out["best_thirds"]
+    )
+    assert third_groups == list("ABCDEFGH")
+
+    bracket = _bracket_with_third_slots()
+    assignment = uq.assign_third_slots(bracket, third_groups)
+
+    # 1) Exactly the 8 third-slots are filled.
+    assert len(assignment) == 8
+    assert set(assignment.keys()) == set(THIRD_SLOT_CONSTRAINTS.keys())
+
+    # 2) Each slot received a group allowed by its FIFA constraint set.
+    for slot_id, group in assignment.items():
+        assert group in THIRD_SLOT_CONSTRAINTS[slot_id], (
+            f"slot {slot_id} got group {group} not in {THIRD_SLOT_CONSTRAINTS[slot_id]}"
+        )
+
+    # 3) Bijection: every qualifying third-group is used exactly once,
+    #    no duplicates and no group left unassigned.
+    used = sorted(assignment.values())
+    assert used == third_groups
+    assert len(set(used)) == len(used)
+
+
+def test_third_slot_assignment_arbitrary_qualifying_set():
+    """Any valid 8-group set must yield a complete constraint-respecting map."""
+    # Pick a different qualifying set: drop A & B, keep C..J.
+    third_groups = list("CDEFGHIJ")
+    bracket = _bracket_with_third_slots()
+    assignment = uq.assign_third_slots(bracket, third_groups)
+
+    assert len(assignment) == 8
+    for slot_id, group in assignment.items():
+        assert group in THIRD_SLOT_CONSTRAINTS[slot_id]
+    assert sorted(assignment.values()) == third_groups

@@ -1182,7 +1182,7 @@
       "away_team": "GHA",
       "date": "2026-07-03",
       "venue": {
-        "stadium": "GEHA Field at Arrowhead",
+        "stadium": "Arrowhead Stadium",
         "city": "Kansas City"
       },
       "feeds_into": 96,
@@ -1364,7 +1364,7 @@
       "away_team": "W96",
       "date": "2026-07-11",
       "venue": {
-        "stadium": "GEHA Field at Arrowhead",
+        "stadium": "Arrowhead Stadium",
         "city": "Kansas City"
       },
       "feeds_into": 102,
