@@ -1,10 +1,10 @@
 {
   "date": "2026-06-29",
-  "last_updated": "2026-06-29T19:45:58.235522+00:00",
+  "last_updated": "2026-06-29T23:03:40.093217+00:00",
   "matches": [
     {
       "fd_id": null,
-      "match_id": null,
+      "match_id": 76,
       "home_team": "BRA",
       "away_team": "JPN",
       "score": {
@@ -13,8 +13,9 @@
       },
       "outcome": "home",
       "date": "2026-06-29",
-      "stage": "LAST_32",
-      "group": null
+      "stage": "R32",
+      "group": null,
+      "round": "round_of_32"
     }
   ]
 }

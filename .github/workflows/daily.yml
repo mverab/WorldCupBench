@@ -29,12 +29,18 @@ jobs:
           pytest tests/ -v
           echo "Smoke tests passed."
 
-      - name: Fetch latest results
+      - name: Fetch results & resolve knockout (orchestration loop)
         env:
           FOOTBALL_DATA_API_KEY: ${{ secrets.FOOTBALL_DATA_API_KEY }}
         run: |
-          python scripts/fetch_results.py --all
-          echo "Results fetched."
+          # Single entry point that loops fetch <-> update_qualified <->
+          # reconcile_results until the bracket and results reach a fixpoint.
+          # This resolves the knockout chicken-and-egg bug: results fetched
+          # before the bracket was resolved (saved with match_id=null, e.g.
+          # the BRA-JPN octavo) get re-empalmados by team pair, and each pass
+          # propagates one more round (R32 -> R16 -> QF -> SF -> Final).
+          python scripts/orchestrate_knockout.py
+          echo "Knockout orchestration complete."
 
       - name: Run scoring engine
         run: |
@@ -60,10 +66,12 @@ jobs:
             mkdir -p docs/data
             cp data/leaderboard.json docs/data/leaderboard.json
             cp data/tournament.json docs/data/tournament.json
-            # Generate predictions summary
+            # Generate predictions summary (now carries advancement_accuracy)
             python scripts/generate_predictions_summary.py
             # Consolidate daily results for the dashboard
             python scripts/build_dashboard_results.py
+            # Build the knockout bracket view (real tree + per-match model picks)
+            python scripts/build_bracket_view.py
           fi
 
       - name: Commit and push

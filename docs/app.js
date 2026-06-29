@@ -57,19 +57,22 @@ function codeToFlag(code) {
 let leaderboard = null;
 let tournament = null;
 let predictionsSummary = null;
+let bracketData = null;
 let resultsByMatchId = {};
 
 async function loadData() {
   try {
-    const [lb, tn, ps, rs] = await Promise.all([
+    const [lb, tn, ps, rs, br] = await Promise.all([
       fetch('data/leaderboard.json').then(r => r.ok ? r.json() : null).catch(() => null),
       fetch('data/tournament.json').then(r => r.ok ? r.json() : null).catch(() => null),
       fetch('data/predictions_summary.json').then(r => r.ok ? r.json() : null).catch(() => null),
       fetch('data/results.json').then(r => r.ok ? r.json() : null).catch(() => null),
+      fetch('data/bracket.json').then(r => r.ok ? r.json() : null).catch(() => null),
     ]);
     leaderboard = lb;
     tournament = tn;
     predictionsSummary = ps;
+    bracketData = br;
 
     resultsByMatchId = {};
     if (rs) {
@@ -172,7 +175,7 @@ function renderLeaderboard() {
   const podium = document.getElementById('podium');
 
   if (!models.length) {
-    tbody.innerHTML = '<tr><td colspan="8" class="px-4 py-12 text-center text-gray-500">No scoring data yet. Leaderboard will populate as match results come in.</td></tr>';
+    tbody.innerHTML = '<tr><td colspan="9" class="px-4 py-12 text-center text-gray-500">No scoring data yet. Leaderboard will populate as match results come in.</td></tr>';
     podium.innerHTML = renderPreKickoffHero();
     return;
   }
@@ -211,9 +214,51 @@ function renderLeaderboard() {
         <td class="px-4 py-3 text-center font-bold" style="color:${color}">${m.brier_total !== null ? m.brier_total.toFixed(4) : '—'}</td>
         <td class="px-4 py-3 text-center font-bold text-gold">${m.quiniela_points}</td>
         ${renderQualifierCell(m.qualifier_accuracy)}
+        ${renderAdvancementCell(m.advancement_accuracy)}
       </tr>
     `;
   }).join('');
+}
+
+// Renders the "Avance" cell: set-membership advancement accuracy across knockout rounds.
+// Shows the overall hits/total once at least one round is fully decided, plus a per-round
+// tooltip (R16 X/16, QF X/8, …) including teams missed and wrongly predicted.
+function renderAdvancementCell(aa) {
+  const ROUND_LABELS = { R16: 'R16', QF: 'QF', SF: 'SF', FINAL: 'Final', CHAMPION: 'Campeón' };
+  const ROUND_ORDER = ['R16', 'QF', 'SF', 'FINAL', 'CHAMPION'];
+
+  if (!aa || !aa.rounds) {
+    return '<td class="px-4 py-3 text-center text-gray-500">—</td>';
+  }
+
+  const lines = [];
+  for (const r of ROUND_ORDER) {
+    const rd = aa.rounds[r];
+    if (!rd) continue;
+    if (rd.ready) {
+      const missed = (rd.missed || []).join(', ') || 'ninguno';
+      const fps = (rd.false_positives || []).join(', ') || 'ninguno';
+      lines.push(`${ROUND_LABELS[r]}: ${rd.hits}/${rd.total} | no predichos: ${missed} | falsos pos.: ${fps}`);
+    } else {
+      lines.push(`${ROUND_LABELS[r]}: pendiente (${rd.reached_count || 0}/${rd.total} equipos definidos)`);
+    }
+  }
+  const titleText = lines.join('\n');
+
+  const ready = aa.ready && (aa.total || 0) > 0;
+  if (!ready) {
+    return `
+      <td class="px-4 py-3 text-center text-gray-500 cursor-help" title="${titleText.replace(/"/g, '&quot;')}">
+        <span class="text-xs">pendiente</span>
+      </td>`;
+  }
+
+  const pct = aa.total ? aa.hits / aa.total : 0;
+  const color = pct >= 0.75 ? '#34D399' : pct >= 0.5 ? '#FBBF24' : '#FF6363';
+  return `
+    <td class="px-4 py-3 text-center cursor-help" title="${titleText.replace(/"/g, '&quot;')}">
+      <span class="font-bold" style="color:${color}">${aa.hits}/${aa.total}</span>
+    </td>`;
 }
 
 // Renders the "Clasificados acertados (n/32)" cell with a hover tooltip
@@ -390,76 +435,310 @@ function renderConsensus() {
 }
 
 // === MATCHES ===
+const KO_ROUND_LABELS = {
+  round_of_32: 'Round of 32',
+  round_of_16: 'Round of 16',
+  quarter_final: 'Quarterfinals',
+  semi_final: 'Semifinals',
+  third_place: 'Third Place',
+  final: 'Final',
+};
+const KO_ROUND_ORDER = ['round_of_32', 'round_of_16', 'quarter_final', 'semi_final', 'third_place', 'final'];
+
+function isPlaceholderTeam(code) {
+  return !code || /^[WL]\d+$/i.test(code);
+}
+
+// Renders one match card for both group-stage and knockout matches.
+function matchCard(m, isKnockout) {
+  const date = m.date ? new Date(m.date + 'T00:00:00') : null;
+  const dateStr = date ? date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }) : '';
+  const result = resultsByMatchId[String(m.match_id)];
+  const played = result && result.outcome != null;
+  const homeScore = played ? result.score?.home : null;
+  const awayScore = played ? result.score?.away : null;
+  const homeWon = played && result.outcome === 'home';
+  const awayWon = played && result.outcome === 'away';
+  const draw = played && result.outcome === 'draw';
+  const centerHtml = played
+    ? `<div class="text-white font-black text-xl px-4">${homeScore} - ${awayScore}</div>`
+    : `<div class="text-gray-500 text-sm font-bold px-4">vs</div>`;
+  const homeClass = homeWon ? 'text-gold font-bold' : (draw ? 'text-white' : 'text-gray-400');
+  const awayClass = awayWon ? 'text-gold font-bold' : (draw ? 'text-white' : 'text-gray-400');
+
+  const badge = isKnockout
+    ? `<span class="text-xs px-2 py-0.5 rounded bg-accent-purple/30 text-accent-purple">${KO_ROUND_LABELS[m.round] || m.round}</span>`
+    : `<span class="text-xs px-2 py-0.5 rounded bg-gray-800 text-gray-400">Group ${m.group}</span>`;
+
+  const teamCell = (code, slot, cls) => {
+    if (isPlaceholderTeam(code)) {
+      return `
+        <div class="text-center flex-1">
+          <div class="text-2xl mb-1 text-gray-600">⚽</div>
+          <div class="text-xs font-medium text-gray-500 italic">${code || slot || 'TBD'}</div>
+        </div>`;
+    }
+    return `
+      <div class="text-center flex-1">
+        <div class="text-2xl mb-1">${codeToFlag(code)}</div>
+        <div class="text-xs font-medium ${cls}">${code}</div>
+      </div>`;
+  };
+
+  return `
+    <div class="glass rounded-xl p-4 hover:border-gold/30 transition">
+      <div class="flex items-center justify-between mb-3">
+        ${badge}
+        <div class="flex items-center gap-2">
+          ${played ? '<span class="text-[10px] px-1.5 py-0.5 rounded bg-green-900/50 text-green-400 font-bold">FT</span>' : ''}
+          <span class="text-xs text-gray-500">${dateStr}</span>
+        </div>
+      </div>
+      <div class="flex items-center justify-between">
+        ${teamCell(m.home_team, m.home_slot, homeClass)}
+        ${centerHtml}
+        ${teamCell(m.away_team, m.away_slot, awayClass)}
+      </div>
+      <div class="mt-3 text-xs text-gray-500 text-center">${m.venue?.stadium || ''}</div>
+    </div>`;
+}
+
 function renderMatches() {
   if (!tournament?.matches) return;
 
   const filtersEl = document.getElementById('group-filters');
   const gridEl = document.getElementById('matches-grid');
 
-  const groups = [...new Set(tournament.matches.map(m => m.group))].sort();
+  const groupMatches = tournament.matches || [];
+  const koMatches = tournament.knockout_bracket || [];
+  const groups = [...new Set(groupMatches.map(m => m.group))].sort();
+  const koRounds = KO_ROUND_ORDER.filter(r => koMatches.some(m => m.round === r));
+
+  const btn = (key, label) =>
+    `<button onclick="filterMatches('${key}')" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-800 text-gray-300 hover:bg-gray-700" id="filter-${key}">${label}</button>`;
+
   filtersEl.innerHTML = `
     <button onclick="filterMatches('all')" class="px-3 py-1 rounded-full text-xs font-medium bg-gold text-black" id="filter-all">All</button>
-    ${groups.map(g => `
-      <button onclick="filterMatches('${g}')" class="px-3 py-1 rounded-full text-xs font-medium bg-gray-800 text-gray-300 hover:bg-gray-700" id="filter-${g}">Group ${g}</button>
-    `).join('')}
+    ${groups.map(g => btn(`group-${g}`, `Group ${g}`)).join('')}
+    ${koRounds.length ? '<span class="mx-1 text-gray-700">|</span>' : ''}
+    ${koRounds.map(r => btn(`round-${r}`, KO_ROUND_LABELS[r])).join('')}
   `;
 
-  window.filterMatches = (group) => {
-    // Update button styles
+  window.filterMatches = (key) => {
     document.querySelectorAll('#group-filters button').forEach(b => {
-      b.className = b.id === `filter-${group}` || (group === 'all' && b.id === 'filter-all')
+      b.className = b.id === `filter-${key}` || (key === 'all' && b.id === 'filter-all')
         ? 'px-3 py-1 rounded-full text-xs font-medium bg-gold text-black'
         : 'px-3 py-1 rounded-full text-xs font-medium bg-gray-800 text-gray-300 hover:bg-gray-700';
     });
 
-    const matches = group === 'all' ? tournament.matches : tournament.matches.filter(m => m.group === group);
-    gridEl.innerHTML = matches.map(m => {
-      const date = new Date(m.date + 'T00:00:00');
-      const dateStr = date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-      const result = resultsByMatchId[String(m.match_id)];
-      const played = result && result.outcome != null;
-      const homeScore = played ? result.score?.home : null;
-      const awayScore = played ? result.score?.away : null;
-      const homeWon = played && result.outcome === 'home';
-      const awayWon = played && result.outcome === 'away';
-      const draw = played && result.outcome === 'draw';
-      const centerHtml = played
-        ? `<div class="text-white font-black text-xl px-4">${homeScore} - ${awayScore}</div>`
-        : `<div class="text-gray-500 text-sm font-bold px-4">vs</div>`;
-      const homeClass = homeWon ? 'text-gold font-bold' : (draw ? 'text-white' : 'text-gray-400');
-      const awayClass = awayWon ? 'text-gold font-bold' : (draw ? 'text-white' : 'text-gray-400');
-      return `
-        <div class="glass rounded-xl p-4 hover:border-gold/30 transition">
-          <div class="flex items-center justify-between mb-3">
-            <span class="text-xs px-2 py-0.5 rounded bg-gray-800 text-gray-400">Group ${m.group}</span>
-            <div class="flex items-center gap-2">
-              ${played ? '<span class="text-[10px] px-1.5 py-0.5 rounded bg-green-900/50 text-green-400 font-bold">FT</span>' : ''}
-              <span class="text-xs text-gray-500">${dateStr}</span>
-            </div>
-          </div>
-          <div class="flex items-center justify-between">
-            <div class="text-center flex-1">
-              <div class="text-2xl mb-1">${codeToFlag(m.home_team)}</div>
-              <div class="text-xs font-medium ${homeClass}">${m.home_team}</div>
-            </div>
-            ${centerHtml}
-            <div class="text-center flex-1">
-              <div class="text-2xl mb-1">${codeToFlag(m.away_team)}</div>
-              <div class="text-xs font-medium ${awayClass}">${m.away_team}</div>
-            </div>
-          </div>
-          <div class="mt-3 text-xs text-gray-500 text-center">${m.venue?.stadium || ''}</div>
-        </div>
-      `;
-    }).join('');
+    let html = '';
+    if (key === 'all') {
+      html = groupMatches.map(m => matchCard(m, false)).join('') +
+             koMatches.map(m => matchCard(m, true)).join('');
+    } else if (key.startsWith('group-')) {
+      const g = key.slice('group-'.length);
+      html = groupMatches.filter(m => m.group === g).map(m => matchCard(m, false)).join('');
+    } else if (key.startsWith('round-')) {
+      const r = key.slice('round-'.length);
+      html = koMatches.filter(m => m.round === r).map(m => matchCard(m, true)).join('');
+    }
+    gridEl.innerHTML = html;
   };
 
   filterMatches('all');
 }
 
 // === BRACKET ===
+const BRACKET_ROUND_LABELS = {
+  R32: 'Round of 32',
+  R16: 'Round of 16',
+  QF: 'Quarterfinals',
+  SF: 'Semifinals',
+  FINAL: 'Final',
+  THIRD_PLACE: 'Third Place',
+};
+
+// True if the bracket view file has real, resolved knockout teams (not just W## placeholders).
+function bracketHasRealTeams() {
+  if (!bracketData?.matches?.length) return false;
+  return bracketData.matches.some(m => {
+    const h = m.home_team || '';
+    const a = m.away_team || '';
+    const isPlaceholder = c => !c || /^[WL]\d+$/i.test(c);
+    return !isPlaceholder(h) || !isPlaceholder(a);
+  });
+}
+
+// Renders the real knockout tree (predicted vs. real) from docs/data/bracket.json.
 function renderBracket() {
   const el = document.getElementById('bracket-content');
+
+  if (!bracketHasRealTeams()) {
+    renderBracketFallback(el);
+    return;
+  }
+
+  const n = bracketData.n_models || (leaderboard?.total_models) || 11;
+  const order = (bracketData.rounds_order || ['R32', 'R16', 'QF', 'SF', 'FINAL', 'THIRD_PLACE'])
+    .filter(r => r !== 'THIRD_PLACE');
+  const byRound = {};
+  for (const m of bracketData.matches) {
+    (byRound[m.stage] = byRound[m.stage] || []).push(m);
+  }
+  Object.values(byRound).forEach(list => list.sort((a, b) => (a.match_id || 0) - (b.match_id || 0)));
+
+  const columns = order
+    .filter(r => byRound[r]?.length)
+    .map(r => `
+      <div class="flex-shrink-0 w-60">
+        <div class="text-xs font-bold uppercase tracking-wide text-gray-400 mb-3 text-center sticky top-0">
+          ${BRACKET_ROUND_LABELS[r] || r}
+          <span class="text-gray-600">(${byRound[r].length})</span>
+        </div>
+        <div class="space-y-3">
+          ${byRound[r].map(m => bracketMatchCard(m, n)).join('')}
+        </div>
+      </div>
+    `).join('');
+
+  const thirdMatches = byRound['THIRD_PLACE'] || [];
+  const thirdHtml = thirdMatches.length ? `
+    <div class="glass rounded-xl p-4 mt-6 max-w-sm mx-auto">
+      <h3 class="text-sm font-bold text-center mb-3">🥉 ${BRACKET_ROUND_LABELS.THIRD_PLACE}</h3>
+      ${thirdMatches.map(m => bracketMatchCard(m, n)).join('')}
+    </div>` : '';
+
+  el.innerHTML = `
+    <div class="glass rounded-xl p-6">
+      <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
+        <h2 class="text-lg font-bold">🗺️ Cuadro de Eliminatorias — Real vs. Predicho</h2>
+        <span class="text-xs text-gray-400">🔮 X/${n} = modelos que predijeron al equipo en esa ronda</span>
+      </div>
+      <p class="text-xs text-gray-500 mb-4">El marcador y el ganador (resaltado en dorado) son resultados reales. El número 🔮 indica cuántos modelos predijeron que ese equipo alcanzaría la ronda siguiente.</p>
+      <div class="overflow-x-auto pb-2">
+        <div class="flex gap-4 min-w-min">
+          ${columns}
+        </div>
+      </div>
+      ${thirdHtml}
+    </div>
+    ${renderAdvancementPanel(n)}
+  `;
+}
+
+// Compact knockout match card: teams, real score, winner highlight, per-team model-pick counts.
+function bracketMatchCard(m, n) {
+  const placeholder = c => !c || /^[WL]\d+$/i.test(c);
+  const played = !!m.played && m.score && m.score.home != null && m.score.away != null;
+  const homeWon = played && m.winner && m.winner === m.home_team;
+  const awayWon = played && m.winner && m.winner === m.away_team;
+
+  const dateStr = m.date
+    ? new Date(m.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
+    : '';
+
+  const picks = m.model_picks || { home: { count: 0, models: [] }, away: { count: 0, models: [] } };
+
+  const teamRow = (code, slot, isWinner, picksObj, score) => {
+    const flag = placeholder(code) ? '' : codeToFlag(code);
+    const label = placeholder(code)
+      ? `<span class="text-gray-500 italic">${code || slot || '—'}</span>`
+      : `<span class="${isWinner ? 'text-gold font-bold' : 'text-white'}">${code}</span>`;
+    const cnt = picksObj?.count || 0;
+    const pct = n ? Math.round((cnt / n) * 100) : 0;
+    const models = (picksObj?.models || []).join(', ');
+    const pickTitle = `${cnt}/${n} modelos predijeron a ${code || slot} en esta ronda${models ? `: ${models}` : ''}`;
+    return `
+      <div class="flex items-center justify-between gap-2 py-1 ${isWinner ? 'bg-gold/10 -mx-2 px-2 rounded' : ''}">
+        <span class="flex items-center gap-1.5 text-xs truncate">${flag}${label}</span>
+        <span class="flex items-center gap-2 flex-shrink-0">
+          <span class="flex items-center gap-1 text-[10px] text-gray-400" title="${pickTitle.replace(/"/g, '&quot;')}">
+            <span>🔮</span><span>${cnt}/${n}</span>
+          </span>
+          ${played ? `<span class="text-sm font-black ${isWinner ? 'text-gold' : 'text-gray-300'} w-4 text-center">${score}</span>` : ''}
+        </span>
+      </div>
+      <div class="h-1 rounded-full bg-gray-800 overflow-hidden -mt-0.5 mb-1">
+        <div class="h-full rounded-full ${isWinner ? 'bg-gold/70' : 'bg-accent-blue/50'}" style="width:${pct}%"></div>
+      </div>`;
+  };
+
+  return `
+    <div class="glass rounded-lg p-3 hover:border-gold/30 transition">
+      <div class="flex items-center justify-between text-[10px] text-gray-500 mb-1.5">
+        <span class="px-1.5 py-0.5 rounded bg-gray-800 text-gray-400">#${m.match_id}</span>
+        <span class="flex items-center gap-1">
+          ${played ? '<span class="px-1 rounded bg-green-900/50 text-green-400 font-bold">FT</span>' : ''}
+          ${dateStr}
+        </span>
+      </div>
+      ${teamRow(m.home_team, m.home_slot, homeWon, picks.home, played ? m.score.home : '')}
+      ${teamRow(m.away_team, m.away_slot, awayWon, picks.away, played ? m.score.away : '')}
+      <div class="text-[9px] text-gray-600 text-center mt-0.5 truncate">${m.venue?.stadium || ''}</div>
+    </div>`;
+}
+
+// Secondary panel: per-model advancement accuracy by round (set-membership metric).
+function renderAdvancementPanel(n) {
+  const adv = bracketData?.model_advancement || [];
+  if (!adv.length) return '';
+
+  const rounds = ['R16', 'QF', 'SF', 'FINAL', 'CHAMPION'];
+  const roundLabel = { R16: 'R16', QF: 'QF', SF: 'SF', FINAL: 'Final', CHAMPION: '🏆' };
+
+  const rows = adv.map(a => {
+    const color = MODEL_COLORS[a.model] || '#9CA3AF';
+    const aa = a.advancement_accuracy || {};
+    const cells = rounds.map(r => {
+      const rd = aa.rounds?.[r];
+      if (!rd || !rd.ready) {
+        return '<td class="px-3 py-2 text-center text-gray-600 text-xs">—</td>';
+      }
+      const pct = rd.total ? rd.hits / rd.total : 0;
+      const col = pct >= 0.75 ? '#34D399' : pct >= 0.5 ? '#FBBF24' : '#FF6363';
+      const missed = (rd.missed || []).join(', ') || 'ninguno';
+      const fps = (rd.false_positives || []).join(', ') || 'ninguno';
+      const title = `${roundLabel[r]}: ${rd.hits}/${rd.total} aciertos\nNo predichos: ${missed}\nFalsos positivos: ${fps}`;
+      return `<td class="px-3 py-2 text-center cursor-help" title="${title.replace(/"/g, '&quot;')}">
+        <span class="font-bold text-xs" style="color:${col}">${rd.hits}/${rd.total}</span></td>`;
+    }).join('');
+    const overall = aa.ready && aa.total
+      ? `${aa.hits}/${aa.total}`
+      : '<span class="text-gray-600">pendiente</span>';
+    return `
+      <tr class="border-t border-gray-800 hover:bg-bg-hover">
+        <td class="px-3 py-2">
+          <div class="flex items-center gap-2">
+            <div class="w-2.5 h-2.5 rounded-full" style="background:${color}"></div>
+            <span class="text-white text-sm">${a.model}</span>
+          </div>
+        </td>
+        ${cells}
+        <td class="px-3 py-2 text-center font-bold text-gold text-sm">${overall}</td>
+      </tr>`;
+  }).join('');
+
+  return `
+    <div class="glass rounded-xl p-6 mt-6">
+      <h2 class="text-lg font-bold mb-2">📈 Precisión de Avance por Ronda</h2>
+      <p class="text-xs text-gray-500 mb-4">Métrica de pertenencia de conjunto: ¿acertó el modelo qué equipos alcanzan cada ronda, sin importar el cruce exacto? Solo se evalúan rondas ya completadas.</p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="text-gray-400 border-b border-gray-800">
+              <th class="px-3 py-2 text-left">Model</th>
+              ${rounds.map(r => `<th class="px-3 py-2 text-center">${roundLabel[r]}</th>`).join('')}
+              <th class="px-3 py-2 text-center">Total</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
+// Fallback to the pre-tournament "Predicted Final Standings by Model" table.
+function renderBracketFallback(el) {
   if (!predictionsSummary?.length) {
     el.innerHTML = '<p class="text-gray-500 text-center py-12">Bracket data not available yet.</p>';
     return;

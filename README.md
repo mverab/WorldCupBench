@@ -188,6 +188,41 @@ contra los **32 equipos reales** que avanzaron (derivados con las reglas de
 desempate FIFA), y reporta aciertos sobre 32, bonus de posición, terceros
 acertados y falsos positivos.
 
+### 📈 Advancement Accuracy (per-round set membership)
+
+`advancement_accuracy` (`scripts/advancement.py`) extends the same robust,
+ground-truth philosophy as `qualifier_accuracy` into the knockout phase. For
+every round it answers a single question — **"which teams *reach* this
+round?"** — as pure set membership, **independent of the bracket slot** a team
+occupies. The set of teams reaching a round is exactly the set of winners of
+the previous round:
+
+| Round | Teams that reach it | Total scored |
+|---|---|---|
+| `R16` | winners of the 16 Round-of-32 ties (match_id 73–88) | /16 |
+| `QF` | winners of the 8 Round-of-16 ties (89–96) | /8 |
+| `SF` | winners of the 4 quarter-finals (97–100) | /4 |
+| `FINAL` | winners of the 2 semi-finals (101–102) | /2 |
+| `CHAMPION` | winner of the final (104) | /1 |
+
+A model's *predicted* advancement is read from the `winner` fields of its frozen
+bracket (the team it picked to win each R32 tie is a team it expects in the
+R16, etc.). Per round it reports `hits` / `total` / `missed` /
+`false_positives`, plus an overall `hits`/`total`/`score` that aggregates
+**only rounds that are fully decided** (`ready: true`), so a half-played round
+never penalizes a model for matches that have not happened yet. Because it
+scores set membership rather than the exact slot, it rewards a model that
+correctly picked the teams to go deep even if it placed them in the wrong half
+of the bracket — complementing the slot-based `brier_knockout`.
+
+🇪🇸 **Resumen (ES):** `advancement_accuracy` mide, ronda por ronda, **qué
+equipos llegan** a cada instancia (octavos, cuartos, semis, final, campeón) como
+pertenencia de conjunto, sin importar el cruce exacto. Los equipos que alcanzan
+una ronda son los ganadores de la ronda anterior; se compara contra los
+`winner` del bracket congelado de cada modelo. Reporta aciertos, no predichos y
+falsos positivos por ronda, y solo agrega al total las rondas ya completas
+(`ready`), de modo que una ronda a medias no penaliza al modelo.
+
 ### 🧊 Freeze provenance (`freeze-v3`)
 
 All pre-tournament predictions were frozen **before kickoff** and carry an
