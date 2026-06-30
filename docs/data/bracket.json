@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30T14:01:25.375611+00:00",
+  "last_updated": "2026-06-30T19:44:43.415226+00:00",
   "rounds_order": [
     "R32",
     "R16",
@@ -240,10 +240,13 @@
         "city": "Arlington"
       },
       "feeds_into": 91,
-      "played": false,
-      "score": null,
-      "outcome": null,
-      "winner": null,
+      "played": true,
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "outcome": "away",
+      "winner": "NOR",
       "target_round": "R16",
       "model_picks": {
         "home": {
@@ -750,7 +753,7 @@
       "stage": "R16",
       "round": "round_of_16",
       "home_team": "BRA",
-      "away_team": "W78",
+      "away_team": "NOR",
       "home_slot": "W76",
       "away_slot": "W78",
       "date": "2026-07-05",
@@ -1184,10 +1187,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 2,
+            "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 3,
+            "reached_count": 4,
             "missed": [
               "MAR"
             ],
@@ -1200,7 +1203,6 @@
               "GER",
               "MEX",
               "NED",
-              "NOR",
               "POR",
               "SEN",
               "SUI",
@@ -1279,9 +1281,10 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 3,
+            "reached_count": 4,
             "missed": [
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "ARG",
@@ -1368,10 +1371,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 2,
+            "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 3,
+            "reached_count": 4,
             "missed": [
               "MAR"
             ],
@@ -1385,7 +1388,6 @@
               "GER",
               "MEX",
               "NED",
-              "NOR",
               "POR",
               "SUI",
               "TUR",
@@ -1463,9 +1465,10 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 3,
+            "reached_count": 4,
             "missed": [
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "ARG",
@@ -1555,9 +1558,10 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 3,
+            "reached_count": 4,
             "missed": [
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "ARG",
@@ -1647,9 +1651,10 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 3,
+            "reached_count": 4,
             "missed": [
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "ARG",
@@ -1739,9 +1744,10 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 3,
+            "reached_count": 4,
             "missed": [
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "ARG",
@@ -1828,10 +1834,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 1,
+            "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 3,
+            "reached_count": 4,
             "missed": [
               "CAN",
               "MAR"
@@ -1847,7 +1853,6 @@
               "KOR",
               "MEX",
               "NED",
-              "NOR",
               "POR",
               "SUI",
               "TUR",
@@ -1922,10 +1927,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 2,
+            "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 3,
+            "reached_count": 4,
             "missed": [
               "MAR"
             ],
@@ -1940,7 +1945,6 @@
               "GER",
               "MEX",
               "NED",
-              "NOR",
               "POR",
               "SUI",
               "USA"
@@ -2017,10 +2021,11 @@
             "hits": 1,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 3,
+            "reached_count": 4,
             "missed": [
               "CAN",
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "ARG",
@@ -2111,10 +2116,11 @@
             "hits": 1,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 3,
+            "reached_count": 4,
             "missed": [
               "CAN",
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "ARG",

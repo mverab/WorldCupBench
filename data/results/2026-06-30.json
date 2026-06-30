@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-30",
+  "last_updated": "2026-06-30T19:44:42.427262+00:00",
+  "matches": [
+    {
+      "fd_id": null,
+      "match_id": 78,
+      "home_team": "CIV",
+      "away_team": "NOR",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "outcome": "away",
+      "date": "2026-06-30",
+      "stage": "R32",
+      "group": null
+    }
+  ]
+}
