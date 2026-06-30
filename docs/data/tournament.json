@@ -1221,7 +1221,7 @@
       "match_id": 90,
       "round": "round_of_16",
       "home_team": "CAN",
-      "away_team": "W75",
+      "away_team": "MAR",
       "date": "2026-07-04",
       "venue": {
         "stadium": "NRG Stadium",
@@ -1563,6 +1563,6 @@
       "L"
     ],
     "all_groups_complete": true,
-    "last_updated": "2026-06-30T02:37:51.140322+00:00"
+    "last_updated": "2026-06-30T08:59:00.764774+00:00"
   }
 }

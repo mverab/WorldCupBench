@@ -1,6 +1,6 @@
 {
   "date": "2026-06-29",
-  "last_updated": "2026-06-30T02:37:51.138190+00:00",
+  "last_updated": "2026-06-30T08:59:00.762140+00:00",
   "matches": [
     {
       "fd_id": null,
@@ -24,6 +24,20 @@
       "score": {
         "home": 4,
         "away": 5
+      },
+      "outcome": "away",
+      "date": "2026-06-29",
+      "stage": "R32",
+      "group": null
+    },
+    {
+      "fd_id": null,
+      "match_id": 75,
+      "home_team": "NED",
+      "away_team": "MAR",
+      "score": {
+        "home": 3,
+        "away": 4
       },
       "outcome": "away",
       "date": "2026-06-29",

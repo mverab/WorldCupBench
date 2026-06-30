@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30T02:37:52.116530+00:00",
+  "last_updated": "2026-06-30T08:59:02.117481+00:00",
   "rounds_order": [
     "R32",
     "R16",
@@ -108,10 +108,13 @@
         "city": "Guadalupe"
       },
       "feeds_into": 90,
-      "played": false,
-      "score": null,
-      "outcome": null,
-      "winner": null,
+      "played": true,
+      "score": {
+        "home": 3,
+        "away": 4
+      },
+      "outcome": "away",
+      "winner": "MAR",
       "target_round": "R16",
       "model_picks": {
         "home": {
@@ -717,7 +720,7 @@
       "stage": "R16",
       "round": "round_of_16",
       "home_team": "CAN",
-      "away_team": "W75",
+      "away_team": "MAR",
       "home_slot": "W73",
       "away_slot": "W75",
       "date": "2026-07-04",
@@ -1184,8 +1187,10 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 2,
-            "missed": [],
+            "reached_count": 3,
+            "missed": [
+              "MAR"
+            ],
             "false_positives": [
               "ARG",
               "COL",
@@ -1274,8 +1279,10 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 2,
-            "missed": [],
+            "reached_count": 3,
+            "missed": [
+              "MAR"
+            ],
             "false_positives": [
               "ARG",
               "BEL",
@@ -1364,8 +1371,10 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 2,
-            "missed": [],
+            "reached_count": 3,
+            "missed": [
+              "MAR"
+            ],
             "false_positives": [
               "ARG",
               "AUT",
@@ -1454,8 +1463,10 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 2,
-            "missed": [],
+            "reached_count": 3,
+            "missed": [
+              "MAR"
+            ],
             "false_positives": [
               "ARG",
               "BEL",
@@ -1544,8 +1555,10 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 2,
-            "missed": [],
+            "reached_count": 3,
+            "missed": [
+              "MAR"
+            ],
             "false_positives": [
               "ARG",
               "BEL",
@@ -1634,8 +1647,10 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 2,
-            "missed": [],
+            "reached_count": 3,
+            "missed": [
+              "MAR"
+            ],
             "false_positives": [
               "ARG",
               "BEL",
@@ -1724,8 +1739,10 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 2,
-            "missed": [],
+            "reached_count": 3,
+            "missed": [
+              "MAR"
+            ],
             "false_positives": [
               "ARG",
               "BEL",
@@ -1814,9 +1831,10 @@
             "hits": 1,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 2,
+            "reached_count": 3,
             "missed": [
-              "CAN"
+              "CAN",
+              "MAR"
             ],
             "false_positives": [
               "ARG",
@@ -1907,8 +1925,10 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 2,
-            "missed": [],
+            "reached_count": 3,
+            "missed": [
+              "MAR"
+            ],
             "false_positives": [
               "ARG",
               "BEL",
@@ -1997,9 +2017,10 @@
             "hits": 1,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 2,
+            "reached_count": 3,
             "missed": [
-              "CAN"
+              "CAN",
+              "MAR"
             ],
             "false_positives": [
               "ARG",
@@ -2090,9 +2111,10 @@
             "hits": 1,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 2,
+            "reached_count": 3,
             "missed": [
-              "CAN"
+              "CAN",
+              "MAR"
             ],
             "false_positives": [
               "ARG",
