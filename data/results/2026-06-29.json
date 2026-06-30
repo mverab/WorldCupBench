@@ -1,6 +1,6 @@
 {
   "date": "2026-06-29",
-  "last_updated": "2026-06-29T23:03:40.093217+00:00",
+  "last_updated": "2026-06-30T02:37:51.138190+00:00",
   "matches": [
     {
       "fd_id": null,
@@ -14,8 +14,21 @@
       "outcome": "home",
       "date": "2026-06-29",
       "stage": "R32",
-      "group": null,
-      "round": "round_of_32"
+      "group": null
+    },
+    {
+      "fd_id": null,
+      "match_id": null,
+      "home_team": "GER",
+      "away_team": "PAR",
+      "score": {
+        "home": 4,
+        "away": 5
+      },
+      "outcome": "away",
+      "date": "2026-06-29",
+      "stage": "R32",
+      "group": null
     }
   ]
 }
