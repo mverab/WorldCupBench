@@ -19,10 +19,23 @@ Original slot placeholders ("2A", "3rd(A/B/C/D/F)", "W73", ...) are preserved in
 always resolves from the preserved template, never from a previously resolved
 value.
 
-Third-placed teams are assigned to their Round-of-32 slots with a deterministic
-constraint-satisfaction matching that respects the official FIFA bracket
-constraints encoded in each slot (e.g. "3rd(A/B/C/D/F)" may only receive the
-third-placed team of group A, B, C, D or F).
+Third-placed teams are assigned to their Round-of-32 slots **strictly from the
+official FIFA "Annex C" combination table** (all 495 possible combinations of
+which eight groups produce a qualifying third-placed team). The table is stored
+in ``data/annex_c_third_place.json`` keyed by the sorted set of qualifying
+groups (e.g. ``"BDEFIJKL"``) and mapping each group-winner slot
+(``1A/1B/1D/1E/1G/1I/1K/1L``) to the group whose third-placed team plays there.
+
+This matters because several different assignments may all satisfy the per-slot
+allowed-group constraints (``"3rd(A/B/C/D/F)"`` …), so a plain constraint search
+can pick a *valid but wrong* bracket. FIFA fixes one specific assignment per
+combination, and getting it wrong breaks the result<->fixture join: e.g. for the
+real set {B,D,E,F,I,J,K,L} the correct slot 1E (Germany) opponent is 3D
+(Paraguay); a naive search instead put 3B there, leaving the played GER-PAR
+octavo unmatched (``match_id: null``).
+
+A deterministic constraint-satisfaction backtracking remains as a safety net for
+combinations not present in the table (e.g. synthetic/partial sets in tests).
 """
 
 import argparse
@@ -39,10 +52,30 @@ import qualifiers as q  # noqa: E402
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RESULTS_DIR = os.path.join(BASE_DIR, "data", "results")
 TOURNAMENT_PATH = os.path.join(BASE_DIR, "data", "tournament.json")
+ANNEX_C_PATH = os.path.join(BASE_DIR, "data", "annex_c_third_place.json")
 
 THIRD_RE = re.compile(r"3rd\(([^)]+)\)")
 SEED_RE = re.compile(r"^([12])([A-L])$")
 WINNER_RE = re.compile(r"^([WL])(\d+)$")
+WINNER_SLOT_RE = re.compile(r"^1([A-L])$")
+
+
+def load_annex_c(path: str = ANNEX_C_PATH) -> dict:
+    """Load the FIFA Annex C third-place combination table.
+
+    Returns ``{qual_key: {winner_slot_label: group_letter}}`` where ``qual_key``
+    is the eight qualifying group letters sorted and concatenated
+    (e.g. ``"BDEFIJKL"``). Returns ``{}`` if the file is missing/unreadable so
+    the caller transparently falls back to constraint-satisfaction matching.
+    """
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f).get("combinations", {})
+    except (json.JSONDecodeError, OSError):
+        return {}
+
+
+_ANNEX_C = load_annex_c()
 
 
 def load_all_results(results_dir: str = RESULTS_DIR) -> list:
@@ -65,11 +98,69 @@ def _allowed_groups(slot: str) -> list:
 
 
 def assign_third_slots(bracket: list, qualifying_third_groups: list) -> dict:
-    """Match qualifying third-placed groups to Round-of-32 slots.
+    """Match qualifying third-placed groups to their Round-of-32 slots.
 
-    Returns ``{match_id(str): group_letter}``. Uses deterministic backtracking
-    that honours each slot's allowed-group constraint, preferring the most
-    constrained slots first so a valid complete assignment is found.
+    Returns ``{match_id(str): group_letter}``.
+
+    Primary path — **FIFA Annex C**: when the exact set of eight qualifying
+    third-place groups is found in the official combination table (always true
+    for a real tournament, since the table covers all 495 combinations), the
+    assignment is taken verbatim from FIFA. This guarantees the *one* correct
+    bracket among the several that merely satisfy the per-slot constraints.
+
+    Fallback — **constraint-satisfaction backtracking**: used only when the
+    combination is absent from the table or the bracket does not expose real
+    group-winner slot labels (e.g. synthetic/partial fixtures in unit tests).
+    """
+    groups = sorted(set(qualifying_third_groups))
+    annex_assignment = _assign_from_annex_c(bracket, groups)
+    if annex_assignment is not None:
+        return annex_assignment
+    return _assign_third_slots_backtrack(bracket, qualifying_third_groups)
+
+
+def _assign_from_annex_c(bracket: list, groups: list):
+    """Resolve third-place slots from the FIFA Annex C table.
+
+    ``groups`` must be the sorted list of qualifying third-place group letters.
+    Returns ``{match_id(str): group_letter}``, or ``None`` when the combination
+    is not in the table or the bracket lacks real winner-slot labels (so the
+    caller falls back to constraint-satisfaction matching).
+    """
+    if len(groups) != 8:
+        return None
+    row = _ANNEX_C.get("".join(groups))
+    if not row:
+        return None
+
+    assignment = {}
+    for m in bracket:
+        # The third-place team always occupies the slot carrying the
+        # ``3rd(...)`` constraint; the *other* slot carries the group-winner
+        # label (``1E``) that indexes the Annex C row.
+        if _allowed_groups(m.get("away_slot")):
+            winner_slot = m.get("home_slot")
+        elif _allowed_groups(m.get("home_slot")):
+            winner_slot = m.get("away_slot")
+        else:
+            continue  # not a third-place match
+        if not WINNER_SLOT_RE.match(winner_slot or ""):
+            return None  # no real winner label -> fall back
+        grp = row.get(winner_slot)
+        if grp is None:
+            return None
+        assignment[str(m["match_id"])] = grp
+
+    return assignment or None
+
+
+def _assign_third_slots_backtrack(bracket: list, qualifying_third_groups: list) -> dict:
+    """Deterministic constraint-satisfaction fallback (legacy behaviour).
+
+    Honours each slot's allowed-group constraint, preferring the most
+    constrained slots first so a valid complete assignment is found. Note this
+    returns *a* valid assignment, not necessarily FIFA's specific one — hence it
+    is only a safety net behind :func:`_assign_from_annex_c`.
     """
     # Collect third slots: match_id -> sorted list of allowed qualifying groups.
     slots = {}

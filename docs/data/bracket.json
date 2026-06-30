@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-06-30T19:44:43.415226+00:00",
+  "last_updated": "2026-06-30T19:57:45.161394+00:00",
   "rounds_order": [
     "R32",
     "R16",
@@ -57,7 +57,7 @@
       "stage": "R32",
       "round": "round_of_32",
       "home_team": "GER",
-      "away_team": "BIH",
+      "away_team": "PAR",
       "home_slot": "1E",
       "away_slot": "3rd(A/B/C/D/F)",
       "date": "2026-06-29",
@@ -66,10 +66,13 @@
         "city": "Foxborough"
       },
       "feeds_into": 89,
-      "played": false,
-      "score": null,
-      "outcome": null,
-      "winner": null,
+      "played": true,
+      "score": {
+        "home": 4,
+        "away": 5
+      },
+      "outcome": "away",
+      "winner": "PAR",
       "target_round": "R16",
       "model_picks": {
         "home": {
@@ -189,7 +192,7 @@
       "stage": "R32",
       "round": "round_of_32",
       "home_team": "FRA",
-      "away_team": "PAR",
+      "away_team": "SWE",
       "home_slot": "1I",
       "away_slot": "3rd(C/D/F/G/H)",
       "date": "2026-06-30",
@@ -357,7 +360,7 @@
       "stage": "R32",
       "round": "round_of_32",
       "home_team": "USA",
-      "away_team": "ALG",
+      "away_team": "BIH",
       "home_slot": "1D",
       "away_slot": "3rd(B/E/F/I/J)",
       "date": "2026-07-01",
@@ -537,7 +540,7 @@
       "stage": "R32",
       "round": "round_of_32",
       "home_team": "SUI",
-      "away_team": "SWE",
+      "away_team": "ALG",
       "home_slot": "1B",
       "away_slot": "3rd(E/F/G/I/J)",
       "date": "2026-07-02",
@@ -692,7 +695,7 @@
       "match_id": 89,
       "stage": "R16",
       "round": "round_of_16",
-      "home_team": "W74",
+      "home_team": "PAR",
       "away_team": "W77",
       "home_slot": "W74",
       "away_slot": "W77",
@@ -1190,9 +1193,10 @@
             "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
-              "MAR"
+              "MAR",
+              "PAR"
             ],
             "false_positives": [
               "ARG",
@@ -1281,10 +1285,11 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
-              "NOR"
+              "NOR",
+              "PAR"
             ],
             "false_positives": [
               "ARG",
@@ -1374,9 +1379,10 @@
             "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
-              "MAR"
+              "MAR",
+              "PAR"
             ],
             "false_positives": [
               "ARG",
@@ -1465,10 +1471,11 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
-              "NOR"
+              "NOR",
+              "PAR"
             ],
             "false_positives": [
               "ARG",
@@ -1558,10 +1565,11 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
-              "NOR"
+              "NOR",
+              "PAR"
             ],
             "false_positives": [
               "ARG",
@@ -1651,10 +1659,11 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
-              "NOR"
+              "NOR",
+              "PAR"
             ],
             "false_positives": [
               "ARG",
@@ -1744,10 +1753,11 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
-              "NOR"
+              "NOR",
+              "PAR"
             ],
             "false_positives": [
               "ARG",
@@ -1837,10 +1847,11 @@
             "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "CAN",
-              "MAR"
+              "MAR",
+              "PAR"
             ],
             "false_positives": [
               "ARG",
@@ -1930,9 +1941,10 @@
             "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
-              "MAR"
+              "MAR",
+              "PAR"
             ],
             "false_positives": [
               "ARG",
@@ -2021,11 +2033,12 @@
             "hits": 1,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "CAN",
               "MAR",
-              "NOR"
+              "NOR",
+              "PAR"
             ],
             "false_positives": [
               "ARG",
@@ -2116,11 +2129,12 @@
             "hits": 1,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "CAN",
               "MAR",
-              "NOR"
+              "NOR",
+              "PAR"
             ],
             "false_positives": [
               "ARG",
