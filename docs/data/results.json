@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01T02:43:48.028455+00:00",
+  "last_updated": "2026-07-01T09:32:28.670646+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -1061,6 +1061,20 @@
         "away": 2
       },
       "outcome": "away",
+      "date": "2026-06-30",
+      "stage": "R32",
+      "group": null
+    },
+    {
+      "fd_id": null,
+      "match_id": 79,
+      "home_team": "MEX",
+      "away_team": "ECU",
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "outcome": "home",
       "date": "2026-06-30",
       "stage": "R32",
       "group": null

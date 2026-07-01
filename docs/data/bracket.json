@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01T02:43:48.063017+00:00",
+  "last_updated": "2026-07-01T09:32:28.705208+00:00",
   "rounds_order": [
     "R32",
     "R16",
@@ -280,10 +280,13 @@
         "city": "Mexico City"
       },
       "feeds_into": 92,
-      "played": false,
-      "score": null,
-      "outcome": null,
-      "winner": null,
+      "played": true,
+      "score": {
+        "home": 2,
+        "away": 0
+      },
+      "outcome": "home",
+      "winner": "MEX",
       "target_round": "R16",
       "model_picks": {
         "home": {
@@ -794,7 +797,7 @@
       "match_id": 92,
       "stage": "R16",
       "round": "round_of_16",
-      "home_team": "W79",
+      "home_team": "MEX",
       "away_team": "W80",
       "home_slot": "W79",
       "away_slot": "W80",
@@ -811,8 +814,10 @@
       "target_round": "QF",
       "model_picks": {
         "home": {
-          "count": 0,
-          "models": []
+          "count": 1,
+          "models": [
+            "Nex-N2-Pro"
+          ]
         },
         "away": {
           "count": 0,
@@ -1187,10 +1192,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 3,
+            "hits": 4,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR"
             ],
@@ -1201,7 +1206,6 @@
               "ESP",
               "FRA",
               "GER",
-              "MEX",
               "NED",
               "POR",
               "SEN",
@@ -1278,10 +1282,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 2,
+            "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
@@ -1295,7 +1299,6 @@
               "ESP",
               "FRA",
               "GER",
-              "MEX",
               "NED",
               "POR",
               "SEN",
@@ -1371,10 +1374,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 3,
+            "hits": 4,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR"
             ],
@@ -1386,7 +1389,6 @@
               "ESP",
               "FRA",
               "GER",
-              "MEX",
               "NED",
               "POR",
               "SUI",
@@ -1462,10 +1464,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 2,
+            "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
@@ -1478,7 +1480,6 @@
               "ESP",
               "FRA",
               "GER",
-              "MEX",
               "NED",
               "POR",
               "SEN",
@@ -1555,10 +1556,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 2,
+            "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
@@ -1571,7 +1572,6 @@
               "ESP",
               "FRA",
               "GER",
-              "MEX",
               "NED",
               "POR",
               "SEN",
@@ -1648,10 +1648,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 2,
+            "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
@@ -1665,7 +1665,6 @@
               "ESP",
               "FRA",
               "GER",
-              "MEX",
               "NED",
               "POR",
               "SEN",
@@ -1741,10 +1740,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 2,
+            "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
@@ -1759,7 +1758,6 @@
               "FRA",
               "GER",
               "KOR",
-              "MEX",
               "NED",
               "POR",
               "TUR",
@@ -1834,10 +1832,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 2,
+            "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "CAN",
               "MAR"
@@ -1851,7 +1849,6 @@
               "FRA",
               "GER",
               "KOR",
-              "MEX",
               "NED",
               "POR",
               "SUI",
@@ -1927,10 +1924,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 3,
+            "hits": 4,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR"
             ],
@@ -1943,7 +1940,6 @@
               "ESP",
               "FRA",
               "GER",
-              "MEX",
               "NED",
               "POR",
               "SUI",
@@ -2018,10 +2014,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 1,
+            "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "CAN",
               "MAR",
@@ -2037,7 +2033,6 @@
               "FRA",
               "GER",
               "KOR",
-              "MEX",
               "NED",
               "POR",
               "SEN",
@@ -2113,10 +2108,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 1,
+            "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "CAN",
               "MAR",
@@ -2131,7 +2126,6 @@
               "FRA",
               "GER",
               "KOR",
-              "MEX",
               "NED",
               "POR",
               "SEN",

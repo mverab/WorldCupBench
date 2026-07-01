@@ -1,6 +1,6 @@
 {
-  "last_updated": "2026-07-01T02:43:47.158356+00:00",
-  "total_results": 76,
+  "last_updated": "2026-07-01T09:32:27.368107+00:00",
+  "total_results": 77,
   "total_models": 11,
   "qualifiers_known": 32,
   "qualifiers_ready": true,
@@ -10,12 +10,12 @@
       "model": "MiMo-V2.5-Pro",
       "model_id": "xiaomi/mimo-v2.5-pro-20260422",
       "brier_group": 35.0096,
-      "brier_knockout": 0.9257,
-      "brier_total": 16.632216,
-      "quiniela_points": 52,
+      "brier_knockout": 1.0281,
+      "brier_total": 16.434884,
+      "quiniela_points": 54,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 76,
+      "n_matches_scored": 77,
       "qualifier_accuracy": {
         "hits": 26,
         "score": 0.8125,
@@ -44,10 +44,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 2,
+            "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "CAN",
               "MAR"
@@ -61,7 +61,6 @@
               "FRA",
               "GER",
               "KOR",
-              "MEX",
               "NED",
               "POR",
               "SUI",
@@ -136,12 +135,12 @@
       "model": "DeepSeek-V4-Pro",
       "model_id": "deepseek/deepseek-v4-pro-20260423",
       "brier_group": 35.0214,
-      "brier_knockout": 1.065,
-      "brier_total": 16.645137,
-      "quiniela_points": 48,
+      "brier_knockout": 1.155,
+      "brier_total": 16.448642,
+      "quiniela_points": 50,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 76,
+      "n_matches_scored": 77,
       "qualifier_accuracy": {
         "hits": 27,
         "score": 0.84375,
@@ -168,10 +167,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 2,
+            "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
@@ -185,7 +184,6 @@
               "ESP",
               "FRA",
               "GER",
-              "MEX",
               "NED",
               "POR",
               "SEN",
@@ -260,12 +258,12 @@
       "model": "Nex-N2-Pro",
       "model_id": "nex-agi/nex-n2-pro:free",
       "brier_group": 35.1942,
-      "brier_knockout": 0.8793,
-      "brier_total": 16.717216,
-      "quiniela_points": 47,
+      "brier_knockout": 0.9577,
+      "brier_total": 16.516619,
+      "quiniela_points": 49,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 76,
+      "n_matches_scored": 77,
       "qualifier_accuracy": {
         "hits": 27,
         "score": 0.84375,
@@ -292,10 +290,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 1,
+            "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "CAN",
               "MAR",
@@ -311,7 +309,6 @@
               "FRA",
               "GER",
               "KOR",
-              "MEX",
               "NED",
               "POR",
               "SEN",
@@ -386,12 +383,12 @@
       "model": "MiniMax-M3",
       "model_id": "minimax/minimax-m3-20260531",
       "brier_group": 35.3422,
-      "brier_knockout": 0.8113,
-      "brier_total": 16.783742,
-      "quiniela_points": 53,
+      "brier_knockout": 1.0138,
+      "brier_total": 16.589457,
+      "quiniela_points": 55,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 76,
+      "n_matches_scored": 77,
       "qualifier_accuracy": {
         "hits": 27,
         "score": 0.84375,
@@ -418,10 +415,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 3,
+            "hits": 4,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR"
             ],
@@ -434,7 +431,6 @@
               "ESP",
               "FRA",
               "GER",
-              "MEX",
               "NED",
               "POR",
               "SUI",
@@ -508,12 +504,12 @@
       "model": "Gemini-3.5-Flash",
       "model_id": "google/gemini-3.5-flash-20260519",
       "brier_group": 35.535,
-      "brier_knockout": 0.825,
-      "brier_total": 16.875789,
-      "quiniela_points": 51,
+      "brier_knockout": 1.0275,
+      "brier_total": 16.680487,
+      "quiniela_points": 53,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 76,
+      "n_matches_scored": 77,
       "qualifier_accuracy": {
         "hits": 26,
         "score": 0.8125,
@@ -542,10 +538,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 3,
+            "hits": 4,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR"
             ],
@@ -557,7 +553,6 @@
               "ESP",
               "FRA",
               "GER",
-              "MEX",
               "NED",
               "POR",
               "SUI",
@@ -632,12 +627,12 @@
       "model": "Qwen-3.7-Max",
       "model_id": "qwen/qwen3.7-max-20260520",
       "brier_group": 35.735,
-      "brier_knockout": 1.2075,
-      "brier_total": 16.990658,
-      "quiniela_points": 46,
+      "brier_knockout": 1.41,
+      "brier_total": 16.798831,
+      "quiniela_points": 48,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 76,
+      "n_matches_scored": 77,
       "qualifier_accuracy": {
         "hits": 27,
         "score": 0.84375,
@@ -664,10 +659,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 1,
+            "hits": 2,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "CAN",
               "MAR",
@@ -682,7 +677,6 @@
               "FRA",
               "GER",
               "KOR",
-              "MEX",
               "NED",
               "POR",
               "SEN",
@@ -758,12 +752,12 @@
       "model": "GPT-5.5",
       "model_id": "openai/gpt-5.5-20260423",
       "brier_group": 35.8112,
-      "brier_knockout": 0.9222,
-      "brier_total": 17.011737,
-      "quiniela_points": 47,
+      "brier_knockout": 1.0822,
+      "brier_total": 16.813171,
+      "quiniela_points": 49,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 76,
+      "n_matches_scored": 77,
       "qualifier_accuracy": {
         "hits": 27,
         "score": 0.84375,
@@ -790,10 +784,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 2,
+            "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
@@ -806,7 +800,6 @@
               "ESP",
               "FRA",
               "GER",
-              "MEX",
               "NED",
               "POR",
               "SEN",
@@ -882,12 +875,12 @@
       "model": "Grok-4.3",
       "model_id": "x-ai/grok-4.3-20260430",
       "brier_group": 35.909,
-      "brier_knockout": 1.2217,
-      "brier_total": 17.073826,
-      "quiniela_points": 47,
+      "brier_knockout": 1.4242,
+      "brier_total": 16.881104,
+      "quiniela_points": 49,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 76,
+      "n_matches_scored": 77,
       "qualifier_accuracy": {
         "hits": 25,
         "score": 0.78125,
@@ -918,10 +911,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 2,
+            "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
@@ -935,7 +928,6 @@
               "ESP",
               "FRA",
               "GER",
-              "MEX",
               "NED",
               "POR",
               "SEN",
@@ -1010,12 +1002,12 @@
       "model": "Kimi-K2.6",
       "model_id": "moonshotai/kimi-k2.6-20260420",
       "brier_group": 36.1986,
-      "brier_knockout": 1.0554,
-      "brier_total": 17.202253,
-      "quiniela_points": 45,
+      "brier_knockout": 1.2318,
+      "brier_total": 17.004008,
+      "quiniela_points": 47,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 76,
+      "n_matches_scored": 77,
       "qualifier_accuracy": {
         "hits": 26,
         "score": 0.8125,
@@ -1044,10 +1036,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 2,
+            "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
@@ -1062,7 +1054,6 @@
               "FRA",
               "GER",
               "KOR",
-              "MEX",
               "NED",
               "POR",
               "TUR",
@@ -1136,12 +1127,12 @@
       "model": "Claude-Fable-5",
       "model_id": "anthropic/claude-5-fable-20260609",
       "brier_group": 36.638,
-      "brier_knockout": 0.8639,
-      "brier_total": 17.400311,
-      "quiniela_points": 48,
+      "brier_knockout": 1.0239,
+      "brier_total": 17.195942,
+      "quiniela_points": 50,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 76,
+      "n_matches_scored": 77,
       "qualifier_accuracy": {
         "hits": 27,
         "score": 0.84375,
@@ -1168,10 +1159,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 3,
+            "hits": 4,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR"
             ],
@@ -1182,7 +1173,6 @@
               "ESP",
               "FRA",
               "GER",
-              "MEX",
               "NED",
               "POR",
               "SEN",
@@ -1258,12 +1248,12 @@
       "model": "GLM-5.1",
       "model_id": "z-ai/glm-5.1-20260406",
       "brier_group": 36.7908,
-      "brier_knockout": 0.945,
-      "brier_total": 17.476958,
-      "quiniela_points": 50,
+      "brier_knockout": 1.105,
+      "brier_total": 17.272647,
+      "quiniela_points": 52,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 76,
+      "n_matches_scored": 77,
       "qualifier_accuracy": {
         "hits": 26,
         "score": 0.8125,
@@ -1292,10 +1282,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 2,
+            "hits": 3,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
@@ -1308,7 +1298,6 @@
               "ESP",
               "FRA",
               "GER",
-              "MEX",
               "NED",
               "POR",
               "SEN",

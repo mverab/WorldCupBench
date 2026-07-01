@@ -1248,7 +1248,7 @@
     {
       "match_id": 92,
       "round": "round_of_16",
-      "home_team": "W79",
+      "home_team": "MEX",
       "away_team": "W80",
       "date": "2026-07-05",
       "venue": {
@@ -1563,6 +1563,6 @@
       "L"
     ],
     "all_groups_complete": true,
-    "last_updated": "2026-07-01T02:43:47.090515+00:00"
+    "last_updated": "2026-07-01T09:32:27.298833+00:00"
   }
 }
