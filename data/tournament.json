@@ -1249,7 +1249,7 @@
       "match_id": 92,
       "round": "round_of_16",
       "home_team": "MEX",
-      "away_team": "W80",
+      "away_team": "ENG",
       "date": "2026-07-05",
       "venue": {
         "stadium": "Estadio Azteca",
@@ -1563,6 +1563,6 @@
       "L"
     ],
     "all_groups_complete": true,
-    "last_updated": "2026-07-01T14:13:58.141384+00:00"
+    "last_updated": "2026-07-01T19:41:59.507030+00:00"
   }
 }
