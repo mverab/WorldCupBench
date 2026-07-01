@@ -1,6 +1,6 @@
 {
   "date": "2026-06-30",
-  "last_updated": "2026-06-30T19:44:42.427262+00:00",
+  "last_updated": "2026-07-01T02:43:47.087807+00:00",
   "matches": [
     {
       "fd_id": null,
@@ -12,6 +12,20 @@
         "away": 2
       },
       "outcome": "away",
+      "date": "2026-06-30",
+      "stage": "R32",
+      "group": null
+    },
+    {
+      "fd_id": null,
+      "match_id": null,
+      "home_team": "FRA",
+      "away_team": "SWE",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "outcome": "home",
       "date": "2026-06-30",
       "stage": "R32",
       "group": null
