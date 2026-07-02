@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-01T19:42:00.993989+00:00",
+  "last_updated": "2026-07-02T02:33:31.024633+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -1087,6 +1087,20 @@
       "score": {
         "home": 2,
         "away": 1
+      },
+      "outcome": "home",
+      "date": "2026-07-01",
+      "stage": "R32",
+      "group": null
+    },
+    {
+      "fd_id": null,
+      "match_id": 82,
+      "home_team": "BEL",
+      "away_team": "SEN",
+      "score": {
+        "home": 3,
+        "away": 2
       },
       "outcome": "home",
       "date": "2026-07-01",

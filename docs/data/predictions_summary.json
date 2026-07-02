@@ -35,8 +35,9 @@
           "hits": 5,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 6,
+          "reached_count": 7,
           "missed": [
+            "BEL",
             "MAR"
           ],
           "false_positives": [
@@ -149,17 +150,16 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 4,
+          "hits": 5,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 6,
+          "reached_count": 7,
           "missed": [
             "MAR",
             "NOR"
           ],
           "false_positives": [
             "ARG",
-            "BEL",
             "CRO",
             "EGY",
             "ESP",
@@ -273,8 +273,9 @@
           "hits": 5,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 6,
+          "reached_count": 7,
           "missed": [
+            "BEL",
             "MAR"
           ],
           "false_positives": [
@@ -389,17 +390,16 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 4,
+          "hits": 5,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 6,
+          "reached_count": 7,
           "missed": [
             "MAR",
             "NOR"
           ],
           "false_positives": [
             "ARG",
-            "BEL",
             "CRO",
             "ESP",
             "FRA",
@@ -508,17 +508,16 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 4,
+          "hits": 5,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 6,
+          "reached_count": 7,
           "missed": [
             "MAR",
             "NOR"
           ],
           "false_positives": [
             "ARG",
-            "BEL",
             "COL",
             "ESP",
             "FRA",
@@ -631,17 +630,16 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 4,
+          "hits": 5,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 6,
+          "reached_count": 7,
           "missed": [
             "MAR",
             "NOR"
           ],
           "false_positives": [
             "ARG",
-            "BEL",
             "CRO",
             "EGY",
             "ESP",
@@ -752,17 +750,16 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 4,
+          "hits": 5,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 6,
+          "reached_count": 7,
           "missed": [
             "MAR",
             "NOR"
           ],
           "false_positives": [
             "ARG",
-            "BEL",
             "COL",
             "ECU",
             "ESP",
@@ -873,17 +870,16 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 4,
+          "hits": 5,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 6,
+          "reached_count": 7,
           "missed": [
             "CAN",
             "MAR"
           ],
           "false_positives": [
             "ARG",
-            "BEL",
             "COL",
             "ESP",
             "FRA",
@@ -992,16 +988,15 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 5,
+          "hits": 6,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 6,
+          "reached_count": 7,
           "missed": [
             "MAR"
           ],
           "false_positives": [
             "ARG",
-            "BEL",
             "COL",
             "EGY",
             "ESP",
@@ -1112,8 +1107,9 @@
           "hits": 3,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 6,
+          "reached_count": 7,
           "missed": [
+            "BEL",
             "CAN",
             "MAR",
             "NOR"
@@ -1230,10 +1226,10 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 3,
+          "hits": 4,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 6,
+          "reached_count": 7,
           "missed": [
             "CAN",
             "MAR",
@@ -1241,7 +1237,6 @@
           ],
           "false_positives": [
             "ARG",
-            "BEL",
             "CRO",
             "ESP",
             "FRA",
