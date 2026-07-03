@@ -1262,8 +1262,8 @@
     {
       "match_id": 93,
       "round": "round_of_16",
-      "home_team": "W83",
-      "away_team": "W84",
+      "home_team": "POR",
+      "away_team": "ESP",
       "date": "2026-07-06",
       "venue": {
         "stadium": "AT&T Stadium",
@@ -1563,6 +1563,6 @@
       "L"
     ],
     "all_groups_complete": true,
-    "last_updated": "2026-07-02T19:12:34.685707+00:00"
+    "last_updated": "2026-07-03T02:08:39.842766+00:00"
   }
 }

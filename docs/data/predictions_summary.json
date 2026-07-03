@@ -32,10 +32,10 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 5,
+          "hits": 7,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 7,
+          "reached_count": 9,
           "missed": [
             "BEL",
             "MAR"
@@ -43,11 +43,9 @@
           "false_positives": [
             "ARG",
             "COL",
-            "ESP",
             "FRA",
             "GER",
             "NED",
-            "POR",
             "SEN",
             "SUI",
             "TUR",
@@ -150,10 +148,10 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 5,
+          "hits": 7,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 7,
+          "reached_count": 9,
           "missed": [
             "MAR",
             "NOR"
@@ -162,11 +160,9 @@
             "ARG",
             "CRO",
             "EGY",
-            "ESP",
             "FRA",
             "GER",
             "NED",
-            "POR",
             "SEN",
             "SUI",
             "USA"
@@ -270,10 +266,10 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 5,
+          "hits": 7,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 7,
+          "reached_count": 9,
           "missed": [
             "BEL",
             "MAR"
@@ -282,11 +278,9 @@
             "ARG",
             "AUT",
             "COL",
-            "ESP",
             "FRA",
             "GER",
             "NED",
-            "POR",
             "SUI",
             "TUR",
             "USA"
@@ -390,10 +384,10 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 5,
+          "hits": 7,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 7,
+          "reached_count": 9,
           "missed": [
             "MAR",
             "NOR"
@@ -401,11 +395,9 @@
           "false_positives": [
             "ARG",
             "CRO",
-            "ESP",
             "FRA",
             "GER",
             "NED",
-            "POR",
             "SEN",
             "SUI",
             "TUR",
@@ -508,10 +500,10 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 5,
+          "hits": 7,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 7,
+          "reached_count": 9,
           "missed": [
             "MAR",
             "NOR"
@@ -519,11 +511,9 @@
           "false_positives": [
             "ARG",
             "COL",
-            "ESP",
             "FRA",
             "GER",
             "NED",
-            "POR",
             "SEN",
             "SUI",
             "TUR",
@@ -630,10 +620,10 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 5,
+          "hits": 7,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 7,
+          "reached_count": 9,
           "missed": [
             "MAR",
             "NOR"
@@ -642,11 +632,9 @@
             "ARG",
             "CRO",
             "EGY",
-            "ESP",
             "FRA",
             "GER",
             "NED",
-            "POR",
             "SEN",
             "SUI",
             "USA"
@@ -750,10 +738,10 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 5,
+          "hits": 7,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 7,
+          "reached_count": 9,
           "missed": [
             "MAR",
             "NOR"
@@ -762,12 +750,10 @@
             "ARG",
             "COL",
             "ECU",
-            "ESP",
             "FRA",
             "GER",
             "KOR",
             "NED",
-            "POR",
             "TUR",
             "USA"
           ],
@@ -870,10 +856,10 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 5,
+          "hits": 7,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 7,
+          "reached_count": 9,
           "missed": [
             "CAN",
             "MAR"
@@ -881,12 +867,10 @@
           "false_positives": [
             "ARG",
             "COL",
-            "ESP",
             "FRA",
             "GER",
             "KOR",
             "NED",
-            "POR",
             "SUI",
             "TUR",
             "USA"
@@ -988,10 +972,10 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 6,
+          "hits": 8,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 7,
+          "reached_count": 9,
           "missed": [
             "MAR"
           ],
@@ -999,11 +983,9 @@
             "ARG",
             "COL",
             "EGY",
-            "ESP",
             "FRA",
             "GER",
             "NED",
-            "POR",
             "SUI",
             "USA"
           ],
@@ -1104,10 +1086,10 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 3,
+          "hits": 5,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 7,
+          "reached_count": 9,
           "missed": [
             "BEL",
             "CAN",
@@ -1119,12 +1101,10 @@
             "CIV",
             "COL",
             "EGY",
-            "ESP",
             "FRA",
             "GER",
             "KOR",
             "NED",
-            "POR",
             "SEN",
             "SUI",
             "USA"
@@ -1226,10 +1206,10 @@
     "advancement_accuracy": {
       "rounds": {
         "R16": {
-          "hits": 4,
+          "hits": 6,
           "total": 16,
           "predicted_count": 16,
-          "reached_count": 7,
+          "reached_count": 9,
           "missed": [
             "CAN",
             "MAR",
@@ -1238,12 +1218,10 @@
           "false_positives": [
             "ARG",
             "CRO",
-            "ESP",
             "FRA",
             "GER",
             "KOR",
             "NED",
-            "POR",
             "SEN",
             "SUI",
             "TUR",

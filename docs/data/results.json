@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02T19:12:35.688139+00:00",
+  "last_updated": "2026-07-03T02:08:41.089397+00:00",
   "matches": [
     {
       "fd_id": 537327,
@@ -1104,6 +1104,34 @@
       },
       "outcome": "home",
       "date": "2026-07-01",
+      "stage": "R32",
+      "group": null
+    },
+    {
+      "fd_id": null,
+      "match_id": 84,
+      "home_team": "ESP",
+      "away_team": "AUT",
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "outcome": "home",
+      "date": "2026-07-02",
+      "stage": "R32",
+      "group": null
+    },
+    {
+      "fd_id": null,
+      "match_id": 83,
+      "home_team": "POR",
+      "away_team": "CRO",
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "outcome": "home",
+      "date": "2026-07-02",
       "stage": "R32",
       "group": null
     }

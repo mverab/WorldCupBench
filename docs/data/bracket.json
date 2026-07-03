@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-02T19:12:35.721351+00:00",
+  "last_updated": "2026-07-03T02:08:41.123442+00:00",
   "rounds_order": [
     "R32",
     "R16",
@@ -464,10 +464,13 @@
         "city": "Toronto"
       },
       "feeds_into": 93,
-      "played": false,
-      "score": null,
-      "outcome": null,
-      "winner": null,
+      "played": true,
+      "score": {
+        "home": 2,
+        "away": 1
+      },
+      "outcome": "home",
+      "winner": "POR",
       "target_round": "R16",
       "model_picks": {
         "home": {
@@ -511,10 +514,13 @@
         "city": "Inglewood"
       },
       "feeds_into": 93,
-      "played": false,
-      "score": null,
-      "outcome": null,
-      "winner": null,
+      "played": true,
+      "score": {
+        "home": 3,
+        "away": 0
+      },
+      "outcome": "home",
+      "winner": "ESP",
       "target_round": "R16",
       "model_picks": {
         "home": {
@@ -846,8 +852,8 @@
       "match_id": 93,
       "stage": "R16",
       "round": "round_of_16",
-      "home_team": "W83",
-      "away_team": "W84",
+      "home_team": "POR",
+      "away_team": "ESP",
       "home_slot": "W83",
       "away_slot": "W84",
       "date": "2026-07-06",
@@ -863,12 +869,36 @@
       "target_round": "QF",
       "model_picks": {
         "home": {
-          "count": 0,
-          "models": []
+          "count": 11,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "Gemini-3.5-Flash",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Grok-4.3",
+            "Kimi-K2.6",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3",
+            "Nex-N2-Pro",
+            "Qwen-3.7-Max"
+          ]
         },
         "away": {
-          "count": 0,
-          "models": []
+          "count": 11,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "Gemini-3.5-Flash",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Grok-4.3",
+            "Kimi-K2.6",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3",
+            "Nex-N2-Pro",
+            "Qwen-3.7-Max"
+          ]
         }
       }
     },
@@ -1214,10 +1244,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 5,
+            "hits": 7,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 7,
+            "reached_count": 9,
             "missed": [
               "BEL",
               "MAR"
@@ -1225,11 +1255,9 @@
             "false_positives": [
               "ARG",
               "COL",
-              "ESP",
               "FRA",
               "GER",
               "NED",
-              "POR",
               "SEN",
               "SUI",
               "TUR",
@@ -1304,10 +1332,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 5,
+            "hits": 7,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 7,
+            "reached_count": 9,
             "missed": [
               "MAR",
               "NOR"
@@ -1316,11 +1344,9 @@
               "ARG",
               "CRO",
               "EGY",
-              "ESP",
               "FRA",
               "GER",
               "NED",
-              "POR",
               "SEN",
               "SUI",
               "USA"
@@ -1394,10 +1420,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 5,
+            "hits": 7,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 7,
+            "reached_count": 9,
             "missed": [
               "BEL",
               "MAR"
@@ -1406,11 +1432,9 @@
               "ARG",
               "AUT",
               "COL",
-              "ESP",
               "FRA",
               "GER",
               "NED",
-              "POR",
               "SUI",
               "TUR",
               "USA"
@@ -1484,10 +1508,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 5,
+            "hits": 7,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 7,
+            "reached_count": 9,
             "missed": [
               "MAR",
               "NOR"
@@ -1495,11 +1519,9 @@
             "false_positives": [
               "ARG",
               "CRO",
-              "ESP",
               "FRA",
               "GER",
               "NED",
-              "POR",
               "SEN",
               "SUI",
               "TUR",
@@ -1574,10 +1596,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 5,
+            "hits": 7,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 7,
+            "reached_count": 9,
             "missed": [
               "MAR",
               "NOR"
@@ -1585,11 +1607,9 @@
             "false_positives": [
               "ARG",
               "COL",
-              "ESP",
               "FRA",
               "GER",
               "NED",
-              "POR",
               "SEN",
               "SUI",
               "TUR",
@@ -1664,10 +1684,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 5,
+            "hits": 7,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 7,
+            "reached_count": 9,
             "missed": [
               "MAR",
               "NOR"
@@ -1676,11 +1696,9 @@
               "ARG",
               "CRO",
               "EGY",
-              "ESP",
               "FRA",
               "GER",
               "NED",
-              "POR",
               "SEN",
               "SUI",
               "USA"
@@ -1754,10 +1772,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 5,
+            "hits": 7,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 7,
+            "reached_count": 9,
             "missed": [
               "MAR",
               "NOR"
@@ -1766,12 +1784,10 @@
               "ARG",
               "COL",
               "ECU",
-              "ESP",
               "FRA",
               "GER",
               "KOR",
               "NED",
-              "POR",
               "TUR",
               "USA"
             ],
@@ -1844,10 +1860,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 5,
+            "hits": 7,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 7,
+            "reached_count": 9,
             "missed": [
               "CAN",
               "MAR"
@@ -1855,12 +1871,10 @@
             "false_positives": [
               "ARG",
               "COL",
-              "ESP",
               "FRA",
               "GER",
               "KOR",
               "NED",
-              "POR",
               "SUI",
               "TUR",
               "USA"
@@ -1934,10 +1948,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 6,
+            "hits": 8,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 7,
+            "reached_count": 9,
             "missed": [
               "MAR"
             ],
@@ -1945,11 +1959,9 @@
               "ARG",
               "COL",
               "EGY",
-              "ESP",
               "FRA",
               "GER",
               "NED",
-              "POR",
               "SUI",
               "USA"
             ],
@@ -2022,10 +2034,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 3,
+            "hits": 5,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 7,
+            "reached_count": 9,
             "missed": [
               "BEL",
               "CAN",
@@ -2037,12 +2049,10 @@
               "CIV",
               "COL",
               "EGY",
-              "ESP",
               "FRA",
               "GER",
               "KOR",
               "NED",
-              "POR",
               "SEN",
               "SUI",
               "USA"
@@ -2116,10 +2126,10 @@
       "advancement_accuracy": {
         "rounds": {
           "R16": {
-            "hits": 4,
+            "hits": 6,
             "total": 16,
             "predicted_count": 16,
-            "reached_count": 7,
+            "reached_count": 9,
             "missed": [
               "CAN",
               "MAR",
@@ -2128,12 +2138,10 @@
             "false_positives": [
               "ARG",
               "CRO",
-              "ESP",
               "FRA",
               "GER",
               "KOR",
               "NED",
-              "POR",
               "SEN",
               "SUI",
               "TUR",
