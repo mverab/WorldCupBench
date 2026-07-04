@@ -1305,7 +1305,7 @@
       "match_id": 96,
       "round": "round_of_16",
       "home_team": "W85",
-      "away_team": "W87",
+      "away_team": "COL",
       "date": "2026-07-07",
       "venue": {
         "stadium": "BC Place",
@@ -1563,6 +1563,6 @@
       "L"
     ],
     "all_groups_complete": true,
-    "last_updated": "2026-07-04T02:07:09.904179+00:00"
+    "last_updated": "2026-07-04T08:26:41.624716+00:00"
   }
 }

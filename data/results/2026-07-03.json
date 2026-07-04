@@ -1,6 +1,6 @@
 {
   "date": "2026-07-03",
-  "last_updated": "2026-07-04T02:07:09.901344+00:00",
+  "last_updated": "2026-07-04T08:26:41.622399+00:00",
   "matches": [
     {
       "fd_id": null,
@@ -38,6 +38,20 @@
       "score": {
         "home": 3,
         "away": 2
+      },
+      "outcome": "home",
+      "date": "2026-07-03",
+      "stage": "R32",
+      "group": null
+    },
+    {
+      "fd_id": null,
+      "match_id": 87,
+      "home_team": "COL",
+      "away_team": "GHA",
+      "score": {
+        "home": 1,
+        "away": 0
       },
       "outcome": "home",
       "date": "2026-07-03",
