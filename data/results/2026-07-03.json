@@ -1,6 +1,6 @@
 {
   "date": "2026-07-03",
-  "last_updated": "2026-07-03T19:05:46.476849+00:00",
+  "last_updated": "2026-07-04T02:07:09.901344+00:00",
   "matches": [
     {
       "fd_id": null,
@@ -10,6 +10,34 @@
       "score": {
         "home": 2,
         "away": 0
+      },
+      "outcome": "home",
+      "date": "2026-07-03",
+      "stage": "R32",
+      "group": null
+    },
+    {
+      "fd_id": null,
+      "match_id": 88,
+      "home_team": "AUS",
+      "away_team": "EGY",
+      "score": {
+        "home": 3,
+        "away": 5
+      },
+      "outcome": "away",
+      "date": "2026-07-03",
+      "stage": "R32",
+      "group": null
+    },
+    {
+      "fd_id": null,
+      "match_id": 86,
+      "home_team": "ARG",
+      "away_team": "CPV",
+      "score": {
+        "home": 3,
+        "away": 2
       },
       "outcome": "home",
       "date": "2026-07-03",

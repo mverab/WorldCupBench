@@ -1290,8 +1290,8 @@
     {
       "match_id": 95,
       "round": "round_of_16",
-      "home_team": "W86",
-      "away_team": "W88",
+      "home_team": "ARG",
+      "away_team": "EGY",
       "date": "2026-07-07",
       "venue": {
         "stadium": "Mercedes-Benz Stadium",
@@ -1563,6 +1563,6 @@
       "L"
     ],
     "all_groups_complete": true,
-    "last_updated": "2026-07-03T19:05:46.479724+00:00"
+    "last_updated": "2026-07-04T02:07:09.904179+00:00"
   }
 }
