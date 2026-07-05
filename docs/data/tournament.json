@@ -1207,7 +1207,7 @@
       "match_id": 89,
       "round": "round_of_16",
       "home_team": "W74",
-      "away_team": "W77",
+      "away_team": "FRA",
       "date": "2026-07-04",
       "venue": {
         "stadium": "Lincoln Financial Field",
@@ -1319,7 +1319,7 @@
       "match_id": 97,
       "round": "quarter_final",
       "home_team": "W89",
-      "away_team": "W90",
+      "away_team": "MAR",
       "date": "2026-07-09",
       "venue": {
         "stadium": "Gillette Stadium",
@@ -1563,6 +1563,6 @@
       "L"
     ],
     "all_groups_complete": true,
-    "last_updated": "2026-07-04T18:59:01.512847+00:00"
+    "last_updated": "2026-07-05T02:22:25.794416+00:00"
   }
 }

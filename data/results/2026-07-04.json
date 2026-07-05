@@ -1,0 +1,49 @@
+{
+  "date": "2026-07-04",
+  "last_updated": "2026-07-05T02:22:25.791664+00:00",
+  "matches": [
+    {
+      "fd_id": null,
+      "match_id": 90,
+      "home_team": "CAN",
+      "away_team": "MAR",
+      "score": {
+        "home": 0,
+        "away": 3
+      },
+      "outcome": "away",
+      "date": "2026-07-04",
+      "stage": "R16",
+      "group": null
+    },
+    {
+      "fd_id": null,
+      "match_id": 77,
+      "home_team": "PAR",
+      "away_team": "FRA",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "outcome": "away",
+      "date": "2026-07-04",
+      "stage": "R32",
+      "group": null,
+      "round": "round_of_32"
+    },
+    {
+      "fd_id": null,
+      "match_id": null,
+      "home_team": "PAR",
+      "away_team": "FRA",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "outcome": "away",
+      "date": "2026-07-04",
+      "stage": "R16",
+      "group": null
+    }
+  ]
+}
