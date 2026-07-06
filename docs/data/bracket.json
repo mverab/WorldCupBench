@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-06T02:27:14.991232+00:00",
+  "last_updated": "2026-07-06T09:59:37.041888+00:00",
   "rounds_order": [
     "R32",
     "R16",
@@ -848,10 +848,13 @@
         "city": "Mexico City"
       },
       "feeds_into": 99,
-      "played": false,
-      "score": null,
-      "outcome": null,
-      "winner": null,
+      "played": true,
+      "score": {
+        "home": 2,
+        "away": 3
+      },
+      "outcome": "away",
+      "winner": "ENG",
       "target_round": "QF",
       "model_picks": {
         "home": {
@@ -1102,7 +1105,7 @@
       "stage": "QF",
       "round": "quarter_final",
       "home_team": "NOR",
-      "away_team": "W92",
+      "away_team": "ENG",
       "home_slot": "W91",
       "away_slot": "W92",
       "date": "2026-07-11",
@@ -1122,8 +1125,14 @@
           "models": []
         },
         "away": {
-          "count": 0,
-          "models": []
+          "count": 5,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "Gemini-3.5-Flash",
+            "Grok-4.3",
+            "MiniMax-M3"
+          ]
         }
       }
     },
@@ -1304,10 +1313,10 @@
             "ready": false
           },
           "QF": {
-            "hits": 0,
+            "hits": 1,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 2,
+            "reached_count": 3,
             "missed": [
               "MAR",
               "NOR"
@@ -1315,7 +1324,6 @@
             "false_positives": [
               "ARG",
               "BRA",
-              "ENG",
               "ESP",
               "FRA",
               "NED",
@@ -1393,10 +1401,10 @@
             "ready": false
           },
           "QF": {
-            "hits": 0,
+            "hits": 1,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 2,
+            "reached_count": 3,
             "missed": [
               "MAR",
               "NOR"
@@ -1404,7 +1412,6 @@
             "false_positives": [
               "ARG",
               "BRA",
-              "ENG",
               "ESP",
               "GER",
               "NED",
@@ -1482,10 +1489,10 @@
             "ready": false
           },
           "QF": {
-            "hits": 0,
+            "hits": 1,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 2,
+            "reached_count": 3,
             "missed": [
               "MAR",
               "NOR"
@@ -1493,7 +1500,6 @@
             "false_positives": [
               "ARG",
               "BRA",
-              "ENG",
               "ESP",
               "FRA",
               "NED",
@@ -1573,10 +1579,10 @@
             "ready": false
           },
           "QF": {
-            "hits": 0,
+            "hits": 1,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 2,
+            "reached_count": 3,
             "missed": [
               "MAR",
               "NOR"
@@ -1585,7 +1591,6 @@
               "ARG",
               "BEL",
               "BRA",
-              "ENG",
               "ESP",
               "FRA",
               "NED",
@@ -1662,10 +1667,10 @@
             "ready": false
           },
           "QF": {
-            "hits": 0,
+            "hits": 1,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 2,
+            "reached_count": 3,
             "missed": [
               "MAR",
               "NOR"
@@ -1673,7 +1678,6 @@
             "false_positives": [
               "ARG",
               "BRA",
-              "ENG",
               "ESP",
               "FRA",
               "NED",
@@ -1751,10 +1755,10 @@
             "ready": false
           },
           "QF": {
-            "hits": 0,
+            "hits": 1,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 2,
+            "reached_count": 3,
             "missed": [
               "MAR",
               "NOR"
@@ -1762,7 +1766,6 @@
             "false_positives": [
               "BEL",
               "BRA",
-              "ENG",
               "ESP",
               "FRA",
               "NED",
@@ -1840,10 +1843,10 @@
             "ready": false
           },
           "QF": {
-            "hits": 0,
+            "hits": 1,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 2,
+            "reached_count": 3,
             "missed": [
               "MAR",
               "NOR"
@@ -1851,7 +1854,6 @@
             "false_positives": [
               "ARG",
               "BRA",
-              "ENG",
               "ESP",
               "FRA",
               "NED",
@@ -1929,10 +1931,10 @@
             "ready": false
           },
           "QF": {
-            "hits": 0,
+            "hits": 1,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 2,
+            "reached_count": 3,
             "missed": [
               "MAR",
               "NOR"
@@ -1941,7 +1943,6 @@
               "ARG",
               "BEL",
               "BRA",
-              "ENG",
               "ESP",
               "FRA",
               "NED",
@@ -2014,10 +2015,10 @@
             "ready": false
           },
           "QF": {
-            "hits": 0,
+            "hits": 1,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 2,
+            "reached_count": 3,
             "missed": [
               "MAR",
               "NOR"
@@ -2026,7 +2027,6 @@
               "ARG",
               "BEL",
               "BRA",
-              "ENG",
               "ESP",
               "FRA",
               "NED",
@@ -2108,8 +2108,9 @@
             "hits": 0,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 2,
+            "reached_count": 3,
             "missed": [
+              "ENG",
               "MAR",
               "NOR"
             ],
@@ -2198,10 +2199,10 @@
             "ready": false
           },
           "QF": {
-            "hits": 0,
+            "hits": 1,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 2,
+            "reached_count": 3,
             "missed": [
               "MAR",
               "NOR"
@@ -2209,7 +2210,6 @@
             "false_positives": [
               "ARG",
               "BRA",
-              "ENG",
               "ESP",
               "FRA",
               "NED",

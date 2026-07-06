@@ -1347,7 +1347,7 @@
       "match_id": 99,
       "round": "quarter_final",
       "home_team": "NOR",
-      "away_team": "W92",
+      "away_team": "ENG",
       "date": "2026-07-11",
       "venue": {
         "stadium": "Hard Rock Stadium",
@@ -1563,6 +1563,6 @@
       "L"
     ],
     "all_groups_complete": true,
-    "last_updated": "2026-07-06T02:27:13.904372+00:00"
+    "last_updated": "2026-07-06T09:59:35.878776+00:00"
   }
 }
