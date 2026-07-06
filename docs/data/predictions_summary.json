@@ -55,9 +55,10 @@
           "hits": 0,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 1,
+          "reached_count": 2,
           "missed": [
-            "MAR"
+            "MAR",
+            "NOR"
           ],
           "false_positives": [
             "ARG",
@@ -171,9 +172,10 @@
           "hits": 0,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 1,
+          "reached_count": 2,
           "missed": [
-            "MAR"
+            "MAR",
+            "NOR"
           ],
           "false_positives": [
             "ARG",
@@ -289,9 +291,10 @@
           "hits": 0,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 1,
+          "reached_count": 2,
           "missed": [
-            "MAR"
+            "MAR",
+            "NOR"
           ],
           "false_positives": [
             "ARG",
@@ -409,9 +412,10 @@
           "hits": 0,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 1,
+          "reached_count": 2,
           "missed": [
-            "MAR"
+            "MAR",
+            "NOR"
           ],
           "false_positives": [
             "ARG",
@@ -525,9 +529,10 @@
           "hits": 0,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 1,
+          "reached_count": 2,
           "missed": [
-            "MAR"
+            "MAR",
+            "NOR"
           ],
           "false_positives": [
             "ARG",
@@ -645,9 +650,10 @@
           "hits": 0,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 1,
+          "reached_count": 2,
           "missed": [
-            "MAR"
+            "MAR",
+            "NOR"
           ],
           "false_positives": [
             "BEL",
@@ -763,9 +769,10 @@
           "hits": 0,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 1,
+          "reached_count": 2,
           "missed": [
-            "MAR"
+            "MAR",
+            "NOR"
           ],
           "false_positives": [
             "ARG",
@@ -881,9 +888,10 @@
           "hits": 0,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 1,
+          "reached_count": 2,
           "missed": [
-            "MAR"
+            "MAR",
+            "NOR"
           ],
           "false_positives": [
             "ARG",
@@ -993,9 +1001,10 @@
           "hits": 0,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 1,
+          "reached_count": 2,
           "missed": [
-            "MAR"
+            "MAR",
+            "NOR"
           ],
           "false_positives": [
             "ARG",
@@ -1111,9 +1120,10 @@
           "hits": 0,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 1,
+          "reached_count": 2,
           "missed": [
-            "MAR"
+            "MAR",
+            "NOR"
           ],
           "false_positives": [
             "ARG",
@@ -1231,9 +1241,10 @@
           "hits": 0,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 1,
+          "reached_count": 2,
           "missed": [
-            "MAR"
+            "MAR",
+            "NOR"
           ],
           "false_positives": [
             "ARG",

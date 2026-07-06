@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-05T19:04:39.663272+00:00",
+  "last_updated": "2026-07-06T02:27:14.991232+00:00",
   "rounds_order": [
     "R32",
     "R16",
@@ -803,10 +803,13 @@
         "city": "East Rutherford"
       },
       "feeds_into": 99,
-      "played": false,
-      "score": null,
-      "outcome": null,
-      "winner": null,
+      "played": true,
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "outcome": "away",
+      "winner": "NOR",
       "target_round": "QF",
       "model_picks": {
         "home": {
@@ -1098,7 +1101,7 @@
       "match_id": 99,
       "stage": "QF",
       "round": "quarter_final",
-      "home_team": "W91",
+      "home_team": "NOR",
       "away_team": "W92",
       "home_slot": "W91",
       "away_slot": "W92",
@@ -1304,9 +1307,10 @@
             "hits": 0,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 1,
+            "reached_count": 2,
             "missed": [
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "ARG",
@@ -1392,9 +1396,10 @@
             "hits": 0,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 1,
+            "reached_count": 2,
             "missed": [
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "ARG",
@@ -1480,9 +1485,10 @@
             "hits": 0,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 1,
+            "reached_count": 2,
             "missed": [
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "ARG",
@@ -1570,9 +1576,10 @@
             "hits": 0,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 1,
+            "reached_count": 2,
             "missed": [
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "ARG",
@@ -1658,9 +1665,10 @@
             "hits": 0,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 1,
+            "reached_count": 2,
             "missed": [
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "ARG",
@@ -1746,9 +1754,10 @@
             "hits": 0,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 1,
+            "reached_count": 2,
             "missed": [
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "BEL",
@@ -1834,9 +1843,10 @@
             "hits": 0,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 1,
+            "reached_count": 2,
             "missed": [
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "ARG",
@@ -1922,9 +1932,10 @@
             "hits": 0,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 1,
+            "reached_count": 2,
             "missed": [
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "ARG",
@@ -2006,9 +2017,10 @@
             "hits": 0,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 1,
+            "reached_count": 2,
             "missed": [
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "ARG",
@@ -2096,9 +2108,10 @@
             "hits": 0,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 1,
+            "reached_count": 2,
             "missed": [
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "ARG",
@@ -2188,9 +2201,10 @@
             "hits": 0,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 1,
+            "reached_count": 2,
             "missed": [
-              "MAR"
+              "MAR",
+              "NOR"
             ],
             "false_positives": [
               "ARG",

@@ -1346,7 +1346,7 @@
     {
       "match_id": 99,
       "round": "quarter_final",
-      "home_team": "W91",
+      "home_team": "NOR",
       "away_team": "W92",
       "date": "2026-07-11",
       "venue": {
@@ -1563,6 +1563,6 @@
       "L"
     ],
     "all_groups_complete": true,
-    "last_updated": "2026-07-05T19:04:38.364011+00:00"
+    "last_updated": "2026-07-06T02:27:13.904372+00:00"
   }
 }

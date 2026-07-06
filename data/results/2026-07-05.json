@@ -1,0 +1,20 @@
+{
+  "date": "2026-07-05",
+  "last_updated": "2026-07-06T02:27:13.901977+00:00",
+  "matches": [
+    {
+      "fd_id": null,
+      "match_id": 91,
+      "home_team": "BRA",
+      "away_team": "NOR",
+      "score": {
+        "home": 1,
+        "away": 2
+      },
+      "outcome": "away",
+      "date": "2026-07-05",
+      "stage": "R16",
+      "group": null
+    }
+  ]
+}
