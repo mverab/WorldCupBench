@@ -52,10 +52,10 @@
           "ready": false
         },
         "QF": {
-          "hits": 1,
+          "hits": 2,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 3,
+          "reached_count": 4,
           "missed": [
             "MAR",
             "NOR"
@@ -63,7 +63,6 @@
           "false_positives": [
             "ARG",
             "BRA",
-            "ESP",
             "FRA",
             "NED",
             "POR",
@@ -168,10 +167,10 @@
           "ready": false
         },
         "QF": {
-          "hits": 1,
+          "hits": 2,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 3,
+          "reached_count": 4,
           "missed": [
             "MAR",
             "NOR"
@@ -179,7 +178,6 @@
           "false_positives": [
             "ARG",
             "BRA",
-            "ESP",
             "GER",
             "NED",
             "POR",
@@ -286,10 +284,10 @@
           "ready": false
         },
         "QF": {
-          "hits": 1,
+          "hits": 2,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 3,
+          "reached_count": 4,
           "missed": [
             "MAR",
             "NOR"
@@ -297,7 +295,6 @@
           "false_positives": [
             "ARG",
             "BRA",
-            "ESP",
             "FRA",
             "NED",
             "POR",
@@ -406,10 +403,10 @@
           "ready": false
         },
         "QF": {
-          "hits": 1,
+          "hits": 2,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 3,
+          "reached_count": 4,
           "missed": [
             "MAR",
             "NOR"
@@ -418,7 +415,6 @@
             "ARG",
             "BEL",
             "BRA",
-            "ESP",
             "FRA",
             "NED",
             "POR"
@@ -522,10 +518,10 @@
           "ready": false
         },
         "QF": {
-          "hits": 1,
+          "hits": 2,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 3,
+          "reached_count": 4,
           "missed": [
             "MAR",
             "NOR"
@@ -533,7 +529,6 @@
           "false_positives": [
             "ARG",
             "BRA",
-            "ESP",
             "FRA",
             "NED",
             "POR",
@@ -642,10 +637,10 @@
           "ready": false
         },
         "QF": {
-          "hits": 1,
+          "hits": 2,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 3,
+          "reached_count": 4,
           "missed": [
             "MAR",
             "NOR"
@@ -653,7 +648,6 @@
           "false_positives": [
             "BEL",
             "BRA",
-            "ESP",
             "FRA",
             "NED",
             "POR",
@@ -760,10 +754,10 @@
           "ready": false
         },
         "QF": {
-          "hits": 1,
+          "hits": 2,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 3,
+          "reached_count": 4,
           "missed": [
             "MAR",
             "NOR"
@@ -771,7 +765,6 @@
           "false_positives": [
             "ARG",
             "BRA",
-            "ESP",
             "FRA",
             "NED",
             "POR",
@@ -878,10 +871,10 @@
           "ready": false
         },
         "QF": {
-          "hits": 1,
+          "hits": 2,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 3,
+          "reached_count": 4,
           "missed": [
             "MAR",
             "NOR"
@@ -890,7 +883,6 @@
             "ARG",
             "BEL",
             "BRA",
-            "ESP",
             "FRA",
             "NED",
             "POR"
@@ -990,10 +982,10 @@
           "ready": false
         },
         "QF": {
-          "hits": 1,
+          "hits": 2,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 3,
+          "reached_count": 4,
           "missed": [
             "MAR",
             "NOR"
@@ -1002,7 +994,6 @@
             "ARG",
             "BEL",
             "BRA",
-            "ESP",
             "FRA",
             "NED",
             "POR"
@@ -1108,10 +1099,10 @@
           "ready": false
         },
         "QF": {
-          "hits": 0,
+          "hits": 1,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 3,
+          "reached_count": 4,
           "missed": [
             "ENG",
             "MAR",
@@ -1120,7 +1111,6 @@
           "false_positives": [
             "ARG",
             "BRA",
-            "ESP",
             "FRA",
             "MEX",
             "NED",
@@ -1230,10 +1220,10 @@
           "ready": false
         },
         "QF": {
-          "hits": 1,
+          "hits": 2,
           "total": 8,
           "predicted_count": 8,
-          "reached_count": 3,
+          "reached_count": 4,
           "missed": [
             "MAR",
             "NOR"
@@ -1241,7 +1231,6 @@
           "false_positives": [
             "ARG",
             "BRA",
-            "ESP",
             "FRA",
             "NED",
             "POR",

@@ -1332,7 +1332,7 @@
     {
       "match_id": 98,
       "round": "quarter_final",
-      "home_team": "W93",
+      "home_team": "ESP",
       "away_team": "W94",
       "date": "2026-07-10",
       "venue": {
@@ -1563,6 +1563,6 @@
       "L"
     ],
     "all_groups_complete": true,
-    "last_updated": "2026-07-06T19:44:53.993338+00:00"
+    "last_updated": "2026-07-07T02:22:50.921684+00:00"
   }
 }

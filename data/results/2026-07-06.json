@@ -1,0 +1,20 @@
+{
+  "date": "2026-07-06",
+  "last_updated": "2026-07-07T02:22:50.916657+00:00",
+  "matches": [
+    {
+      "fd_id": null,
+      "match_id": 93,
+      "home_team": "POR",
+      "away_team": "ESP",
+      "score": {
+        "home": 0,
+        "away": 1
+      },
+      "outcome": "away",
+      "date": "2026-07-06",
+      "stage": "R16",
+      "group": null
+    }
+  ]
+}
