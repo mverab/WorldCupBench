@@ -1,141 +1,21 @@
 {
-  "last_updated": "2026-07-07T14:11:16.657942+00:00",
-  "total_results": 89,
+  "last_updated": "2026-07-07T19:44:11.035078+00:00",
+  "total_results": 90,
   "total_models": 11,
   "qualifiers_known": 32,
   "qualifiers_ready": true,
   "advancement_rounds_ready": [],
   "models": [
     {
-      "model": "MiMo-V2.5-Pro",
-      "model_id": "xiaomi/mimo-v2.5-pro-20260422",
-      "brier_group": 35.0096,
-      "brier_knockout": 3.9622,
-      "brier_total": 14.918011,
-      "quiniela_points": 72,
-      "roi": null,
-      "roi_status": "no_market_data",
-      "n_matches_scored": 89,
-      "qualifier_accuracy": {
-        "hits": 26,
-        "score": 0.8125,
-        "with_position_bonus": 23,
-        "third_place_hits": 4,
-        "missed": [
-          "BIH",
-          "COD",
-          "CPV",
-          "GHA",
-          "PAR",
-          "RSA"
-        ],
-        "false_positives": [
-          "CZE",
-          "IRN",
-          "KOR",
-          "SCO",
-          "TUR",
-          "URU"
-        ],
-        "predicted_count": 32,
-        "qualified_count": 32,
-        "ready": true
-      },
-      "advancement_accuracy": {
-        "rounds": {
-          "R16": {
-            "hits": 10,
-            "total": 16,
-            "predicted_count": 16,
-            "reached_count": 13,
-            "missed": [
-              "CAN",
-              "EGY",
-              "MAR"
-            ],
-            "false_positives": [
-              "GER",
-              "KOR",
-              "NED",
-              "SUI",
-              "TUR",
-              "USA"
-            ],
-            "ready": false
-          },
-          "QF": {
-            "hits": 2,
-            "total": 8,
-            "predicted_count": 8,
-            "reached_count": 4,
-            "missed": [
-              "MAR",
-              "NOR"
-            ],
-            "false_positives": [
-              "ARG",
-              "BEL",
-              "BRA",
-              "FRA",
-              "NED",
-              "POR"
-            ],
-            "ready": false
-          },
-          "SF": {
-            "hits": 0,
-            "total": 4,
-            "predicted_count": 4,
-            "reached_count": 0,
-            "missed": [],
-            "false_positives": [
-              "ARG",
-              "BRA",
-              "ESP",
-              "FRA"
-            ],
-            "ready": false
-          },
-          "FINAL": {
-            "hits": 0,
-            "total": 2,
-            "predicted_count": 2,
-            "reached_count": 0,
-            "missed": [],
-            "false_positives": [
-              "ARG",
-              "FRA"
-            ],
-            "ready": false
-          },
-          "CHAMPION": {
-            "hits": 0,
-            "total": 1,
-            "predicted_count": 1,
-            "reached_count": 0,
-            "missed": [],
-            "false_positives": [
-              "ARG"
-            ],
-            "ready": false
-          }
-        },
-        "hits": 0,
-        "total": 0,
-        "score": 0.0,
-        "ready": false
-      }
-    },
-    {
       "model": "DeepSeek-V4-Pro",
       "model_id": "deepseek/deepseek-v4-pro-20260423",
       "brier_group": 35.0214,
-      "brier_knockout": 3.9575,
-      "brier_total": 14.921887,
-      "quiniela_points": 70,
+      "brier_knockout": 3.9975,
+      "brier_total": 14.80806,
+      "quiniela_points": 74,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 89,
+      "n_matches_scored": 90,
       "qualifier_accuracy": {
         "hits": 27,
         "score": 0.84375,
@@ -182,16 +62,15 @@
             "ready": false
           },
           "QF": {
-            "hits": 2,
+            "hits": 3,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BRA",
               "GER",
               "NED",
@@ -245,15 +124,134 @@
       }
     },
     {
+      "model": "MiMo-V2.5-Pro",
+      "model_id": "xiaomi/mimo-v2.5-pro-20260422",
+      "brier_group": 35.0096,
+      "brier_knockout": 4.0847,
+      "brier_total": 14.82078,
+      "quiniela_points": 76,
+      "roi": null,
+      "roi_status": "no_market_data",
+      "n_matches_scored": 90,
+      "qualifier_accuracy": {
+        "hits": 26,
+        "score": 0.8125,
+        "with_position_bonus": 23,
+        "third_place_hits": 4,
+        "missed": [
+          "BIH",
+          "COD",
+          "CPV",
+          "GHA",
+          "PAR",
+          "RSA"
+        ],
+        "false_positives": [
+          "CZE",
+          "IRN",
+          "KOR",
+          "SCO",
+          "TUR",
+          "URU"
+        ],
+        "predicted_count": 32,
+        "qualified_count": 32,
+        "ready": true
+      },
+      "advancement_accuracy": {
+        "rounds": {
+          "R16": {
+            "hits": 10,
+            "total": 16,
+            "predicted_count": 16,
+            "reached_count": 13,
+            "missed": [
+              "CAN",
+              "EGY",
+              "MAR"
+            ],
+            "false_positives": [
+              "GER",
+              "KOR",
+              "NED",
+              "SUI",
+              "TUR",
+              "USA"
+            ],
+            "ready": false
+          },
+          "QF": {
+            "hits": 3,
+            "total": 8,
+            "predicted_count": 8,
+            "reached_count": 5,
+            "missed": [
+              "MAR",
+              "NOR"
+            ],
+            "false_positives": [
+              "BEL",
+              "BRA",
+              "FRA",
+              "NED",
+              "POR"
+            ],
+            "ready": false
+          },
+          "SF": {
+            "hits": 0,
+            "total": 4,
+            "predicted_count": 4,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "BRA",
+              "ESP",
+              "FRA"
+            ],
+            "ready": false
+          },
+          "FINAL": {
+            "hits": 0,
+            "total": 2,
+            "predicted_count": 2,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG",
+              "FRA"
+            ],
+            "ready": false
+          },
+          "CHAMPION": {
+            "hits": 0,
+            "total": 1,
+            "predicted_count": 1,
+            "reached_count": 0,
+            "missed": [],
+            "false_positives": [
+              "ARG"
+            ],
+            "ready": false
+          }
+        },
+        "hits": 0,
+        "total": 0,
+        "score": 0.0,
+        "ready": false
+      }
+    },
+    {
       "model": "MiniMax-M3",
       "model_id": "minimax/minimax-m3-20260531",
       "brier_group": 35.3422,
-      "brier_knockout": 3.5521,
-      "brier_total": 14.974212,
-      "quiniela_points": 75,
+      "brier_knockout": 3.6421,
+      "brier_total": 14.8653,
+      "quiniela_points": 79,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 89,
+      "n_matches_scored": 90,
       "qualifier_accuracy": {
         "hits": 27,
         "score": 0.84375,
@@ -296,16 +294,15 @@
             "ready": false
           },
           "QF": {
-            "hits": 2,
+            "hits": 3,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BEL",
               "BRA",
               "FRA",
@@ -362,12 +359,12 @@
       "model": "Nex-N2-Pro",
       "model_id": "nex-agi/nex-n2-pro:free",
       "brier_group": 35.1942,
-      "brier_knockout": 4.2223,
-      "brier_total": 15.042363,
-      "quiniela_points": 63,
+      "brier_knockout": 4.3312,
+      "brier_total": 14.94392,
+      "quiniela_points": 67,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 89,
+      "n_matches_scored": 90,
       "qualifier_accuracy": {
         "hits": 27,
         "score": 0.84375,
@@ -416,17 +413,16 @@
             "ready": false
           },
           "QF": {
-            "hits": 1,
+            "hits": 2,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "ENG",
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BRA",
               "FRA",
               "MEX",
@@ -484,12 +480,12 @@
       "model": "Gemini-3.5-Flash",
       "model_id": "google/gemini-3.5-flash-20260519",
       "brier_group": 35.535,
-      "brier_knockout": 3.9675,
-      "brier_total": 15.131545,
-      "quiniela_points": 69,
+      "brier_knockout": 4.09,
+      "brier_total": 15.032,
+      "quiniela_points": 73,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 89,
+      "n_matches_scored": 90,
       "qualifier_accuracy": {
         "hits": 26,
         "score": 0.8125,
@@ -538,16 +534,15 @@
             "ready": false
           },
           "QF": {
-            "hits": 2,
+            "hits": 3,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BRA",
               "FRA",
               "NED",
@@ -604,12 +599,12 @@
       "model": "GPT-5.5",
       "model_id": "openai/gpt-5.5-20260423",
       "brier_group": 35.8112,
-      "brier_knockout": 3.9887,
-      "brier_total": 15.247316,
-      "quiniela_points": 67,
+      "brier_knockout": 4.1043,
+      "brier_total": 15.14534,
+      "quiniela_points": 71,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 89,
+      "n_matches_scored": 90,
       "qualifier_accuracy": {
         "hits": 27,
         "score": 0.84375,
@@ -656,16 +651,15 @@
             "ready": false
           },
           "QF": {
-            "hits": 2,
+            "hits": 3,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BRA",
               "FRA",
               "NED",
@@ -722,12 +716,12 @@
       "model": "Qwen-3.7-Max",
       "model_id": "qwen/qwen3.7-max-20260520",
       "brier_group": 35.735,
-      "brier_knockout": 4.3925,
-      "brier_total": 15.293624,
-      "quiniela_points": 66,
+      "brier_knockout": 4.455,
+      "brier_total": 15.185,
+      "quiniela_points": 70,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 89,
+      "n_matches_scored": 90,
       "qualifier_accuracy": {
         "hits": 27,
         "score": 0.84375,
@@ -778,16 +772,15 @@
             "ready": false
           },
           "QF": {
-            "hits": 2,
+            "hits": 3,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BRA",
               "FRA",
               "NED",
@@ -844,12 +837,12 @@
       "model": "Grok-4.3",
       "model_id": "x-ai/grok-4.3-20260430",
       "brier_group": 35.909,
-      "brier_knockout": 4.1373,
-      "brier_total": 15.31526,
+      "brier_knockout": 4.3677,
+      "brier_total": 15.23714,
       "quiniela_points": 69,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 89,
+      "n_matches_scored": 90,
       "qualifier_accuracy": {
         "hits": 25,
         "score": 0.78125,
@@ -903,8 +896,9 @@
             "hits": 2,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
+              "ARG",
               "MAR",
               "NOR"
             ],
@@ -966,12 +960,12 @@
       "model": "Kimi-K2.6",
       "model_id": "moonshotai/kimi-k2.6-20260420",
       "brier_group": 36.1986,
-      "brier_knockout": 4.0051,
-      "brier_total": 15.407149,
-      "quiniela_points": 65,
+      "brier_knockout": 4.0835,
+      "brier_total": 15.29614,
+      "quiniela_points": 69,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 89,
+      "n_matches_scored": 90,
       "qualifier_accuracy": {
         "hits": 26,
         "score": 0.8125,
@@ -1020,16 +1014,15 @@
             "ready": false
           },
           "QF": {
-            "hits": 2,
+            "hits": 3,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BRA",
               "FRA",
               "NED",
@@ -1086,12 +1079,12 @@
       "model": "Claude-Fable-5",
       "model_id": "anthropic/claude-5-fable-20260609",
       "brier_group": 36.638,
-      "brier_knockout": 3.7859,
-      "brier_total": 15.543015,
-      "quiniela_points": 66,
+      "brier_knockout": 3.8883,
+      "brier_total": 15.43286,
+      "quiniela_points": 70,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 89,
+      "n_matches_scored": 90,
       "qualifier_accuracy": {
         "hits": 27,
         "score": 0.84375,
@@ -1138,16 +1131,15 @@
             "ready": false
           },
           "QF": {
-            "hits": 2,
+            "hits": 3,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BRA",
               "FRA",
               "NED",
@@ -1204,12 +1196,12 @@
       "model": "GLM-5.1",
       "model_id": "z-ai/glm-5.1-20260406",
       "brier_group": 36.7908,
-      "brier_knockout": 4.0975,
-      "brier_total": 15.66434,
-      "quiniela_points": 70,
+      "brier_knockout": 4.1875,
+      "brier_total": 15.55382,
+      "quiniela_points": 74,
       "roi": null,
       "roi_status": "no_market_data",
-      "n_matches_scored": 89,
+      "n_matches_scored": 90,
       "qualifier_accuracy": {
         "hits": 26,
         "score": 0.8125,
@@ -1260,16 +1252,15 @@
             "ready": false
           },
           "QF": {
-            "hits": 2,
+            "hits": 3,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BEL",
               "BRA",
               "FRA",

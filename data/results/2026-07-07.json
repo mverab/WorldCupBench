@@ -1,6 +1,6 @@
 {
   "date": "2026-07-07",
-  "last_updated": "2026-07-07T14:11:16.586954+00:00",
+  "last_updated": "2026-07-07T19:44:10.961274+00:00",
   "matches": [
     {
       "fd_id": null,
@@ -12,6 +12,20 @@
         "away": 4
       },
       "outcome": "away",
+      "date": "2026-07-07",
+      "stage": "R16",
+      "group": null
+    },
+    {
+      "fd_id": null,
+      "match_id": 95,
+      "home_team": "ARG",
+      "away_team": "EGY",
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "outcome": "home",
       "date": "2026-07-07",
       "stage": "R16",
       "group": null

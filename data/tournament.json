@@ -1360,7 +1360,7 @@
     {
       "match_id": 100,
       "round": "quarter_final",
-      "home_team": "W95",
+      "home_team": "ARG",
       "away_team": "W96",
       "date": "2026-07-11",
       "venue": {
@@ -1563,6 +1563,6 @@
       "L"
     ],
     "all_groups_complete": true,
-    "last_updated": "2026-07-07T14:11:16.590095+00:00"
+    "last_updated": "2026-07-07T19:44:10.966202+00:00"
   }
 }

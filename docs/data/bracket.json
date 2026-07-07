@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-07T14:11:17.971900+00:00",
+  "last_updated": "2026-07-07T19:44:11.960082+00:00",
   "rounds_order": [
     "R32",
     "R16",
@@ -986,10 +986,13 @@
         "city": "Atlanta"
       },
       "feeds_into": 100,
-      "played": false,
-      "score": null,
-      "outcome": null,
-      "winner": null,
+      "played": true,
+      "score": {
+        "home": 3,
+        "away": 2
+      },
+      "outcome": "home",
+      "winner": "ARG",
       "target_round": "QF",
       "model_picks": {
         "home": {
@@ -1152,7 +1155,7 @@
       "match_id": 100,
       "stage": "QF",
       "round": "quarter_final",
-      "home_team": "W95",
+      "home_team": "ARG",
       "away_team": "W96",
       "home_slot": "W95",
       "away_slot": "W96",
@@ -1169,8 +1172,18 @@
       "target_round": "SF",
       "model_picks": {
         "home": {
-          "count": 0,
-          "models": []
+          "count": 9,
+          "models": [
+            "Claude-Fable-5",
+            "DeepSeek-V4-Pro",
+            "Gemini-3.5-Flash",
+            "GLM-5.1",
+            "GPT-5.5",
+            "Kimi-K2.6",
+            "MiMo-V2.5-Pro",
+            "MiniMax-M3",
+            "Qwen-3.7-Max"
+          ]
         },
         "away": {
           "count": 0,
@@ -1325,16 +1338,15 @@
             "ready": false
           },
           "QF": {
-            "hits": 2,
+            "hits": 3,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BRA",
               "FRA",
               "NED",
@@ -1412,16 +1424,15 @@
             "ready": false
           },
           "QF": {
-            "hits": 2,
+            "hits": 3,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BRA",
               "GER",
               "NED",
@@ -1499,16 +1510,15 @@
             "ready": false
           },
           "QF": {
-            "hits": 2,
+            "hits": 3,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BRA",
               "FRA",
               "NED",
@@ -1588,16 +1598,15 @@
             "ready": false
           },
           "QF": {
-            "hits": 2,
+            "hits": 3,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BEL",
               "BRA",
               "FRA",
@@ -1675,16 +1684,15 @@
             "ready": false
           },
           "QF": {
-            "hits": 2,
+            "hits": 3,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BRA",
               "FRA",
               "NED",
@@ -1765,8 +1773,9 @@
             "hits": 2,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
+              "ARG",
               "MAR",
               "NOR"
             ],
@@ -1849,16 +1858,15 @@
             "ready": false
           },
           "QF": {
-            "hits": 2,
+            "hits": 3,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BRA",
               "FRA",
               "NED",
@@ -1936,16 +1944,15 @@
             "ready": false
           },
           "QF": {
-            "hits": 2,
+            "hits": 3,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BEL",
               "BRA",
               "FRA",
@@ -2019,16 +2026,15 @@
             "ready": false
           },
           "QF": {
-            "hits": 2,
+            "hits": 3,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BEL",
               "BRA",
               "FRA",
@@ -2108,17 +2114,16 @@
             "ready": false
           },
           "QF": {
-            "hits": 1,
+            "hits": 2,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "ENG",
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BRA",
               "FRA",
               "MEX",
@@ -2201,16 +2206,15 @@
             "ready": false
           },
           "QF": {
-            "hits": 2,
+            "hits": 3,
             "total": 8,
             "predicted_count": 8,
-            "reached_count": 4,
+            "reached_count": 5,
             "missed": [
               "MAR",
               "NOR"
             ],
             "false_positives": [
-              "ARG",
               "BRA",
               "FRA",
               "NED",
