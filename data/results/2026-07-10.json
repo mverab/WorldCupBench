@@ -1,18 +1,18 @@
 {
-  "date": "2026-07-09",
-  "last_updated": "2026-07-11T01:54:27.319688+00:00",
+  "date": "2026-07-10",
+  "last_updated": "2026-07-11T01:54:27.319860+00:00",
   "matches": [
     {
       "fd_id": null,
       "match_id": null,
-      "home_team": "FRA",
-      "away_team": "MAR",
+      "home_team": "ESP",
+      "away_team": "BEL",
       "score": {
         "home": 2,
-        "away": 0
+        "away": 1
       },
       "outcome": "home",
-      "date": "2026-07-09",
+      "date": "2026-07-10",
       "stage": "QF",
       "group": null
     }
