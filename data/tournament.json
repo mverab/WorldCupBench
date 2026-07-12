@@ -1388,7 +1388,7 @@
     {
       "match_id": 102,
       "round": "semi_final",
-      "home_team": "W99",
+      "home_team": "ENG",
       "away_team": "W100",
       "date": "2026-07-15",
       "venue": {
@@ -1563,6 +1563,6 @@
       "L"
     ],
     "all_groups_complete": true,
-    "last_updated": "2026-07-11T18:48:43.055917+00:00"
+    "last_updated": "2026-07-12T01:57:38.425904+00:00"
   }
 }

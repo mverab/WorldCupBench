@@ -70,14 +70,13 @@
           "ready": false
         },
         "SF": {
-          "hits": 0,
+          "hits": 1,
           "total": 4,
           "predicted_count": 4,
-          "reached_count": 0,
+          "reached_count": 1,
           "missed": [],
           "false_positives": [
             "ARG",
-            "ENG",
             "ESP",
             "FRA"
           ],
@@ -184,14 +183,13 @@
           "ready": false
         },
         "SF": {
-          "hits": 0,
+          "hits": 1,
           "total": 4,
           "predicted_count": 4,
-          "reached_count": 0,
+          "reached_count": 1,
           "missed": [],
           "false_positives": [
             "ARG",
-            "ENG",
             "GER",
             "USA"
           ],
@@ -300,14 +298,13 @@
           "ready": false
         },
         "SF": {
-          "hits": 0,
+          "hits": 1,
           "total": 4,
           "predicted_count": 4,
-          "reached_count": 0,
+          "reached_count": 1,
           "missed": [],
           "false_positives": [
             "ARG",
-            "ENG",
             "ESP",
             "FRA"
           ],
@@ -421,8 +418,10 @@
           "hits": 0,
           "total": 4,
           "predicted_count": 4,
-          "reached_count": 0,
-          "missed": [],
+          "reached_count": 1,
+          "missed": [
+            "ENG"
+          ],
           "false_positives": [
             "ARG",
             "BRA",
@@ -535,8 +534,10 @@
           "hits": 0,
           "total": 4,
           "predicted_count": 4,
-          "reached_count": 0,
-          "missed": [],
+          "reached_count": 1,
+          "missed": [
+            "ENG"
+          ],
           "false_positives": [
             "ARG",
             "BRA",
@@ -652,14 +653,13 @@
           "ready": false
         },
         "SF": {
-          "hits": 0,
+          "hits": 1,
           "total": 4,
           "predicted_count": 4,
-          "reached_count": 0,
+          "reached_count": 1,
           "missed": [],
           "false_positives": [
             "BRA",
-            "ENG",
             "FRA",
             "POR"
           ],
@@ -771,8 +771,10 @@
           "hits": 0,
           "total": 4,
           "predicted_count": 4,
-          "reached_count": 0,
-          "missed": [],
+          "reached_count": 1,
+          "missed": [
+            "ENG"
+          ],
           "false_positives": [
             "ARG",
             "BRA",
@@ -887,8 +889,10 @@
           "hits": 0,
           "total": 4,
           "predicted_count": 4,
-          "reached_count": 0,
-          "missed": [],
+          "reached_count": 1,
+          "missed": [
+            "ENG"
+          ],
           "false_positives": [
             "ARG",
             "BRA",
@@ -994,14 +998,13 @@
           "ready": false
         },
         "SF": {
-          "hits": 0,
+          "hits": 1,
           "total": 4,
           "predicted_count": 4,
-          "reached_count": 0,
+          "reached_count": 1,
           "missed": [],
           "false_positives": [
             "ARG",
-            "ENG",
             "ESP",
             "FRA"
           ],
@@ -1115,8 +1118,10 @@
           "hits": 0,
           "total": 4,
           "predicted_count": 4,
-          "reached_count": 0,
-          "missed": [],
+          "reached_count": 1,
+          "missed": [
+            "ENG"
+          ],
           "false_positives": [
             "BRA",
             "FRA",
@@ -1233,8 +1238,10 @@
           "hits": 0,
           "total": 4,
           "predicted_count": 4,
-          "reached_count": 0,
-          "missed": [],
+          "reached_count": 1,
+          "missed": [
+            "ENG"
+          ],
           "false_positives": [
             "ARG",
             "BRA",
