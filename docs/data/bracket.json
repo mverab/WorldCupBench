@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-18T18:51:57.373588+00:00",
+  "last_updated": "2026-07-19T01:55:08.746396+00:00",
   "rounds_order": [
     "R32",
     "R16",
@@ -1271,10 +1271,13 @@
         "city": "Miami Gardens"
       },
       "feeds_into": null,
-      "played": false,
-      "score": null,
-      "outcome": null,
-      "winner": null,
+      "played": true,
+      "score": {
+        "home": 4,
+        "away": 6
+      },
+      "outcome": "away",
+      "winner": "ENG",
       "target_round": "THIRD_PLACE",
       "model_picks": {
         "home": {
