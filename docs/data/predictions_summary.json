@@ -95,21 +95,19 @@
           "ready": false
         },
         "CHAMPION": {
-          "hits": 0,
+          "hits": 1,
           "total": 1,
           "predicted_count": 1,
-          "reached_count": 0,
+          "reached_count": 1,
           "missed": [],
-          "false_positives": [
-            "ESP"
-          ],
-          "ready": false
+          "false_positives": [],
+          "ready": true
         }
       },
-      "hits": 0,
-      "total": 0,
-      "score": 0.0,
-      "ready": false
+      "hits": 1,
+      "total": 1,
+      "score": 1.0,
+      "ready": true
     }
   },
   {
@@ -211,18 +209,20 @@
           "hits": 0,
           "total": 1,
           "predicted_count": 1,
-          "reached_count": 0,
-          "missed": [],
+          "reached_count": 1,
+          "missed": [
+            "ESP"
+          ],
           "false_positives": [
             "ARG"
           ],
-          "ready": false
+          "ready": true
         }
       },
       "hits": 0,
-      "total": 0,
+      "total": 1,
       "score": 0.0,
-      "ready": false
+      "ready": true
     }
   },
   {
@@ -326,18 +326,20 @@
           "hits": 0,
           "total": 1,
           "predicted_count": 1,
-          "reached_count": 0,
-          "missed": [],
+          "reached_count": 1,
+          "missed": [
+            "ESP"
+          ],
           "false_positives": [
             "FRA"
           ],
-          "ready": false
+          "ready": true
         }
       },
       "hits": 0,
-      "total": 0,
+      "total": 1,
       "score": 0.0,
-      "ready": false
+      "ready": true
     }
   },
   {
@@ -446,18 +448,20 @@
           "hits": 0,
           "total": 1,
           "predicted_count": 1,
-          "reached_count": 0,
-          "missed": [],
+          "reached_count": 1,
+          "missed": [
+            "ESP"
+          ],
           "false_positives": [
             "BRA"
           ],
-          "ready": false
+          "ready": true
         }
       },
       "hits": 0,
-      "total": 0,
+      "total": 1,
       "score": 0.0,
-      "ready": false
+      "ready": true
     }
   },
   {
@@ -562,18 +566,20 @@
           "hits": 0,
           "total": 1,
           "predicted_count": 1,
-          "reached_count": 0,
-          "missed": [],
+          "reached_count": 1,
+          "missed": [
+            "ESP"
+          ],
           "false_positives": [
             "FRA"
           ],
-          "ready": false
+          "ready": true
         }
       },
       "hits": 0,
-      "total": 0,
+      "total": 1,
       "score": 0.0,
-      "ready": false
+      "ready": true
     }
   },
   {
@@ -681,18 +687,20 @@
           "hits": 0,
           "total": 1,
           "predicted_count": 1,
-          "reached_count": 0,
-          "missed": [],
+          "reached_count": 1,
+          "missed": [
+            "ESP"
+          ],
           "false_positives": [
             "BRA"
           ],
-          "ready": false
+          "ready": true
         }
       },
       "hits": 0,
-      "total": 0,
+      "total": 1,
       "score": 0.0,
-      "ready": false
+      "ready": true
     }
   },
   {
@@ -799,18 +807,20 @@
           "hits": 0,
           "total": 1,
           "predicted_count": 1,
-          "reached_count": 0,
-          "missed": [],
+          "reached_count": 1,
+          "missed": [
+            "ESP"
+          ],
           "false_positives": [
             "ARG"
           ],
-          "ready": false
+          "ready": true
         }
       },
       "hits": 0,
-      "total": 0,
+      "total": 1,
       "score": 0.0,
-      "ready": false
+      "ready": true
     }
   },
   {
@@ -917,18 +927,20 @@
           "hits": 0,
           "total": 1,
           "predicted_count": 1,
-          "reached_count": 0,
-          "missed": [],
+          "reached_count": 1,
+          "missed": [
+            "ESP"
+          ],
           "false_positives": [
             "ARG"
           ],
-          "ready": false
+          "ready": true
         }
       },
       "hits": 0,
-      "total": 0,
+      "total": 1,
       "score": 0.0,
-      "ready": false
+      "ready": true
     }
   },
   {
@@ -1026,18 +1038,20 @@
           "hits": 0,
           "total": 1,
           "predicted_count": 1,
-          "reached_count": 0,
-          "missed": [],
+          "reached_count": 1,
+          "missed": [
+            "ESP"
+          ],
           "false_positives": [
             "FRA"
           ],
-          "ready": false
+          "ready": true
         }
       },
       "hits": 0,
-      "total": 0,
+      "total": 1,
       "score": 0.0,
-      "ready": false
+      "ready": true
     }
   },
   {
@@ -1146,18 +1160,20 @@
           "hits": 0,
           "total": 1,
           "predicted_count": 1,
-          "reached_count": 0,
-          "missed": [],
+          "reached_count": 1,
+          "missed": [
+            "ESP"
+          ],
           "false_positives": [
             "FRA"
           ],
-          "ready": false
+          "ready": true
         }
       },
       "hits": 0,
-      "total": 0,
+      "total": 1,
       "score": 0.0,
-      "ready": false
+      "ready": true
     }
   },
   {
@@ -1266,18 +1282,20 @@
           "hits": 0,
           "total": 1,
           "predicted_count": 1,
-          "reached_count": 0,
-          "missed": [],
+          "reached_count": 1,
+          "missed": [
+            "ESP"
+          ],
           "false_positives": [
             "ARG"
           ],
-          "ready": false
+          "ready": true
         }
       },
       "hits": 0,
-      "total": 0,
+      "total": 1,
       "score": 0.0,
-      "ready": false
+      "ready": true
     }
   }
 ]
