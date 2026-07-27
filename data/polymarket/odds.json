@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-07-27T09:35:24.904833+00:00",
+  "last_updated": "2026-07-27T14:13:53.134632+00:00",
   "total_events": 20,
   "events": [
     {
@@ -119,7 +119,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "series": [
@@ -143,7 +144,7 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:36:01.131Z",
-          "updatedAt": "2026-07-27T09:34:35.328146Z",
+          "updatedAt": "2026-07-27T14:12:47.287813Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 11.073004,
@@ -174,7 +175,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2891",
@@ -294,7 +296,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "series": [
@@ -317,7 +320,7 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:34:06.557Z",
-          "updatedAt": "2026-07-27T09:34:35.328146Z",
+          "updatedAt": "2026-07-27T14:12:47.287813Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 7943.585086,
@@ -348,7 +351,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2892",
@@ -464,7 +468,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "series": [
@@ -487,7 +492,7 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:34:06.557Z",
-          "updatedAt": "2026-07-27T09:34:35.328146Z",
+          "updatedAt": "2026-07-27T14:12:47.287813Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 7943.585086,
@@ -518,7 +523,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2893",
@@ -645,7 +651,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "tags": [
@@ -669,7 +676,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2894",
@@ -790,7 +798,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "series": [
@@ -814,7 +823,7 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:36:01.131Z",
-          "updatedAt": "2026-07-27T09:34:35.328146Z",
+          "updatedAt": "2026-07-27T14:12:47.287813Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 11.073004,
@@ -845,7 +854,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2895",
@@ -965,7 +975,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "series": [
@@ -988,7 +999,7 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:34:06.557Z",
-          "updatedAt": "2026-07-27T09:34:35.328146Z",
+          "updatedAt": "2026-07-27T14:12:47.287813Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 7943.585086,
@@ -1019,7 +1030,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2896",
@@ -1138,7 +1150,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "series": [
@@ -1162,7 +1175,7 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:36:01.131Z",
-          "updatedAt": "2026-07-27T09:34:35.328146Z",
+          "updatedAt": "2026-07-27T14:12:47.287813Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 11.073004,
@@ -1193,7 +1206,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2897",
@@ -1314,7 +1328,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "series": [
@@ -1337,7 +1352,7 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:34:06.557Z",
-          "updatedAt": "2026-07-27T09:34:35.328146Z",
+          "updatedAt": "2026-07-27T14:12:47.287813Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 7943.585086,
@@ -1368,7 +1383,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2898",
@@ -1494,7 +1510,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "series": [
@@ -1518,12 +1535,12 @@
           "createdBy": "15",
           "updatedBy": "9",
           "createdAt": "2023-06-12T16:25:03.836Z",
-          "updatedAt": "2026-07-27T09:34:35.328146Z",
+          "updatedAt": "2026-07-27T14:12:47.287813Z",
           "commentsEnabled": false,
           "competitive": "0",
-          "volume24hr": 81835.902027,
-          "volume": 559976.96893,
-          "liquidity": 250493.47779,
+          "volume24hr": 82146.124167,
+          "volume": 570157.1237979999,
+          "liquidity": 247150.85846,
           "startDate": "2023-06-07T16:00:00Z",
           "commentCount": 5561,
           "requiresTranslation": false
@@ -1551,7 +1568,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2899",
@@ -1671,7 +1689,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "series": [
@@ -1694,7 +1713,7 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:34:06.557Z",
-          "updatedAt": "2026-07-27T09:34:35.328146Z",
+          "updatedAt": "2026-07-27T14:12:47.287813Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 7943.585086,
@@ -1725,7 +1744,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2900",
@@ -1853,7 +1873,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "tags": [
@@ -1877,7 +1898,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2901",
@@ -1993,7 +2015,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "series": [
@@ -2017,7 +2040,7 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:36:01.131Z",
-          "updatedAt": "2026-07-27T09:34:35.328146Z",
+          "updatedAt": "2026-07-27T14:12:47.287813Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 11.073004,
@@ -2048,7 +2071,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2902",
@@ -2174,7 +2198,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "tags": [
@@ -2198,7 +2223,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2903",
@@ -2327,7 +2353,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "tags": [
@@ -2351,7 +2378,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2904",
@@ -2478,7 +2506,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "tags": [
@@ -2502,7 +2531,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2905",
@@ -2616,7 +2646,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "tags": [
@@ -2640,7 +2671,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2906",
@@ -2757,7 +2789,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "tags": [
@@ -2781,7 +2814,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2907",
@@ -2907,7 +2941,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "tags": [
@@ -2931,7 +2966,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2908",
@@ -3056,7 +3092,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "series": [
@@ -3080,7 +3117,7 @@
           "createdBy": "15",
           "updatedBy": "15",
           "createdAt": "2022-10-13T00:36:01.131Z",
-          "updatedAt": "2026-07-27T09:34:35.328146Z",
+          "updatedAt": "2026-07-27T14:12:47.287813Z",
           "commentsEnabled": false,
           "competitive": "0",
           "volume24hr": 11.073004,
@@ -3111,7 +3148,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     },
     {
       "id": "2909",
@@ -3224,7 +3262,8 @@
           "holdingRewardsEnabled": false,
           "feesEnabled": false,
           "requiresTranslation": false,
-          "feeType": null
+          "feeType": null,
+          "version": "v1"
         }
       ],
       "tags": [
@@ -3248,7 +3287,8 @@
       "requiresTranslation": false,
       "eventMetadata": {
         "context_requires_regen": true
-      }
+      },
+      "version": "v1"
     }
   ]
 }
